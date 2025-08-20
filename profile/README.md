@@ -15,21 +15,22 @@
 ### 🔥 Key Repositories
 
 #### Core Platform
-- **[f1r3fly](https://github.com/F1R3FLY-io/f1r3fly)** ⭐ - Main transaction server (Scala)
-- **[RNode](https://github.com/F1R3FLY-io/rnode)** - Multi-consensus blockchain platform (Scala/Rust)
+- **[f1r3fly](https://github.com/F1R3FLY-io/f1r3fly)** ⭐ - Main transaction server (Scala/Rust)
 
 #### Language & Tools
 - **[rholang-rs](https://github.com/F1R3FLY-io/rholang-rs)** - Rholang interpreter (Rust)
-- **[rholang-language-server](https://github.com/F1R3FLY-io/rholang-language-server)** - IDE support (Rust)
+- **[rholang-language-server](https://github.com/F1R3FLY-io/rholang-language-server)** - LSP-based Language Server for Rholang (Rust)
+- **[graph-to-rholang-parser](https://github.com/F1R3FLY-io/graph-to-rholang-parser)** - Graph to RhoLang parser (Rust)
 
 #### Applications
-- **[Embers](https://github.com/F1R3FLY-io/Embers)** - F1R3Sky wallets and agents (Rust)
+- **[embers](https://github.com/F1R3FLY-io/embers)** - F1R3Sky wallets and agents (Rust)
 - **[embers-frontend](https://github.com/F1R3FLY-io/embers-frontend)** - Web interface (TypeScript)
-- **[f1r3sky](https://github.com/F1R3FLY-io/f1r3sky)** - Decentralized social platform (TypeScript)
+- **[f1r3sky](https://github.com/F1R3FLY-io/f1r3sky)** - F1R3FLY BlueSky fork (TypeScript)
+- **[lightning-bug](https://github.com/F1R3FLY-io/lightning-bug)** - Modern, extensible, browser-based code editor (Clojure)
 
-#### Research
-- **[rhoHDC](https://github.com/F1R3FLY-io/rhoHDC)** - Hyper-dimensional computing research
-- **[MeTTa](https://github.com/F1R3FLY-io/MeTTa)** - Meta-Type Talk language (Scala)
+#### Research & Tools
+- **[MeTTa](https://github.com/F1R3FLY-io/MeTTa)** - MeTTa 2.0 language (Scala)
+- **[F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)** - Visualization tool for Infrastructure as Code
 
 📚 **[Complete Repository Guide](https://github.com/F1R3FLY-io/F1R3FLY-io.github.io/blob/main/docs/Organization_of_Repositories.md)** - View all projects with detailed descriptions
 
@@ -193,3 +194,4 @@ This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) fi
 ---
 
 *Building the future of distributed computing, one transaction at a time.* 🔥🚀
+
