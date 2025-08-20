@@ -36,6 +36,34 @@ git push origin docs/your-feature
 
 This repository follows F1R3FLY.io's documentation-first methodology, serving as the central knowledge base for the entire organization. All organizational changes, new projects, and processes begin with documentation.
 
+### Key Repositories
+
+#### Core Platform
+- **[f1r3fly](https://github.com/F1R3FLY-io/f1r3fly)** - Main transaction server (Scala/Rust)
+
+#### Language & Tools
+- **[rholang-rs](https://github.com/F1R3FLY-io/rholang-rs)** - Rholang interpreter (Rust)
+- **[rholang-language-server](https://github.com/F1R3FLY-io/rholang-language-server)** - LSP-based Language Server for Rholang (Rust)
+- **[graph-to-rholang-parser](https://github.com/F1R3FLY-io/graph-to-rholang-parser)** - Graph to RhoLang parser (Rust)
+
+#### Applications
+- **[embers](https://github.com/F1R3FLY-io/embers)** - F1R3Sky wallets and agents (Rust)
+- **[embers-frontend](https://github.com/F1R3FLY-io/embers-frontend)** - Web interface (TypeScript)
+- **[f1r3sky](https://github.com/F1R3FLY-io/f1r3sky)** - F1R3FLY BlueSky fork (TypeScript)
+- **[lightning-bug](https://github.com/F1R3FLY-io/lightning-bug)** - Modern, extensible, browser-based code editor (Clojure)
+
+#### Research & Tools
+- **[MeTTa](https://github.com/F1R3FLY-io/MeTTa)** - MeTTa 2.0 language (Scala)
+- **[F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)** - Visualization tool for Infrastructure as Code
+
+**[Complete Repository Guide](https://github.com/F1R3FLY-io/.github/blob/main/docs/Organization_of_Repositories.md)** - View all projects with detailed descriptions
+
+## Quick Links
+
+- **[Project Template](https://github.com/F1R3FLY-io/.github/blob/main/docs/Project_Template.md)** - Standard template for F1R3FLY.io repositories
+- **[LLM Context](CLAUDE.md)** - AI assistant instructions for this project
+- **[GitHub Organization](https://github.com/F1R3FLY-io)** - View all repositories
+
 ### Organization Structure
 
 - Repository Guide: Complete overview of all F1R3FLY.io projects
@@ -189,15 +217,15 @@ research_innovation:
 
 ```yaml
 public_portal:
-  url: "https://github.com/F1R3FLY-io/F1R3FLY-io.github.io"
+  url: "https://github.com/F1R3FLY-io/.github"
   description: "Public documentation portal"
 
 organization_guide:
-  url: "https://github.com/F1R3FLY-io/F1R3FLY-io.github.io/blob/main/docs/Organization_of_Repositories.md"
+  url: "https://github.com/F1R3FLY-io/.github/blob/main/docs/Organization_of_Repositories.md"
   description: "Complete project overview"
 
 project_template:
-  url: "https://github.com/F1R3FLY-io/F1R3FLY-io.github.io/blob/main/docs/Project_Template.md"
+  url: "https://github.com/F1R3FLY-io/.github/blob/main/docs/Project_Template.md"
   description: "Standard repository template"
 ```
 
@@ -260,8 +288,8 @@ principles:
 
 ```yaml
 organization_website: "https://f1r3fly.io"
-documentation_portal: "https://github.com/F1R3FLY-io/F1R3FLY-io.github.io"
-repository_guide: "https://github.com/F1R3FLY-io/F1R3FLY-io.github.io/blob/main/docs/Organization_of_Repositories.md"
+documentation_portal: "https://github.com/F1R3FLY-io/.github"
+repository_guide: "https://github.com/F1R3FLY-io/.github/blob/main/docs/Organization_of_Repositories.md"
 improvement_proposals: "https://github.com/F1R3FLY-io/fflip"
 contact: "f1r3fly.ceo@gmail.com"
 ```
