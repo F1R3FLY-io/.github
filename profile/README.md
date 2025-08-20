@@ -1,200 +1,195 @@
-# Project Template for Repositories
+# F1R3FLY.io Documentation Portal
 
-# [Project Name]
-[Brief project description - 1-2 sentences explaining what this project does and its value proposition]
+[![License: Apache 2.0](https://img.shields.io/github/license/saltstack/salt.png)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Jekyll](https://img.shields.io/badge/Jekyll-4.x-red)](https://jekyllrb.com)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-green)](https://f1r3fly.io)
+
+**Organization documentation site for F1R3FLY.io - Building high-performance distributed systems and blockchain infrastructure.**
+
+🌐 **Live Site**: [f1r3fly.io](https://f1r3fly.io)
+
+## 🚦 F1R3FLY.io Organization Overview
+
+**Mission**: Building next-generation scalable, verifiable, and efficient transaction processing systems through distributed computing and blockchain infrastructure.
+
+### 🔥 Key Repositories
+
+#### Core Platform
+- **[f1r3fly](https://github.com/F1R3FLY-io/f1r3fly)** ⭐ - Main transaction server (Scala)
+- **[RNode](https://github.com/F1R3FLY-io/rnode)** - Multi-consensus blockchain platform (Scala/Rust)
+
+#### Language & Tools
+- **[rholang-rs](https://github.com/F1R3FLY-io/rholang-rs)** - Rholang interpreter (Rust)
+- **[rholang-language-server](https://github.com/F1R3FLY-io/rholang-language-server)** - IDE support (Rust)
+
+#### Applications
+- **[Embers](https://github.com/F1R3FLY-io/Embers)** - F1R3Sky wallets and agents (Rust)
+- **[embers-frontend](https://github.com/F1R3FLY-io/embers-frontend)** - Web interface (TypeScript)
+- **[f1r3sky](https://github.com/F1R3FLY-io/f1r3sky)** - Decentralized social platform (TypeScript)
+
+#### Research
+- **[rhoHDC](https://github.com/F1R3FLY-io/rhoHDC)** - Hyper-dimensional computing research
+- **[MeTTa](https://github.com/F1R3FLY-io/MeTTa)** - Meta-Type Talk language (Scala)
+
+📚 **[Complete Repository Guide](https://github.com/F1R3FLY-io/F1R3FLY-io.github.io/blob/main/docs/Organization_of_Repositories.md)** - View all projects with detailed descriptions
+
+## Quick Links
+
+- 📋 **[Project Template](https://github.com/F1R3FLY-io/F1R3FLY-io.github.io/blob/main/docs/Project_Template.md)** - Standard template for F1R3FLY.io repositories
+- 🤖 **[LLM Context](https://github.com/F1R3FLY-io/F1R3FLY-io.github.io/blob/main/CLAUDE.md)** - AI assistant instructions for this project
+- 🏢 **[GitHub Organization](https://github.com/F1R3FLY-io)** - View all repositories
 
 ## 🚀 Quick Start
 
 ```bash
 # Install dependencies
-[package-manager] install
+bundle install
 
-# Start development
-[package-manager] dev
+# Start development server
+bundle exec jekyll serve
 
-# Build project
-[package-manager] build
-
-# Run tests
-[package-manager] test
+# View site at http://localhost:4000
 ```
 
 ### With Nix/Direnv (Recommended)
 
 ```bash
-# Enter development shell with all dependencies
+# Auto-load development environment
 direnv allow
 
-# Or manually with nix
-nix develop
-
-# Dependencies and environment are automatically configured
-[package-manager] dev
+# Start server with all dependencies configured
+bundle exec jekyll serve
 ```
 
-## 📚 Documentation-First Approach
-
-This project follows a documentation-first methodology optimized for both human developers and LLM-assisted development. All features begin with documentation, ensuring clear requirements before implementation.
-
-### Core Documentation Structure
-
-- **[📋 Requirements](docs/requirements/)** - User stories, business requirements, and acceptance criteria
-  - `user-stories/` - Feature requirements from user perspective
-  - `business-requirements/` - Business logic and constraints
-  - `acceptance-criteria/` - Definition of done for features
-  
-- **[📐 Specifications](docs/specifications/)** - Technical specifications and design documents
-  - `visual-design/` - UI/UX mockups, wireframes, and style guides
-  - `technical/` - API specifications, data schemas, and algorithms
-  - `integration/` - Third-party service integration specs
-  
-- **[🏗️ Architecture](docs/architecture/)** - System design and architectural decisions
-  - `decisions/` - Architecture Decision Records (ADRs)
-  - `diagrams/` - System component diagrams and data flows
-  - `patterns/` - Established patterns and conventions
-  
-- **[✅ Current Status](docs/ToDos.md)** - Live project status, active tasks, and priorities
-
-### For Contributors
-
-- **[🤝 Contributing Guide](CONTRIBUTING.md)** - Complete workflow for development
-- **[🔧 Development Setup](docs/development-setup.md)** - Environment configuration
-- **[🐚 Nix/Direnv Setup](docs/nix-setup.md)** - Reproducible development environments
-- **[🧪 Testing Guide](docs/testing.md)** - Testing strategies and conventions
-- **[📖 API Documentation](docs/api/)** - API reference and examples
-
-### For LLM-Assisted Development
-
-When using AI coding assistants (Claude, GitHub Copilot, etc.), provide context from:
-
-1. **Project Context**: `[LLM-CONTEXT].md` (e.g., CLAUDE.md, COPILOT.md)
-2. **Requirements**: Relevant files from `docs/requirements/`
-3. **Specifications**: Technical specs from `docs/specifications/`
-4. **Architecture**: Constraints from `docs/architecture/`
-5. **Current Tasks**: Priorities from `docs/ToDos.md`
-
-## 🗂️ Project Structure
+## 📁 Project Structure
 
 ```
-[project-name]/
-├── docs/                    # Documentation hierarchy
-│   ├── requirements/        # Business and user requirements
-│   ├── specifications/      # Technical specifications
-│   ├── architecture/        # System design documents
-│   ├── api/                # API documentation
-│   └── ToDos.md            # Current status and tasks
-├── src/                    # Source code
-│   ├── components/         # [Framework-specific organization]
-│   ├── services/           # Business logic and services
-│   ├── utils/              # Shared utilities
-│   └── types/              # TypeScript types/interfaces
-├── tests/                  # Test suites
-│   ├── unit/              # Unit tests
-│   ├── integration/       # Integration tests
-│   └── e2e/               # End-to-end tests
-├── scripts/               # Build and utility scripts
-├── .github/               # GitHub configuration
-│   └── workflows/         # CI/CD pipelines
-├── [LLM-CONTEXT].md      # LLM assistant context
-└── README.md             # This file
+F1R3FLY-io.github.io/
+├── _posts/              # Portfolio projects and articles
+├── _includes/           # Reusable HTML components
+├── _layouts/            # Page templates
+├── _data/               # Site configuration data
+├── img/                 # Images and media
+├── css/                 # Stylesheets
+├── js/                  # JavaScript
+├── docs/                # Documentation
+│   ├── ORGANIZATION_REPOS.md   # Repository navigation
+│   └── Project_Template.md     # Repository template
+├── CLAUDE.md           # LLM assistant context
+└── README.md           # This file
 ```
 
-## 🔄 Development Workflow
+## 🛠 Site Management
 
-1. **📖 Documentation First**
-   - Start with requirements in `docs/requirements/`
-   - Create/update technical specs in `docs/specifications/`
-   - Document architectural decisions in `docs/architecture/decisions/`
+### Adding Portfolio Items
 
-2. **🤖 LLM Integration**
-   - Provide comprehensive context from documentation
-   - Reference `[LLM-CONTEXT].md` for project-specific instructions
-   - Update documentation alongside code changes
+1. Create new post in `_posts/` with format: `YYYY-MM-DD-project-name.markdown`
+2. Add images to `/img/portfolio/`
+3. Use this front matter template:
 
-3. **⚙️ Development Standards**
-   - Use Nix/Direnv for consistent development environments
-   - Follow test-driven development (TDD) practices
-   - Maintain code coverage targets (e.g., 90%+)
-   - Use conventional commits for version control
-   - Implement CI/CD checks before merging
+```yaml
+---
+layout: default
+modal-id: 1
+date: 2023-06-06
+img: project-image.png
+thumbnail: project-thumbnail.png
+alt: image-alt-text
+project-date: June 2023
+client: Client Name
+category: Development
+description: Project description
+---
+```
 
-4. **📝 Continuous Documentation**
-   - Keep `docs/ToDos.md` updated with current status
-   - Update relevant documentation with each PR
-   - Maintain README files at directory levels for complex modules
+### Updating Team Members
 
-## 🛠️ Technical Stack
+Edit `_config.yml` people section:
 
-- **Languages**: [Primary languages used]
-- **Frameworks**: [Main frameworks]
-- **Testing**: [Testing frameworks]
-- **Build Tools**: [Build/bundling tools]
-- **Package Manager**: [npm/yarn/pnpm]
-- **Version Control**: Git with [branching strategy]
-- **Development Environment**: Nix flakes + Direnv for reproducible environments
+```yaml
+people:
+- name: Team Member
+  pic: 1
+  position: Role
+  social:
+    - title: twitter
+      url: #
+```
+
+### Image Guidelines
+
+- **Portfolio**: 650x350px (main), 400x289px (thumbnail)
+- **Team**: 225x225px square
+- **About**: 650x350px timeline
+- **Format**: JPEG for photos, PNG for graphics
+
+## 📚 Documentation-First Methodology
+
+F1R3FLY.io follows a documentation-first approach. All features and changes should:
+
+1. Start with documentation in `docs/`
+2. Follow the [Project Template](docs/Project_Template.md) structure
+3. Include clear requirements and specifications
+4. Update relevant documentation with code changes
 
 ## 🧪 Testing
 
 ```bash
-# Run all tests
-[package-manager] test
+# Build site
+bundle exec jekyll build
 
-# Run specific test suites
-[package-manager] test:unit
-[package-manager] test:integration
-[package-manager] test:e2e
+# Validate HTML
+bundle exec htmlproofer ./_site
 
-# Coverage report
-[package-manager] test:coverage
+# Check configuration
+bundle exec jekyll doctor
+
+# Test with drafts
+bundle exec jekyll serve --drafts
 ```
 
 ## 🚢 Deployment
 
-[Brief deployment instructions or link to detailed deployment guide]
+The site automatically deploys to GitHub Pages when changes are pushed to `main`:
 
-## 🔐 Security
-
-- Security policies and guidelines in `SECURITY.md`
-- Vulnerability reporting procedures
-- Security best practices for contributors
-
-## 📈 Performance
-
-- Performance benchmarks and targets
-- Optimization guidelines
-- Monitoring and metrics
+1. Push to `main` branch
+2. GitHub Actions builds the site
+3. Deploys to [f1r3fly.io](https://f1r3fly.io)
+4. CNAME handles custom domain
 
 ## 🤝 Contributing
 
-Please read our [Contributing Guide](CONTRIBUTING.md) for details on:
-- Code of conduct
-- Development process
-- Pull request process
-- Coding standards
-- Documentation requirements
+1. **Document First** - Start with requirements/specifications
+2. **Test Locally** - Use `bundle exec jekyll serve`
+3. **Optimize Assets** - Compress images before committing
+4. **Follow Standards** - Use conventional commits
+5. **Security** - Never commit sensitive data
+
+## 📈 Performance Optimization
+
+- Compress images before upload
+- Use lazy loading for below-fold content
+- Leverage GitHub Pages CDN
+- Minify CSS/JS in production
+
+## 🔐 Security
+
+- Report vulnerabilities to f1r3fly.ceo@gmail.com
+- See `SECURITY.md` for policies
+- Regular dependency updates via Dependabot
 
 ## 📄 License
 
-[![License: Apache 2.0](https://img.shields.io/github/license/saltstack/salt.png)](https://www.apache.org/licenses/LICENSE-2.0)
+This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## 🔗 Resources
 
-- [Credits and acknowledgments]
-- [Third-party libraries and tools]
-
----
-
-<details>
-<summary>📦 Additional Resources</summary>
-
-- [Project Website/Demo]
-- [Documentation Site]
-- [API Reference]
-- [Community Forum/Discord]
-- [Issue Tracker]
-
-</details>
+- **Website**: [f1r3fly.io](https://f1r3fly.io)
+- **Organization**: [github.com/F1R3FLY-io](https://github.com/F1R3FLY-io)
+- **Email**: f1r3fly.ceo@gmail.com
+- **Jekyll Docs**: [jekyllrb.com](https://jekyllrb.com/docs/)
+- **Agency Theme**: [startbootstrap.com](https://startbootstrap.com/themes/agency/)
 
 ---
 
-> **Note for F1r3fly-io Projects**: This template supports our organization's commitment to documentation-first development and LLM-enhanced workflows. Customize sections based on your project's specific needs while maintaining the core documentation structure.
+*Building the future of distributed computing, one transaction at a time.* 🔥🚀
