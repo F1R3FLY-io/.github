@@ -1,18 +1,8 @@
-# F1R3FLY.io Documentation Portal
-
-[![License: Apache 2.0](https://img.shields.io/github/license/saltstack/salt.png)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Jekyll](https://img.shields.io/badge/Jekyll-4.x-red)](https://jekyllrb.com)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-green)](https://f1r3fly.io)
-
-**Organization documentation site for F1R3FLY.io - Building high-performance distributed systems and blockchain infrastructure.**
-
-🌐 **Live Site**: [f1r3fly.io](https://f1r3fly.io)
-
-## 🚦 F1R3FLY.io Organization Overview
+#  F1R3FLY.io Organization Overview
 
 **Mission**: Building next-generation scalable, verifiable, and efficient transaction processing systems through distributed computing and blockchain infrastructure.
 
-### 🔥 Key Repositories
+### Key Repositories
 
 #### Core Platform
 - **[f1r3fly](https://github.com/F1R3FLY-io/f1r3fly)** ⭐ - Main transaction server (Scala/Rust)
@@ -40,7 +30,7 @@
 - 🤖 **[LLM Context](https://github.com/F1R3FLY-io/F1R3FLY-io.github.io/blob/main/CLAUDE.md)** - AI assistant instructions for this project
 - 🏢 **[GitHub Organization](https://github.com/F1R3FLY-io)** - View all repositories
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Install dependencies
@@ -158,7 +148,7 @@ The site automatically deploys to GitHub Pages when changes are pushed to `main`
 3. Deploys to [f1r3fly.io](https://f1r3fly.io)
 4. CNAME handles custom domain
 
-## 🤝 Contributing
+## Contributing
 
 1. **Document First** - Start with requirements/specifications
 2. **Test Locally** - Use `bundle exec jekyll serve`
@@ -173,13 +163,13 @@ The site automatically deploys to GitHub Pages when changes are pushed to `main`
 - Leverage GitHub Pages CDN
 - Minify CSS/JS in production
 
-## 🔐 Security
+## Security
 
 - Report vulnerabilities to f1r3fly.ceo@gmail.com
 - See `SECURITY.md` for policies
 - Regular dependency updates via Dependabot
 
-## 📄 License
+## License
 
 This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) file for details.
 
@@ -193,5 +183,5 @@ This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) fi
 
 ---
 
-*Building the future of distributed computing, one transaction at a time.* 🔥🚀
+*Building the future of distributed computing, one transaction at a time.* 
 
