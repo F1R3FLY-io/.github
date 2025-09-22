@@ -18,6 +18,17 @@ tree docs/
 code docs/
 ```
 
+## 📚 Enhanced Documentation Structure
+
+This repository now includes comprehensive standards for all F1R3FLY.io projects:
+
+- **[📖 Documentation Index](./docs/Documentation_Index.md)** - Complete guide to all documentation standards
+- **[🔗 Cross-Project Dependencies](./docs/Cross_Project_Dependencies.md)** - Ecosystem dependency mapping
+- **[📐 API Documentation Standards](./docs/specifications/api/API_Documentation_Standards.md)** - REST, gRPC, GraphQL standards
+- **[🧪 Testing Standards](./docs/specifications/testing/Testing_Standards.md)** - Comprehensive testing requirements
+- **[🔐 Security Standards](./docs/specifications/security/Security_Standards.md)** - Security requirements and best practices
+- **[🚀 Deployment Standards](./docs/deployment/Deployment_Standards.md)** - Infrastructure and deployment requirements
+
 ### For Contributors
 
 ```bash
