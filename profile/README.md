@@ -60,8 +60,11 @@ This repository follows F1R3FLY.io's documentation-first methodology, serving as
 
 ## Quick Links
 
-- **[Project Template](https://github.com/F1R3FLY-io/.github/blob/main/docs/Project_Template.md)** - Standard template for F1R3FLY.io repositories
-- **[LLM Context](https://github.com/F1R3FLY-io/.github/blob/main/CLAUDE.md)** - AI assistant instructions for this project
+- **[Documentation Index](https://github.com/F1R3FLY-io/.github/blob/main/docs/Documentation_Index.md)** - Complete documentation guide
+- **[Repository Guide](https://github.com/F1R3FLY-io/.github/blob/main/docs/Organization_of_Repositories.md)** - Navigate all projects
+- **[Project Template](https://github.com/F1R3FLY-io/.github/blob/main/docs/Project_Template.md)** - Standard repository template
+- **[FIP Process](https://github.com/F1R3FLY-io/fflip)** - Improvement proposals
+- **[LLM Context](https://github.com/F1R3FLY-io/.github/blob/main/CLAUDE.md)** - AI assistant context
 - **[GitHub Organization](https://github.com/F1R3FLY-io)** - View all repositories
 
 ### Organization Structure

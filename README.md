@@ -2,6 +2,8 @@
 
 Central hub for F1R3FLY.io's organizational documentation, templates, and governance. This repository serves as the single source of truth for organization-wide knowledge management and project standards.
 
+**Quick Navigation**: [Documentation Index](docs/Documentation_Index.md) | [Repository Guide](docs/Organization_of_Repositories.md) | [FIPs](https://github.com/F1R3FLY-io/fflip) | [Project Template](docs/Project_Template.md)
+
 ## Quick Start
 
 ```bash
@@ -18,11 +20,17 @@ tree docs/
 code docs/
 ```
 
-## 📚 Enhanced Documentation Structure
+## 📚 Documentation Hub
 
-This repository now includes comprehensive standards for all F1R3FLY.io projects:
+### Core Documentation Resources
 
-- **[📖 Documentation Index](./docs/Documentation_Index.md)** - Complete guide to all documentation standards
+- **[📖 Documentation Index](./docs/Documentation_Index.md)** - Complete guide to all documentation, organized by role and category
+- **[📂 Repository Guide](./docs/Organization_of_Repositories.md)** - Navigate all F1R3FLY.io projects by category
+- **[📋 Project Template](./docs/Project_Template.md)** - Standard template for new repositories
+- **[🔧 FIP Process](https://github.com/F1R3FLY-io/fflip)** - F1R3FLY.io Improvement Proposals
+
+### Standards & Specifications
+
 - **[🔗 Cross-Project Dependencies](./docs/Cross_Project_Dependencies.md)** - Ecosystem dependency mapping
 - **[📐 API Documentation Standards](./docs/specifications/api/API_Documentation_Standards.md)** - REST, gRPC, GraphQL standards
 - **[🧪 Testing Standards](./docs/specifications/testing/Testing_Standards.md)** - Comprehensive testing requirements
