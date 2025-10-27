@@ -2,7 +2,19 @@
 
 ## Overview
 
-This diagram ([`docs/images/Whiteboard_talk.png`](https://github.com/F1R3FLY-io/.github/blob/master/docs/images/Whiteboard_talk.png)) from the F1R3FLY-io organization's [`.github`](https://github.com/F1R3FLY-io/.github) repository illustrates a paradigm shift in distributed computing, aligned with the organization's mission to build high-throughput transaction servers and decentralized systems using rho-calculus and Rholang (as seen in active repos like [`rhoHDC`](https://github.com/F1R3FLY-io/rhoHDC), [`rholang-rs`](https://github.com/F1R3FLY-io/rholang-rs), and [`f1r3node`](https://github.com/F1R3FLY-io/f1r3node), with updates as recent as October 27, 2025). It employs manufacturing metaphors to highlight the evolution toward mobile process calculi and channel-process programming for enhanced concurrency. The firefly-like butterfly image serves as branding for F1R3FLY-io, symbolizing autonomous, emergent agents in blockchain ecosystems such as RNode and F1R3FLYFS.
+![Whiteboard Talk Diagram](images/Whiteboard_talk.png)
+
+This diagram illustrates a paradigm shift in distributed computing, aligned with F1R3FLY-io's mission to build high-throughput distributed computing systems leveraging decentralizion via Rholang. The visual representation employs manufacturing metaphors and engineering analogies to contrast traditional lambda calculus limitations (left side) with the capabilities of mobile process calculi and channel-process programming (center-right), culminating in Byzantine fault tolerance objectives (upper-right). The firefly-like butterfly image serves as the F1R3FLY-io brand symbol, representing autonomous, emergent agents in blockchain ecosystems such as F1r3node and F1R3FLYFS.
+
+### Diagram Structure
+
+The whiteboard is organized into several key regions:
+
+- **Left Side**: Lambda calculus foundations and traditional functional programming challenges (as they also apply to Rho-caculus systems)
+- **Center**: A factory metaphor comparing traditional assembly line (highly sequential) approaches comparing von Neumann machines the opportunity to evolve to new data flow silicon with a flexible and more dynamic "workstation assembly" paradigm
+- **Lower Right**: A metaphor for correct by construction software development as structural integrity was insured through the math of Euler and Navier
+- **Center Right**: Tools, Systems & Services ecosystem for visual design, debugging, and development using Rho-based mobile process calculi throughout
+- **Upper Right**: Byzantine fault tolerance architecture with the efficiency of current state of the art crash fault tolerant systems
 
 ## Central Metaphor: Manufacturing Factory and Workstation Assembly
 
@@ -16,9 +28,13 @@ The left indicates limitations of Church's λ-calculus (1930s) in functional pro
 
 Nearest the center-right, mobile process calculi like Milner's π-calculus (1989) and rho-calculus extensions (core to Rholang in [`rhoHDC`](https://github.com/F1R3FLY-io/rhoHDC) and [`rholang-rs`](https://github.com/F1R3FLY-io/rholang-rs)) are depicted as migrating agents in nested ambients (Cardelli, 1998). Processes as first-class entities, with channels for communication and mobility, enable topology reconfiguration and data flow-driven execution—surpassing static structures by supporting channel-process programming for asynchronous, location-independent concurrency. This new model evolves data architectures for unbounded dynamism, though with nondeterministic verification needs, directly aiding F1R3FLY-io's decentralized platforms as in the MeTTaCycle Yellow Paper ([`MeTTaCycleYellowPaper`](https://github.com/F1R3FLY-io/MeTTaCycleYellowPaper)).
 
-## Correctness by Construction Paradigm: Truss Evolution
+## Correctness by Construction: Bridge Truss Engineering Analogy
 
-The lower-right evolves this through engineering analogies: Euler's beam theory and Navier's work on tension/compression enable visual buckling verification in bridge trusses (e.g., Pratt, Howe, Warren designs), shifting from ad-hoc builds to "correct by construction" paradigms. Trusses distribute loads formally, allowing integrity assurance via verifiable models—paralleling F1R3FLY-io's rho-calculus methods to transcend λ-calculus limitations (e.g., composition, type errors) and handle emergent concurrent/distributed challenges (e.g., spatial typing, semantics). Channel-process capabilities ensure inherent correctness, akin to visual IaC tools in [`F1r3bu1ld3r`](https://github.com/F1R3FLY-io/F1r3bu1ld3r), building resilient software from formal foundations rather than post-hoc fixes.
+The lower-right section draws an engineering analogy from structural analysis of bridge trusses (Pratt, Howe, and Warren designs) to illustrate the "correctness by construction" paradigm. Just as engineers evolved from ad-hoc bridge building to mathematically verifiable truss designs using Euler's beam theory and Navier's tension/compression principles, software engineering can evolve from post-hoc testing to inherently correct systems through formal methods.
+
+Bridge trusses demonstrate visual verification—engineers can verify structural integrity through mathematical models before construction, identifying potential failure modes like buckling through analysis rather than trial and error. Similarly, F1R3FLY-io's approach using rho-calculus and channel-process programming enables formal verification of concurrent systems, addressing λ-calculus limitations (composition challenges, type errors, race conditions) through mathematical foundations rather than runtime debugging.
+
+This paradigm shift—from reactive bug fixing to proactive correctness—parallels the visual Infrastructure-as-Code tools in [`F1r3bu1ld3r`](https://github.com/F1R3FLY-io/F1r3bu1ld3r), where distributed systems are designed with verifiable correctness properties from the ground up, much like bridges are designed with proven load distribution patterns.
 
 ## F1R3FLY-io's Tools, Systems, and Services Intent
 
