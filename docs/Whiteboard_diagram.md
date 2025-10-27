@@ -2,7 +2,7 @@
 
 ## Overview
 
-This diagram (`docs/images/Whiteboard_talk.png`)[./images/Whiteboard_talk.png] from the F1R3FLY-io organization's `.github` repository illustrates a paradigm shift in distributed computing, aligned with the organization's mission to build high-throughput transaction servers and decentralized systems using rho-calculus and Rholang (as seen in active repos like `rhoHDC`, `rholang-rs`, and `f1r3node`, with updates as recent as October 27, 2025). It employs manufacturing metaphors to highlight the evolution toward mobile process calculi and channel-process programming for enhanced concurrency. The firefly-like butterfly image serves as branding for F1R3FLY-io, symbolizing autonomous, emergent agents in blockchain ecosystems such as RNode and F1R3FLYFS.
+This diagram [`docs/images/Whiteboard_talk.png`](./images/Whiteboard_talk.png) from the F1R3FLY-io organization's `.github` repository illustrates a paradigm shift in distributed computing, aligned with the organization's mission to build high-throughput transaction servers and decentralized systems using rho-calculus and Rholang (as seen in active repos like `rhoHDC`, `rholang-rs`, and `f1r3node`, with updates as recent as October 27, 2025). It employs manufacturing metaphors to highlight the evolution toward mobile process calculi and channel-process programming for enhanced concurrency. The firefly-like butterfly image serves as branding for F1R3FLY-io, symbolizing autonomous, emergent agents in blockchain ecosystems such as RNode and F1R3FLYFS.
 
 ## Central Metaphor: Manufacturing Factory and Workstation Assembly
 
@@ -39,4 +39,4 @@ Leverage for onboarding: visualize paradigm shifts per ADRs in `.github/docs/arc
 ## References
 
 - F1R3FLY-io Organization: Rho-calculus-driven distributed systems.
-- Key Repos: `rhoHDC`, `MeTTa`, `rholang-rs`, `MeTTaCycleYellowPaper`, `f1r3node`.
+- Key Repos: `F1r3node`, `[lightning-bug](https://github.com/F1R3FLY-io/lightning-bug)` `rholang-rs`, `f1r3node`.
