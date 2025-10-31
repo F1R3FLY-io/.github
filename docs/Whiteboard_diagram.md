@@ -56,3 +56,11 @@ Leverage for onboarding: visualize paradigm shifts per ADRs in [`.github/docs/ar
 
 - F1R3FLY-io Organization: Rho-calculus-driven distributed systems.
 - Key Repos: [`rhoHDC`](https://github.com/F1R3FLY-io/rhoHDC), [`lightning-bug`](https://github.com/F1R3FLY-io/lightning-bug), [`MeTTa`](https://github.com/F1R3FLY-io/MeTTa), [`rholang-rs`](https://github.com/F1R3FLY-io/rholang-rs), [`MeTTaCycleYellowPaper`](https://github.com/F1R3FLY-io/MeTTaCycleYellowPaper), [`f1r3node`](https://github.com/F1R3FLY-io/f1r3node).
+
+
+## Action Items (from Office Hours)
+
+- **Factory Metaphor**: Mike says that many people may not understand factory assembly versus flexible workstations. Pi/Rho allow for self-assembly  dynamicism, flexibility, and ephemeral activity. Seek out other potential metaphors. Perhaps a traditional personal computer to Internet transition might be useful.
+- **Software Development Challenges **: Lambda calculus approaches using functional programming  are inherently single machine (perhaps with shared memory) oriented. Therefore, the challenges for software engineering may be different particularly under deadlock, race conditions, and parallel programming paradigmes [per Mike].
+- **Opening**: Need to better desribe factory metaphors if we use that approach. Probably should go through the differences in needs between data flow and von Neumann silicon along with approaches to parallelism.
+
