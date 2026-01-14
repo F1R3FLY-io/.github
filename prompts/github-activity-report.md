@@ -46,28 +46,28 @@ After the report is generated, offer to help fill in the AI_NARRATIVE placeholde
 
 ```bash
 # Monthly report for previous month (most common)
-./scripts/generate-monthly-report.sh
+./scripts/generate-github-status-report.sh
 
 # Monthly report for specific month
-./scripts/generate-monthly-report.sh --month 2025-01
+./scripts/generate-github-status-report.sh --month 2025-01
 
 # Daily report for yesterday
-./scripts/generate-monthly-report.sh --daily
+./scripts/generate-github-status-report.sh --daily
 
 # Daily report for specific date
-./scripts/generate-monthly-report.sh --daily 2025-01-10
+./scripts/generate-github-status-report.sh --daily 2025-01-10
 
 # Month-to-date report (1st of current month to today)
-./scripts/generate-monthly-report.sh --mtd
+./scripts/generate-github-status-report.sh --mtd
 
 # Annual report for previous year
-./scripts/generate-monthly-report.sh --annual
+./scripts/generate-github-status-report.sh --annual
 
 # Annual report for specific year
-./scripts/generate-monthly-report.sh --annual 2024
+./scripts/generate-github-status-report.sh --annual 2024
 
 # Preview without writing file
-./scripts/generate-monthly-report.sh --dry-run
+./scripts/generate-github-status-report.sh --dry-run
 ```
 
 ## Script Options
@@ -94,7 +94,7 @@ Other Options:
 Run the script to fetch GitHub data and generate the report:
 
 ```bash
-./scripts/generate-monthly-report.sh
+./scripts/generate-github-status-report.sh
 ```
 
 ### Step 2: Add Narrative Summaries

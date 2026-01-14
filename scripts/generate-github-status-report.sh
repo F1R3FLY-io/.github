@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# generate-monthly-report.sh - Generate status reports for F1R3FLY.io
+# generate-github-status-report.sh - Generate status reports for F1R3FLY.io
 #
 # This script:
 # 1. Fetches data from all F1R3FLY repositories via GitHub API (gh CLI)
@@ -8,7 +8,7 @@
 # 3. Stores report in docs/reports/
 #
 # Usage:
-#   generate-monthly-report.sh [OPTIONS]
+#   generate-github-status-report.sh [OPTIONS]
 #
 # Period Options (mutually exclusive):
 #   --month YYYY-MM    Monthly report for specific month (default: previous month)
@@ -29,14 +29,14 @@
 #   - jq - for JSON processing
 #
 # Examples:
-#   ./generate-monthly-report.sh                    # Monthly report for previous month
-#   ./generate-monthly-report.sh --month 2025-01    # Monthly report for January 2025
-#   ./generate-monthly-report.sh --daily            # Daily report for yesterday
-#   ./generate-monthly-report.sh --daily 2025-01-10 # Daily report for specific date
-#   ./generate-monthly-report.sh --mtd              # Month-to-date report
-#   ./generate-monthly-report.sh --annual           # Annual report for previous year
-#   ./generate-monthly-report.sh --annual 2024      # Annual report for 2024
-#   ./generate-monthly-report.sh --dry-run          # Preview without writing
+#   ./generate-github-status-report.sh                    # Monthly report for previous month
+#   ./generate-github-status-report.sh --month 2025-01    # Monthly report for January 2025
+#   ./generate-github-status-report.sh --daily            # Daily report for yesterday
+#   ./generate-github-status-report.sh --daily 2025-01-10 # Daily report for specific date
+#   ./generate-github-status-report.sh --mtd              # Month-to-date report
+#   ./generate-github-status-report.sh --annual           # Annual report for previous year
+#   ./generate-github-status-report.sh --annual 2024      # Annual report for 2024
+#   ./generate-github-status-report.sh --dry-run          # Preview without writing
 #
 
 set -euo pipefail
@@ -81,9 +81,9 @@ fi
 #
 usage() {
     cat <<EOF
-generate-monthly-report.sh - Generate F1R3FLY.io status reports
+generate-github-status-report.sh - Generate F1R3FLY.io status reports
 
-Usage: generate-monthly-report.sh [OPTIONS]
+Usage: generate-github-status-report.sh [OPTIONS]
 
 Period Options (mutually exclusive):
   --month YYYY-MM      Monthly report for specific month (default: previous month)
@@ -406,7 +406,7 @@ main() {
     generated_at=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
 
     local report
-    report=$(generate_report "$all_data" "$PERIOD_NAME" "$TARGET_PERIOD" "$generated_at")
+    report=$(generate_report "$all_data" "$PERIOD_NAME" "$TARGET_PERIOD" "$generated_at" "$REPORT_TYPE")
 
     # Output or write report
     if [[ "$DRY_RUN" == true ]]; then

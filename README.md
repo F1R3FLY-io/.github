@@ -28,11 +28,11 @@ Generate status reports across all F1R3FLY.io repositories.
 
 **Generate reports:**
 ```bash
-./scripts/generate-monthly-report.sh              # Monthly (previous month)
-./scripts/generate-monthly-report.sh --daily      # Daily (yesterday)
-./scripts/generate-monthly-report.sh --mtd        # Month-to-date
-./scripts/generate-monthly-report.sh --annual     # Annual (previous year)
-./scripts/generate-monthly-report.sh --dry-run    # Preview only
+./scripts/generate-github-status-report.sh              # Monthly (previous month)
+./scripts/generate-github-status-report.sh --daily      # Daily (yesterday)
+./scripts/generate-github-status-report.sh --mtd        # Month-to-date
+./scripts/generate-github-status-report.sh --annual     # Annual (previous year)
+./scripts/generate-github-status-report.sh --dry-run    # Preview only
 ```
 
 **With Claude Code:** Use `/github-activity-report` to generate reports interactively. To enable:
