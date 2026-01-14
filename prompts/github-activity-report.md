@@ -1,6 +1,6 @@
-# Monthly Report Generation
+# GitHub Activity Report
 
-Generate comprehensive status reports for F1R3FLY.io repositories with GitHub activity metrics, progress summaries, and planned work.
+Generate status reports for F1R3FLY.io repositories with GitHub activity metrics, progress summaries, and planned work.
 
 ## Quick Commands
 

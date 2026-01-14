@@ -116,7 +116,7 @@ Output Files:
   Annual:  docs/reports/YYYY-annual-report.md
 
 Post-generation:
-  Use the /monthly-report Claude Code skill to add narrative summaries
+  Use the /github-activity-report Claude Code command to add narrative summaries
   to the AI_NARRATIVE placeholder sections.
 
 Requirements:
@@ -434,7 +434,7 @@ main() {
         echo ""
         log INFO "Next steps:"
         echo "  1. Review the generated report"
-        echo "  2. Use /monthly-report skill to add narrative summaries"
+        echo "  2. Use /github-activity-report to add narrative summaries"
         echo "  3. Commit and push when complete"
     fi
 

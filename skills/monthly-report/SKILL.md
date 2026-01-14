@@ -1,6 +1,6 @@
 ---
-name: monthly-report
-description: Generate and enhance monthly status reports for F1R3FLY.io repositories. Use when user asks to "generate monthly report", "create status report", "monthly update", "GitHub activity summary", or "add narratives to report".
+name: github-activity-report
+description: Generate and enhance status reports for F1R3FLY.io repositories. Use when user asks to "generate monthly report", "create status report", "GitHub activity summary", or "add narratives to report".
 version: 1.0.0
 ---
 

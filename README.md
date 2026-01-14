@@ -35,7 +35,11 @@ Generate status reports across all F1R3FLY.io repositories.
 ./scripts/generate-monthly-report.sh --dry-run    # Preview only
 ```
 
-**With Claude Code:** Use `/monthly-report` to generate reports and add narrative summaries interactively.
+**With Claude Code:** Use `/github-activity-report` to generate reports interactively. To enable:
+
+```bash
+ln -s "$(pwd)/prompts/github-activity-report.md" ~/.claude/commands/
+```
 
 Reports are saved to `docs/reports/` with metrics, PR lists, milestones, and contributor data.
 
