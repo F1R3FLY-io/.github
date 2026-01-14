@@ -303,6 +303,18 @@ git diff
 - **Design Quality**: Consistent, accessible, responsive
 - **Performance Quality**: Fast, efficient, scalable
 
+## Git & Hygiene
+
+- Use the `/quick-commit` slash command for git add/commit operations; use the `/recursive-push` command for git push operations. Do not run `git add`, `git commit`, or `git push` directly unless explicitly requested.
+- `git mv` is permitted but requires user confirmation.
+- Never discard user changes; avoid destructive git commands.
+- Keep .env files and secrets out of the repo.
+- Follow existing formatting/lint/typecheck scripts before shipping significant code changes.
+
+## Attributions
+
+- Do not include any references to Claude co-authoring commits or code.
+
 ## Important Instructions
 - Do what has been asked; nothing more, nothing less
 - NEVER create files unless absolutely necessary

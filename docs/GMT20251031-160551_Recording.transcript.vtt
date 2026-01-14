@@ -1,0 +1,2022 @@
+WEBVTT
+
+1
+00:00:00.050 --> 00:00:01.650
+Jeff: better refined.
+
+2
+00:00:03.530 --> 00:00:04.380
+CB Wells: Sounds good.
+
+3
+00:00:06.230 --> 00:00:10.119
+Jeff: And then I'll put the notes in the office hours channel. We're just waiting for Dylan now.
+
+4
+00:00:10.620 --> 00:00:20.299
+Jeff: I was just saying to Christian, Mike, that, I don't know if you'd be available to come in, but Christian's gonna come over, we're gonna try to grab lunch with Allie.
+
+5
+00:00:20.510 --> 00:00:24.220
+Jeff: Miles and Alexander Kurtz at Chapman.
+
+6
+00:00:24.440 --> 00:00:32.460
+Jeff: Probably the week of the 17th, and then I was gonna try to talk Greg into coming down. I don't know if you'd have interest in coming, too.
+
+7
+00:00:32.659 --> 00:00:35.400
+Jeff: Should be a fairly easy flight from Utah.
+
+8
+00:00:35.520 --> 00:00:37.829
+Jeff: To Chapman University, here in Orange.
+
+9
+00:00:46.730 --> 00:00:54.779
+stay: Well… Well, I didn't think Orange was a city. I only was aware of Orange as a county.
+
+10
+00:00:55.400 --> 00:01:03.659
+Jeff: Yeah, it's Orange in Orange County, here close to where I live. That's where I met Alexander Kurtz, who actually had introduced me originally to Greg 3 years ago.
+
+11
+00:01:03.990 --> 00:01:22.319
+Jeff: And then, anyway, we were talking about just getting a whole bunch of category theorists together, and then I… since that XLNS money is… has not come in, or does not appear to be coming in soon, Alexander has volunteered to write up the NSF grant proposal and leverage Miles for that.
+
+12
+00:01:23.830 --> 00:01:25.940
+stay: Okay, and you said the week of the 17th?
+
+13
+00:01:26.140 --> 00:01:29.759
+Jeff: That's what I'm thinking, that's what I was going to propose to Greg, and then…
+
+14
+00:01:29.760 --> 00:01:33.130
+stay: Greg is on tour from the 17th through the 23rd.
+
+15
+00:01:33.850 --> 00:01:35.290
+Jeff: is on tour…
+
+16
+00:01:35.670 --> 00:01:36.940
+stay: Around the world.
+
+17
+00:01:37.650 --> 00:01:40.560
+stay: Yeah, I don't know where exactly he's going, but…
+
+18
+00:01:40.560 --> 00:01:41.400
+Jeff: Okay.
+
+19
+00:01:42.320 --> 00:01:59.729
+Jeff: Yeah, so we could probably do it the previous week, too. I'm gonna try to get Greg to come in and visit that Chris Murphy guy, the former general counsel for Facebook, who's a billionaire, and a potential investor, too. But that's up in Menlo Park. Alright, I'll ask him this afternoon.
+
+20
+00:01:59.990 --> 00:02:01.470
+Jeff: And see what… range.
+
+21
+00:02:01.470 --> 00:02:04.910
+stay: I have a commitment on the… On Wednesday the 12th.
+
+22
+00:02:05.920 --> 00:02:17.190
+stay: But I think otherwise… I could spend… Some time out there, yeah.
+
+23
+00:02:17.830 --> 00:02:18.570
+Jeff: Okay
+
+24
+00:02:18.780 --> 00:02:32.810
+Jeff: Yeah, Alexander just got back to me, so, I'll try to work this out with Greg as well. Maybe he can come down to Menlo Park. It's actually a birthday… it's a social function, it's a birthday party.
+
+25
+00:02:33.010 --> 00:02:35.700
+Jeff: But all the key players will be there.
+
+26
+00:02:36.090 --> 00:02:39.280
+Jeff: Okay,
+
+27
+00:02:39.600 --> 00:02:45.870
+Jeff: I guess Dylan can kind of come in whenever, I'll just share my screen if it's cool with you guys.
+
+28
+00:02:52.660 --> 00:02:59.170
+Jeff: Okay, so I worked this up the other day. I woke up in the middle of the night on, on,
+
+29
+00:03:00.350 --> 00:03:03.209
+Jeff: on… I think that was,
+
+30
+00:03:05.270 --> 00:03:15.009
+Jeff: Sunday night, or Monday morning, in London, and it struck me that, let me see if I can turn this stuff off…
+
+31
+00:03:18.840 --> 00:03:24.840
+Jeff: It struck me that, what I'm trying to do is to come up with a set of metaphors
+
+32
+00:03:25.210 --> 00:03:32.410
+Jeff: and ways of describing, Firefly to, like, potential investors and customers, etc.
+
+33
+00:03:32.800 --> 00:03:48.460
+Jeff: So, what I came up with was this, and I wanted to run it by you guys, and then, assuming that these metaphors and elegies work, we'll put it together with Nicholas into a Firefly video.
+
+34
+00:03:48.700 --> 00:03:58.549
+Jeff: And and and then that… that then can be used. Actually, I'll show you guys real quick in the chat.
+
+35
+00:03:59.290 --> 00:04:05.490
+Jeff: What I'm thinking. Let me find it real quick.
+
+36
+00:04:09.060 --> 00:04:11.389
+Jeff: I can't, I find the chat anymore.
+
+37
+00:04:18.850 --> 00:04:22.050
+Jeff: Have you guys seen the Cinematics videos, by chance?
+
+38
+00:04:22.430 --> 00:04:23.679
+Jeff: Have you ever heard of that?
+
+39
+00:04:24.920 --> 00:04:25.710
+stay: No.
+
+40
+00:04:27.170 --> 00:04:33.340
+Jeff: I think they're really good, high-level descriptions of, like, they go through smart contracts.
+
+41
+00:04:33.810 --> 00:04:35.140
+Jeff: Jesus.
+
+42
+00:04:42.410 --> 00:04:48.899
+Jeff: And this is just one of many examples that can be used, for this kind of thing.
+
+43
+00:04:54.910 --> 00:04:56.509
+Jeff: I'll share my screen.
+
+44
+00:04:57.400 --> 00:05:02.110
+Jeff: So this guy is out of Switzerland, and he produces these sorts of videos.
+
+45
+00:05:02.610 --> 00:05:06.200
+Jeff: And, and basically,
+
+46
+00:05:09.030 --> 00:05:16.970
+Jeff: you know, he's got a whiteboard, then he describes this, in a way that, that is, I think pretty understandable to the layman.
+
+47
+00:05:19.100 --> 00:05:27.410
+Jeff: So, what I want to get to is to produce this style or kind of video as a marketing and potential investor piece.
+
+48
+00:05:31.370 --> 00:05:33.369
+Jeff: But I'll post this link in the…
+
+49
+00:05:33.370 --> 00:05:43.389
+stay: Yeah, I've certainly seen the whiteboard-style things. There are… tools that… We'll let you build them.
+
+50
+00:05:44.820 --> 00:05:52.179
+Jeff: Yeah, I don't know of the tools, but that, yeah, that would probably be the next step with Nicholas to figure this out. So this is where I want to get to. Hey, Dylan.
+
+51
+00:05:56.620 --> 00:06:11.279
+Jeff: So, let me hide my video panel here, and I'll go back to the presentation. I was just, I don't mean to hijack this meeting, Dylan, but I… what I'd like to do is just get technical verification from you guys that I'm on the right track.
+
+52
+00:06:11.420 --> 00:06:14.910
+Jeff: And using some metaphors and analogies for Firefly.
+
+53
+00:06:15.070 --> 00:06:25.919
+Jeff: And what I came up with, just to kind of start out on this, was that we can think of, von Neumann architectures as being kind of like, assembly lines in a factory.
+
+54
+00:06:26.150 --> 00:06:38.720
+Jeff: co-assembly lines, etc. They're highly sequential in nature, and they tend to roll up, and in order to parallelize them, what you do is you just expand the number of assemblies, or the number of factories, etc.
+
+55
+00:06:39.310 --> 00:06:43.320
+Jeff: But there's also an alternative kind of factory.
+
+56
+00:06:43.550 --> 00:06:49.609
+Jeff: Which are typically workstations which are dynamically, associated.
+
+57
+00:06:49.760 --> 00:07:07.069
+Jeff: And you have different kinds of, sub… or, excuse me, different kinds of workstation platforms that are put together into these, into basically what can be peered or networked, assembly lines. And so they have a lot more dynamicism.
+
+58
+00:07:07.260 --> 00:07:15.909
+Jeff: and flexibility in the way that those things, are used to be put together. So, what I'm trying to do with this is to draw
+
+59
+00:07:16.040 --> 00:07:31.929
+Jeff: a, a comparison to traditional von Neumann computing architectures, which tend to be highly sequential, and they're very, very difficult, and that's basically what we've been using today until, up until things like NVIDIA and GPUs have come along.
+
+60
+00:07:32.200 --> 00:07:39.210
+Jeff: And we're moving more and more, as Greg likes to say, toward these bespoke data flow architectures.
+
+61
+00:07:39.430 --> 00:07:58.309
+Jeff: that have a different form of parallelism that comes together. And there's this thing known as Flynn's Taxonomy, which goes through single instruction, single data, single instruction, multiple data, etc. And, turns out that that's a, a 64-element, 5-dimensional matrix.
+
+62
+00:07:58.590 --> 00:08:08.270
+Jeff: That can represent all these different architectures and, systems for doing these highly parallel data flow architecture, silicon.
+
+63
+00:08:08.970 --> 00:08:12.939
+Jeff: Is that… is… is that resonating and or making sense?
+
+64
+00:08:13.360 --> 00:08:21.129
+Dylon Edwards: Yes, sir, and I have some experience with non-neumann architectures, sorry. So the GSI, the last
+
+65
+00:08:21.840 --> 00:08:23.050
+Dylon Edwards: Or, the last topic.
+
+66
+00:08:23.050 --> 00:08:23.620
+Jeff: Yeah.
+
+67
+00:08:23.620 --> 00:08:25.890
+Dylon Edwards: They have a bundle in our.
+
+68
+00:08:25.890 --> 00:08:27.990
+Jeff: When you work with, Beckman, right?
+
+69
+00:08:27.990 --> 00:08:28.680
+Dylon Edwards: Yes, sir.
+
+70
+00:08:29.240 --> 00:08:29.870
+Jeff: Yeah.
+
+71
+00:08:30.120 --> 00:08:48.239
+Jeff: So… and I'm just trying to… what I'm trying to do, if you will, is kind of dumb this down for the layman, so that the guys in London can… we can produce a video like I was just showing with Phineomatics, and I want to make sure that this is technically accurate and the analogies work.
+
+72
+00:08:48.930 --> 00:08:49.560
+Dylon Edwards: Okay.
+
+73
+00:08:51.620 --> 00:08:56.129
+Jeff: So, that's kind of the basis, the factory model. And then,
+
+74
+00:08:56.330 --> 00:08:58.470
+Jeff: If we zoom out a little bit.
+
+75
+00:08:58.620 --> 00:09:04.920
+Jeff: We can look at what, Turing and Church came up with in terms of lambda calculus.
+
+76
+00:09:05.330 --> 00:09:10.300
+Jeff: And a bunch of the challenges that you have in doing traditional software development.
+
+77
+00:09:10.460 --> 00:09:20.249
+Jeff: Including checking for deadlock conditions, ensuring composition, making sure there isn't race conditions, etc.
+
+78
+00:09:20.410 --> 00:09:21.580
+Jeff: And.
+
+79
+00:09:21.580 --> 00:09:25.220
+stay: Neither Turing machines nor Lambda calculus have that problem.
+
+80
+00:09:26.710 --> 00:09:27.810
+Jeff: Oh, okay, well that's fine.
+
+81
+00:09:27.810 --> 00:09:29.369
+stay: They're not concurrent.
+
+82
+00:09:30.230 --> 00:09:31.770
+stay: programming languages.
+
+83
+00:09:32.740 --> 00:09:33.980
+Jeff: Oh, right.
+
+84
+00:09:35.450 --> 00:09:44.209
+Jeff: Well, let's see. With traditional functional programming-style lambda calculus, you still have composition, right?
+
+85
+00:09:46.530 --> 00:09:47.330
+stay: Yes.
+
+86
+00:09:48.580 --> 00:09:55.720
+Jeff: But in terms of… well… but you still, when you're writing parallel programs, you could have deadlock or race conditions too, right?
+
+87
+00:09:56.160 --> 00:09:57.899
+stay: No, not if it's functional.
+
+88
+00:09:58.980 --> 00:10:01.240
+Jeff: Oh, that's true, because you've got,
+
+89
+00:10:01.540 --> 00:10:05.720
+Jeff: Well, hold it. But if I… if I've got two…
+
+90
+00:10:05.880 --> 00:10:15.300
+Jeff: parallel, factories, if you will, two parallel von Neumann machines, and they're running concurrently, can we not get deadlock or race conditions?
+
+91
+00:10:15.300 --> 00:10:26.660
+stay: But a Turing machine only has one head. If you generalize to multi-head Turing machines that are acting on the same tape or something, then you have to decide what happens if…
+
+92
+00:10:27.010 --> 00:10:31.400
+stay: Two different heads try to write to the same cell on the same step.
+
+93
+00:10:33.030 --> 00:10:34.200
+Jeff: Okay, perfect.
+
+94
+00:10:34.200 --> 00:10:41.510
+CB Wells: So is that usually what's going on? That there's essentially just a bunch of…
+
+95
+00:10:41.780 --> 00:10:44.989
+CB Wells: Turing machines operating independently on the same…
+
+96
+00:10:45.590 --> 00:10:52.509
+stay: Yeah, to some extent. I mean, you've got lots of cores in your laptop, and they're all able to access the same memory.
+
+97
+00:10:53.210 --> 00:10:53.930
+CB Wells: Yeah.
+
+98
+00:10:54.270 --> 00:10:55.469
+CB Wells: But, yeah, sure.
+
+99
+00:10:55.470 --> 00:10:57.109
+Jeff: You have shared memory,
+
+100
+00:10:57.340 --> 00:11:00.310
+CB Wells: But depending on your language, it…
+
+101
+00:11:00.480 --> 00:11:06.240
+CB Wells: I mean, I don't know much about this, but, like, Rust… manages,
+
+102
+00:11:06.570 --> 00:11:09.559
+CB Wells: Memory well, and ensures that those kind of things.
+
+103
+00:11:09.860 --> 00:11:15.540
+stay: Yeah, you can use type systems like Rust's BorrowChecker and so on to…
+
+104
+00:11:16.240 --> 00:11:20.379
+stay: Guarantee that those things don't happen, but it's something that you have to account for.
+
+105
+00:11:22.090 --> 00:11:22.740
+Jeff: Right.
+
+106
+00:11:24.190 --> 00:11:34.599
+Jeff: So I'm… what I'm trying to get to, you'll… hopefully it all comes together here in just a second, is there's a whole bunch of challenges in doing software development. We need to improve
+
+107
+00:11:34.720 --> 00:11:41.159
+Jeff: leveraging things like a correctness by construction paradigm. So, what I'd like to do is to draw an analogy
+
+108
+00:11:41.270 --> 00:11:58.829
+Jeff: to trust systems that were built back in the day of Euler and Navier… Navier. And, it turns out Euler, the great mathematician Leopold, Euler, came up with a,
+
+109
+00:11:59.010 --> 00:12:06.470
+Jeff: a description, a mathematical description of what happens under compression, and then Navier, the French mathematician, came up
+
+110
+00:12:06.580 --> 00:12:15.570
+Jeff: with a description of what, happens under tension. So, you know, tension and compression that were combined took roughly about 100 years, but…
+
+111
+00:12:15.570 --> 00:12:28.929
+Jeff: There became a whole set of triangular crusts that got developed, and what… one of the key advantages that these things had in the mid-1800s was you could see visually whether they were deforming.
+
+112
+00:12:29.190 --> 00:12:42.200
+Jeff: And this math got then applied with the tension and compression approaches so that we have these triangular trusses, so you could build much longer bridges, but you could also… the key thing is you could visually inspect them.
+
+113
+00:12:42.380 --> 00:12:49.820
+Jeff: Without having to go through and take empirical or intuitive approaches to do that.
+
+114
+00:12:50.150 --> 00:12:59.919
+Jeff: So this, to me, sets up for a system whereby we can build tooling, software tooling, that allows us to see
+
+115
+00:12:59.920 --> 00:13:10.170
+Jeff: with things like, pi and, row calculus, a completely different approach, and that's what Milner kind of gave us back. I guess that was in the 1990s.
+
+116
+00:13:10.170 --> 00:13:27.989
+Jeff: is that we can now create visual tooling and systems to design, debug, and develop code that's highly parallel, and works well, in addition, works well not only with von Neumann architectures, but also non-von Neumann architectures, with the new data flow approaches.
+
+117
+00:13:28.220 --> 00:13:32.499
+CB Wells: What visual are you… what visual aspect are you talking about?
+
+118
+00:13:32.940 --> 00:13:50.299
+Jeff: Well, this is something that Greg is constantly emphasizing with, rolling, is that you can… you can see things such as deadlock conditions and race conditions much more naturally inside the code, as opposed to those, those,
+
+119
+00:13:50.550 --> 00:13:57.189
+Jeff: concurrent systems that we have to build with multiple von Neumann machines that Mike was just describing.
+
+120
+00:13:57.810 --> 00:14:03.960
+CB Wells: Okay, well, when most people hear visual, they'll be thinking, like, actual visual, not seeing something in the code, right?
+
+121
+00:14:05.160 --> 00:14:24.090
+Jeff: Well, yeah, and that's where we want to ultimately get to higher-level tooling, too. So we have those kinds of tools, both with the type systems, OSLF, etc, to be able to demonstrate a higher level of abstraction to the programmer, or the person doing… writing the code, in addition to using things like AI.
+
+122
+00:14:25.070 --> 00:14:26.769
+Jeff: Oh. But anyway, anyway…
+
+123
+00:14:26.770 --> 00:14:29.630
+stay: when he says, you can see it, is that…
+
+124
+00:14:30.950 --> 00:14:36.339
+stay: that it is… Possible to talk about in the type system.
+
+125
+00:14:37.070 --> 00:14:41.049
+stay: Rather than… I mean, because I have written code that…
+
+126
+00:14:41.940 --> 00:14:50.430
+stay: Deadlocks, and it's… without the type system, the behavioral types, it's not something that's immediately obvious from looking at the code.
+
+127
+00:14:54.900 --> 00:14:55.640
+CB Wells: Yeah.
+
+128
+00:14:57.060 --> 00:15:04.940
+Jeff: So you need, you need, like, spatial behavioral types to, and the tooling around that to be able to, to, quote, see it.
+
+129
+00:15:08.250 --> 00:15:14.180
+stay: Yeah, the behavior type… Is an annotation on the code.
+
+130
+00:15:14.630 --> 00:15:23.500
+stay: that then… lets you, you know, the compiler checks and… and…
+
+131
+00:15:24.120 --> 00:15:27.630
+stay: You can then tell that it can't deadlock.
+
+132
+00:15:31.730 --> 00:15:36.280
+Jeff: And are we specifically building any…
+
+133
+00:15:36.400 --> 00:15:44.430
+Jeff: tooling around that, in particular for rolling, to… to make these systems much more robust as a result.
+
+134
+00:15:44.960 --> 00:15:49.679
+stay: Yeah, I mean, that's what MetaIL is for, is both
+
+135
+00:15:49.900 --> 00:15:56.979
+stay: To express these theories, but also to automatically derive a type system from a theory, so that you can
+
+136
+00:15:57.400 --> 00:16:01.799
+stay: Use the behavioral type system to express these properties that you care about.
+
+137
+00:16:03.880 --> 00:16:05.280
+Jeff: Okay, perfect.
+
+138
+00:16:05.610 --> 00:16:08.719
+Jeff: So then I put the Yeah, go ahead, sorry.
+
+139
+00:16:08.720 --> 00:16:21.450
+CB Wells: Sorry, as far as the visual aspect, I just want to clarify, like, the stuff that I've shown you is what I'm trying to do with my company. So if… if you're thinking about advertising it, then it's something that we need to discuss.
+
+140
+00:16:21.450 --> 00:16:26.179
+Jeff: I didn't realize that. Okay, I'm glad you're saying that now.
+
+141
+00:16:27.370 --> 00:16:31.260
+CB Wells: Yeah, that's not anything that Greg… Dead.
+
+142
+00:16:31.260 --> 00:16:34.850
+Jeff: That's not… that's not a fire… that's not a Firefly component. Okay.
+
+143
+00:16:35.000 --> 00:16:37.510
+CB Wells: Yeah, and I want… I haven't realized that.
+
+144
+00:16:37.510 --> 00:16:38.260
+Jeff: Christian.
+
+145
+00:16:38.640 --> 00:16:43.669
+CB Wells: Yeah, no, I want to set up a partnership with Firefly, but so far, I haven't…
+
+146
+00:16:44.020 --> 00:16:50.669
+CB Wells: heard anything definitive. It sounds like Greg is open to it, but it sounds like y'all are, waiting on…
+
+147
+00:16:51.010 --> 00:16:57.890
+CB Wells: I, yeah, I wanna, I wanna make it more concrete, since I'll be renewing the contract soon.
+
+148
+00:16:58.550 --> 00:16:59.290
+Jeff: Okay.
+
+149
+00:17:00.280 --> 00:17:01.020
+CB Wells: Yeah.
+
+150
+00:17:01.760 --> 00:17:16.620
+Jeff: Okay, okay, and I didn't understand that prior, so that's why I want to have part of this conversation. So if I zoom out a little bit, and look at, kind of, Firefly and row calculus at the center of these things.
+
+151
+00:17:16.980 --> 00:17:27.399
+Jeff: I see 3… at least three distinct paths. I guess if we had the caps and the security model capabilities, which I don't know how to fit into this overall narrative.
+
+152
+00:17:27.480 --> 00:17:37.679
+Jeff: But we've got one direction coming… kind of coming out of here, where we want to go after creating Byzantine fault-tolerant systems that have the performance of crash fault tolerance.
+
+153
+00:17:38.160 --> 00:17:55.440
+Jeff: That's one… one direction and one set of technologies and services that we're offering. We've got, what I'd love to do with this, by the way, is to, have some follow-on whiteboard videos. We also have a whole, machine intelligence area
+
+154
+00:17:55.530 --> 00:18:11.910
+Jeff: where we want to, improve things, like with the ROHDC compiler and such, so that we can create much more performance systems that have much greater energy efficiency. And then I think, finally, there's a whole class of work that we can do,
+
+155
+00:18:12.330 --> 00:18:16.080
+Jeff: not necessarily, I guess, creating either new algorithms.
+
+156
+00:18:16.210 --> 00:18:23.940
+Jeff: But we can use… by using this pi or rho calculus derivative paradigm, we can create,
+
+157
+00:18:24.050 --> 00:18:33.620
+Jeff: new, I should say, new, paradigms for writing code on top of these data flow architectures and the data flow silicon.
+
+158
+00:18:33.870 --> 00:18:44.269
+Jeff: So those are the three distinct directions that I see us going down in the future. And that's… that's basically it. That's all I… I was trying to pitch, because I'm trying to get this into a tight narrative.
+
+159
+00:18:44.410 --> 00:18:54.250
+Jeff: That Nicholas and Steven and Tim, our sales guy, can use when they're going out there with a whiteboard pitch, something that they could send off.
+
+160
+00:18:54.250 --> 00:19:00.250
+stay: is not so much the energy efficiency, though that may be a side effect, but simply.
+
+161
+00:19:00.250 --> 00:19:00.630
+Jeff: -H.
+
+162
+00:19:00.630 --> 00:19:08.290
+stay: The current chips… stopped getting… Faster clock speeds and started getting
+
+163
+00:19:08.790 --> 00:19:13.380
+stay: More massive parallelism on the… the cores.
+
+164
+00:19:13.800 --> 00:19:18.690
+stay: And so, PiCalculus and Rolang are designed for that environment.
+
+165
+00:19:20.090 --> 00:19:25.690
+Jeff: Right, so aren't they… they're better designed for these new data flow architectures, right?
+
+166
+00:19:27.410 --> 00:19:37.879
+Jeff: That's… by the way, that's, that's a term I worked out with Steven Alexander a while back, as he was trying to pitch, to Amazon and its, its silicon people.
+
+167
+00:19:38.810 --> 00:19:41.369
+stay: It seems a reasonable term.
+
+168
+00:19:41.840 --> 00:19:47.610
+Jeff: Yeah, I don't… I couldn't find anything standardized, so the… I think it was Grok helped me come up with that phrase.
+
+169
+00:19:52.400 --> 00:19:56.519
+stay: But yeah, the… What you want is to be able to…
+
+170
+00:19:57.440 --> 00:20:01.009
+stay: Distribute the work over a whole bunch of…
+
+171
+00:20:01.680 --> 00:20:07.689
+stay: Of different cores, and still be able to guarantee that they're not gonna step on each other's toes.
+
+172
+00:20:08.600 --> 00:20:19.060
+Jeff: Yeah, and those cores, each of those cores can be highly specialized and do different sorts of things. One can be doing vector multiplication, another one could be hyper… doing…
+
+173
+00:20:19.060 --> 00:20:19.660
+stay: Hype.
+
+174
+00:20:19.660 --> 00:20:21.170
+Jeff: vector XOR's, right?
+
+175
+00:20:22.370 --> 00:20:25.410
+Jeff: And you have all these hybrid models.
+
+176
+00:20:25.500 --> 00:20:27.810
+stay: And this takes me back to…
+
+177
+00:20:27.840 --> 00:20:34.380
+Jeff: The, the, peered workstation factory floor as opposed to the assembly line factory floor.
+
+178
+00:20:38.220 --> 00:20:41.070
+Jeff: Does that… does that metaphor work, guys?
+
+179
+00:20:43.770 --> 00:20:48.870
+CB Wells: How… how does, the peered one…
+
+180
+00:20:49.010 --> 00:20:53.450
+CB Wells: Like, it's… it's supposed to represent… parallelism?
+
+181
+00:20:54.160 --> 00:21:09.769
+Jeff: It's a different sort of parallelism. The way that you get parallelism with a standard sub-assembly, you know, it's kind of like, when you have, with functional programming, you have, routines and coroutines and subroutines, and,
+
+182
+00:21:09.970 --> 00:21:14.599
+Jeff: Like, monadic structures to… to…
+
+183
+00:21:14.700 --> 00:21:34.159
+Jeff: to, ensure consistency and robustness. You get the same… you need to off… you need to create an entirely new paradigm at the upper level of the software when you've got a bunch of workstations. As I understand it, the workstation, factory kind of got its start in Scandinavia.
+
+184
+00:21:34.210 --> 00:21:38.420
+Jeff: Where they started assembling cars and things, with much greater flexibility.
+
+185
+00:21:38.430 --> 00:21:53.589
+Jeff: Because what they would do is set up a workstation that might have all the necessary equipment to assemble a car, but it might have leather seats versus vinyl seats or whatever inside that part, that sub-assembly. And then they parallelize things by
+
+186
+00:21:53.590 --> 00:21:59.270
+Jeff: By, having… by creating these very flexible workstation environments that could be,
+
+187
+00:21:59.270 --> 00:22:03.230
+Jeff: That could be tied together, that could be networked together, so to speak.
+
+188
+00:22:03.350 --> 00:22:21.249
+Jeff: in a layout that went on the floor, so you didn't just have a straight-up assembly line, you know, start and finish with widgets that were produced in it, but each of the workstations would produce those things. That may be an imperfect analogy, because I suspect that what we'll find with
+
+189
+00:22:21.410 --> 00:22:38.270
+Jeff: with pi and row calculus approaches is that there's a whole new class of problems that can be solved. Like, Greg is always talking about genetic algorithms and other things that, and stochastic algorithms and such that can do different things than what we've done with traditional computing.
+
+190
+00:22:38.880 --> 00:22:42.199
+Jeff: Oops, I don't know who that zipper is.
+
+191
+00:22:43.320 --> 00:22:50.750
+stay: So, for one thing, the peered workstation assemblies is a very… niche.
+
+192
+00:22:52.550 --> 00:22:57.480
+stay: knowledge, right? If you're not in manufacturing, then… Do you want?
+
+193
+00:22:57.820 --> 00:23:02.830
+stay: aware of that as something to refer to. You'll have to explain that as well.
+
+194
+00:23:04.410 --> 00:23:09.739
+Jeff: Yeah, and I probably need to go through a more thorough description of that on the right side of the opening.
+
+195
+00:23:09.740 --> 00:23:15.450
+stay: in pi calculus, you have… a…
+
+196
+00:23:16.750 --> 00:23:20.280
+stay: network with the changing topology, that is the.
+
+197
+00:23:20.280 --> 00:23:20.870
+Jeff: Right.
+
+198
+00:23:20.870 --> 00:23:22.660
+stay: spin up new…
+
+199
+00:23:23.600 --> 00:23:27.079
+stay: New resources that you then interact with.
+
+200
+00:23:27.700 --> 00:23:34.990
+stay: So, it would almost be like the factory is building itself.
+
+201
+00:23:35.700 --> 00:23:36.370
+Jeff: Right.
+
+202
+00:23:36.370 --> 00:23:40.019
+stay: Which I don't see a lot of in the manufacturing environment.
+
+203
+00:23:40.430 --> 00:23:53.230
+Jeff: Yeah, yeah, yeah, and then you've also got… it's also much more appropriate. I just discovered this in doing this… this diagram the other night, that there's also this thing called network conscious pie calculus.
+
+204
+00:23:54.200 --> 00:23:57.889
+Jeff: I'd never heard of that before, but I guess that came into being, like.
+
+205
+00:23:57.890 --> 00:23:59.470
+stay: Just a few years ago.
+
+206
+00:23:59.470 --> 00:24:00.639
+Dylon Edwards: What is it called again?
+
+207
+00:24:00.990 --> 00:24:10.590
+Jeff: Network Conscious Pi Calculus. So it's a derivative of the pi calculus, and there was some papers written back, I think it was 2012 or so.
+
+208
+00:24:10.810 --> 00:24:16.040
+Jeff: On how… and the idea is that… that you tie the,
+
+209
+00:24:16.400 --> 00:24:25.789
+Jeff: You actually tie the calculus into the physical networking, the actual real-world physical networks.
+
+210
+00:24:25.960 --> 00:24:31.680
+Jeff: And, going back to what Mike was just saying, that dynamicism where you've got these peers coming and going.
+
+211
+00:24:31.820 --> 00:24:34.410
+Jeff: And even, self-assembling.
+
+212
+00:24:34.570 --> 00:24:42.080
+Jeff: is built directly into this. I can… you can just look it up on Google. Network Conscious Pi.
+
+213
+00:24:42.520 --> 00:24:44.920
+Jeff: There doesn't seem to be a whole lot of,
+
+214
+00:24:44.920 --> 00:24:45.400
+stay: Yeah, excellent.
+
+215
+00:24:45.400 --> 00:24:46.859
+Jeff: research out there on that.
+
+216
+00:24:47.780 --> 00:24:53.040
+stay: That sounds like a sort of hybrid between an existing
+
+217
+00:24:54.100 --> 00:25:01.560
+stay: wired network, and the kind of virtual network that PiCalculus itself does, so…
+
+218
+00:25:01.560 --> 00:25:04.740
+Jeff: Yeah, exactly. Yeah, that was my understanding.
+
+219
+00:25:06.610 --> 00:25:08.130
+Jeff: Okay.
+
+220
+00:25:08.130 --> 00:25:09.810
+CB Wells: I was just gonna…
+
+221
+00:25:09.810 --> 00:25:11.230
+Jeff: Yes, please.
+
+222
+00:25:11.580 --> 00:25:20.130
+CB Wells: Just with those pictures, at first glance, like, the left side, looks more efficient.
+
+223
+00:25:20.410 --> 00:25:22.399
+CB Wells: So, I don't know how…
+
+224
+00:25:22.880 --> 00:25:27.679
+CB Wells: I'm not sure off the top of my head how to represent the right side, but .
+
+225
+00:25:27.680 --> 00:25:31.530
+Jeff: Well, and I think to Mike's point that these are… can be self-assembling.
+
+226
+00:25:31.750 --> 00:25:47.009
+Jeff: And, and then they're very dynamic, coming and going. I mean, that's one of the things that's really great about Rowan-Pi calculus with the modern world. What we'll do is get an artist or a team, assuming this is the right path to go down, that's kind of what I'm checking with you guys.
+
+227
+00:25:47.010 --> 00:25:52.710
+stay: I think it might be better to just… talk about… the…
+
+228
+00:25:53.560 --> 00:26:03.789
+stay: PyCalculus directly, right? Because all of these systems that are actually deployed have messaging layers, like RabbitMQ or whatever.
+
+229
+00:26:05.630 --> 00:26:09.160
+stay: People understand messages being sent around.
+
+230
+00:26:09.360 --> 00:26:16.960
+stay: the… I think the thing to emphasize would be that this is a… Disciplined, well-studied.
+
+231
+00:26:18.060 --> 00:26:22.930
+stay: Computation model involving passing messages around, and that…
+
+232
+00:26:23.510 --> 00:26:34.860
+stay: The type system includes the messaging layer, rather than having it bolted on… as… Shuttling between typed…
+
+233
+00:26:35.050 --> 00:26:43.270
+stay: programs, right? That… that if you're working in C++, for instance, the…
+
+234
+00:26:43.400 --> 00:26:47.210
+stay: the messaging layer isn't part of C++'s type system.
+
+235
+00:26:48.610 --> 00:26:59.289
+stay: If you're doing it in Java, it's not part of that. If you're doing it in Rust, it's not part of that. No matter which programming language you choose, the messaging layer is usually a library
+
+236
+00:26:59.450 --> 00:27:08.580
+stay: Rather than part of the type system, so you can't state things like deadlock freeness in the type system and have the compiler check it.
+
+237
+00:27:09.070 --> 00:27:13.880
+stay: Now, there are tools for…
+
+238
+00:27:16.360 --> 00:27:24.539
+stay: For defining deadlock-free protocols that you then implement, but… I think, simply saying.
+
+239
+00:27:24.930 --> 00:27:33.240
+stay: the messaging layer is unified as part of the type system when you program is something that these
+
+240
+00:27:34.520 --> 00:27:37.630
+stay: Potential clients are familiar with.
+
+241
+00:27:40.430 --> 00:27:49.780
+Jeff: Well, yeah, I'm… frankly, I'm trying to get to something in the physical, real world, because I'm thinking especially about Tim, Tim Goebly in this.
+
+242
+00:27:50.240 --> 00:27:56.209
+Jeff: And he needs to have some metaphors and use an… if you will, an abductive.
+
+243
+00:27:56.210 --> 00:27:56.910
+stay: Yeah, I guess…
+
+244
+00:27:56.910 --> 00:27:57.550
+Jeff: King style.
+
+245
+00:27:57.550 --> 00:28:01.200
+stay: Who's your audience, is the first question to ask.
+
+246
+00:28:01.470 --> 00:28:08.120
+Jeff: Yeah, so the way I was thinking about this with Nicholas is that Tim would have some prospect, or he would have some prospect.
+
+247
+00:28:08.350 --> 00:28:17.939
+Jeff: first thing they would do is send off this, I don't know, 10 or 20 minute video, just to give them some familiarity with what Firefly does and is.
+
+248
+00:28:18.060 --> 00:28:25.430
+Jeff: And then that would be a, a teaser to get the follow-on meetings and go deep, like you were just describing.
+
+249
+00:28:25.430 --> 00:28:30.210
+stay: Okay, but if they're not involved in… In…
+
+250
+00:28:30.490 --> 00:28:34.129
+stay: manufacturing process, none of these analogies will.
+
+251
+00:28:35.040 --> 00:28:38.690
+Jeff: Yeah, that's… that's where I'm trying to get to. That's why I was trying to use this…
+
+252
+00:28:38.690 --> 00:28:43.349
+stay: Physical metaphor. Yeah. And metaphors that they are familiar with.
+
+253
+00:28:43.620 --> 00:28:58.409
+Jeff: And yeah, and this is… that's what I came up with the other night, is that, oh, it's like a… it… because I… really, what we're trying to draw, or what I'm trying to do, is to go from the von Neumann architecture to the new data flow architectures, draw an analogy.
+
+254
+00:28:58.540 --> 00:29:11.280
+Jeff: And then, and then why, rho and pi calculus are superior for this, this new type of silicon that's coming out, and how we're transitioning from
+
+255
+00:29:11.340 --> 00:29:18.850
+Jeff: the Lambda calculus-based approaches into these new, more modern, dynamic and flexible approaches.
+
+256
+00:29:19.180 --> 00:29:30.760
+Jeff: So, but that's exactly what this meeting is about, is I'm looking for your feedback on that. I'll keep thinking about other metaphors, but I think I do want to apply it to something in the physical world.
+
+257
+00:29:31.520 --> 00:29:35.939
+CB Wells: This, well, this might be a little…
+
+258
+00:29:36.260 --> 00:29:43.500
+CB Wells: oversimplified, but, like, as I was learning about PiCalculus… It seemed like the big…
+
+259
+00:29:44.010 --> 00:30:01.809
+CB Wells: idea is that Lambda calculus and most of the early history of computers was, focusing on one machine, because, you know, computers were these giant things that took so many resources, and so so much of computer science history was focused on
+
+260
+00:30:01.900 --> 00:30:12.350
+CB Wells: you know, language for just a single machine. And then you had to do all the connectivity externally, and there's, like, friction there. Whereas…
+
+261
+00:30:12.910 --> 00:30:15.260
+CB Wells: Milner came up with this,
+
+262
+00:30:15.540 --> 00:30:20.440
+CB Wells: The first language for… for actual networks, and .
+
+263
+00:30:20.440 --> 00:30:21.010
+Jeff: Mmm…
+
+264
+00:30:21.010 --> 00:30:24.169
+CB Wells: That's a huge paradigm shift, and…
+
+265
+00:30:24.610 --> 00:30:30.710
+CB Wells: Like, that already has a real-world aspect, because the person's picturing machines versus networks.
+
+266
+00:30:30.920 --> 00:30:37.349
+CB Wells: And then you could just… Come up with a… an example or two about how…
+
+267
+00:30:37.910 --> 00:30:45.640
+CB Wells: There's potential friction when you only have a language for one machine, whereas the network language would have it built in.
+
+268
+00:30:45.640 --> 00:30:54.460
+Jeff: Yeah, well, I mean, actually, I guess that… the way to think about that is just going from the personal computer to the network, and to the internet.
+
+269
+00:30:54.920 --> 00:30:55.260
+Dylon Edwards: You…
+
+270
+00:30:56.030 --> 00:30:58.590
+Dylon Edwards: You know Brian Beckman, right, Jeff? At least you…
+
+271
+00:30:58.590 --> 00:31:02.040
+Jeff: I don't… I don't know him, I mean, I've heard Greg talk about him a lot.
+
+272
+00:31:02.310 --> 00:31:13.250
+Dylon Edwards: Okay, I was just gonna say, he's quite excellent at coming up with the types of metaphors that you're looking for for this. If you want, I could run this by him and see what he thinks.
+
+273
+00:31:13.720 --> 00:31:19.089
+Jeff: Sure, I've already put all this up on GitHub, I'll update it here lately. It's all public.
+
+274
+00:31:19.590 --> 00:31:19.990
+Dylon Edwards: Okay.
+
+275
+00:31:19.990 --> 00:31:24.080
+Jeff: Here, I'll find it real quick and drop it in the chat.
+
+276
+00:31:26.500 --> 00:31:31.109
+Jeff: But yeah, thank you. Thanks, guys. If you have other comments, though,
+
+277
+00:31:31.250 --> 00:31:33.930
+Jeff: That's… that's… that was great. I appreciate it.
+
+278
+00:31:41.270 --> 00:31:42.919
+CB Wells: Yeah, if,
+
+279
+00:31:49.100 --> 00:31:56.549
+CB Wells: I may just need to bring it up myself, but, as far as the visual stuff,
+
+280
+00:32:00.060 --> 00:32:05.950
+CB Wells: it's… if… if we are going to be meeting in… in Orange County,
+
+281
+00:32:06.880 --> 00:32:09.609
+CB Wells: It might be a good time to,
+
+282
+00:32:11.320 --> 00:32:17.220
+CB Wells: I can talk about it, later with you, but, yeah, I'm hoping to…
+
+283
+00:32:18.460 --> 00:32:22.489
+CB Wells: Try to set up something in next year's contract for that.
+
+284
+00:32:23.490 --> 00:32:26.799
+Jeff: Okay, yeah, I wasn't aware of any of that.
+
+285
+00:32:27.070 --> 00:32:30.690
+Jeff: Christian, so, but yeah, we can certainly…
+
+286
+00:32:31.400 --> 00:32:39.219
+Jeff: go through it, or I… I will leave that, I guess, to you, Mike and Greg, but maybe I'll talk to… I'll mention this to Greg later, the…
+
+287
+00:32:39.340 --> 00:32:42.220
+Jeff: Later today when we have our meeting this afternoon.
+
+288
+00:32:42.610 --> 00:32:43.220
+CB Wells: Okay.
+
+289
+00:32:44.730 --> 00:32:47.060
+stay: Hey Nutzipper, it's good to see you here.
+
+290
+00:32:48.310 --> 00:32:48.980
+stay: It's been a few…
+
+291
+00:32:48.980 --> 00:32:49.870
+nutzipper: Hey, Mike.
+
+292
+00:32:50.450 --> 00:32:58.129
+nutzipper: Yeah, well… I'm just, I've figured out that there's some activity on the GitHub, so…
+
+293
+00:32:58.480 --> 00:33:04.859
+nutzipper: was looking through the Discord, and it looks like some nice stuff is going on here, so…
+
+294
+00:33:05.430 --> 00:33:14.919
+nutzipper: I just jumped on to check… It's always nice to… Here… Clever people talking, so…
+
+295
+00:33:16.210 --> 00:33:18.029
+stay: Yeah, welcome. So…
+
+296
+00:33:18.330 --> 00:33:22.650
+nutzipper: Sorry for not being, for not, telling in advance.
+
+297
+00:33:23.820 --> 00:33:25.869
+CB Wells: Yeah, no worries. This is an open meeting.
+
+298
+00:33:26.020 --> 00:33:34.020
+stay: Nutzipper worked on our chain back in the… Pre-COVID days.
+
+299
+00:33:36.650 --> 00:33:45.290
+Jeff: Yeah, hi, I'm Jeff. I think I reached out to you a while back, it's probably been, like, close to 3 years ago.
+
+300
+00:33:45.460 --> 00:33:48.140
+Jeff: To get some help on some source code a while back.
+
+301
+00:33:51.010 --> 00:33:51.969
+nutzipper: But nice to…
+
+302
+00:33:51.970 --> 00:33:53.119
+Jeff: Meet you virtually.
+
+303
+00:33:55.160 --> 00:33:56.419
+nutzipper: Yeah, my pleasure as well.
+
+304
+00:33:58.180 --> 00:34:15.119
+nutzipper: Yeah, it's just, I've… I found one issue on the GitHub where Paul said that he wanted to do some stuff on Scali Note, and I figured out that I already did that, so… I decided that it would be a good, good, good thing to sync with what you guys are doing.
+
+305
+00:34:18.560 --> 00:34:20.170
+Jeff: Oh, are you guys working on an.
+
+306
+00:34:20.170 --> 00:34:20.920
+stay: I'm forking.
+
+307
+00:34:20.929 --> 00:34:21.719
+nutzipper: opinion.
+
+308
+00:34:24.209 --> 00:34:25.379
+nutzipper: Well…
+
+309
+00:34:25.499 --> 00:34:34.009
+nutzipper: I don't know, so there is a long story, I don't think this is appropriate for this venue. But yeah, I was working on Skull Node after our chain as well.
+
+310
+00:34:37.520 --> 00:34:38.480
+Jeff: Oh, okay.
+
+311
+00:34:38.920 --> 00:34:46.290
+Jeff: Yeah, but yeah, you can always go into Discord if there's issues and stuff,
+
+312
+00:34:46.630 --> 00:34:48.950
+Jeff: We've got a fire node.
+
+313
+00:34:49.370 --> 00:34:55.000
+Jeff: Section to report any issues to the other software developers.
+
+314
+00:34:58.190 --> 00:35:03.969
+nutzipper: Sure, yeah. I messaged, Marcin.
+
+315
+00:35:04.140 --> 00:35:10.179
+nutzipper: Martin… Oh, perfect, okay. To have a chat about all this stuff.
+
+316
+00:35:12.020 --> 00:35:18.560
+stay: Yeah, I think the Scala fork that Greg produced had been developed further
+
+317
+00:35:18.880 --> 00:35:24.870
+stay: within, or at least on the R chain, repository,
+
+318
+00:35:26.480 --> 00:35:34.150
+stay: And and so there are some features that were implemented there that didn't get implemented on Greg's fork.
+
+319
+00:35:35.230 --> 00:35:40.929
+stay: So, I… I think that's what you were referring to, right? That…
+
+320
+00:35:41.470 --> 00:35:46.980
+stay: You had already implemented that feature on the other… On the other fork.
+
+321
+00:35:48.510 --> 00:35:56.349
+nutzipper: I mean, there are… yeah, there is the transition to… to the version of Scala using updated CATS effects library.
+
+322
+00:35:57.040 --> 00:36:00.300
+nutzipper: And a bunch of technical engineering stuff, basically.
+
+323
+00:36:00.580 --> 00:36:01.300
+stay: Okay.
+
+324
+00:36:02.020 --> 00:36:07.199
+nutzipper: So it's not a feature. It's not a feature. It's more like a platform update.
+
+325
+00:36:08.770 --> 00:36:09.490
+stay: Thanks.
+
+326
+00:36:09.700 --> 00:36:17.269
+nutzipper: Anyways, like, I'm interested to see what's going on with the feature-wise…
+
+327
+00:36:18.030 --> 00:36:25.570
+nutzipper: Especially consensus and, how the block merge, maybe there's some progress on block merge, and…
+
+328
+00:36:25.770 --> 00:36:31.230
+nutzipper: Truncating the state, so all stuff that is… Basically, the user-facing features.
+
+329
+00:36:33.680 --> 00:36:36.019
+nutzipper: that I've been trying to solve.
+
+330
+00:36:36.340 --> 00:36:42.159
+nutzipper: And, I must admit I failed, so maybe you guys did something with that.
+
+331
+00:36:43.350 --> 00:36:50.299
+stay: Yeah, this particular group hasn't been working directly with that sort of stuff. Marchand is certainly the…
+
+332
+00:36:51.930 --> 00:36:53.860
+stay: Key point of contact.
+
+333
+00:36:54.890 --> 00:36:55.550
+nutzipper: Cool.
+
+334
+00:36:55.550 --> 00:36:57.810
+stay: We're mostly language theory.
+
+335
+00:36:58.370 --> 00:36:58.950
+stay: kinds of…
+
+336
+00:36:58.950 --> 00:37:00.730
+nutzipper: Language theory, yeah, I see.
+
+337
+00:37:02.420 --> 00:37:09.319
+nutzipper: Yeah, this I'm also interested, because, So I'm interested in…
+
+338
+00:37:10.400 --> 00:37:16.779
+nutzipper: in some intuitions, it's… it's always useful to… to learn from
+
+339
+00:37:17.120 --> 00:37:24.320
+nutzipper: High-level guys, because it makes you understand more later when you read about actual implementations of languages.
+
+340
+00:37:28.740 --> 00:37:33.579
+nutzipper: Oh, yeah, if, if, like, no, no worries, I'm just, I'm just a spectator here.
+
+341
+00:37:33.950 --> 00:37:34.910
+nutzipper: to learn.
+
+342
+00:37:37.180 --> 00:37:51.159
+Jeff: Well, I was just trying to come up with a marketing presentation, so I was asking the guys for some feedback and make sure I was being technically accurate with it, but now we're kind of going into our regular Friday open meetings, so…
+
+343
+00:37:51.610 --> 00:37:53.969
+Jeff: I don't know what else you guys wanted to talk about.
+
+344
+00:37:57.640 --> 00:38:09.829
+CB Wells: I didn't have something specific planned, but there's, I mean… So basically,
+
+345
+00:38:12.680 --> 00:38:17.559
+CB Wells: we're, I could send you a link to the…
+
+346
+00:38:18.280 --> 00:38:32.120
+CB Wells: The paper, if you want, where we're developing the, logical framework for… Languages… .
+
+347
+00:38:37.060 --> 00:38:39.830
+nutzipper: But, yeah, I didn't… I've been looking…
+
+348
+00:38:40.120 --> 00:38:44.189
+nutzipper: Sorry, I've been looking into this, Rust repo.
+
+349
+00:38:44.700 --> 00:38:56.900
+nutzipper: which… which I didn't fully get… fully… fully understood, but as I'm saying, it's some… some theory which can… basically, it's some super, super tool which can give you…
+
+350
+00:38:58.490 --> 00:39:02.519
+nutzipper: in, in extreme, the… everything from some…
+
+351
+00:39:03.830 --> 00:39:07.119
+nutzipper: Super high-level theoretical description of a language.
+
+352
+00:39:09.080 --> 00:39:15.480
+nutzipper: Which is… which is quite, interesting and, expiring.
+
+353
+00:39:17.420 --> 00:39:20.940
+nutzipper: Exciting, not expiring, sorry. No, no, no, it's not expiring yet.
+
+354
+00:39:22.890 --> 00:39:29.629
+CB Wells: Yeah, wait, sorry, what was… What was the sentence about a high-level… something…
+
+355
+00:39:29.630 --> 00:39:32.260
+stay: I think he's talking about the MetaIL stuff that.
+
+356
+00:39:32.260 --> 00:39:34.069
+CB Wells: Oh, yeah, yeah. Yes.
+
+357
+00:39:34.070 --> 00:39:34.880
+nutzipper: Yeah, yeah, Matt.
+
+358
+00:39:35.340 --> 00:39:38.740
+nutzipper: MetaIL, yes, this one.
+
+359
+00:39:42.600 --> 00:39:48.360
+nutzipper: I'm wondering, is it okay if I ask some questions here? Just tell me, guys, I've been following.
+
+360
+00:39:48.360 --> 00:39:50.430
+stay: Yeah, absolutely, that is what we focus on.
+
+361
+00:39:50.700 --> 00:39:54.810
+Jeff: Yeah. Yes, so I see that you're targeting…
+
+362
+00:39:55.450 --> 00:40:01.200
+nutzipper: AI, it's some… it's, in some way…
+
+363
+00:40:01.750 --> 00:40:09.220
+nutzipper: I'm not sure how was these… collaboration with the Singularity And,
+
+364
+00:40:10.320 --> 00:40:15.649
+nutzipper: So, yeah, my question, basically, all this LM, boom, yeah, revolution.
+
+365
+00:40:15.860 --> 00:40:21.719
+nutzipper: and this meta IL, is this somehow related to the…
+
+366
+00:40:22.120 --> 00:40:27.520
+nutzipper: large language models, or… or defining AIs.
+
+367
+00:40:27.700 --> 00:40:33.470
+nutzipper: Or it's just that, branch of, of the,
+
+368
+00:40:33.800 --> 00:40:41.299
+nutzipper: of the research, general research that I'm aware of, these OSLFs, and
+
+369
+00:40:43.340 --> 00:40:48.269
+nutzipper: that branch, basically. Or is something new… Which is related to AI.
+
+370
+00:40:49.160 --> 00:40:51.330
+nutzipper: And this… My question.
+
+371
+00:40:55.730 --> 00:40:59.300
+stay: So, the AI component comes from
+
+372
+00:40:59.430 --> 00:41:07.830
+stay: SingularityNet principally. Singularitynet focuses largely on non-LLM AI.
+
+373
+00:41:08.070 --> 00:41:11.669
+stay: what you might call good old-fashioned AI.
+
+374
+00:41:11.950 --> 00:41:20.840
+stay: They are funding a group to develop a language called Meta, M-E-T-T-A.
+
+375
+00:41:22.420 --> 00:41:30.279
+stay: wouldn't… the fire node running Rolang has been extended to…
+
+376
+00:41:31.300 --> 00:41:34.640
+stay: Have a data structure called a path map.
+
+377
+00:41:35.490 --> 00:41:44.390
+stay: that allows… Allows us to use the…
+
+378
+00:41:44.800 --> 00:41:49.460
+stay: the Pathmap library itself is, for doing
+
+379
+00:41:50.380 --> 00:41:57.420
+stay: metagraph rewrites. So, a graph has vertices and edges, and an edge has…
+
+380
+00:41:58.260 --> 00:42:00.840
+stay: A source and a target vertex, right?
+
+381
+00:42:01.300 --> 00:42:11.090
+stay: a hypergraph is a generalization of an unordered Sorry, undirected graph.
+
+382
+00:42:11.600 --> 00:42:16.729
+stay: Where an edge can have More than two vertices.
+
+383
+00:42:16.910 --> 00:42:20.069
+stay: So an arbitrary subset of the vertex.
+
+384
+00:42:21.310 --> 00:42:25.130
+stay: set. Is… Is an edge.
+
+385
+00:42:25.250 --> 00:42:25.840
+stay: Sweet.
+
+386
+00:42:26.420 --> 00:42:27.830
+nutzipper: Hypercube miscamera.
+
+387
+00:42:27.830 --> 00:42:33.240
+stay: a subset of the power set on the… vertices.
+
+388
+00:42:33.380 --> 00:42:42.269
+stay: And then a metagraph Allows you to put… structure primarily tree structure.
+
+389
+00:42:42.540 --> 00:42:46.910
+stay: on those… Subsets of the vertex graph.
+
+390
+00:42:47.120 --> 00:42:52.410
+stay: So, the path map library is a metagraph rewriting system.
+
+391
+00:42:52.550 --> 00:42:59.519
+stay: And, we can use that to… To execute.
+
+392
+00:43:00.000 --> 00:43:05.890
+stay: meta code, which goes through a compilation step to… to produce
+
+393
+00:43:06.680 --> 00:43:10.880
+stay: Rolang, but we can execute metacode very rapidly that way.
+
+394
+00:43:12.640 --> 00:43:23.169
+stay: So that's our principle tied to artificial intelligence, is that there is a lot of interest from SingularityNet, who is our biggest client at the moment, on
+
+395
+00:43:23.480 --> 00:43:26.820
+stay: doing non-LLM AI stuff.
+
+396
+00:43:27.400 --> 00:43:32.950
+stay: So, Meta itself is sort of a mix of Prologue and Lisp.
+
+397
+00:43:33.490 --> 00:43:39.409
+stay: And, does a whole bunch of formal reasoning.
+
+398
+00:43:39.940 --> 00:43:45.940
+stay: With that, rather than trying to compete in the LLM stage.
+
+399
+00:43:46.280 --> 00:43:54.000
+stay: it's too crowded at the moment for SingularityNet, that there are so many people in investing in…
+
+400
+00:43:54.220 --> 00:44:02.630
+stay: LLM AIs that… Ben thinks that, that pursuing
+
+401
+00:44:03.730 --> 00:44:10.280
+stay: the other tools that an LLM will need to become generic.
+
+402
+00:44:11.220 --> 00:44:13.210
+stay: Artificial intelligence, yeah.
+
+403
+00:44:13.590 --> 00:44:20.070
+stay: you know, AGI, Artificial General Intelligence. He thinks there will be… need to be more than…
+
+404
+00:44:20.070 --> 00:44:20.990
+nutzipper: mere…
+
+405
+00:44:20.990 --> 00:44:27.320
+stay: LLMs to accomplish that, and so he's trying to fill out the rest of the ecosystem, and then just pull in an LLM when
+
+406
+00:44:27.680 --> 00:44:28.590
+stay: When needed.
+
+407
+00:44:30.070 --> 00:44:36.009
+stay: So, that's their strategy, and we are building tools
+
+408
+00:44:36.680 --> 00:44:41.959
+stay: That we think will be generally useful, but also specifically useful for them.
+
+409
+00:44:42.750 --> 00:44:46.090
+stay: And so that's our interaction with AI.
+
+410
+00:44:48.180 --> 00:44:56.889
+Jeff: Mike, is it fair to say, though, Ben also thinks that you can hybridize these approaches by having, say, transformers underneath?
+
+411
+00:44:57.130 --> 00:44:59.929
+Jeff: The tradition, yeah.
+
+412
+00:44:59.930 --> 00:45:07.890
+stay: I mean, one of the other things that we're doing, the MetaIL project, is… that the meta-language
+
+413
+00:45:08.340 --> 00:45:24.989
+stay: was designed by AI researchers rather than programming language researchers, and so it didn't have a formal semantics, it had various, scoping issues, there were all kinds of things like that.
+
+414
+00:45:25.250 --> 00:45:35.700
+stay: So… Greg started working with Ben to try to solidify some of those, problems.
+
+415
+00:45:36.390 --> 00:45:42.360
+stay: to address some of those problems, but then also to address Ben's intuition that any
+
+416
+00:45:42.470 --> 00:45:48.280
+stay: Agent that is exploring some part of its world.
+
+417
+00:45:49.320 --> 00:45:56.430
+stay: We'll want to create domain-specific languages to help it reason efficiently about that.
+
+418
+00:45:56.780 --> 00:46:07.120
+stay: And so… The, the ability to write down a domain-specific language.
+
+419
+00:46:07.290 --> 00:46:14.109
+stay: was something that Meta could sort of do, But you couldn't express
+
+420
+00:46:17.830 --> 00:46:25.350
+stay: Things like, in PiCalculus, not reducing under an input prefix.
+
+421
+00:46:27.740 --> 00:46:33.219
+stay: Right? The rewrites in meta applied globally throughout a term.
+
+422
+00:46:33.480 --> 00:46:38.100
+stay: And so there are some hacks you can do to get around that, but…
+
+423
+00:46:39.420 --> 00:46:42.109
+stay: But it was awkward, and
+
+424
+00:46:44.780 --> 00:46:49.929
+stay: Meta itself also didn't have any notion of transaction.
+
+425
+00:46:50.540 --> 00:46:52.880
+stay: One thing that… been…
+
+426
+00:46:53.750 --> 00:46:59.859
+stay: told us was, you know, there's a lot of money in combining AI and blockchain right now, so…
+
+427
+00:47:00.260 --> 00:47:07.990
+stay: If you have… some tied to… A decentralized ledger.
+
+428
+00:47:08.310 --> 00:47:16.530
+stay: that I can get funding for, and so that's, you know, another place Where… our chain.
+
+429
+00:47:17.090 --> 00:47:20.450
+stay: and its descendants in Fire Node.
+
+430
+00:47:24.690 --> 00:47:27.530
+stay: Are valued by… by our client.
+
+431
+00:47:28.500 --> 00:47:34.410
+stay: So, that's the sort of thing that we've been… working on.
+
+432
+00:47:35.150 --> 00:47:44.009
+stay: Is MetaIL both as a way to formalize Meta, to formalize DSLs.
+
+433
+00:47:44.380 --> 00:47:51.099
+stay: To generate behavioral type systems so that we can prove security properties about these programs.
+
+434
+00:47:51.830 --> 00:47:56.119
+stay: to work with good old-fashioned AI, to work with the blockchain.
+
+435
+00:48:01.360 --> 00:48:03.670
+nutzipper: Cool, I think I, I got, got that.
+
+436
+00:48:03.990 --> 00:48:05.340
+nutzipper: At least the idea.
+
+437
+00:48:06.630 --> 00:48:10.589
+nutzipper: 2… To be able to create the deal.
+
+438
+00:48:10.740 --> 00:48:17.080
+nutzipper: ESLs that… AI can operate efficiently and with the, proof.
+
+439
+00:48:18.110 --> 00:48:20.000
+nutzipper: Yes. Over purpose.
+
+440
+00:48:20.500 --> 00:48:21.940
+stay: The formal reasoning there.
+
+441
+00:48:21.940 --> 00:48:25.869
+nutzipper: At least this is my understanding of what you just said. Oof.
+
+442
+00:48:28.490 --> 00:48:35.840
+CB Wells: So, like, other projects… Have…
+
+443
+00:48:36.150 --> 00:48:40.010
+CB Wells: Tried to, like, make logic programming
+
+444
+00:48:40.270 --> 00:48:45.960
+CB Wells: Or, like, unify logic programming with functional programming. And there's even things that are just, like.
+
+445
+00:48:46.820 --> 00:48:52.390
+CB Wells: there's, like, Lambda Prologue, that… supports both.
+
+446
+00:48:52.640 --> 00:48:57.809
+CB Wells: So, like, is Meta mainly…
+
+447
+00:48:59.560 --> 00:49:05.299
+CB Wells: Adding architecture on top of a language like that to,
+
+448
+00:49:05.530 --> 00:49:09.850
+CB Wells: Help with some kind of self-modifying learning.
+
+449
+00:49:10.020 --> 00:49:11.120
+CB Wells: System.
+
+450
+00:49:11.520 --> 00:49:19.570
+CB Wells: Because the language itself, it seems like similar things have… have been done, a functional version of Prologue. But…
+
+451
+00:49:19.720 --> 00:49:23.599
+CB Wells: Maybe there are some aspects of it that are… That are new as well.
+
+452
+00:49:34.150 --> 00:49:41.619
+stay: I don't know what Ben's motivation was in funding this, or the language designer's motivation was in…
+
+453
+00:49:43.080 --> 00:49:45.020
+stay: In working this way.
+
+454
+00:49:46.730 --> 00:49:52.389
+stay: the acronym METTA is MetaType Talk.
+
+455
+00:49:53.070 --> 00:50:01.230
+stay: And so, meta type is talking about types, I guess, but, you know, their type system was
+
+456
+00:50:01.940 --> 00:50:13.460
+stay: Purely nominal, and the… the execution paradigm is… is doing… Pattern matching and replacement.
+
+457
+00:50:13.840 --> 00:50:20.130
+stay: So I don't know what… new features, it… has beyond the…
+
+458
+00:50:21.420 --> 00:50:26.849
+stay: the superpose and collapse, which is non-deterministic, but, I mean, that's just a monad on top of…
+
+459
+00:50:28.940 --> 00:50:36.789
+stay: Some other stuff, so… Mine is not to question why. Mine is but to do or die.
+
+460
+00:50:42.070 --> 00:50:52.159
+Jeff: Mike, do you have any sense of why… I've heard Ben say it a few times, he talks about neuro-symbolic AI, or neuromorphic AI versus sub-symbolic.
+
+461
+00:50:52.300 --> 00:50:55.410
+Jeff: And where does this fit in that… that taxonomy?
+
+462
+00:50:58.120 --> 00:51:04.870
+stay: Neuromorphic means… like… nerve-shaped?
+
+463
+00:51:05.050 --> 00:51:06.290
+stay: Brain-shaped.
+
+464
+00:51:07.560 --> 00:51:11.990
+stay: I don't know what neurosymbolic is.
+
+465
+00:51:13.920 --> 00:51:16.490
+stay: Sounded like buzzwords to me, but…
+
+466
+00:51:16.660 --> 00:51:22.140
+stay: Maybe there's something specific that it means. That's not something I've dug into much.
+
+467
+00:51:26.890 --> 00:51:32.320
+Jeff: Well, I'm trying to figure out where good old-fashioned AI fits in that taxonomy.
+
+468
+00:51:32.760 --> 00:51:34.480
+Jeff: I've heard him use both terms.
+
+469
+00:51:34.700 --> 00:51:41.550
+stay: Oh, good old-fashioned AI is the, is pre-neural network stuff.
+
+470
+00:51:42.010 --> 00:51:44.229
+stay: It's the, like…
+
+471
+00:51:44.740 --> 00:51:46.539
+Dylon Edwards: Or I search all over those things.
+
+472
+00:51:46.540 --> 00:51:47.120
+stay: lisp.
+
+473
+00:51:47.910 --> 00:51:49.229
+Jeff: Oh, okay.
+
+474
+00:51:49.980 --> 00:51:58.530
+stay: You know, trying to… formalize… Logic and language in a way that we can…
+
+475
+00:51:59.400 --> 00:52:02.209
+stay: Derive true facts from known facts.
+
+476
+00:52:04.210 --> 00:52:07.629
+Jeff: Yeah, Expert Systems and Prologue and all that.
+
+477
+00:52:07.630 --> 00:52:08.170
+stay: Yeah.
+
+478
+00:52:08.970 --> 00:52:09.750
+Jeff: Okay.
+
+479
+00:52:10.450 --> 00:52:19.570
+Jeff: But that doesn't necessarily fit with sub-symbolic AI or something like that, or… or it's just… it's just the traditional way of doing things.
+
+480
+00:52:23.560 --> 00:52:27.319
+stay: Yes, I… I don't know what sub-symbolic AI is.
+
+481
+00:52:30.010 --> 00:52:30.920
+Jeff: Yeah, I've just heard.
+
+482
+00:52:30.920 --> 00:52:31.580
+stay: Not true.
+
+483
+00:52:31.580 --> 00:52:32.309
+Jeff: grown out there, too.
+
+484
+00:52:32.590 --> 00:52:33.510
+Jeff: Yeah.
+
+485
+00:52:34.160 --> 00:52:34.840
+Jeff: Okay.
+
+486
+00:52:37.790 --> 00:52:41.510
+CB Wells: I think that's… that's synonymous with neural networks.
+
+487
+00:52:41.880 --> 00:52:43.080
+CB Wells: Sirbs and blood.
+
+488
+00:52:45.700 --> 00:52:55.089
+Jeff: Yeah, I asked Rock about this, I don't know, a few weeks ago, I have to dig it up, but yeah, that was my understanding, is that, it's the connectionist approach.
+
+489
+00:52:55.630 --> 00:52:59.330
+Jeff: With neural networks and transformers and such.
+
+490
+00:53:07.850 --> 00:53:08.899
+CB Wells: Anything else?
+
+491
+00:53:08.900 --> 00:53:12.909
+Jeff: There's… No, I run… I run out of…
+
+492
+00:53:13.350 --> 00:53:14.260
+Renato Faraone: Hi.
+
+493
+00:53:15.500 --> 00:53:19.040
+CB Wells: Oh, hi, we were just… We were just wrapping up.
+
+494
+00:53:23.800 --> 00:53:28.710
+Jeff: Yeah, I didn't have anything else, but thank you guys. Appreciate the feedback. I put the…
+
+495
+00:53:28.870 --> 00:53:33.410
+Jeff: I put that whiteboard thing in the, it's up on GitHub, it's in the chat.
+
+496
+00:53:35.450 --> 00:53:36.180
+CB Wells: Yep.
+
+497
+00:53:36.750 --> 00:53:41.960
+Jeff: Okay, and I'll post… I'll post notes into the Office Hours channel after they pop up from Zoom.
+
+498
+00:53:43.820 --> 00:53:45.280
+CB Wells: Sounds good, thanks.
+
+499
+00:53:45.730 --> 00:53:46.420
+Jeff: Okay.
+
+500
+00:53:46.580 --> 00:53:47.470
+Jeff: Thanks.
+
+501
+00:53:48.330 --> 00:53:50.690
+CB Wells: Alright, good luck with y'all, have a good…
+
+502
+00:53:50.690 --> 00:53:51.040
+Jeff: Okay.
+
+503
+00:53:51.560 --> 00:53:53.060
+Dylon Edwards: Yep. Bye. Bye.
+
+504
+00:53:53.060 --> 00:53:53.610
+nutzipper: Cheers.
+
+505
+00:53:54.170 --> 00:53:54.620
+CB Wells: Bye.
+
