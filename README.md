@@ -38,7 +38,8 @@ Generate status reports across all F1R3FLY.io repositories.
 **With Claude Code:** Use `/github-activity-report` to generate reports interactively. To enable:
 
 ```bash
-ln -s "$(pwd)/prompts/github-activity-report.md" ~/.claude/commands/
+$ ln -s "$(pwd)/prompts/github-activity-report.md" ~/.claude/commands/
+claude
 ```
 
 Reports are saved to `docs/reports/` with metrics, PR lists, milestones, and contributor data.
