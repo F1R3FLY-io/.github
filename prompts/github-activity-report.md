@@ -2,6 +2,46 @@
 
 Generate status reports for F1R3FLY.io repositories with GitHub activity metrics, progress summaries, and planned work.
 
+## Instructions for Claude
+
+When the user invokes this command, use AskUserQuestion to guide them through report generation:
+
+### Step 1: Ask Report Type
+
+```
+Question: "What type of report would you like to generate?"
+Header: "Report type"
+Options:
+1. Monthly (previous month) - Generate report for last month's activity
+2. Monthly (specific month) - Specify a particular month (YYYY-MM)
+3. Daily - Generate report for yesterday or specific date
+4. Month-to-date - Current month progress (1st to today)
+5. Annual - Full year report
+```
+
+### Step 2: Handle follow-up (if needed)
+
+- If "Monthly (specific month)" selected: Ask for YYYY-MM
+- If "Daily" and user wants specific date: Ask for YYYY-MM-DD
+- If "Annual" and user wants specific year: Ask for YYYY
+
+### Step 3: Confirm and Execute
+
+Show the command that will run and ask for confirmation:
+```
+Question: "Ready to generate the report?"
+Options:
+1. Yes, generate report - Run the script
+2. Preview only (dry-run) - Preview without writing file
+3. Cancel - Abort
+```
+
+### Step 4: Post-generation
+
+After the report is generated, offer to help fill in the AI_NARRATIVE placeholders.
+
+---
+
 ## Quick Commands
 
 ```bash

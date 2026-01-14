@@ -44,6 +44,8 @@ $ claude # or --continue to restart with /slash command
 
 Reports are saved to `docs/reports/` with metrics, PR lists, milestones, and contributor data.
 
+**Sample report:** [2026-01 MTD Sample Report](docs/reports/2026-01-mtd-sample-report.md)
+
 ## 📚 Documentation Hub
 
 ### Core Documentation Resources
