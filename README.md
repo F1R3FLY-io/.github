@@ -22,75 +22,22 @@ code docs/
 
 ## Status Reports
 
-Generate comprehensive status reports across all F1R3FLY.io repositories with GitHub activity metrics, progress summaries, and planned work.
+Generate status reports across all F1R3FLY.io repositories.
 
-### Prerequisites
+**Prerequisites:** `brew install gh jq && gh auth login`
 
+**Generate reports:**
 ```bash
-# Install GitHub CLI (required)
-brew install gh
-
-# Authenticate with GitHub
-gh auth login
-
-# Install jq for JSON processing (required)
-brew install jq
-
-# Optional: Install Claude Code for AI-assisted narrative generation
-# See: https://claude.ai/claude-code
+./scripts/generate-monthly-report.sh              # Monthly (previous month)
+./scripts/generate-monthly-report.sh --daily      # Daily (yesterday)
+./scripts/generate-monthly-report.sh --mtd        # Month-to-date
+./scripts/generate-monthly-report.sh --annual     # Annual (previous year)
+./scripts/generate-monthly-report.sh --dry-run    # Preview only
 ```
 
-### Quick Commands
+**With Claude Code:** Use `/monthly-report` to generate reports and add narrative summaries interactively.
 
-```bash
-# Generate monthly report (previous month)
-./scripts/generate-monthly-report.sh
-
-# Generate daily report (yesterday)
-./scripts/generate-monthly-report.sh --daily
-
-# Generate month-to-date report
-./scripts/generate-monthly-report.sh --mtd
-
-# Generate annual report (previous year)
-./scripts/generate-monthly-report.sh --annual
-
-# Preview without writing file
-./scripts/generate-monthly-report.sh --dry-run
-```
-
-### Report Types
-
-| Command | Period | Output File |
-|---------|--------|-------------|
-| `--month YYYY-MM` | Specific month | `docs/reports/YYYY-MM-monthly-report.md` |
-| `--daily [DATE]` | Single day (default: yesterday) | `docs/reports/YYYY-MM-DD-daily-report.md` |
-| `--mtd` | Month-to-date | `docs/reports/YYYY-MM-mtd-report.md` |
-| `--annual [YEAR]` | Full year | `docs/reports/YYYY-annual-report.md` |
-
-### Using with Claude Code
-
-After generating a report, use the `/monthly-report` skill to add narrative summaries:
-
-```bash
-# Start Claude Code in this directory
-claude
-
-# Then use the skill
-/monthly-report
-```
-
-The skill will guide you through adding context to the `<!-- AI_NARRATIVE_START -->` placeholder sections in the generated report.
-
-### Report Contents
-
-Each report includes:
-- Executive summary with key metrics
-- Per-repository activity (commits, PRs, issues)
-- Category breakdowns (Core, Language, Frontend, Tools, Research, Docs)
-- Open milestones and priority issues
-- Contributor leaderboard
-- Raw JSON data appendix
+Reports are saved to `docs/reports/` with metrics, PR lists, milestones, and contributor data.
 
 ## 📚 Documentation Hub
 
