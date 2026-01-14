@@ -106,12 +106,47 @@ rate_limited_api() {
 }
 
 #
+# Execute paginated API call with slurp (for use with jq pipe)
+# Returns raw JSON array combining all pages
+#
+paginated_api() {
+    local endpoint="$1"
+    local attempt=1
+    local result
+    local exit_code
+
+    while [[ $attempt -le $MAX_RETRIES ]]; do
+        # Discard stderr, capture only stdout
+        result=$(gh api "$endpoint" --paginate --slurp 2>/dev/null)
+        exit_code=$?
+
+        if [[ $exit_code -eq 0 ]] && [[ -n "$result" ]]; then
+            echo "$result"
+            sleep "$RATE_LIMIT_DELAY"
+            return 0
+        fi
+
+        # On failure, check exit code for likely causes
+        if [[ $exit_code -eq 1 ]]; then
+            # Could be rate limit or not found - retry
+            sleep 2
+        fi
+
+        ((attempt++))
+    done
+
+    echo '[]'
+    return 0
+}
+
+#
 # Fetch repository metadata
 #
 fetch_repo_info() {
     local repo="$1"
+    local result
 
-    rate_limited_api "repos/${GITHUB_ORG}/${repo}" \
+    result=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}" \
         --jq '{
             name: .name,
             description: .description,
@@ -121,7 +156,14 @@ fetch_repo_info() {
             pushed_at: .pushed_at,
             archived: .archived,
             language: .language
-        }' 2>/dev/null || echo '{"error": "failed to fetch repo info"}'
+        }' 2>/dev/null)
+
+    # Return the result, or a fallback if empty
+    if [[ -n "$result" ]]; then
+        echo "$result"
+    else
+        echo '{"error": "failed to fetch repo info"}'
+    fi
 }
 
 #
@@ -138,27 +180,26 @@ fetch_repo_issues() {
 
     # Get issues closed in the period
     local closed_data
-    closed_data=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/issues" \
-        --paginate \
-        -f state=closed \
-        -f since="${start_date}T00:00:00Z" \
-        --jq "[.[] | select(.closed_at >= \"${start_date}\" and .closed_at <= \"${end_date}T23:59:59Z\" and .pull_request == null)] | {
+    closed_data=$(paginated_api "repos/${GITHUB_ORG}/${repo}/issues?state=closed&since=${start_date}T00:00:00Z" | \
+        jq "flatten | [.[] | select(.closed_at >= \"${start_date}\" and .closed_at <= \"${end_date}T23:59:59Z\" and .pull_request == null)] | {
             count: length,
             issues: [.[:10] | .[] | {number, title, closed_at, labels: [.labels[].name]}]
         }" 2>/dev/null || echo '{"count": 0, "issues": []}')
 
     # Get issues opened in the period
     local opened_data
-    opened_data=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/issues" \
-        --paginate \
-        -f state=all \
-        -f since="${start_date}T00:00:00Z" \
-        --jq "[.[] | select(.created_at >= \"${start_date}\" and .created_at <= \"${end_date}T23:59:59Z\" and .pull_request == null)] | length" 2>/dev/null || echo "0")
+    opened_data=$(paginated_api "repos/${GITHUB_ORG}/${repo}/issues?state=all&since=${start_date}T00:00:00Z" | \
+        jq "flatten | [.[] | select(.created_at >= \"${start_date}\" and .created_at <= \"${end_date}T23:59:59Z\" and .pull_request == null)] | length" 2>/dev/null || echo "0")
+
+    # Apply defaults for empty values (avoids zsh parameter expansion issues)
+    [[ -z "$open_count" ]] && open_count="0"
+    [[ -z "$closed_data" ]] && closed_data='{"count":0,"issues":[]}'
+    [[ -z "$opened_data" ]] && opened_data="0"
 
     jq -n \
-        --argjson open "${open_count:-0}" \
-        --argjson closed "${closed_data:-{\"count\":0,\"issues\":[]}}" \
-        --argjson opened "${opened_data:-0}" \
+        --argjson open "$open_count" \
+        --argjson closed "$closed_data" \
+        --argjson opened "$opened_data" \
         '{
             open_count: $open,
             closed_in_period: $closed.count,
@@ -177,10 +218,8 @@ fetch_repo_prs() {
 
     # Get merged PRs in period
     local merged_data
-    merged_data=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/pulls" \
-        --paginate \
-        -f state=closed \
-        --jq "[.[] | select(.merged_at != null and .merged_at >= \"${start_date}\" and .merged_at <= \"${end_date}T23:59:59Z\")] | {
+    merged_data=$(paginated_api "repos/${GITHUB_ORG}/${repo}/pulls?state=closed" | \
+        jq "flatten | [.[] | select(.merged_at != null and .merged_at >= \"${start_date}\" and .merged_at <= \"${end_date}T23:59:59Z\")] | {
             count: length,
             prs: [.[:15] | .[] | {
                 number,
@@ -196,13 +235,16 @@ fetch_repo_prs() {
 
     # Get open PRs count
     local open_prs
-    open_prs=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/pulls" \
-        -f state=open \
+    open_prs=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/pulls?state=open" \
         --jq 'length' 2>/dev/null || echo "0")
 
+    # Apply defaults for empty values
+    [[ -z "$merged_data" ]] && merged_data='{"count":0,"prs":[]}'
+    [[ -z "$open_prs" ]] && open_prs="0"
+
     jq -n \
-        --argjson merged "${merged_data:-{\"count\":0,\"prs\":[]}}" \
-        --argjson open "${open_prs:-0}" \
+        --argjson merged "$merged_data" \
+        --argjson open "$open_prs" \
         '{
             merged_count: $merged.count,
             open_count: $open,
@@ -219,11 +261,8 @@ fetch_repo_commits() {
     local end_date="$3"
 
     local commit_data
-    commit_data=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/commits" \
-        --paginate \
-        -f since="${start_date}T00:00:00Z" \
-        -f until="${end_date}T23:59:59Z" \
-        --jq '{
+    commit_data=$(paginated_api "repos/${GITHUB_ORG}/${repo}/commits?since=${start_date}T00:00:00Z&until=${end_date}T23:59:59Z" | \
+        jq 'flatten | {
             count: length,
             contributors: ([.[] | .author.login // .commit.author.name] | unique),
             recent: [.[:5] | .[] | {
@@ -243,8 +282,7 @@ fetch_repo_commits() {
 fetch_repo_milestones() {
     local repo="$1"
 
-    rate_limited_api "repos/${GITHUB_ORG}/${repo}/milestones" \
-        -f state=all \
+    rate_limited_api "repos/${GITHUB_ORG}/${repo}/milestones?state=all" \
         --jq '[.[] | {
             title,
             state,
@@ -266,9 +304,7 @@ fetch_priority_issues() {
     local repo="$1"
     local labels="${2:-priority,critical,next,planned}"
 
-    rate_limited_api "repos/${GITHUB_ORG}/${repo}/issues" \
-        -f state=open \
-        -f labels="$labels" \
+    rate_limited_api "repos/${GITHUB_ORG}/${repo}/issues?state=open&labels=${labels}" \
         --jq '[.[:10] | .[] | select(.pull_request == null) | {
             number,
             title,
@@ -322,6 +358,13 @@ fetch_repo_data() {
     prs=$(fetch_repo_prs "$repo" "$start_date" "$end_date")
     commits=$(fetch_repo_commits "$repo" "$start_date" "$end_date")
     milestones=$(fetch_repo_milestones "$repo")
+
+    # Apply defaults for empty values
+    [[ -z "$info" ]] && info='{}'
+    [[ -z "$issues" ]] && issues='{"open_count":0,"closed_in_period":0,"opened_in_period":0,"recent_closed":[]}'
+    [[ -z "$prs" ]] && prs='{"merged_count":0,"open_count":0,"merged_prs":[]}'
+    [[ -z "$commits" ]] && commits='{"count":0,"contributors":[],"recent":[]}'
+    [[ -z "$milestones" ]] && milestones='[]'
 
     jq -n \
         --arg repo "$repo" \

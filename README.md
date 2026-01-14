@@ -39,7 +39,7 @@ Generate status reports across all F1R3FLY.io repositories.
 
 ```bash
 $ ln -s "$(pwd)/prompts/github-activity-report.md" ~/.claude/commands/
-claude
+$ claude # or --continue to restart with /slash command
 ```
 
 Reports are saved to `docs/reports/` with metrics, PR lists, milestones, and contributor data.

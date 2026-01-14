@@ -137,20 +137,20 @@ log() {
 
     case "$level" in
         INFO)
-            echo -e "${BLUE}[$timestamp]${RESET} $message"
+            echo -e "${BLUE}[$timestamp]${RESET} $message" >&2
             ;;
         SUCCESS)
-            echo -e "${GREEN}[$timestamp]${RESET} $message"
+            echo -e "${GREEN}[$timestamp]${RESET} $message" >&2
             ;;
         WARN)
-            echo -e "${YELLOW}[$timestamp]${RESET} $message"
+            echo -e "${YELLOW}[$timestamp]${RESET} $message" >&2
             ;;
         ERROR)
             echo -e "${RED}[$timestamp]${RESET} $message" >&2
             ;;
         DEBUG)
             if [[ "$VERBOSE" == true ]]; then
-                echo -e "[$timestamp] $message"
+                echo -e "[$timestamp] $message" >&2
             fi
             ;;
     esac
