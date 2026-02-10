@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1920"
+  height="1080"
+  viewBox="0 0 1920 1080"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0a09" />
+      <stop offset="55%" stop-color="#0c0a09" />
+      <stop offset="100%" stop-color="#053345" />
+    </linearGradient>
+
+    <radialGradient id="glowA" cx="18%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowB" cx="84%" cy="22%" r="70%">
+      <stop offset="0%" stop-color="#00b8db" stop-opacity="0.20" />
+      <stop offset="60%" stop-color="#00b8db" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path
+        d="M 44 0 L 0 0 0 44"
+        fill="none"
+        stroke="#ffffff"
+        stroke-opacity="0.06"
+        stroke-width="1"
+      />
+    </pattern>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+
+    <style>
+      .font {
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      .brand {
+        font-size: 14px;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.72);
+      }
+      .pill {
+        font-size: 12px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.82);
+      }
+      .h1 {
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        fill: #ffffff;
+      }
+      .sub {
+        font-size: 22px;
+        fill: #d1d5dc;
+      }
+      .card {
+        fill: rgba(255, 255, 255, 0.06);
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1;
+      }
+      .tile {
+        fill: rgba(255, 255, 255, 0.05);
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1;
+      }
+      .tileTitle {
+        font-size: 20px;
+        font-weight: 750;
+        letter-spacing: -0.2px;
+        fill: #ffffff;
+      }
+      .tileBody {
+        font-size: 16px;
+        fill: #d1d5dc;
+      }
+      .cardTitle {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        fill: #ffffff;
+      }
+      .cardSub {
+        font-size: 16px;
+        fill: #d1d5dc;
+      }
+      .bullet {
+        font-size: 18px;
+        fill: #d1d5dc;
+      }
+      .muted {
+        font-size: 14px;
+        fill: rgba(255, 255, 255, 0.62);
+      }
+      .accent {
+        fill: #00b8db;
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#bg)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowA)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowB)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#grid)" />
+
+  <image
+    x="1560"
+    y="98"
+    width="300"
+    height="452"
+    xlink:href="../_assets/f1r3fly-logo-400w.png"
+    opacity="0.08"
+  />
+
+  <!-- header -->
+  <g class="font">
+    <text x="86" y="74" class="brand">F1R3FLY</text>
+    <g transform="translate(1444, 46)">
+      <rect x="0" y="0" width="390" height="34" rx="17" class="card" />
+      <text x="18" y="23" class="pill">Products and Services</text>
+    </g>
+
+    <text x="86" y="148" class="h1">Offerings for Partners</text>
+    <text x="86" y="190" class="sub">
+      <tspan x="86" dy="0">A platform + tooling stack for high-throughput distributed systems,</tspan>
+      <tspan x="86" dy="28">caps-based security, BFT resilience, and AI orchestration.</tspan>
+    </text>
+  </g>
+
+  <!-- body -->
+  <g class="font" transform="translate(86, 260)">
+    <!-- product portfolio -->
+    <g>
+      <rect x="0" y="0" width="1748" height="462" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="48" class="cardTitle">Product Line</text>
+      <text x="26" y="76" class="cardSub">Named components used in sales, enablement, and delivery</text>
+
+      <!-- row 1: 4 tiles -->
+      <g transform="translate(26, 112)">
+        <rect x="0" y="0" width="409" height="150" rx="18" class="tile" />
+        <text x="20" y="42" class="tileTitle">F1r3fly</text>
+        <text x="20" y="74" class="tileBody">Distributed compute platform</text>
+        <text x="20" y="102" class="tileBody">High-throughput, BFT-ready primitives</text>
+      </g>
+
+      <g transform="translate(455, 112)">
+        <rect x="0" y="0" width="409" height="150" rx="18" class="tile" />
+        <text x="20" y="42" class="tileTitle">Rholang</text>
+        <text x="20" y="74" class="tileBody">Concurrent language</text>
+        <text x="20" y="102" class="tileBody">pi/rho calculus for channels + processes</text>
+      </g>
+
+      <g transform="translate(884, 112)">
+        <rect x="0" y="0" width="409" height="150" rx="18" class="tile" />
+        <text x="20" y="42" class="tileTitle">OSLF</text>
+        <text x="20" y="74" class="tileBody">Correct-by-construction tooling</text>
+        <text x="20" y="102" class="tileBody">Behavior and protocol safety checks</text>
+      </g>
+
+      <g transform="translate(1313, 112)">
+        <rect x="0" y="0" width="409" height="150" rx="18" class="tile" />
+        <text x="20" y="42" class="tileTitle">F1r3fly Caps</text>
+        <text x="20" y="74" class="tileBody">Capability-based security</text>
+        <text x="20" y="102" class="tileBody">Fine-grained, composable authorization</text>
+      </g>
+
+      <!-- row 2: 3 tiles -->
+      <g transform="translate(26, 282)">
+        <rect x="0" y="0" width="552" height="150" rx="18" class="tile" />
+        <text x="20" y="42" class="tileTitle">F1r3fbuild3r</text>
+        <text x="20" y="74" class="tileBody">Design + deployment tooling</text>
+        <text x="20" y="102" class="tileBody">Visual blueprints -&gt; infrastructure patterns</text>
+      </g>
+
+      <g transform="translate(598, 282)">
+        <rect x="0" y="0" width="552" height="150" rx="18" class="tile" />
+        <text x="20" y="42" class="tileTitle">F1r3sky</text>
+        <text x="20" y="74" class="tileBody">Reference application layer</text>
+        <text x="20" y="102" class="tileBody">Showcase for decentralized / networked systems</text>
+      </g>
+
+      <g transform="translate(1170, 282)">
+        <rect x="0" y="0" width="552" height="150" rx="18" class="tile" />
+        <text x="20" y="42" class="tileTitle">F1r3dr1v3</text>
+        <text x="20" y="74" class="tileBody">Data and storage integration</text>
+        <text x="20" y="102" class="tileBody">Distributed access patterns for real deployments</text>
+      </g>
+    </g>
+
+    <!-- services -->
+    <g transform="translate(0, 490)">
+      <rect x="0" y="0" width="1748" height="210" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="52" class="cardTitle">Partner Services</text>
+      <text x="26" y="82" class="cardSub">Enablement that turns the stack into a competitive advantage</text>
+
+      <g transform="translate(26, 110)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="bullet">Architecture workshops and integration planning for SI teams</text>
+      </g>
+      <g transform="translate(26, 144)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="bullet">Reference integrations, deployment blueprints, and performance profiling</text>
+      </g>
+      <g transform="translate(960, 110)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="bullet">Caps security model design reviews and BFT deployment patterns</text>
+      </g>
+      <g transform="translate(960, 144)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="bullet">Training, partner enablement, and co-delivery support</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <g class="font">
+    <text x="86" y="1032" class="muted">
+      F1r3fly supports decentralized systems (including blockchains and DAGs) but is not a blockchain product.
+    </text>
+    <text x="1834" y="1032" text-anchor="end" class="muted">f1r3fly.com</text>
+  </g>
+</svg>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1920"
+  height="1080"
+  viewBox="0 0 1920 1080"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0a09" />
+      <stop offset="55%" stop-color="#0c0a09" />
+      <stop offset="100%" stop-color="#053345" />
+    </linearGradient>
+
+    <radialGradient id="glowA" cx="18%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowB" cx="84%" cy="22%" r="70%">
+      <stop offset="0%" stop-color="#00b8db" stop-opacity="0.20" />
+      <stop offset="60%" stop-color="#00b8db" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path
+        d="M 44 0 L 0 0 0 44"
+        fill="none"
+        stroke="#ffffff"
+        stroke-opacity="0.06"
+        stroke-width="1"
+      />
+    </pattern>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+
+    <style>
+      .font {
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      .brand {
+        font-size: 14px;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.72);
+      }
+      .pill {
+        font-size: 12px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.82);
+      }
+      .h1 {
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        fill: #ffffff;
+      }
+      .sub {
+        font-size: 22px;
+        fill: #d1d5dc;
+      }
+      .card {
+        fill: rgba(255, 255, 255, 0.06);
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1;
+      }
+      .cardTitle {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        fill: #ffffff;
+      }
+      .body {
+        font-size: 18px;
+        fill: #d1d5dc;
+      }
+      .muted {
+        font-size: 14px;
+        fill: rgba(255, 255, 255, 0.62);
+      }
+      .accent {
+        fill: #00b8db;
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#bg)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowA)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowB)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#grid)" />
+
+  <image
+    x="1560"
+    y="98"
+    width="300"
+    height="452"
+    xlink:href="../_assets/f1r3fly-logo-400w.png"
+    opacity="0.08"
+  />
+
+  <!-- header -->
+  <g class="font">
+    <text x="86" y="74" class="brand">F1R3FLY</text>
+    <g transform="translate(1496, 46)">
+      <rect x="0" y="0" width="338" height="34" rx="17" class="card" />
+      <text x="18" y="23" class="pill">Conclusion</text>
+    </g>
+
+    <text x="86" y="148" class="h1">Summary for Partners</text>
+    <text x="86" y="190" class="sub">
+      <tspan x="86" dy="0">A network-native platform (F1r3fly + Rholang) with correctness tooling (OSLF),</tspan>
+      <tspan x="86" dy="28">caps-based security, BFT resilience, and a roadmap for AI throughput-per-watt.</tspan>
+    </text>
+  </g>
+
+  <g class="font" transform="translate(86, 260)">
+    <!-- three columns -->
+    <g>
+      <rect x="0" y="0" width="556" height="700" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="52" class="cardTitle">What Was Discussed</text>
+
+      <g transform="translate(26, 104)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Move from sequential to message-first systems</text>
+      </g>
+      <g transform="translate(26, 138)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">pi/rho calculus + Rholang for network-native concurrency</text>
+      </g>
+      <g transform="translate(26, 172)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">OSLF for correctness and protocol safety checks</text>
+      </g>
+      <g transform="translate(26, 206)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">F1r3fly Caps for fine-grained capability-based security</text>
+      </g>
+      <g transform="translate(26, 240)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">BFT as a foundation for resilient decentralized systems</text>
+      </g>
+      <g transform="translate(26, 274)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">AI infrastructure: targeting 10x-1000x throughput-per-watt</text>
+      </g>
+    </g>
+
+    <g transform="translate(596, 0)">
+      <rect x="0" y="0" width="556" height="700" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="52" class="cardTitle">Why This Matters to SIs</text>
+
+      <g transform="translate(26, 104)">
+        <text x="0" y="0" class="body">F1r3fly helps integrators deliver:</text>
+      </g>
+
+      <g transform="translate(26, 148)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">More capacity per watt (dataflow architectures + Rholang)</text>
+      </g>
+      <g transform="translate(26, 182)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Stronger security posture (caps vs coarse ACL patterns)</text>
+      </g>
+      <g transform="translate(26, 216)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Resilience in adversarial settings (BFT)</text>
+      </g>
+      <g transform="translate(26, 250)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Modern AI orchestration with throughput-per-watt targets</text>
+      </g>
+
+      <g transform="translate(26, 322)">
+        <rect x="0" y="0" width="504" height="336" rx="18" class="card" />
+        <text x="22" y="44" class="cardTitle">Positioning Guidance</text>
+        <text x="22" y="78" class="body">F1r3fly is not a blockchain product.</text>
+        <text x="22" y="108" class="body">It provides underlying BFT and distributed systems technologies</text>
+        <text x="22" y="138" class="body">applicable to blockchains, DAGs, and custom architectures.</text>
+        <text x="22" y="198" class="body">Lead with competitive advantage:</text>
+        <g transform="translate(22, 228)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">Throughput-per-watt</text>
+        </g>
+        <g transform="translate(22, 262)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">Caps security</text>
+        </g>
+        <g transform="translate(22, 296)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">BFT resilience</text>
+        </g>
+      </g>
+    </g>
+
+    <g transform="translate(1192, 0)">
+      <rect x="0" y="0" width="556" height="700" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="52" class="cardTitle">Next Steps</text>
+
+      <g transform="translate(26, 112)">
+        <rect x="0" y="0" width="504" height="164" rx="18" class="card" />
+        <text x="22" y="44" class="cardTitle">1) Discovery Call</text>
+        <text x="22" y="78" class="body">Align use case, target hardware, and delivery model.</text>
+        <text x="22" y="108" class="body">Choose a pilot track: performance, caps security, BFT, or AI.</text>
+      </g>
+
+      <g transform="translate(26, 296)">
+        <rect x="0" y="0" width="504" height="164" rx="18" class="card" />
+        <text x="22" y="44" class="cardTitle">2) 2-Week Pilot</text>
+        <text x="22" y="78" class="body">Prove throughput-per-watt and integration feasibility.</text>
+        <text x="22" y="108" class="body">Produce a partner-ready reference architecture.</text>
+      </g>
+
+      <g transform="translate(26, 480)">
+        <rect x="0" y="0" width="504" height="190" rx="18" class="card" />
+        <text x="22" y="44" class="cardTitle">3) Production Plan</text>
+        <text x="22" y="78" class="body">Roadmap delivery, security model (caps), and BFT posture.</text>
+        <text x="22" y="108" class="body">Define KPIs: throughput, power, resilience, and operability.</text>
+        <text x="22" y="150" class="body">Enable sales: messaging, diagrams, and deployment blueprints.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <g class="font">
+    <text x="86" y="1032" class="muted">Deliverables: 5 infographics suitable for slides, docs, and video storyboards.</text>
+    <text x="1834" y="1032" text-anchor="end" class="muted">f1r3fly.com</text>
+  </g>
+</svg>

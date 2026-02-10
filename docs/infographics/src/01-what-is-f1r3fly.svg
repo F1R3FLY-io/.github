@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1920"
+  height="1080"
+  viewBox="0 0 1920 1080"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0a09" />
+      <stop offset="55%" stop-color="#0c0a09" />
+      <stop offset="100%" stop-color="#053345" />
+    </linearGradient>
+
+    <radialGradient id="glowA" cx="18%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowB" cx="84%" cy="22%" r="70%">
+      <stop offset="0%" stop-color="#00b8db" stop-opacity="0.20" />
+      <stop offset="60%" stop-color="#00b8db" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path
+        d="M 44 0 L 0 0 0 44"
+        fill="none"
+        stroke="#ffffff"
+        stroke-opacity="0.06"
+        stroke-width="1"
+      />
+    </pattern>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+
+    <style>
+      .font {
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      .brand {
+        font-size: 14px;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.72);
+      }
+      .pill {
+        font-size: 12px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.82);
+      }
+      .h1 {
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        fill: #ffffff;
+      }
+      .sub {
+        font-size: 22px;
+        fill: #d1d5dc;
+      }
+      .card {
+        fill: rgba(255, 255, 255, 0.06);
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1;
+      }
+      .cardTitle {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        fill: #ffffff;
+      }
+      .cardSub {
+        font-size: 16px;
+        fill: #d1d5dc;
+      }
+      .bulletText {
+        font-size: 18px;
+        fill: #d1d5dc;
+      }
+      .muted {
+        font-size: 14px;
+        fill: rgba(255, 255, 255, 0.62);
+      }
+      .accent {
+        fill: #00b8db;
+      }
+      .accentStroke {
+        stroke: #00b8db;
+      }
+      .accentLight {
+        fill: #00d3f2;
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#bg)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowA)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowB)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#grid)" />
+
+  <!-- watermark mark -->
+  <image
+    x="1585"
+    y="110"
+    width="280"
+    height="422"
+    xlink:href="../_assets/f1r3fly-logo-400w.png"
+    opacity="0.10"
+  />
+
+  <!-- header -->
+  <g class="font">
+    <text x="86" y="74" class="brand">F1R3FLY</text>
+
+    <g transform="translate(1490, 46)">
+      <rect x="0" y="0" width="344" height="34" rx="17" class="card" />
+      <text x="18" y="23" class="pill">Systems Integrators</text>
+    </g>
+
+    <text x="86" y="148" class="h1">What Is F1r3fly</text>
+    <text x="86" y="190" class="sub">
+      <tspan x="86" dy="0">Network-native, message-first distributed systems platform built on</tspan>
+      <tspan x="86" dy="28">pi/rho calculus and Rholang - designed for dataflow architectures.</tspan>
+    </text>
+  </g>
+
+  <!-- top band -->
+  <g class="font" transform="translate(86, 248)">
+    <rect x="0" y="0" width="1748" height="116" rx="20" class="card" filter="url(#shadow)" />
+
+    <g transform="translate(26, 24)">
+      <text x="0" y="24" class="cardTitle">Rholang</text>
+      <text x="0" y="52" class="cardSub">
+        pi/rho calculus in practice: processes + channels + concurrency as first-class.
+      </text>
+    </g>
+
+    <g transform="translate(888, 24)">
+      <text x="0" y="24" class="cardTitle">OSLF</text>
+      <text x="0" y="52" class="cardSub">
+        Correct-by-construction tooling: behavior checks, protocol safety, safe composition.
+      </text>
+    </g>
+
+    <line x1="842" y1="24" x2="842" y2="92" stroke="rgba(255,255,255,0.14)" stroke-width="1" />
+    <circle cx="842" cy="58" r="6" class="accent" />
+  </g>
+
+  <!-- four pillars -->
+  <g class="font" transform="translate(86, 392)">
+    <!-- card sizing -->
+    <!-- row 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="856" height="260" rx="20" class="card" filter="url(#shadow)" />
+      <g transform="translate(26, 34)">
+        <text x="0" y="22" class="cardTitle">Performance + Power</text>
+        <text x="0" y="50" class="cardSub">Dataflow architectures + Rholang</text>
+
+        <g transform="translate(0, 84)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Exploit heterogeneous cores and accelerators</text>
+        </g>
+        <g transform="translate(0, 118)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Reduce coordination overhead; keep compute busy</text>
+        </g>
+        <g transform="translate(0, 152)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Higher throughput with lower power consumption</text>
+        </g>
+      </g>
+    </g>
+
+    <g transform="translate(892, 0)">
+      <rect x="0" y="0" width="856" height="260" rx="20" class="card" filter="url(#shadow)" />
+      <g transform="translate(26, 34)">
+        <text x="0" y="22" class="cardTitle">F1r3fly Caps (Security)</text>
+        <text x="0" y="50" class="cardSub">Capability-based security model</text>
+
+        <g transform="translate(0, 84)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Least privilege by default; fine-grained authorization</text>
+        </g>
+        <g transform="translate(0, 118)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Composable caps for precise, auditable access flows</text>
+        </g>
+        <g transform="translate(0, 152)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Parallel to ACLs, but more expressive for distributed systems</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- row 2 -->
+    <g transform="translate(0, 290)">
+      <rect x="0" y="0" width="856" height="260" rx="20" class="card" filter="url(#shadow)" />
+      <g transform="translate(26, 34)">
+        <text x="0" y="22" class="cardTitle">BFT Resilience</text>
+        <text x="0" y="50" class="cardSub">Byzantine fault tolerant distributed systems</text>
+
+        <g transform="translate(0, 84)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Tolerate arbitrary and malicious failures</text>
+        </g>
+        <g transform="translate(0, 118)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Build decentralized systems: blockchains, DAGs, and more</text>
+        </g>
+        <g transform="translate(0, 152)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Designed for survivability under real-world network conditions</text>
+        </g>
+      </g>
+    </g>
+
+    <g transform="translate(892, 290)">
+      <rect x="0" y="0" width="856" height="260" rx="20" class="card" filter="url(#shadow)" />
+      <g transform="translate(26, 34)">
+        <text x="0" y="22" class="cardTitle">AI Infrastructure</text>
+        <text x="0" y="50" class="cardSub">Next-gen orchestration with Rholang</text>
+
+        <g transform="translate(0, 84)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Concurrency-native AI pipelines and coordination</text>
+        </g>
+        <g transform="translate(0, 118)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Targeting 10x-1000x throughput-per-watt improvements</text>
+        </g>
+        <g transform="translate(0, 152)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="bulletText">Workload-dependent; validated through pilots and benchmarks</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <g class="font">
+    <text x="86" y="1032" class="muted">
+      F1r3fly provides underlying BFT and distributed systems technologies (not a blockchain product).
+    </text>
+    <text x="1834" y="1032" text-anchor="end" class="muted">f1r3fly.com</text>
+  </g>
+</svg>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1920"
+  height="1080"
+  viewBox="0 0 1920 1080"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0a09" />
+      <stop offset="55%" stop-color="#0c0a09" />
+      <stop offset="100%" stop-color="#053345" />
+    </linearGradient>
+
+    <radialGradient id="glowA" cx="18%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowB" cx="84%" cy="22%" r="70%">
+      <stop offset="0%" stop-color="#00b8db" stop-opacity="0.20" />
+      <stop offset="60%" stop-color="#00b8db" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path
+        d="M 44 0 L 0 0 0 44"
+        fill="none"
+        stroke="#ffffff"
+        stroke-opacity="0.06"
+        stroke-width="1"
+      />
+    </pattern>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+
+    <style>
+      .font {
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      .brand {
+        font-size: 14px;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.72);
+      }
+      .pill {
+        font-size: 12px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.82);
+      }
+      .h1 {
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        fill: #ffffff;
+      }
+      .sub {
+        font-size: 22px;
+        fill: #d1d5dc;
+      }
+      .card {
+        fill: rgba(255, 255, 255, 0.06);
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1;
+      }
+      .cardTitle {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        fill: #ffffff;
+      }
+      .cardSub {
+        font-size: 16px;
+        fill: #d1d5dc;
+      }
+      .body {
+        font-size: 18px;
+        fill: #d1d5dc;
+      }
+      .muted {
+        font-size: 14px;
+        fill: rgba(255, 255, 255, 0.62);
+      }
+      .accent {
+        fill: #00b8db;
+      }
+      .accentStroke {
+        stroke: #00b8db;
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#bg)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowA)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowB)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#grid)" />
+
+  <image
+    x="1560"
+    y="98"
+    width="300"
+    height="452"
+    xlink:href="../_assets/f1r3fly-logo-400w.png"
+    opacity="0.08"
+  />
+
+  <!-- header -->
+  <g class="font">
+    <text x="86" y="74" class="brand">F1R3FLY</text>
+    <g transform="translate(1510, 46)">
+      <rect x="0" y="0" width="324" height="34" rx="17" class="card" />
+      <text x="18" y="23" class="pill">How It Evolved</text>
+    </g>
+
+    <text x="86" y="148" class="h1">From One Machine to Networks</text>
+    <text x="86" y="190" class="sub">
+      <tspan x="86" dy="0">A shift in both hardware and software models: from sequential execution</tspan>
+      <tspan x="86" dy="28">to message-first, topology-aware distributed systems.</tspan>
+    </text>
+  </g>
+
+  <!-- two-column body -->
+  <g class="font" transform="translate(86, 260)">
+    <!-- left: timeline -->
+    <g>
+      <rect x="0" y="0" width="856" height="700" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="48" class="cardTitle">Evolution Timeline</text>
+      <text x="26" y="76" class="cardSub">Why the programming model had to change</text>
+
+      <line x1="60" y1="132" x2="60" y2="618" stroke="rgba(255,255,255,0.14)" stroke-width="2" />
+
+      <!-- step 1 -->
+      <circle cx="60" cy="160" r="10" class="accent" />
+      <text x="92" y="166" class="cardTitle">Single-machine mindset</text>
+      <text x="92" y="194" class="body">von Neumann execution + lambda calculus foundations</text>
+      <text x="92" y="222" class="body">Sequential control; shared-memory assumptions</text>
+
+      <!-- step 2 -->
+      <circle cx="60" cy="300" r="10" class="accent" />
+      <text x="92" y="306" class="cardTitle">Multi-core and distributed reality</text>
+      <text x="92" y="334" class="body">Parallelism becomes the default</text>
+      <text x="92" y="362" class="body">Messaging is bolted on via libraries and middleware</text>
+
+      <!-- step 3 -->
+      <circle cx="60" cy="440" r="10" class="accent" />
+      <text x="92" y="446" class="cardTitle">pi calculus (Milner)</text>
+      <text x="92" y="474" class="body">A disciplined model for networks and message passing</text>
+      <text x="92" y="502" class="body">Communication is explicit and central</text>
+
+      <!-- step 4 -->
+      <circle cx="60" cy="580" r="10" class="accent" />
+      <text x="92" y="586" class="cardTitle">rho calculus and Rholang</text>
+      <text x="92" y="614" class="body">Network-native implementation + reflection</text>
+      <text x="92" y="642" class="body">OSLF + caps security + BFT-ready distributed systems</text>
+    </g>
+
+    <!-- right: metaphor & implication -->
+    <g transform="translate(892, 0)">
+      <rect x="0" y="0" width="856" height="700" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="48" class="cardTitle">Metaphor: Assembly Line -&gt; Network</text>
+      <text x="26" y="76" class="cardSub">A hybrid visual for non-specialists</text>
+
+      <!-- assembly line -->
+      <g transform="translate(44, 132)">
+        <text x="0" y="-12" class="pill" fill="rgba(255,255,255,0.70)">Sequential (assembly line)</text>
+        <line x1="0" y1="34" x2="338" y2="34" stroke="rgba(255,255,255,0.20)" stroke-width="6" stroke-linecap="round" />
+        <rect x="30" y="12" width="74" height="44" rx="12" class="card" />
+        <rect x="132" y="12" width="74" height="44" rx="12" class="card" />
+        <rect x="234" y="12" width="74" height="44" rx="12" class="card" />
+        <circle cx="360" cy="34" r="10" class="accent" />
+      </g>
+
+      <!-- arrow -->
+      <g transform="translate(400, 152)">
+        <path d="M 0 14 L 108 14" stroke="#00b8db" stroke-width="6" stroke-linecap="round" />
+        <path d="M 108 14 L 92 2" stroke="#00b8db" stroke-width="6" stroke-linecap="round" />
+        <path d="M 108 14 L 92 26" stroke="#00b8db" stroke-width="6" stroke-linecap="round" />
+      </g>
+
+      <!-- network -->
+      <g transform="translate(566, 132)">
+        <text x="0" y="-12" class="pill" fill="rgba(255,255,255,0.70)">Network-native (workstations)</text>
+        <circle cx="42" cy="34" r="14" class="card" />
+        <circle cx="132" cy="16" r="14" class="card" />
+        <circle cx="132" cy="56" r="14" class="card" />
+        <circle cx="220" cy="34" r="14" class="card" />
+
+        <line x1="56" y1="34" x2="118" y2="16" stroke="rgba(255,255,255,0.18)" stroke-width="3" />
+        <line x1="56" y1="34" x2="118" y2="56" stroke="rgba(255,255,255,0.18)" stroke-width="3" />
+        <line x1="146" y1="16" x2="206" y2="34" stroke="rgba(255,255,255,0.18)" stroke-width="3" />
+        <line x1="146" y1="56" x2="206" y2="34" stroke="rgba(255,255,255,0.18)" stroke-width="3" />
+
+        <circle cx="132" cy="16" r="6" class="accent" />
+        <circle cx="220" cy="34" r="6" class="accent" />
+      </g>
+
+      <!-- key idea -->
+      <g transform="translate(26, 300)">
+        <rect x="0" y="0" width="804" height="166" rx="18" class="card" />
+        <text x="22" y="42" class="cardTitle">Key Idea</text>
+        <text x="22" y="74" class="body">In most stacks, messaging lives outside the type system.</text>
+        <text x="22" y="104" class="body">With pi/rho calculus and Rholang, communication is first-class.</text>
+        <text x="22" y="134" class="body">That enables correctness checks (OSLF) and caps-based security.</text>
+      </g>
+
+      <!-- implications -->
+      <g transform="translate(26, 496)">
+        <text x="0" y="24" class="cardTitle">Implication for Integrators</text>
+        <g transform="translate(0, 52)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">Performance-per-watt aligned to dataflow hardware</text>
+        </g>
+        <g transform="translate(0, 86)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">More precise security: caps vs coarse ACL patterns</text>
+        </g>
+        <g transform="translate(0, 120)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">BFT resilience as a foundation for decentralized systems</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <g class="font">
+    <text x="86" y="1032" class="muted">
+      F1r3fly is an underlying distributed systems platform: applicable to blockchains, DAGs, and other decentralized systems.
+    </text>
+    <text x="1834" y="1032" text-anchor="end" class="muted">f1r3fly.com</text>
+  </g>
+</svg>
