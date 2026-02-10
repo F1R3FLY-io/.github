@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1920"
+  height="1080"
+  viewBox="0 0 1920 1080"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0a09" />
+      <stop offset="55%" stop-color="#0c0a09" />
+      <stop offset="100%" stop-color="#053345" />
+    </linearGradient>
+
+    <radialGradient id="glowA" cx="18%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowB" cx="84%" cy="22%" r="70%">
+      <stop offset="0%" stop-color="#00b8db" stop-opacity="0.20" />
+      <stop offset="60%" stop-color="#00b8db" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path
+        d="M 44 0 L 0 0 0 44"
+        fill="none"
+        stroke="#ffffff"
+        stroke-opacity="0.06"
+        stroke-width="1"
+      />
+    </pattern>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+
+    <style>
+      .font {
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      .brand {
+        font-size: 14px;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.72);
+      }
+      .pill {
+        font-size: 12px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.82);
+      }
+      .h1 {
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        fill: #ffffff;
+      }
+      .sub {
+        font-size: 22px;
+        fill: #d1d5dc;
+      }
+      .card {
+        fill: rgba(255, 255, 255, 0.06);
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1;
+      }
+      .cardTitle {
+        font-size: 22px;
+        font-weight: 750;
+        letter-spacing: -0.2px;
+        fill: #ffffff;
+      }
+      .cardSub {
+        font-size: 16px;
+        fill: #d1d5dc;
+      }
+      .body {
+        font-size: 18px;
+        fill: #d1d5dc;
+      }
+      .big {
+        font-size: 46px;
+        font-weight: 850;
+        letter-spacing: -0.8px;
+        fill: #ffffff;
+      }
+      .muted {
+        font-size: 14px;
+        fill: rgba(255, 255, 255, 0.62);
+      }
+      .accent {
+        fill: #00b8db;
+      }
+      .accentStroke {
+        stroke: #00b8db;
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#bg)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowA)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowB)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#grid)" />
+
+  <image
+    x="1560"
+    y="98"
+    width="300"
+    height="452"
+    xlink:href="../_assets/f1r3fly-logo-400w.png"
+    opacity="0.08"
+  />
+
+  <!-- header -->
+  <g class="font">
+    <text x="86" y="74" class="brand">F1R3FLY</text>
+    <g transform="translate(1398, 46)">
+      <rect x="0" y="0" width="436" height="34" rx="17" class="card" />
+      <text x="18" y="23" class="pill">Crash to Byzantine (CFT to BFT)</text>
+    </g>
+
+    <text x="86" y="148" class="h1">Why Crash -&gt; Byzantine Matters</text>
+    <text x="86" y="190" class="sub">
+      <tspan x="86" dy="0">A new revenue and capability opportunity for systems integrators:</tspan>
+      <tspan x="86" dy="28">upgrade customer systems from benign failures to adversarial resilience.</tspan>
+    </text>
+  </g>
+
+  <!-- body -->
+  <g class="font" transform="translate(86, 260)">
+    <!-- left: CFT -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="560" height="520" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="52" class="cardTitle">Crash Fault Tolerance (CFT)</text>
+      <text x="26" y="80" class="cardSub">Designed for benign failures</text>
+
+      <g transform="translate(26, 134)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Handles crashes, restarts, partitions</text>
+      </g>
+      <g transform="translate(26, 168)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Assumes nodes are honest when alive</text>
+      </g>
+      <g transform="translate(26, 202)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Common in trusted perimeters and single-org stacks</text>
+      </g>
+
+      <g transform="translate(26, 260)">
+        <rect x="0" y="0" width="508" height="230" rx="18" class="card" />
+        <text x="22" y="44" class="cardTitle">Customer Risk</text>
+        <text x="22" y="78" class="body">A single compromised node can:</text>
+        <g transform="translate(22, 112)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">Corrupt results and shared state</text>
+        </g>
+        <g transform="translate(22, 146)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">Leak or manipulate critical workflows</text>
+        </g>
+        <g transform="translate(22, 180)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">Undermine auditability and trust across organizations</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- center: why now -->
+    <g transform="translate(594, 0)">
+      <rect x="0" y="0" width="560" height="520" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="52" class="cardTitle">Why Now</text>
+      <text x="26" y="80" class="cardSub">Systems are more distributed and more exposed</text>
+
+      <g transform="translate(26, 134)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Multi-tenant cloud and shared infrastructure</text>
+      </g>
+      <g transform="translate(26, 168)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Supply-chain attacks and compromised dependencies</text>
+      </g>
+      <g transform="translate(26, 202)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Cross-org workflows and decentralized deployments</text>
+      </g>
+      <g transform="translate(26, 236)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">AI agents and automation increase blast radius</text>
+      </g>
+
+      <g transform="translate(26, 304)">
+        <text x="0" y="0" class="big">CFT -&gt; BFT</text>
+        <text x="0" y="46" class="body">Byzantine fault tolerance is the needed upgrade</text>
+        <text x="0" y="76" class="body">when failures can be adversarial, not just accidental.</text>
+      </g>
+
+      <g transform="translate(26, 404)">
+        <rect x="0" y="0" width="508" height="86" rx="18" class="card" />
+        <text x="22" y="40" class="cardTitle">Integrator Message</text>
+        <text x="22" y="66" class="body">Offer resilience as a product line, not a patch.</text>
+      </g>
+    </g>
+
+    <!-- right: BFT -->
+    <g transform="translate(1188, 0)">
+      <rect x="0" y="0" width="560" height="520" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="52" class="cardTitle">Byzantine Fault Tolerance (BFT)</text>
+      <text x="26" y="80" class="cardSub">Designed for adversarial conditions</text>
+
+      <g transform="translate(26, 134)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Tolerates malicious or arbitrary node behavior</text>
+      </g>
+      <g transform="translate(26, 168)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Enables cross-org trust without a single trusted party</text>
+      </g>
+      <g transform="translate(26, 202)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Foundation for blockchains, DAGs, and custom topologies</text>
+      </g>
+
+      <g transform="translate(26, 260)">
+        <rect x="0" y="0" width="508" height="230" rx="18" class="card" />
+        <text x="22" y="44" class="cardTitle">SI Revenue Opportunity</text>
+        <g transform="translate(22, 84)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">Crash-to-Byzantine modernization assessments</text>
+        </g>
+        <g transform="translate(22, 118)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">Reference architectures and 2-week pilots</text>
+        </g>
+        <g transform="translate(22, 152)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">Managed resilience services and compliance posture</text>
+        </g>
+        <g transform="translate(22, 186)">
+          <circle cx="6" cy="8" r="4" class="accent" />
+          <text x="22" y="14" class="body">High-throughput distributed compute offerings</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- bottom: F1r3fly tie-in -->
+    <g transform="translate(0, 548)">
+      <rect x="0" y="0" width="1748" height="152" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="54" class="cardTitle">Why F1r3fly</text>
+      <text x="26" y="84" class="body">
+        F1r3fly targets BFT resilience with crash-fault-like performance, enabled by Rholang, OSLF, and F1r3fly Caps.
+      </text>
+      <text x="26" y="116" class="muted">
+        Positioning: F1r3fly provides underlying BFT and distributed systems technologies (not a blockchain product).
+      </text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <g class="font">
+    <text x="86" y="1032" class="muted">Use this as the opening infographic for partner-oriented sales materials.</text>
+    <text x="1834" y="1032" text-anchor="end" class="muted">f1r3fly.com</text>
+  </g>
+</svg>
+
