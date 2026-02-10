@@ -118,6 +118,21 @@
         stroke: #00b8db;
         stroke-width: 2;
       }
+      .nodeGreen {
+        fill: rgba(34, 197, 94, 0.18);
+        stroke: rgba(34, 197, 94, 0.95);
+        stroke-width: 2;
+      }
+      .nodeYellow {
+        fill: rgba(250, 204, 21, 0.16);
+        stroke: rgba(250, 204, 21, 0.95);
+        stroke-width: 2;
+      }
+      .nodeRed {
+        fill: rgba(255, 107, 107, 0.16);
+        stroke: #ff6b6b;
+        stroke-width: 2;
+      }
       .nodeBad {
         fill: rgba(255, 107, 107, 0.16);
         stroke: #ff6b6b;
@@ -184,12 +199,12 @@
         <line x1="62" y1="76" x2="132" y2="76" stroke="rgba(255,255,255,0.18)" stroke-width="2" />
 
         <!-- nodes -->
-        <circle cx="97" cy="32" r="8" class="nodeGood" />
-        <circle cx="78" cy="58" r="7" class="nodeGood" />
-        <circle cx="116" cy="58" r="7" class="nodeGood" />
-        <circle cx="70" cy="76" r="6" class="nodeGood" />
-        <circle cx="97" cy="76" r="6" class="nodeGood" />
-        <circle cx="124" cy="76" r="6" class="nodeGood" />
+        <circle cx="97" cy="32" r="8" class="nodeGreen" />
+        <circle cx="78" cy="58" r="7" class="nodeYellow" />
+        <circle cx="116" cy="58" r="7" class="nodeYellow" />
+        <circle cx="70" cy="76" r="6" class="nodeRed" />
+        <circle cx="97" cy="76" r="6" class="nodeRed" />
+        <circle cx="124" cy="76" r="6" class="nodeRed" />
 
         <!-- hierarchy links -->
         <line x1="97" y1="40" x2="78" y2="51" class="link" />
@@ -269,33 +284,36 @@
 	        <path d="M 134 64 L 125 59 L 125 69 Z" class="accent" opacity="0.88" />
 
 	        <!-- right: smaller surface, more decentralized footprint (oval) -->
-	        <ellipse
-	          cx="152"
-	          cy="64"
-	          rx="30"
-	          ry="20"
-	          fill="rgba(0, 184, 219, 0.09)"
-	          stroke="rgba(0, 184, 219, 0.82)"
-	          stroke-width="2"
-	        />
-	        <circle cx="152" cy="44" r="6.5" class="nodeGood" />
-	        <circle cx="170" cy="52" r="6.5" class="nodeGood" />
-	        <circle cx="176" cy="64" r="6.5" class="nodeGood" />
-	        <circle cx="170" cy="76" r="6.5" class="nodeGood" />
-	        <circle cx="152" cy="84" r="6.5" class="nodeGood" />
-	        <circle cx="134" cy="76" r="6.5" class="nodeGood" />
-	        <circle cx="128" cy="64" r="6.5" class="nodeGood" />
-	        <circle cx="134" cy="52" r="6.5" class="nodeGood" />
-	        <line x1="152" y1="44" x2="170" y2="52" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
-	        <line x1="170" y1="52" x2="176" y2="64" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
-	        <line x1="176" y1="64" x2="170" y2="76" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
-	        <line x1="170" y1="76" x2="152" y2="84" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
-	        <line x1="152" y1="84" x2="134" y2="76" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
-	        <line x1="134" y1="76" x2="128" y2="64" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
-	        <line x1="128" y1="64" x2="134" y2="52" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
-	        <line x1="134" y1="52" x2="152" y2="44" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
-	        <line x1="152" y1="44" x2="152" y2="84" stroke="rgba(255,255,255,0.16)" stroke-width="2" stroke-dasharray="3 5" />
-	        <line x1="128" y1="64" x2="176" y2="64" stroke="rgba(255,255,255,0.16)" stroke-width="2" stroke-dasharray="3 5" />
+		        <ellipse
+		          cx="152"
+		          cy="64"
+		          rx="30"
+		          ry="20"
+		          fill="rgba(0, 184, 219, 0.09)"
+		          stroke="rgba(0, 184, 219, 0.82)"
+		          stroke-width="2"
+		        />
+
+		        <!-- decentralized cluster (intentionally irregular) -->
+		        <line x1="138" y1="54" x2="176" y2="60" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
+		        <line x1="160" y1="48" x2="170" y2="78" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
+		        <line x1="128" y1="62" x2="160" y2="48" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
+		        <line x1="130" y1="72" x2="176" y2="60" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="4 4" />
+		        <line x1="130" y1="72" x2="150" y2="82" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="4 4" />
+		        <line x1="146" y1="66" x2="158" y2="70" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
+		        <line x1="158" y1="70" x2="170" y2="78" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="4 4" />
+		        <line x1="128" y1="62" x2="146" y2="66" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="4 4" />
+		        <line x1="150" y1="82" x2="170" y2="78" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="4 4" />
+
+		        <circle cx="138" cy="54" r="6.3" class="nodeGood" />
+		        <circle cx="160" cy="48" r="6.3" class="nodeGood" />
+		        <circle cx="176" cy="60" r="6.3" class="nodeGood" />
+		        <circle cx="170" cy="78" r="6.3" class="nodeGood" />
+		        <circle cx="150" cy="82" r="6.3" class="nodeGood" />
+		        <circle cx="130" cy="72" r="6.3" class="nodeGood" />
+		        <circle cx="128" cy="62" r="6.3" class="nodeGood" />
+		        <circle cx="146" cy="66" r="6.3" class="nodeGood" />
+		        <circle cx="158" cy="70" r="6.3" class="nodeGood" />
 	      </g>
 
       <g transform="translate(26, 134)">
@@ -323,8 +341,8 @@
 
       <g transform="translate(26, 404)">
         <rect x="0" y="0" width="508" height="86" rx="18" class="card" />
-        <text x="22" y="40" class="cardTitle">Integrator Message</text>
-        <text x="22" y="66" class="body">Offer resilience as a product line, not a patch.</text>
+        <text x="22" y="40" class="cardTitle" style="font-size: 18px">Resilience, Performance, and capability-based Security</text>
+        <text x="22" y="66" class="body">A new System Integration Paradigm</text>
       </g>
     </g>
 
@@ -334,89 +352,77 @@
       <text x="26" y="52" class="cardTitle">Byzantine Fault Tolerance (BFT)</text>
       <text x="26" y="80" class="cardSub">Designed for adversarial conditions</text>
 
-      <!-- BFT sketch -->
-      <g transform="translate(340, 18)">
-        <rect x="0" y="0" width="194" height="110" rx="16" class="card" />
+	      <!-- BFT sketch -->
+	      <g transform="translate(340, 18)">
+	        <rect x="0" y="0" width="194" height="110" rx="16" class="card" />
 
-        <!-- rivers -->
-        <path
-          d="M 18 52 C 52 34 86 70 120 52 C 142 40 160 38 176 46"
-          fill="none"
-          stroke="rgba(0, 184, 219, 0.75)"
-          stroke-width="4"
-          stroke-linecap="round"
-        />
-        <path
-          d="M 18 80 C 54 66 86 96 122 82 C 146 72 162 70 176 76"
-          fill="none"
-          stroke="rgba(0, 211, 242, 0.55)"
-          stroke-width="4"
-          stroke-linecap="round"
-        />
-        <path
-          d="M 96 56 C 106 62 106 70 96 76"
-          fill="none"
-          stroke="rgba(255,255,255,0.16)"
-          stroke-width="3"
-          stroke-linecap="round"
-        />
+		        <!-- distributed network (intentionally irregular / non-directional) -->
+		        <path
+		          d="M 24 58 C 26 34 58 18 92 22 C 126 26 170 30 172 58 C 174 86 140 96 104 92 C 68 88 28 80 24 58 Z"
+		          fill="rgba(0, 184, 219, 0.04)"
+		          stroke="rgba(0, 184, 219, 0.18)"
+		          stroke-width="2"
+		          stroke-linejoin="round"
+		        />
 
-        <!-- nodes (locks/junctions) -->
-        <circle cx="28" cy="52" r="7" class="nodeGood" />
-        <circle cx="74" cy="46" r="7" class="nodeGood" />
-        <circle cx="120" cy="52" r="7" class="nodeGood" />
-        <circle cx="28" cy="80" r="7" class="nodeGood" />
-        <circle cx="92" cy="86" r="7" class="nodeGood" />
-        <circle cx="122" cy="82" r="7" class="nodeGood" />
-        <circle cx="154" cy="46" r="7" class="nodeBad" />
+		        <!-- base mesh -->
+		        <path d="M 30 76 C 40 68 46 62 54 58" fill="none" stroke="rgba(0, 211, 242, 0.28)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 54 58 C 64 52 70 48 78 46" fill="none" stroke="rgba(0, 211, 242, 0.30)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 44 32 C 48 42 50 50 54 58" fill="none" stroke="rgba(0, 211, 242, 0.26)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 44 32 C 66 24 86 22 104 28" fill="none" stroke="rgba(0, 211, 242, 0.30)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 78 46 C 82 58 86 66 92 72" fill="none" stroke="rgba(0, 211, 242, 0.28)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 92 72 C 78 82 68 88 60 92" fill="none" stroke="rgba(0, 211, 242, 0.26)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 92 72 C 120 66 142 72 156 80" fill="none" stroke="rgba(0, 211, 242, 0.30)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 104 28 C 120 30 132 34 144 38" fill="none" stroke="rgba(0, 211, 242, 0.30)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 144 38 C 156 42 164 44 170 50" fill="none" stroke="rgba(0, 211, 242, 0.26)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 170 50 C 166 62 162 72 156 80" fill="none" stroke="rgba(0, 211, 242, 0.28)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 156 80 C 140 90 124 94 110 92" fill="none" stroke="rgba(0, 211, 242, 0.26)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 110 92 C 92 96 76 96 60 92" fill="none" stroke="rgba(0, 211, 242, 0.28)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 60 92 C 46 90 38 84 30 76" fill="none" stroke="rgba(0, 211, 242, 0.26)" stroke-width="3" stroke-linecap="round" />
+		        <path d="M 54 58 C 66 70 78 74 92 72" fill="none" stroke="rgba(0, 211, 242, 0.24)" stroke-width="3" stroke-linecap="round" />
 
-        <!-- cooperative verification (no single trusted node) -->
-        <line
-          x1="74"
-          y1="46"
-          x2="120"
-          y2="52"
-          stroke="rgba(255,255,255,0.20)"
-          stroke-width="2"
-          stroke-dasharray="4 4"
-        />
-        <line
-          x1="120"
-          y1="52"
-          x2="92"
-          y2="86"
-          stroke="rgba(255,255,255,0.20)"
-          stroke-width="2"
-          stroke-dasharray="4 4"
-        />
-        <line
-          x1="92"
-          y1="86"
-          x2="74"
-          y2="46"
-          stroke="rgba(255,255,255,0.20)"
-          stroke-width="2"
-          stroke-dasharray="4 4"
-        />
+		        <!-- rerouting paradigm: blocked shortcut + alternate route (no arrows) -->
+		        <path
+		          d="M 104 28 C 116 40 124 46 130 56 C 138 70 146 76 156 80"
+		          fill="none"
+		          stroke="rgba(255,255,255,0.14)"
+		          stroke-width="3.5"
+		          stroke-linecap="round"
+		        />
+		        <path
+		          d="M 104 28 C 120 30 132 34 144 38 C 156 42 164 44 170 50 C 166 62 162 72 156 80"
+		          fill="none"
+		          stroke="rgba(0, 184, 219, 0.86)"
+		          stroke-width="4.5"
+		          stroke-linecap="round"
+		          opacity="0.92"
+		        />
 
-        <!-- reroute around adversarial node -->
-        <path
-          d="M 120 52 C 134 64 130 74 122 82"
-          fill="none"
-          stroke="rgba(0, 184, 219, 0.85)"
-          stroke-width="4"
-          stroke-linecap="round"
-        />
-        <path d="M 124 84 L 132 78 L 132 90 Z" class="accent" opacity="0.85" />
+		        <!-- cooperative verification (no single trusted node) -->
+		        <line x1="78" y1="46" x2="144" y2="38" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
+		        <line x1="144" y1="38" x2="92" y2="72" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
+		        <line x1="92" y1="72" x2="78" y2="46" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-dasharray="4 4" />
 
-        <!-- blocked upper canal segment -->
-        <line x1="140" y1="48" x2="168" y2="44" class="dangerStroke" stroke-width="6" stroke-linecap="round" opacity="0.9" />
-        <line x1="140" y1="44" x2="168" y2="48" class="dangerStroke" stroke-width="6" stroke-linecap="round" opacity="0.9" />
+		        <!-- blocked marker -->
+		        <line x1="120" y1="46" x2="140" y2="66" class="dangerStroke" stroke-width="5.5" stroke-linecap="round" opacity="0.95" />
+		        <line x1="120" y1="66" x2="140" y2="46" class="dangerStroke" stroke-width="5.5" stroke-linecap="round" opacity="0.95" />
 
-        <!-- flow arrows -->
-        <path d="M 176 46 L 166 40 L 166 52 Z" class="accent" opacity="0.25" />
-        <path d="M 176 76 L 166 70 L 166 82 Z" class="accent" opacity="0.65" />
-      </g>
+		        <!-- nodes -->
+		        <circle cx="30" cy="76" r="7" class="nodeGood" />
+		        <circle cx="44" cy="32" r="7" class="nodeGood" />
+		        <circle cx="54" cy="58" r="7" class="nodeGood" />
+		        <circle cx="78" cy="46" r="7" class="nodeGood" />
+		        <circle cx="92" cy="72" r="7" class="nodeGood" />
+		        <circle cx="60" cy="92" r="7" class="nodeGood" />
+		        <circle cx="104" cy="28" r="7" class="nodeGood" />
+		        <circle cx="144" cy="38" r="7" class="nodeGood" />
+		        <circle cx="170" cy="50" r="7" class="nodeGood" />
+		        <circle cx="156" cy="80" r="7" class="nodeGood" />
+		        <circle cx="110" cy="92" r="7" class="nodeGood" />
+
+		        <!-- adversarial node -->
+		        <circle cx="130" cy="56" r="7.5" class="nodeBad" />
+	      </g>
 
       <g transform="translate(26, 134)">
         <circle cx="6" cy="8" r="4" class="accent" />
@@ -451,7 +457,7 @@
         </g>
         <g transform="translate(22, 166)">
           <circle cx="6" cy="8" r="4" class="accent" />
-          <text x="22" y="14" class="body">Reference architectures and 2-week pilots</text>
+          <text x="22" y="14" class="body">Forward Deployed Fast-Cycled Engineering Architectures</text>
         </g>
         <g transform="translate(22, 200)">
           <circle cx="6" cy="8" r="4" class="accent" />
@@ -465,7 +471,7 @@
       <rect x="0" y="0" width="1748" height="152" rx="20" class="card" filter="url(#shadow)" />
       <text x="26" y="54" class="cardTitle">Why F1r3fly</text>
       <text x="26" y="84" class="body">
-        F1r3fly enables BFT resilience with crash-fault-like performance, using Rholang, OSLF, and F1r3fly Caps.
+        F1r3fly enables BFT resilience with crash-fault-like performance,&#160;using Rholang,&#160;F1r3drive,&#160;and CAPs.
       </text>
       <text x="26" y="116" class="muted">
         Positioning: F1r3fly provides underlying BFT and distributed systems technologies (not a blockchain product).
