@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1920"
+  height="1080"
+  viewBox="0 0 1920 1080"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0a09" />
+      <stop offset="55%" stop-color="#0c0a09" />
+      <stop offset="100%" stop-color="#053345" />
+    </linearGradient>
+
+    <radialGradient id="glowA" cx="18%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowB" cx="84%" cy="22%" r="70%">
+      <stop offset="0%" stop-color="#00b8db" stop-opacity="0.20" />
+      <stop offset="60%" stop-color="#00b8db" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path
+        d="M 44 0 L 0 0 0 44"
+        fill="none"
+        stroke="#ffffff"
+        stroke-opacity="0.06"
+        stroke-width="1"
+      />
+    </pattern>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+
+    <style>
+      .font {
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      .brand {
+        font-size: 14px;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.72);
+      }
+      .pill {
+        font-size: 12px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.82);
+      }
+      .h1 {
+        font-size: 58px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        fill: #ffffff;
+      }
+      .sub {
+        font-size: 21px;
+        fill: #d1d5dc;
+      }
+      .card {
+        fill: rgba(255, 255, 255, 0.06);
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1;
+      }
+      .tile {
+        fill: rgba(255, 255, 255, 0.05);
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1;
+      }
+      .tileTitle {
+        font-size: 20px;
+        font-weight: 750;
+        letter-spacing: -0.2px;
+        fill: #ffffff;
+      }
+      .tileBody {
+        font-size: 16px;
+        fill: #d1d5dc;
+      }
+      .cardTitle {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        fill: #ffffff;
+      }
+      .cardSub {
+        font-size: 16px;
+        fill: #d1d5dc;
+      }
+      .bullet {
+        font-size: 18px;
+        fill: #d1d5dc;
+      }
+      .muted {
+        font-size: 14px;
+        fill: rgba(255, 255, 255, 0.62);
+      }
+      .accent {
+        fill: #00b8db;
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#bg)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowA)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowB)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#grid)" />
+
+  <image
+    x="1560"
+    y="98"
+    width="300"
+    height="452"
+    xlink:href="../_assets/f1r3fly-logo-400w.png"
+    opacity="0.08"
+  />
+
+  <!-- header -->
+  <g class="font">
+    <text x="86" y="74" class="brand">F1R3FLY</text>
+    <g transform="translate(1250, 46)">
+      <rect x="0" y="0" width="584" height="34" rx="17" class="card" />
+      <text x="18" y="23" class="pill">System Integrator Product Offering Sheet</text>
+    </g>
+
+    <text x="86" y="148" class="h1">Partner Portfolio and Capability Map</text>
+    <text x="86" y="190" class="sub">
+      <tspan x="86" dy="0">Canonical repository naming as of 2026-02-13.</tspan>
+      <tspan x="86" dy="28">Category and portfolio-level overview for system integrators and delivery partners.</tspan>
+    </text>
+  </g>
+
+  <!-- body -->
+  <g class="font" transform="translate(86, 246)">
+    <!-- portfolio categories -->
+    <g>
+      <rect x="0" y="0" width="1748" height="412" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="48" class="cardTitle">Public Portfolio Categories (Canonical Names)</text>
+      <text x="26" y="76" class="cardSub">Representative repositories by product family for SI solution design</text>
+
+      <g transform="translate(26, 110)">
+        <rect x="0" y="0" width="409" height="278" rx="18" class="tile" />
+        <text x="20" y="42" class="tileTitle">Core Platform and Protocol</text>
+        <text x="20" y="74" class="tileBody">f1r3node, f1r3node-rust, pyf1r3fly</text>
+        <text x="20" y="102" class="tileBody">rust-client, rust-lightning</text>
+        <text x="20" y="150" class="tileBody">Capability:</text>
+        <text x="20" y="176" class="tileBody">High-throughput transaction nodes,</text>
+        <text x="20" y="202" class="tileBody">distributed coordination, and</text>
+        <text x="20" y="228" class="tileBody">production-ready client integration.</text>
+      </g>
+
+      <g transform="translate(455, 110)">
+        <rect x="0" y="0" width="409" height="278" rx="18" class="tile" />
+        <text x="20" y="42" class="tileTitle">Language and Correctness Tooling</text>
+        <text x="20" y="74" class="tileBody">rholang-rs, rholang-language-server,</text>
+        <text x="20" y="102" class="tileBody">graphl-parser, OSLF, OSLF-editor</text>
+        <text x="20" y="128" class="tileBody">MeTTaIL, mettail-rust, MeTTa-Compiler</text>
+        <text x="20" y="176" class="tileBody">Capability:</text>
+        <text x="20" y="202" class="tileBody">Message-first concurrency, formal</text>
+        <text x="20" y="228" class="tileBody">semantics, and SI-ready dev tooling.</text>
+      </g>
+
+      <g transform="translate(884, 110)">
+        <rect x="0" y="0" width="409" height="278" rx="18" class="tile" />
+        <text x="20" y="42" class="tileTitle">Applications and Experience</text>
+        <text x="20" y="74" class="tileBody">embers, embers-frontend</text>
+        <text x="20" y="102" class="tileBody">f1r3sky, f1r3sky-backend, f1r3sky-client</text>
+        <text x="20" y="128" class="tileBody">f1r3wallet, f1r3bot, lightning-bug</text>
+        <text x="20" y="176" class="tileBody">Capability:</text>
+        <text x="20" y="202" class="tileBody">Reference applications for wallet,</text>
+        <text x="20" y="228" class="tileBody">social, agent, and app-layer delivery.</text>
+      </g>
+
+      <g transform="translate(1313, 110)">
+        <rect x="0" y="0" width="409" height="278" rx="18" class="tile" />
+        <text x="20" y="42" class="tileTitle">Infrastructure and Integration</text>
+        <text x="20" y="74" class="tileBody">F1r3bu1ld3r, IaC, system-integration</text>
+        <text x="20" y="102" class="tileBody">Sankey_block_explorer, f1r3drive</text>
+        <text x="20" y="176" class="tileBody">Capability:</text>
+        <text x="20" y="202" class="tileBody">Deployment automation, observability,</text>
+        <text x="20" y="228" class="tileBody">and multi-project integration patterns.</text>
+      </g>
+    </g>
+
+    <!-- technical capabilities + private portfolio -->
+    <g transform="translate(0, 434)">
+      <rect x="0" y="0" width="1130" height="288" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="52" class="cardTitle">Technical Capabilities</text>
+      <text x="26" y="82" class="cardSub">Portfolio-level value propositions for partner offerings</text>
+
+      <g transform="translate(26, 114)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="bullet">High-throughput transaction and coordination infrastructure for distributed systems.</text>
+      </g>
+      <g transform="translate(26, 148)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="bullet">Message-first concurrency model with Rholang and formal semantics tooling.</text>
+      </g>
+      <g transform="translate(26, 182)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="bullet">Capability-oriented security and BFT-ready architecture patterns.</text>
+      </g>
+      <g transform="translate(26, 216)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="bullet">Cross-stack delivery from language/runtime to applications, infrastructure, and operations.</text>
+      </g>
+    </g>
+
+    <g transform="translate(1150, 434)">
+      <rect x="0" y="0" width="598" height="288" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="52" class="cardTitle">Strategic Partnerships for Forward Deployment</text>
+      <text x="26" y="82" class="cardSub">Private repositories available for internal alignment</text>
+      <text x="26" y="100" class="cardSub">and selective partner engagements</text>
+      <text x="26" y="122" class="tileBody">Branding, CorporateDocuments, dev.github.io</text>
+      <text x="26" y="154" class="tileBody">f1r3fly-rgb, f1r3fly-rgb-wallet, Rholang-RGB</text>
+      <text x="26" y="186" class="tileBody">F1R3FLY.ai, Singularity-Scale, skein, SNETPackages</text>
+      <text x="26" y="248" class="tileBody">Access to private repositories available</text>
+      <text x="26" y="268" class="tileBody">per request and NDA</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <g class="font">
+    <text x="86" y="1032" class="muted">
+      This sheet is portfolio-level. Use docs/Organization_of_Repositories.md as the canonical source for repository naming.
+    </text>
+    <text x="1834" y="1032" text-anchor="end" class="muted">f1r3fly.com</text>
+  </g>
+</svg>
