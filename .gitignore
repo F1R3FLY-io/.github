@@ -2,3 +2,4 @@
 .grepai/
 docs/videos/
 node_modules
+.tmp/

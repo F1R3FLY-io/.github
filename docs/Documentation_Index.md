@@ -154,7 +154,7 @@ This index provides a comprehensive guide to all F1R3FLY.io documentation standa
 ### Quick Links by Project Type
 
 #### Blockchain/Distributed Systems
-- Core Platform: [f1r3fly](https://github.com/F1R3FLY-io/f1r3fly)
+- Core Platform: [f1r3node](https://github.com/F1R3FLY-io/f1r3node)
 - Language Tools: [rholang-rs](https://github.com/F1R3FLY-io/rholang-rs)
 - Development Tools: [rholang-language-server](https://github.com/F1R3FLY-io/rholang-language-server)
 
@@ -165,7 +165,8 @@ This index provides a comprehensive guide to all F1R3FLY.io documentation standa
 - Code Editor: [lightning-bug](https://github.com/F1R3FLY-io/lightning-bug)
 
 #### Research & Innovation
-- Language Research: [MeTTa](https://github.com/F1R3FLY-io/MeTTa)
+- Language Research: [MeTTaIL](https://github.com/F1R3FLY-io/MeTTaIL)
+- Compiler Toolchain: [mettail-rust](https://github.com/F1R3FLY-io/mettail-rust)
 - Infrastructure Tools: [F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)
 
 ### Documentation by Audience
@@ -199,4 +200,4 @@ This index provides a comprehensive guide to all F1R3FLY.io documentation standa
 
 ---
 
-*This index is maintained by the F1R3FLY.io platform team. Last updated: 2025-01-22*
+*This index is maintained by the F1R3FLY.io platform team. Last updated: 2026-02-13*

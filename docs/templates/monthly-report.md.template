@@ -40,7 +40,7 @@ Example narrative:
 
 ## Core Platform
 
-### f1r3fly
+### f1r3node
 
 Main transaction server with distributed systems infrastructure.
 
@@ -52,11 +52,11 @@ Main transaction server with distributed systems infrastructure.
 | Open Issues | 0 |
 
 **Merged PRs:**
-- [#123](https://github.com/F1R3FLY-io/f1r3fly/pull/123) - Example PR title (@author, 2025-01-15)
+- [#123](https://github.com/F1R3FLY-io/f1r3node/pull/123) - Example PR title (@author, 2025-01-15)
 
 **Notes:**
-<!-- AI_NARRATIVE_START: f1r3fly -->
-_Add narrative summary of f1r3fly progress_
+<!-- AI_NARRATIVE_START: f1r3node -->
+_Add narrative summary of f1r3node progress_
 <!-- AI_NARRATIVE_END -->
 
 ---
@@ -116,17 +116,17 @@ _Add narrative summary_
 
 ### Open Milestones
 
-#### Milestone Title (repo-name)
+#### Milestone Title (f1r3node)
 - **Due:** 2025-02-15
 - **Progress:** 60% (6/10 issues)
-- [View milestone](https://github.com/F1R3FLY-io/repo/milestone/1)
+- [View milestone](https://github.com/F1R3FLY-io/f1r3node/milestone/1)
 
 ### Priority Issues
 
 Issues labeled with: priority, critical, next, planned
 
-- [repo#123](https://github.com/F1R3FLY-io/repo/issues/123) - Issue title (priority, enhancement)
-- [repo#456](https://github.com/F1R3FLY-io/repo/issues/456) - Another issue (critical)
+- [f1r3node#123](https://github.com/F1R3FLY-io/f1r3node/issues/123) - Issue title (priority, enhancement)
+- [embers#456](https://github.com/F1R3FLY-io/embers/issues/456) - Another issue (critical)
 
 ### Focus Areas
 

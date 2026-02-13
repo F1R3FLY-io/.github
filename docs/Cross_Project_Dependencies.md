@@ -2,284 +2,113 @@
 
 ## Purpose
 
-This document maps dependencies and relationships between F1R3FLY.io projects to facilitate impact analysis, coordinated releases, and ecosystem understanding.
+This document tracks high-level dependencies across key F1R3FLY.io repositories to support:
 
-## Dependency Matrix
+- impact analysis,
+- release coordination,
+- documentation-first planning.
 
-### Core Platform Dependencies
+Repository names in this document follow canonical org naming reconciled on `2026-02-13`.
+
+## Dependency Map
 
 ```mermaid
 graph TD
-    f1r3fly[f1r3fly<br/>Transaction Server] --> rholang[rholang-rs<br/>Rholang Interpreter]
-    f1r3fly --> consensus[Consensus Layer]
+    f1r3node[f1r3node<br/>Transaction Node] --> rholang_rs[rholang-rs<br/>Rholang Runtime]
 
-    embers[embers<br/>Backend API] --> firefly-client[firefly-client<br/>Blockchain Client]
-    firefly-client --> f1r3fly
+    pyf1r3fly[pyf1r3fly<br/>Python Client] --> f1r3node
+    rust_client[rust-client<br/>Rust Client] --> f1r3node
 
-    embers-frontend[embers-frontend<br/>Web UI] --> embers
-    embers-frontend --> client-sdk[TypeScript SDK]
+    embers[embers<br/>Wallets and Agents Backend] --> f1r3node
+    embers_frontend[embers-frontend<br/>Web UI] --> embers
 
-    f1r3sky[f1r3sky<br/>Social Platform] --> embers
-    f1r3sky --> atproto[AT Protocol]
+    f1r3sky_backend[f1r3sky-backend<br/>Application Backend] --> embers
+    f1r3sky[f1r3sky<br/>Application Layer] --> f1r3sky_backend
+    f1r3sky_client[f1r3sky-client<br/>Client App] --> f1r3sky_backend
 
-    lightning-bug[lightning-bug<br/>Code Editor] --> rholang-lsp[rholang-language-server<br/>LSP Server]
-    rholang-lsp --> rholang
+    rholang_lsp[rholang-language-server<br/>LSP Server] --> rholang_rs
+    rholang_vscode[rholang-vscode-client<br/>VS Code Client] --> rholang_lsp
+    rholang_nvim[rholang-nvim<br/>Neovim Client] --> rholang_lsp
+    rholang_emacs[rholang-emacs-client<br/>Emacs Client] --> rholang_lsp
+
+    mettail[MeTTaIL<br/>Intermediate Language] --> oslf[OSLF<br/>Semantics/Generators]
+    mettail_rust[mettail-rust<br/>Rust Tooling] --> mettail
+    metta_compiler[MeTTa-Compiler<br/>Compiler] --> mettail
+
+    oslf_editor[OSLF-editor<br/>Editor] --> oslf
 ```
 
-### Project Dependency Details
+## Dependency Notes
 
-| Project | Dependencies | Dependents | API Type | Status |
-|---------|--------------|------------|----------|--------|
-| **f1r3fly** | rholang-rs | firefly-client, embers | gRPC | Production |
-| **rholang-rs** | - | f1r3fly, rholang-language-server | Library | Production |
-| **embers** | firefly-client | embers-frontend, f1r3sky | REST/OpenAPI | Active |
-| **embers-frontend** | embers API | - | Consumer | Active |
-| **firefly-client** | f1r3fly | embers | gRPC Client | Active |
-| **f1r3sky** | embers, AT Protocol | - | REST | Development |
-| **rholang-language-server** | rholang-rs | lightning-bug | LSP | Active |
-| **lightning-bug** | rholang-language-server | - | LSP Client | Development |
-| **MeTTa** | - | Research tools | Library | Research |
-| **F1r3bu1ld3r** | - | - | Standalone | Development |
+- The map is intentionally portfolio-level and should be treated as coordination guidance, not build-graph truth.
+- Validate dependency details in each repository before implementation planning or release sign-off.
+- Some relationships are integration-level (service-to-service), not direct package dependencies.
 
-## Version Compatibility Matrix
+## Canonical Projects in Scope
 
-### Current Versions (as of 2025-01)
+| Project | Primary Role | Depends On (High Level) | Dependents (High Level) | Status |
+|---|---|---|---|---|
+| `f1r3node` | Core transaction node | `rholang-rs` | `pyf1r3fly`, `rust-client`, `embers` | Active |
+| `rholang-rs` | Runtime/language execution | - | `f1r3node`, `rholang-language-server` | Active |
+| `embers` | Wallets/agents backend | `f1r3node` | `embers-frontend`, `f1r3sky-backend` | Active |
+| `embers-frontend` | Web frontend | `embers` | - | Active |
+| `f1r3sky-backend` | App backend | `embers` | `f1r3sky`, `f1r3sky-client` | Active |
+| `f1r3sky` | Application layer | `f1r3sky-backend` | - | Active |
+| `f1r3sky-client` | Web/mobile client | `f1r3sky-backend` | - | Active |
+| `rholang-language-server` | LSP server | `rholang-rs` | editor clients | Active |
+| `MeTTaIL` | Intermediate language | `OSLF` (semantic tooling alignment) | `mettail-rust`, `MeTTa-Compiler` | Active |
+| `OSLF` | Formal tooling/generators | - | `MeTTaIL`, `OSLF-editor` | Active |
+| `F1r3bu1ld3r` | Infra visualization tooling | `IaC`/integration context | deployment workflows | Active |
+| `system-integration` | Cross-project integration code | multiple project APIs | integration workflows | Active |
 
-| Project | Version | Min f1r3fly | Min rholang-rs | Min embers |
-|---------|---------|-------------|----------------|------------|
-| f1r3fly | 1.0.0 | - | 0.5.0 | - |
-| rholang-rs | 0.5.0 | - | - | - |
-| embers | 0.3.0 | 1.0.0 | - | - |
-| embers-frontend | 0.3.0 | - | - | 0.3.0 |
-| firefly-client | 0.2.0 | 1.0.0 | - | - |
-| f1r3sky | 0.1.0 | - | - | 0.3.0 |
+## Breaking Change Process
 
-## API Contracts
+### Required Steps
 
-### Inter-Service Communication
+1. Document the change in the repository changelog.
+2. Identify impacted dependent repositories.
+3. Publish migration notes in the source repository.
+4. Open dependency update issues in affected repositories.
+5. Confirm integration tests pass across impacted boundaries.
 
-```yaml
-# f1r3fly <-> firefly-client
-protocol: gRPC
-port: 50051
-authentication: mTLS
-contracts:
-  - f1r3fly.proto
-  - consensus.proto
-  - blockchain.proto
+### Change Categories
 
-# embers <-> embers-frontend
-protocol: REST/OpenAPI 3.0
-port: 4000
-authentication: JWT Bearer
-contracts:
-  - openapi.yaml
-  - websocket-events.md
+- `API Contract`: service schema, RPC contract, REST shape.
+- `Runtime Behavior`: consensus/runtime behavior that impacts clients.
+- `Tooling Interface`: LSP/editor/protocol behavior.
+- `Build/Packaging`: crate/package/module boundaries.
 
-# rholang-language-server <-> lightning-bug
-protocol: LSP over WebSocket
-port: 7000
-authentication: None (local only)
-contracts:
-  - LSP 3.17 specification
-```
+## Release Coordination Order
 
-## Breaking Change Policy
+1. Language/runtime core (`rholang-rs`, `OSLF`, `MeTTaIL`, `MeTTa-Compiler`).
+2. Core node/services (`f1r3node`, `embers`).
+3. App backends and clients (`f1r3sky-backend`, `f1r3sky`, `f1r3sky-client`, `embers-frontend`).
+4. Tooling and integrations (`rholang-language-server` clients, `F1r3bu1ld3r`, `system-integration`).
 
-### Versioning Strategy
+## Documentation Requirements per Repository
 
-All projects follow Semantic Versioning 2.0.0:
-- **MAJOR**: Breaking API changes
-- **MINOR**: Backward-compatible functionality
-- **PATCH**: Backward-compatible fixes
+Each repository should maintain:
 
-### Deprecation Timeline
+1. a machine-readable dependency manifest (`dependencies.json` or ecosystem equivalent),
+2. a changelog with compatibility notes,
+3. migration guidance for breaking changes,
+4. interface documentation for external consumers.
 
-1. **Announcement** (T+0): Document deprecation in CHANGELOG
-2. **Warning** (T+1 month): Add deprecation warnings
-3. **Migration** (T+3 months): Provide migration guide
-4. **Removal** (T+6 months): Remove deprecated feature
-
-### Breaking Change Checklist
-
-- [ ] Update version compatibility matrix
-- [ ] Document in CHANGELOG.md
-- [ ] Create migration guide
-- [ ] Update dependent projects
-- [ ] Notify ecosystem partners
-- [ ] Update CI/CD pipelines
-
-## Shared Libraries and Components
-
-### Shared TypeScript Packages
-```json
-{
-  "@f1r3fly/client": "Wallet and agent operations",
-  "@f1r3fly/types": "Shared TypeScript types",
-  "@f1r3fly/utils": "Common utilities"
-}
-```
-
-### Shared Rust Crates
-```toml
-[workspace.dependencies]
-firefly-client = { path = "../firefly-client" }
-firefly-types = { path = "../firefly-types" }
-firefly-macros = { path = "../firefly-macros" }
-```
-
-### Shared Protocol Definitions
-```
-protos/
-├── blockchain.proto    # Blockchain operations
-├── consensus.proto     # Consensus protocols
-├── agent.proto         # AI agent definitions
-└── wallet.proto        # Wallet operations
-```
-
-## Release Coordination
-
-### Release Train Schedule
-
-| Phase | Duration | Activities |
-|-------|----------|------------|
-| Planning | Week 1 | Dependency analysis, version planning |
-| Development | Weeks 2-3 | Feature development, testing |
-| Integration | Week 4 | Cross-project testing |
-| Release | Week 5 | Coordinated deployment |
-
-### Release Order
-
-1. **Core Libraries** (rholang-rs, firefly-types)
-2. **Platform Services** (f1r3fly, firefly-client)
-3. **Application APIs** (embers)
-4. **Frontend Applications** (embers-frontend, f1r3sky)
-5. **Developer Tools** (rholang-language-server, lightning-bug)
-
-## Integration Testing
-
-### Cross-Project Test Suites
+## Validation Commands
 
 ```bash
-# Run integration tests across projects
-./scripts/cross-project-tests.sh
+# Refresh canonical org repo list
+gh api '/orgs/F1R3FLY-io/repos?per_page=100&type=all'
 
-# Test specific dependency chain
-./scripts/test-dependency.sh embers embers-frontend
-
-# Validate API contracts
-./scripts/validate-contracts.sh
+# Find hard-coded repo links in docs
+rg -n 'https://github.com/F1R3FLY-io/' docs
 ```
 
-### Test Matrix
+## Maintenance
 
-| Test Suite | Projects Tested | Frequency |
-|------------|----------------|-----------|
-| Core Integration | f1r3fly + firefly-client | Every commit |
-| API Integration | embers + embers-frontend | Every commit |
-| Full Stack | All projects | Nightly |
-| Performance | Critical path projects | Weekly |
-
-## Monitoring and Health
-
-### Service Dependencies Dashboard
-
-```yaml
-health_checks:
-  - name: f1r3fly_health
-    url: http://f1r3fly:50051/health
-    critical: true
-
-  - name: embers_health
-    url: http://embers:4000/health
-    critical: true
-
-  - name: frontend_health
-    url: http://embers-frontend:3000/health
-    critical: false
-```
-
-### Dependency Alerts
-
-- Version mismatch detection
-- API contract violations
-- Performance degradation
-- Security vulnerability propagation
-
-## Migration Guides
-
-### Standard Migration Template
-
-```markdown
-# Migration Guide: [Project] v[OLD] to v[NEW]
-
-## Breaking Changes
-- List all breaking changes
-- Explain impact on dependent projects
-
-## Migration Steps
-1. Update dependencies
-2. Modify configuration
-3. Update code
-4. Test integration
-
-## Rollback Procedure
-- Steps to rollback if needed
-```
-
-## Documentation Requirements
-
-Each project MUST maintain:
-
-1. **dependencies.json** - Machine-readable dependency list
-2. **CHANGELOG.md** - Version history with breaking changes
-3. **MIGRATION.md** - Migration guides for major versions
-4. **API.md** - API documentation and contracts
-
-## Tools and Automation
-
-### Dependency Management Tools
-
-```bash
-# Check for outdated dependencies
-cargo outdated                    # Rust projects
-npm outdated                      # TypeScript projects
-
-# Analyze dependency graph
-cargo tree                        # Rust projects
-npm ls                           # TypeScript projects
-
-# Security audit
-cargo audit                      # Rust projects
-npm audit                        # TypeScript projects
-```
-
-### CI/CD Integration
-
-```yaml
-# GitHub Action for dependency checks
-name: Dependency Check
-on: [push, pull_request]
-jobs:
-  check:
-    steps:
-      - uses: actions/checkout@v3
-      - name: Check dependencies
-        run: ./scripts/check-dependencies.sh
-      - name: Validate contracts
-        run: ./scripts/validate-contracts.sh
-```
-
-## Best Practices
-
-1. **Loose Coupling**: Minimize direct dependencies
-2. **Contract Testing**: Validate API contracts in CI
-3. **Version Pinning**: Pin major versions in production
-4. **Gradual Rollout**: Use feature flags for breaking changes
-5. **Documentation**: Keep dependency docs current
-6. **Monitoring**: Track cross-service metrics
-7. **Communication**: Coordinate releases across teams
+- Update this file whenever repositories are renamed, merged, split, or retired.
+- Ensure all project names stay aligned with `docs/Organization_of_Repositories.md`.
 
 ---
 
-*This document is maintained by the F1R3FLY.io platform team. Updates require cross-project coordination.*
+Maintained by the F1R3FLY.io platform team.

@@ -4,7 +4,7 @@
 
 ![Whiteboard Talk Diagram](images/Whiteboard_talk.png)
 
-This diagram illustrates a paradigm shift in distributed computing, aligned with F1R3FLY-io's mission to build high-throughput distributed computing systems leveraging decentralizion via Rholang. The visual representation employs manufacturing metaphors and engineering analogies to contrast traditional lambda calculus limitations (left side) with the capabilities of mobile process calculi and channel-process programming (center-right), culminating in Byzantine fault tolerance objectives (upper-right). The firefly-like butterfly image serves as the F1R3FLY-io brand symbol, representing autonomous, emergent agents in blockchain ecosystems such as F1r3node and F1R3FLYFS.
+This diagram illustrates a paradigm shift in distributed computing, aligned with F1R3FLY-io's mission to build high-throughput distributed computing systems leveraging decentralizion via Rholang. The visual representation employs manufacturing metaphors and engineering analogies to contrast traditional lambda calculus limitations (left side) with the capabilities of mobile process calculi and channel-process programming (center-right), culminating in Byzantine fault tolerance objectives (upper-right). The firefly-like butterfly image serves as the F1R3FLY-io brand symbol, representing autonomous, emergent agents in blockchain ecosystems such as F1r3node and f1r3drive.
 
 ### Diagram Structure
 
@@ -106,7 +106,7 @@ Just as Cerebras WSE's 400,000 cores coordinate through dataflow fabric without 
 
 ## Left Side: Limitations of Traditional Lambda Calculus and Functional Programming
 
-The left indicates limitations of Church's λ-calculus (1930s) in functional programming—stateless, referentially transparent functions enabling purity in languages like Haskell or Scala's MeTTa ([`MeTTa`](https://github.com/F1R3FLY-io/MeTTa) repo)—for modern fault-tolerant distributed computing. It lists von Neumann/Turing-derived constraints: composition challenges, deadlocks, race conditions, type error detection, verification inefficiencies, performance bottlenecks, distributed failure handling, concurrency expressiveness gaps, spatial behavioral typing deficits, and operational semantics limitations. These underscore sequential vulnerabilities in shared-state models, necessitating a new paradigm via mobile process calculi and channel-process programming to enable dynamic, composable interactions that address scalability and resilience in distributed environments.
+The left indicates limitations of Church's λ-calculus (1930s) in functional programming—stateless, referentially transparent functions enabling purity in languages like Haskell or Scala's MeTTa lineage ([`MeTTaIL`](https://github.com/F1R3FLY-io/MeTTaIL) repo)—for modern fault-tolerant distributed computing. It lists von Neumann/Turing-derived constraints: composition challenges, deadlocks, race conditions, type error detection, verification inefficiencies, performance bottlenecks, distributed failure handling, concurrency expressiveness gaps, spatial behavioral typing deficits, and operational semantics limitations. These underscore sequential vulnerabilities in shared-state models, necessitating a new paradigm via mobile process calculi and channel-process programming to enable dynamic, composable interactions that address scalability and resilience in distributed environments.
 
 ## Center-Right: Mobile Process Calculi Description
 
@@ -126,11 +126,11 @@ Upper sections introduce "Tools, Systems & Services" icons: eye for visual inspe
 
 ## Objective: Byzantine Fault Tolerance with Crash Fault Efficiency
 
-The upper-right culminates in fault tolerance: network diagrams and gauges demonstrate achieving Byzantine fault tolerance (resilience to arbitrary/malicious failures) with the performance and efficiencies of simpler crash fault tolerance (handling node crashes). This objective harnesses mobile process calculi and channel-process programming for multi-consensus in RNode-derived systems ([`f1r3node`](https://github.com/F1R3FLY-io/f1r3node)), enabling scalable, secure blockchains like f1r3sky ([`f1r3sky`](https://github.com/F1R3FLY-io/f1r3sky))—delivering high-throughput transactions without compromising speed, as in F1R3FLYFS distributed storage, by evolving data flows for inherent efficiency in distributed paradigms.
+The upper-right culminates in fault tolerance: network diagrams and gauges demonstrate achieving Byzantine fault tolerance (resilience to arbitrary/malicious failures) with the performance and efficiencies of simpler crash fault tolerance (handling node crashes). This objective harnesses mobile process calculi and channel-process programming for multi-consensus in RNode-derived systems ([`f1r3node`](https://github.com/F1R3FLY-io/f1r3node)), enabling scalable, secure blockchains like f1r3sky ([`f1r3sky`](https://github.com/F1R3FLY-io/f1r3sky))—delivering high-throughput transactions without compromising speed, as in f1r3drive storage integration, by evolving data flows for inherent efficiency in distributed paradigms.
 
 ## Relation to F1R3FLY-io Projects
 
-The diagram informs active repos: [`rhoHDC`](https://github.com/F1R3FLY-io/rhoHDC) for rho encoding in hyper-dimensional computing, [`MeTTa`](https://github.com/F1R3FLY-io/MeTTa) for concurrent languages, [`F1R3FLYFS`](https://github.com/F1R3FLY-io/F1R3FLYFS) for fault-tolerant storage, and [`embers`](https://github.com/F1R3FLY-io/embers) for agents. It advocates transitioning from λ-based sequential limits to mobile concurrency under Apache 2.0, with LLM-assisted workflows (`CLAUDE.md`).
+The diagram informs active repos: [`rhoHDC`](https://github.com/F1R3FLY-io/rhoHDC) for rho encoding in hyper-dimensional computing, [`MeTTaIL`](https://github.com/F1R3FLY-io/MeTTaIL) for intermediate language work, [`f1r3drive`](https://github.com/F1R3FLY-io/f1r3drive) for storage integration, and [`embers`](https://github.com/F1R3FLY-io/embers) for agents. It advocates transitioning from λ-based sequential limits to mobile concurrency under Apache 2.0, with LLM-assisted workflows (`CLAUDE.md`).
 
 ## Usage in Development
 
@@ -139,7 +139,7 @@ Leverage for onboarding: visualize paradigm shifts per ADRs in [`.github/docs/ar
 ## References
 
 - F1R3FLY-io Organization: Rho-calculus-driven distributed systems.
-- Key Repos: [`rhoHDC`](https://github.com/F1R3FLY-io/rhoHDC), [`lightning-bug`](https://github.com/F1R3FLY-io/lightning-bug), [`MeTTa`](https://github.com/F1R3FLY-io/MeTTa), [`rholang-rs`](https://github.com/F1R3FLY-io/rholang-rs), [`MeTTaCycleYellowPaper`](https://github.com/F1R3FLY-io/MeTTaCycleYellowPaper), [`f1r3node`](https://github.com/F1R3FLY-io/f1r3node).
+- Key Repos: [`rhoHDC`](https://github.com/F1R3FLY-io/rhoHDC), [`lightning-bug`](https://github.com/F1R3FLY-io/lightning-bug), [`MeTTaIL`](https://github.com/F1R3FLY-io/MeTTaIL), [`rholang-rs`](https://github.com/F1R3FLY-io/rholang-rs), [`MeTTaCycleYellowPaper`](https://github.com/F1R3FLY-io/MeTTaCycleYellowPaper), [`f1r3node`](https://github.com/F1R3FLY-io/f1r3node).
 
 
 ## Action Items (from Office Hours)
@@ -147,4 +147,3 @@ Leverage for onboarding: visualize paradigm shifts per ADRs in [`.github/docs/ar
 - **Factory Metaphor**: Mike says that many people may not understand factory assembly versus flexible workstations. Pi/Rho allow for self-assembly  dynamicism, flexibility, and ephemeral activity. Seek out other potential metaphors. Perhaps a traditional personal computer to Internet transition might be useful.
 - **Software Development Challenges **: Lambda calculus approaches using functional programming  are inherently single machine (perhaps with shared memory) oriented. Therefore, the challenges for software engineering may be different particularly under deadlock, race conditions, and parallel programming paradigmes [per Mike].
 - **Opening**: Need to better desribe factory metaphors if we use that approach. Probably should go through the differences in needs between data flow and von Neumann silicon along with approaches to parallelism.
-
