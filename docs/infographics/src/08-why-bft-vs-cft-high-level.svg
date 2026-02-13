@@ -58,7 +58,7 @@
         fill: rgba(255, 255, 255, 0.82);
       }
       .h1 {
-        font-size: 60px;
+        font-size: 58px;
         font-weight: 700;
         letter-spacing: -1px;
         fill: #ffffff;
@@ -72,15 +72,29 @@
         stroke: rgba(255, 255, 255, 0.14);
         stroke-width: 1;
       }
+      .cardStrong {
+        fill: rgba(0, 184, 219, 0.08);
+        stroke: rgba(0, 184, 219, 0.42);
+        stroke-width: 1.1;
+      }
       .cardTitle {
-        font-size: 22px;
+        font-size: 30px;
         font-weight: 700;
         letter-spacing: -0.2px;
         fill: #ffffff;
       }
-      .body {
-        font-size: 18px;
+      .cardSub {
+        font-size: 20px;
         fill: #d1d5dc;
+      }
+      .body {
+        font-size: 20px;
+        fill: #d1d5dc;
+      }
+      .bodyStrong {
+        font-size: 22px;
+        font-weight: 640;
+        fill: #ffffff;
       }
       .muted {
         font-size: 14px;
@@ -88,6 +102,16 @@
       }
       .accent {
         fill: #00b8db;
+      }
+      .triLine {
+        stroke: #00b8db;
+        stroke-width: 4;
+      }
+      .sideLabel {
+        font-size: 24px;
+        font-weight: 650;
+        letter-spacing: 0.2px;
+        fill: #ffffff;
       }
     </style>
   </defs>
@@ -106,7 +130,6 @@
     opacity="0.08"
   />
 
-  <!-- header -->
   <g class="font">
     <circle cx="118" cy="78" r="36" fill="rgba(0, 184, 219, 0.14)" />
     <image
@@ -119,128 +142,77 @@
       opacity="0.92"
     />
     <text x="158" y="74" class="brand">F1R3FLY</text>
-    <g transform="translate(1496, 46)">
-      <rect x="0" y="0" width="338" height="34" rx="17" class="card" />
-      <text x="18" y="23" class="pill">Conclusion</text>
+
+    <g transform="translate(1332, 46)">
+      <rect x="0" y="0" width="502" height="34" rx="17" class="card" />
+      <text x="18" y="23" class="pill">Intro Graphic: CFT to BFT</text>
     </g>
 
-    <text x="86" y="148" class="h1">Summary for Partners</text>
+    <text x="86" y="148" class="h1">CFT to BFT: Why It Matters</text>
     <text x="86" y="190" class="sub">
-      <tspan x="86" dy="0">A network-native platform (F1r3fly + Rholang) with correctness tooling (OSLF),</tspan>
-      <tspan x="86" dy="28">caps-based security, BFT resilience, and a roadmap for AI throughput-per-watt.</tspan>
+      <tspan x="86" dy="0">Conceptual shift from benign-failure recovery toward adversarial fault tolerance.</tspan>
+      <tspan x="86" dy="28">Moderate recommendation: prefer BFT posture when cross-trust risk is present.</tspan>
     </text>
   </g>
 
-  <g class="font" transform="translate(86, 260)">
-    <!-- three columns -->
-    <g>
-      <rect x="0" y="0" width="556" height="700" rx="20" class="card" filter="url(#shadow)" />
-      <text x="26" y="52" class="cardTitle">What Was Discussed</text>
+  <g class="font" transform="translate(86, 240)">
+    <rect x="0" y="0" width="1748" height="700" rx="22" class="cardStrong" filter="url(#shadow)" />
 
-      <g transform="translate(26, 104)">
-        <circle cx="6" cy="8" r="4" class="accent" />
-        <text x="22" y="14" class="body">Move from sequential to message-first systems</text>
-      </g>
-      <g transform="translate(26, 138)">
-        <circle cx="6" cy="8" r="4" class="accent" />
-        <text x="22" y="14" class="body">pi/rho calculus + Rholang for network-native concurrency</text>
-      </g>
-      <g transform="translate(26, 172)">
-        <circle cx="6" cy="8" r="4" class="accent" />
-        <text x="22" y="14" class="body">OSLF for correctness and protocol safety checks</text>
-      </g>
-      <g transform="translate(26, 206)">
-        <circle cx="6" cy="8" r="4" class="accent" />
-        <text x="22" y="14" class="body">F1r3fly Caps for fine-grained capability-based security</text>
-      </g>
-      <g transform="translate(26, 240)">
-        <circle cx="6" cy="8" r="4" class="accent" />
-        <text x="22" y="14" class="body">BFT as a foundation for resilient decentralized systems</text>
-      </g>
-      <g transform="translate(26, 274)">
-        <circle cx="6" cy="8" r="4" class="accent" />
-        <text x="22" y="14" class="body">AI infrastructure: targeting 10x-1000x throughput-per-watt</text>
-      </g>
+    <g transform="translate(32, 24)">
+      <rect x="0" y="0" width="516" height="52" rx="12" class="card" />
+      <text x="24" y="34" class="bodyStrong">CFT -&gt; BFT: Holding adversaries at bay</text>
     </g>
 
-    <g transform="translate(596, 0)">
-      <rect x="0" y="0" width="556" height="700" rx="20" class="card" filter="url(#shadow)" />
-      <text x="26" y="52" class="cardTitle">Why This Matters to SIs</text>
-
-      <g transform="translate(26, 104)">
-        <text x="0" y="0" class="body">F1r3fly helps integrators deliver:</text>
-      </g>
-
-      <g transform="translate(26, 148)">
-        <circle cx="6" cy="8" r="4" class="accent" />
-        <text x="22" y="14" class="body">More capacity per watt (dataflow architectures + Rholang)</text>
-      </g>
-      <g transform="translate(26, 182)">
-        <circle cx="6" cy="8" r="4" class="accent" />
-        <text x="22" y="14" class="body">Stronger security posture (caps vs coarse ACL patterns)</text>
-      </g>
-      <g transform="translate(26, 216)">
-        <circle cx="6" cy="8" r="4" class="accent" />
-        <text x="22" y="14" class="body">Resilience in adversarial settings (BFT)</text>
-      </g>
-      <g transform="translate(26, 250)">
-        <circle cx="6" cy="8" r="4" class="accent" />
-        <text x="22" y="14" class="body">Modern AI orchestration with throughput-per-watt targets</text>
-      </g>
-
-      <g transform="translate(26, 322)">
-        <rect x="0" y="0" width="504" height="336" rx="18" class="card" />
-        <text x="22" y="44" class="cardTitle">Positioning Guidance</text>
-        <text x="22" y="78" class="body">F1r3fly is not a blockchain product.</text>
-        <text x="22" y="108" class="body">It provides underlying BFT and distributed systems technologies</text>
-        <text x="22" y="138" class="body">applicable to blockchains, DAGs, and custom architectures.</text>
-        <text x="22" y="198" class="body">Lead with competitive advantage:</text>
-        <g transform="translate(22, 228)">
-          <circle cx="6" cy="8" r="4" class="accent" />
-          <text x="22" y="14" class="body">Throughput-per-watt</text>
-        </g>
-        <g transform="translate(22, 262)">
-          <circle cx="6" cy="8" r="4" class="accent" />
-          <text x="22" y="14" class="body">Caps security</text>
-        </g>
-        <g transform="translate(22, 296)">
-          <circle cx="6" cy="8" r="4" class="accent" />
-          <text x="22" y="14" class="body">BFT resilience</text>
-        </g>
-      </g>
+    <g transform="translate(1200, 24)">
+      <rect x="0" y="0" width="516" height="52" rx="12" class="card" />
+      <text x="24" y="34" class="body">Technical lens: performance, security, resilience</text>
     </g>
 
-    <g transform="translate(1192, 0)">
-      <rect x="0" y="0" width="556" height="700" rx="20" class="card" filter="url(#shadow)" />
-      <text x="26" y="52" class="cardTitle">Next Steps</text>
+    <!-- Triangle -->
+    <line x1="874" y1="162" x2="560" y2="520" class="triLine" />
+    <line x1="560" y1="520" x2="1188" y2="520" class="triLine" />
+    <line x1="1188" y1="520" x2="874" y2="162" class="triLine" />
 
-      <g transform="translate(26, 112)">
-        <rect x="0" y="0" width="504" height="164" rx="18" class="card" />
-        <text x="22" y="44" class="cardTitle">1) Discovery Call</text>
-        <text x="22" y="78" class="body">Align use case, target hardware, and delivery model.</text>
-        <text x="22" y="108" class="body">Choose a pilot track: performance, caps security, BFT, or AI.</text>
-      </g>
+    <circle cx="874" cy="162" r="10" class="accent" />
+    <circle cx="560" cy="520" r="10" class="accent" />
+    <circle cx="1188" cy="520" r="10" class="accent" />
 
-      <g transform="translate(26, 296)">
-        <rect x="0" y="0" width="504" height="164" rx="18" class="card" />
-        <text x="22" y="44" class="cardTitle">2) 2-Week Pilot</text>
-        <text x="22" y="78" class="body">Prove throughput-per-watt and integration feasibility.</text>
-        <text x="22" y="108" class="body">Produce a partner-ready reference architecture.</text>
-      </g>
+    <!-- strict side labels -->
+    <g transform="translate(634, 322)">
+      <rect x="0" y="0" width="170" height="42" rx="11" class="card" />
+      <text x="21" y="28" class="sideLabel">Resilience</text>
+    </g>
 
-      <g transform="translate(26, 480)">
-        <rect x="0" y="0" width="504" height="190" rx="18" class="card" />
-        <text x="22" y="44" class="cardTitle">3) Production Plan</text>
-        <text x="22" y="78" class="body">Roadmap delivery, security model (caps), and BFT posture.</text>
-        <text x="22" y="108" class="body">Define KPIs: throughput, power, resilience, and operability.</text>
-        <text x="22" y="150" class="body">Enable sales: messaging, diagrams, and deployment blueprints.</text>
-      </g>
+    <g transform="translate(944, 322)">
+      <rect x="0" y="0" width="152" height="42" rx="11" class="card" />
+      <text x="24" y="28" class="sideLabel">Security</text>
+    </g>
+
+    <g transform="translate(777, 544)">
+      <rect x="0" y="0" width="194" height="42" rx="11" class="card" />
+      <text x="23" y="28" class="sideLabel">Performance</text>
+    </g>
+
+    <g transform="translate(170, 278)">
+      <rect x="0" y="0" width="338" height="98" rx="16" class="card" />
+      <text x="22" y="40" class="cardSub">Resilience:</text>
+      <text x="22" y="72" class="body">Continues correct operation through contested faults.</text>
+    </g>
+
+    <g transform="translate(1240, 278)">
+      <rect x="0" y="0" width="338" height="98" rx="16" class="card" />
+      <text x="22" y="40" class="cardSub">Security:</text>
+      <text x="22" y="72" class="body">Tolerance to compromised or malicious participants.</text>
+    </g>
+
+    <g transform="translate(650, 612)">
+      <rect x="0" y="0" width="448" height="62" rx="14" class="card" />
+      <text x="24" y="40" class="body">Performance: sustained useful progress under contention.</text>
     </g>
   </g>
 
-  <!-- footer -->
   <g class="font">
-    <text x="86" y="1032" class="muted">Deliverables: 9 infographics including SI offering and CFT/BFT comparison sheets.</text>
+    <text x="86" y="1032" class="muted">Conceptual intro for SI analysis: one-line transition, triangle model, high-level technical framing.</text>
     <text x="1834" y="1032" text-anchor="end" class="muted">f1r3fly.com</text>
   </g>
 </svg>
