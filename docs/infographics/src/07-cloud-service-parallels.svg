@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1920"
+  height="1080"
+  viewBox="0 0 1920 1080"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0a09" />
+      <stop offset="55%" stop-color="#0c0a09" />
+      <stop offset="100%" stop-color="#053345" />
+    </linearGradient>
+
+    <radialGradient id="glowA" cx="18%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowB" cx="84%" cy="22%" r="70%">
+      <stop offset="0%" stop-color="#00b8db" stop-opacity="0.20" />
+      <stop offset="60%" stop-color="#00b8db" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path
+        d="M 44 0 L 0 0 0 44"
+        fill="none"
+        stroke="#ffffff"
+        stroke-opacity="0.06"
+        stroke-width="1"
+      />
+    </pattern>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+
+    <clipPath id="logoClip">
+      <circle cx="118" cy="78" r="36" />
+    </clipPath>
+
+    <style>
+      .font {
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      .brand {
+        font-size: 14px;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.72);
+      }
+      .pill {
+        font-size: 12px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        fill: rgba(255, 255, 255, 0.82);
+      }
+      .h1 {
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        fill: #ffffff;
+      }
+      .sub {
+        font-size: 20px;
+        fill: #d1d5dc;
+      }
+      .card {
+        fill: rgba(255, 255, 255, 0.06);
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1;
+      }
+      .th {
+        font-size: 15px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .td {
+        font-size: 13px;
+        fill: #d1d5dc;
+      }
+      .cardTitle {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        fill: #ffffff;
+      }
+      .body {
+        font-size: 17px;
+        fill: #d1d5dc;
+      }
+      .muted {
+        font-size: 14px;
+        fill: rgba(255, 255, 255, 0.62);
+      }
+      .accent {
+        fill: #00b8db;
+      }
+      .line {
+        stroke: rgba(255, 255, 255, 0.16);
+        stroke-width: 1;
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#bg)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowA)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#glowB)" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#grid)" />
+
+  <image
+    x="1560"
+    y="98"
+    width="300"
+    height="452"
+    xlink:href="../_assets/f1r3fly-logo-400w.png"
+    opacity="0.08"
+  />
+
+  <!-- header -->
+  <g class="font">
+    <circle cx="118" cy="78" r="36" fill="rgba(0, 184, 219, 0.14)" />
+    <image
+      x="86"
+      y="30"
+      width="64"
+      height="96"
+      xlink:href="../_assets/f1r3fly-logo-400w.png"
+      clip-path="url(#logoClip)"
+      opacity="0.92"
+    />
+    <text x="158" y="74" class="brand">F1R3FLY</text>
+    <g transform="translate(1320, 46)">
+      <rect x="0" y="0" width="514" height="34" rx="17" class="card" />
+      <text x="18" y="23" class="pill">Abductive SI Comparison: CFT to BFT</text>
+    </g>
+
+    <text x="86" y="148" class="h1">Cloud Service Parallels to F1R3FLY Portfolio</text>
+    <text x="86" y="190" class="sub">
+      <tspan x="86" dy="0">Conceptual equivalents across AWS, Azure, and GCP mapped to F1R3FLY offerings.</tspan>
+      <tspan x="86" dy="28">Neutral capability framing with explicit Crash Fault Tolerant to Byzantine Fault Tolerant emphasis.</tspan>
+    </text>
+  </g>
+
+  <g class="font" transform="translate(86, 246)">
+    <!-- table -->
+    <g>
+      <rect x="0" y="0" width="1748" height="496" rx="20" class="card" filter="url(#shadow)" />
+
+      <!-- vertical lines -->
+      <line x1="320" y1="0" x2="320" y2="496" class="line" />
+      <line x1="540" y1="0" x2="540" y2="496" class="line" />
+      <line x1="760" y1="0" x2="760" y2="496" class="line" />
+      <line x1="1010" y1="0" x2="1010" y2="496" class="line" />
+
+      <!-- horizontal lines -->
+      <line x1="0" y1="40" x2="1748" y2="40" class="line" />
+      <line x1="0" y1="78" x2="1748" y2="78" class="line" />
+      <line x1="0" y1="116" x2="1748" y2="116" class="line" />
+      <line x1="0" y1="154" x2="1748" y2="154" class="line" />
+      <line x1="0" y1="192" x2="1748" y2="192" class="line" />
+      <line x1="0" y1="230" x2="1748" y2="230" class="line" />
+      <line x1="0" y1="268" x2="1748" y2="268" class="line" />
+      <line x1="0" y1="306" x2="1748" y2="306" class="line" />
+      <line x1="0" y1="344" x2="1748" y2="344" class="line" />
+      <line x1="0" y1="382" x2="1748" y2="382" class="line" />
+      <line x1="0" y1="420" x2="1748" y2="420" class="line" />
+      <line x1="0" y1="458" x2="1748" y2="458" class="line" />
+
+      <!-- header row -->
+      <text x="14" y="26" class="th">Capability Category</text>
+      <text x="334" y="26" class="th">AWS Baseline</text>
+      <text x="554" y="26" class="th">Azure Baseline</text>
+      <text x="774" y="26" class="th">GCP Baseline</text>
+      <text x="1024" y="26" class="th">F1R3FLY Conceptual Equivalent</text>
+
+      <!-- row 1 -->
+      <text x="14" y="64" class="td">Object/data storage service</text>
+      <text x="334" y="64" class="td">S3</text>
+      <text x="554" y="64" class="td">Blob Storage</text>
+      <text x="774" y="64" class="td">Cloud Storage</text>
+      <text x="1024" y="64" class="td">f1r3drive, f1r3drive-extension</text>
+
+      <!-- row 2 -->
+      <text x="14" y="102" class="td">Compute/node runtime</text>
+      <text x="334" y="102" class="td">EC2</text>
+      <text x="554" y="102" class="td">Virtual Machines</text>
+      <text x="774" y="102" class="td">Compute Engine</text>
+      <text x="1024" y="102" class="td">f1r3node, f1r3node-rust, pyf1r3fly, rust-client</text>
+
+      <!-- row 3 -->
+      <text x="14" y="140" class="td">Infrastructure automation/provisioning</text>
+      <text x="334" y="140" class="td">CloudFormation/CDK</text>
+      <text x="554" y="140" class="td">ARM/Bicep</text>
+      <text x="774" y="140" class="td">Infrastructure Manager/OpenTofu</text>
+      <text x="1024" y="140" class="td">IaC, F1r3bu1ld3r, system-integration</text>
+
+      <!-- row 4 -->
+      <text x="14" y="178" class="td">API and service gateway layer</text>
+      <text x="334" y="178" class="td">API Gateway</text>
+      <text x="554" y="178" class="td">API Management</text>
+      <text x="774" y="178" class="td">API Gateway</text>
+      <text x="1024" y="178" class="td">embers, f1r3sky-backend</text>
+
+      <!-- row 5 -->
+      <text x="14" y="216" class="td">Application platform layer</text>
+      <text x="334" y="216" class="td">ECS/EKS app stacks</text>
+      <text x="554" y="216" class="td">AKS app stacks</text>
+      <text x="774" y="216" class="td">GKE app stacks</text>
+      <text x="1024" y="216" class="td">embers-frontend, f1r3sky stack, f1r3wallet, f1r3bot</text>
+
+      <!-- row 6 -->
+      <text x="14" y="254" class="td">Messaging and event coordination</text>
+      <text x="334" y="254" class="td">SQS/SNS</text>
+      <text x="554" y="254" class="td">Service Bus/Event Grid</text>
+      <text x="774" y="254" class="td">Pub/Sub</text>
+      <text x="1024" y="254" class="td">rholang, rholang-rs, graphl-parser</text>
+
+      <!-- row 7 -->
+      <text x="14" y="292" class="td">Access control, identity, and policy</text>
+      <text x="334" y="292" class="td">IAM</text>
+      <text x="554" y="292" class="td">Entra ID + IAM</text>
+      <text x="774" y="292" class="td">Cloud IAM</text>
+      <text x="1024" y="292" class="td">F1r3 CAPS, OSLF, OSLF-editor</text>
+
+      <!-- row 8 -->
+      <text x="14" y="330" class="td">Correctness and integration safety tooling</text>
+      <text x="334" y="330" class="td">Code-level lint/test stacks</text>
+      <text x="554" y="330" class="td">Code-level lint/test stacks</text>
+      <text x="774" y="330" class="td">Code-level lint/test stacks</text>
+      <text x="1024" y="330" class="td">OSLF, MeTTaIL, mettail-rust, MeTTa-Compiler</text>
+
+      <!-- row 9 -->
+      <text x="14" y="368" class="td">Developer productivity and integration</text>
+      <text x="334" y="368" class="td">Cloud IDE ecosystem</text>
+      <text x="554" y="368" class="td">Cloud IDE ecosystem</text>
+      <text x="774" y="368" class="td">Cloud IDE ecosystem</text>
+      <text x="1024" y="368" class="td">rholang-language-server clients, lightning-bug</text>
+
+      <!-- row 10 -->
+      <text x="14" y="406" class="td">Observability and flow analysis</text>
+      <text x="334" y="406" class="td">CloudWatch</text>
+      <text x="554" y="406" class="td">Azure Monitor</text>
+      <text x="774" y="406" class="td">Cloud Monitoring</text>
+      <text x="1024" y="406" class="td">Sankey_block_explorer, system-integration</text>
+
+      <!-- row 11 -->
+      <text x="14" y="444" class="td">Governance, process, and release controls</text>
+      <text x="334" y="444" class="td">Organizations/Config</text>
+      <text x="554" y="444" class="td">Mgmt Groups/Policy</text>
+      <text x="774" y="444" class="td">Org Policy/Folders</text>
+      <text x="1024" y="444" class="td">FIPS, fflip, .github</text>
+
+      <!-- row 12 -->
+      <text x="14" y="482" class="td">Strategic private extension portfolio</text>
+      <text x="334" y="482" class="td">Specialized managed services</text>
+      <text x="554" y="482" class="td">Specialized managed services</text>
+      <text x="774" y="482" class="td">Specialized managed services</text>
+      <text x="1024" y="482" class="td">f1r3fly-rgb, Rholang-RGB, F1R3FLY.ai, Singularity-Scale, more</text>
+    </g>
+
+    <!-- bottom cards -->
+    <g transform="translate(0, 516)">
+      <rect x="0" y="0" width="1068" height="188" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="52" class="cardTitle">CFT/BFT Comparison</text>
+
+      <g transform="translate(26, 84)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Abductive Analysis.</text>
+      </g>
+      <g transform="translate(26, 118)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">Cloud baselines are typically CFT-oriented; F1R3FLY mappings emphasize BFT posture.</text>
+      </g>
+      <g transform="translate(26, 152)">
+        <circle cx="6" cy="8" r="4" class="accent" />
+        <text x="22" y="14" class="body">F1r3 CAPS security model extends and enhances traditional hierarchical approaches.</text>
+      </g>
+    </g>
+
+    <g transform="translate(1086, 516)">
+      <rect x="0" y="0" width="662" height="188" rx="20" class="card" filter="url(#shadow)" />
+      <text x="26" y="52" class="cardTitle">Guardrails</text>
+      <text x="26" y="88" class="body">Conceptual equivalents only. Not drop-in replacements.</text>
+      <text x="26" y="116" class="body">Private repositories: name references only, no URLs.</text>
+      <text x="26" y="144" class="body">Canonical naming source: docs/Organization_of_Repositories.md</text>
+      <text x="26" y="172" class="muted">Source: docs/Cloud_Service_Parallels.md (2026-02-13)</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <g class="font">
+    <text x="86" y="1032" class="muted">
+      SI comparison aid: evaluate fault model assumptions, trust boundaries, and integration patterns before architecture commitments.
+    </text>
+    <text x="1834" y="1032" text-anchor="end" class="muted">f1r3fly.com</text>
+  </g>
+</svg>

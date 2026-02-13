@@ -37,6 +37,10 @@
       <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55" />
     </filter>
 
+    <clipPath id="logoClip">
+      <circle cx="118" cy="78" r="36" />
+    </clipPath>
+
     <style>
       .font {
         font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -115,7 +119,17 @@
 
   <!-- header -->
   <g class="font">
-    <text x="86" y="74" class="brand">F1R3FLY</text>
+    <circle cx="118" cy="78" r="36" fill="rgba(0, 184, 219, 0.14)" />
+    <image
+      x="86"
+      y="30"
+      width="64"
+      height="96"
+      xlink:href="../_assets/f1r3fly-logo-400w.png"
+      clip-path="url(#logoClip)"
+      opacity="0.92"
+    />
+    <text x="158" y="74" class="brand">F1R3FLY</text>
 
     <g transform="translate(1490, 46)">
       <rect x="0" y="0" width="344" height="34" rx="17" class="card" />
