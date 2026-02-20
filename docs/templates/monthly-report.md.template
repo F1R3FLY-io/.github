@@ -189,7 +189,7 @@ This template is used by `scripts/generate-monthly-report.sh` to create monthly 
 
 ### Narrative Sections
 
-Sections marked with `<!-- AI_NARRATIVE_START: section_name -->` are placeholders for human or AI-generated narrative content. The `/github-activity-report` Claude Code command can help fill these in.
+Sections marked with `<!-- AI_NARRATIVE_START: section_name -->` are placeholders for human or AI-generated narrative content. The `/generate-github-status --narratives` Claude Code command can help fill these in.
 
 ### Customization
 

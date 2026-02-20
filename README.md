@@ -35,10 +35,10 @@ Generate status reports across all F1R3FLY.io repositories.
 ./scripts/generate-github-status-report.sh --dry-run    # Preview only
 ```
 
-**With Claude Code:** Use `/github-activity-report` to generate reports interactively. To enable:
+**With Claude Code:** Use `/generate-github-status` to generate reports interactively. To enable:
 
 ```bash
-$ ln -s "$(pwd)/prompts/github-activity-report.md" ~/.claude/commands/
+$ ln -s "$(pwd)/prompts/generate-github-status.md" ~/.claude/commands/
 $ claude # or --continue to restart with /slash command
 ```
 

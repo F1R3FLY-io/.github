@@ -1,7 +1,7 @@
 ---
-name: github-activity-report
+name: generate-github-status
 description: Generate and enhance status reports for F1R3FLY.io repositories. Use when user asks to "generate monthly report", "create status report", "GitHub activity summary", or "add narratives to report".
-version: 1.0.0
+version: 2.0.0
 ---
 
 # Monthly Report Generation Skill

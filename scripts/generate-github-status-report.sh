@@ -116,8 +116,8 @@ Output Files:
   Annual:  docs/reports/YYYY-annual-report.md
 
 Post-generation:
-  Use the /github-activity-report Claude Code command to add narrative summaries
-  to the AI_NARRATIVE placeholder sections.
+  Use the /generate-github-status --narratives Claude Code command to add narrative
+  summaries to the AI_NARRATIVE placeholder sections.
 
 Requirements:
   - gh CLI must be installed and authenticated (run: gh auth login)
@@ -434,7 +434,7 @@ main() {
         echo ""
         log INFO "Next steps:"
         echo "  1. Review the generated report"
-        echo "  2. Use /github-activity-report to add narrative summaries"
+        echo "  2. Use /generate-github-status --narratives to add narrative summaries"
         echo "  3. Commit and push when complete"
     fi
 
