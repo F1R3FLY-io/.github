@@ -239,69 +239,97 @@
 		],
 		"1.5x": [
 			{
-				"id": "stage_0_intro",
-				"name": "Intro",
-				"short_name": "Intro",
+				"id": "stage_1_problem",
+				"name": "Problem Framing",
+				"short_name": "Problem",
 				"start_time": 0,
 				"end_time": 10,
-				"color": "#f4b942",
-				"narration": { "tone": "placeholder", "pause_ms": 120, "text": "Placeholder 1.5x intro narration." }
+				"color": "#d17e7e",
+				"narration": {
+					"tone": "product explainer, concise",
+					"pause_ms": 120,
+					"text": "Firefly rethinks high-throughput systems. Sequential, single-instruction assumptions break under distributed, concurrent, always-on workloads."
+				}
 			},
 			{
-				"id": "stage_1_shift",
+				"id": "stage_2_shift",
 				"name": "Architecture Shift",
 				"short_name": "Shift",
 				"start_time": 10,
 				"end_time": 25,
 				"color": "#44bfbf",
-				"narration": { "tone": "placeholder", "pause_ms": 120, "text": "Placeholder 1.5x architecture shift narration." }
+				"narration": {
+					"tone": "product explainer, concise",
+					"pause_ms": 120,
+					"text": "Traditional scaling copies the same line: more cores, more servers, more coordination overhead. Dataflow changes this: work starts on data arrival and routes across flexible compute paths."
+				}
 			},
 			{
-				"id": "stage_2_messaging",
-				"name": "Typed Messaging",
-				"short_name": "Typing",
+				"id": "stage_3_message_first",
+				"name": "Message-First Model",
+				"short_name": "Messaging",
 				"start_time": 25,
 				"end_time": 42,
 				"color": "#ad8fff",
-				"narration": { "tone": "placeholder", "pause_ms": 120, "text": "Placeholder 1.5x typed messaging narration." }
+				"narration": {
+					"tone": "product explainer, concise",
+					"pause_ms": 120,
+					"text": "Most stacks treat messaging as an external queue. Pi and rho calculus make communication first-class and type-visible, enabling design-time protocol guarantees instead of runtime guesswork."
+				}
 			},
 			{
-				"id": "stage_3_close",
-				"name": "Outcomes",
+				"id": "stage_4_outcome",
+				"name": "Outcome and Call to Action",
 				"short_name": "Close",
 				"start_time": 42,
 				"end_time": 60,
 				"color": "#f4b942",
-				"narration": { "tone": "placeholder", "pause_ms": 120, "text": "Placeholder 1.5x closing narration." }
+				"narration": {
+					"tone": "product explainer, concise close",
+					"pause_ms": 120,
+					"text": "Behavioral typing plus dataflow execution strengthens correctness and performance, with a path toward Byzantine fault tolerance efficiency. Firefly tools, systems, and services make this deployable."
+				}
 			}
 		],
 		"2x": [
 			{
-				"id": "stage_0_intro",
-				"name": "Legacy to Dataflow",
+				"id": "stage_1_problem_shift",
+				"name": "Problem and Shift",
 				"short_name": "Shift",
 				"start_time": 0,
 				"end_time": 20,
 				"color": "#44bfbf",
-				"narration": { "tone": "placeholder", "pause_ms": 100, "text": "Placeholder 2x architecture shift narration." }
+				"narration": {
+					"tone": "product explainer, rapid",
+					"pause_ms": 100,
+					"text": "Firefly rethinks high-throughput systems: single-machine assumptions fail for distributed, concurrent workloads. Dataflow replaces rigid sequencing with work triggered by data arrival."
+				}
 			},
 			{
-				"id": "stage_1_messaging",
-				"name": "Typed Messaging",
+				"id": "stage_2_message_first",
+				"name": "Message-First Model",
 				"short_name": "Messaging",
 				"start_time": 20,
 				"end_time": 42,
 				"color": "#ad8fff",
-				"narration": { "tone": "placeholder", "pause_ms": 100, "text": "Placeholder 2x typed messaging narration." }
+				"narration": {
+					"tone": "product explainer, rapid",
+					"pause_ms": 100,
+					"text": "Pi and rho calculus make communication first-class and visible to the type system, moving concurrency from test-and-hope to design-time guarantees."
+				}
 			},
 			{
-				"id": "stage_2_close",
-				"name": "Outcome",
+				"id": "stage_3_outcome",
+				"name": "Outcome and Call to Action",
 				"short_name": "Close",
 				"start_time": 42,
 				"end_time": 60,
 				"color": "#f4b942",
-				"narration": { "tone": "placeholder", "pause_ms": 100, "text": "Placeholder 2x closing narration." }
+				"narration": {
+					"tone": "product explainer, rapid close",
+					"pause_ms": 100,
+					"text": "This yields stronger correctness and performance, with a path toward crash-fault-like Byzantine fault tolerance efficiency. Firefly delivers design, verification, and deployment tooling for message-first systems."
+				}
 			}
 		]
 	}
