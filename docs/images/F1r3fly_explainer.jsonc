@@ -4,7 +4,7 @@
 	"meta": {
 		"id": "f1r3fly_explainer_speed_based",
 		"title": "F1R3FLY Explainer",
-		"version": "0.1.0",
+		"version": "0.2.0",
 		"total_duration_seconds": 60
 	},
 
@@ -40,11 +40,11 @@
 		"anchor_speed": 1.0,
 		"strength": 0.5,
 		"regions": [
-			{ "id": "anchor_intro", "start": 0.0, "end": 0.1 },
-			{ "id": "anchor_shift_1", "start": 0.2, "end": 0.35 },
-			{ "id": "anchor_shift_2", "start": 0.45, "end": 0.62 },
-			{ "id": "anchor_shift_3", "start": 0.7, "end": 0.85 },
-			{ "id": "anchor_close", "start": 0.9, "end": 0.98 }
+			{ "id": "anchor_stage_1", "start": 0.0, "end": 0.133 },
+			{ "id": "anchor_stage_2", "start": 0.133, "end": 0.333 },
+			{ "id": "anchor_stage_3", "start": 0.333, "end": 0.567 },
+			{ "id": "anchor_stage_4", "start": 0.567, "end": 0.833 },
+			{ "id": "anchor_stage_5", "start": 0.833, "end": 0.98 }
 		]
 	},
 
@@ -172,49 +172,69 @@
 		],
 		"1x": [
 			{
-				"id": "stage_0_intro",
-				"name": "Intro",
-				"short_name": "Intro",
+				"id": "stage_1_problem",
+				"name": "Problem Framing",
+				"short_name": "Problem",
 				"start_time": 0,
-				"end_time": 6,
-				"color": "#f4b942",
-				"narration": { "tone": "placeholder", "pause_ms": 140, "text": "Placeholder 1x intro narration." }
+				"end_time": 8,
+				"color": "#d17e7e",
+				"narration": {
+					"tone": "product explainer, opening",
+					"pause_ms": 140,
+					"text": "Firefly rethinks high-throughput systems. The old single-instruction model was built for one machine. Modern workloads are distributed, concurrent, and always on."
+				}
 			},
 			{
-				"id": "stage_1_contrast",
-				"name": "Sequential vs Dataflow",
-				"short_name": "Contrast",
-				"start_time": 6,
+				"id": "stage_2_shift",
+				"name": "Architecture Shift",
+				"short_name": "Shift",
+				"start_time": 8,
 				"end_time": 20,
-				"color": "#8fc8ff",
-				"narration": { "tone": "placeholder", "pause_ms": 140, "text": "Placeholder 1x contrast narration." }
+				"color": "#44bfbf",
+				"narration": {
+					"tone": "product explainer, clear",
+					"pause_ms": 140,
+					"text": "Traditional scaling copies the same line: more cores, more servers, more coordination overhead. Dataflow flips this. Work begins when data arrives, and execution routes through flexible compute paths."
+				}
 			},
 			{
-				"id": "stage_2_pi_rho",
-				"name": "Pi and Rho Calculus",
-				"short_name": "Pi-Rho",
+				"id": "stage_3_message_first",
+				"name": "Message-First Model",
+				"short_name": "Messaging",
 				"start_time": 20,
 				"end_time": 34,
 				"color": "#ad8fff",
-				"narration": { "tone": "placeholder", "pause_ms": 140, "text": "Placeholder 1x messaging and type-system narration." }
+				"narration": {
+					"tone": "product explainer, technical",
+					"pause_ms": 160,
+					"text": "Most stacks bolt messaging on with external queues. Pi and rho calculus make communication first-class, so protocols are visible to the type system. That enables design-time guarantees instead of production-time guesswork."
+				}
 			},
 			{
-				"id": "stage_3_correctness",
-				"name": "Correctness by Construction",
-				"short_name": "Verify",
+				"id": "stage_4_correctness_performance",
+				"name": "Correctness and Performance",
+				"short_name": "Verify+Perf",
 				"start_time": 34,
-				"end_time": 48,
+				"end_time": 50,
 				"color": "#84d08d",
-				"narration": { "tone": "placeholder", "pause_ms": 140, "text": "Placeholder 1x correctness and verification narration." }
+				"narration": {
+					"tone": "product explainer, assertive",
+					"pause_ms": 160,
+					"text": "Behavioral typing lets us check deadlock risk, protocol order, and resource safety while targeting modern parallel silicon. That gives stronger correctness and a path toward Byzantine fault tolerance with crash-fault-like performance."
+				}
 			},
 			{
-				"id": "stage_4_close",
-				"name": "F1R3FLY Outcome",
+				"id": "stage_5_outcome",
+				"name": "Outcome and Call to Action",
 				"short_name": "Close",
-				"start_time": 48,
+				"start_time": 50,
 				"end_time": 60,
 				"color": "#f4b942",
-				"narration": { "tone": "placeholder", "pause_ms": 140, "text": "Placeholder 1x closing narration." }
+				"narration": {
+					"tone": "product explainer, closing",
+					"pause_ms": 140,
+					"text": "Firefly delivers this through tools, systems, and services: design, verify, and deploy message-first software for distributed backends, AI pipelines, and blockchain infrastructure. Move from ad-hoc concurrency to provable concurrent systems."
+				}
 			}
 		],
 		"1.5x": [
