@@ -8,11 +8,15 @@
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
+		"hooks:install": "./scripts/setup-hooks.sh",
 		"typecheck": "tsc --noEmit",
-		"check": "pnpm run typecheck && pnpm run build"
+		"test": "pnpm run test:ts",
+		"test:ts": "vitest run",
+		"check": "pnpm run typecheck && pnpm run test && pnpm run build"
 	},
 	"devDependencies": {
 		"typescript": "^5.7.0",
-		"vite": "^6.0.0"
+		"vite": "^6.0.0",
+		"vitest": "^3.2.4"
 	}
 }

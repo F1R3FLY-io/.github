@@ -69,6 +69,30 @@ pnpm run dev
 pnpm run build
 ```
 
+### Unit tests
+
+```bash
+pnpm run test
+```
+
+### Pre-push hook setup
+
+```bash
+./scripts/setup-hooks.sh
+```
+
+Optional copy mode:
+
+```bash
+./scripts/setup-hooks.sh --copy
+```
+
+The hook runs:
+
+- `pnpm run typecheck`
+- `pnpm run test`
+- `pnpm run build` (skipped with `QUICK=1`)
+
 ### Files to edit in follow-up steps
 
 - `docs/images/F1r3fly_explainer.svg` (SMIL animation asset, not yet created)
