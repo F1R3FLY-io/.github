@@ -1,0 +1,288 @@
+{
+	// Source of truth for runtime playback scaffolding.
+	// Replace placeholder texts and timing windows in a later content pass.
+	"meta": {
+		"id": "f1r3fly_explainer_speed_based",
+		"title": "F1R3FLY Explainer",
+		"version": "0.1.0",
+		"total_duration_seconds": 60
+	},
+
+	"playback_profiles": {
+		"0.10x": {
+			"speed_factor": 0.1,
+			"loop_seconds": 600,
+			"detail_level": "slowest"
+		},
+		"0.25x": {
+			"speed_factor": 0.25,
+			"loop_seconds": 240,
+			"detail_level": "slow"
+		},
+		"1x": {
+			"speed_factor": 1.0,
+			"loop_seconds": 60,
+			"detail_level": "baseline"
+		},
+		"1.5x": {
+			"speed_factor": 1.5,
+			"loop_seconds": 40,
+			"detail_level": "fast"
+		},
+		"2x": {
+			"speed_factor": 2.0,
+			"loop_seconds": 30,
+			"detail_level": "fastest"
+		}
+	},
+
+	"tempo_map": {
+		"anchor_speed": 1.0,
+		"strength": 0.5,
+		"regions": [
+			{ "id": "anchor_intro", "start": 0.0, "end": 0.1 },
+			{ "id": "anchor_shift_1", "start": 0.2, "end": 0.35 },
+			{ "id": "anchor_shift_2", "start": 0.45, "end": 0.62 },
+			{ "id": "anchor_shift_3", "start": 0.7, "end": 0.85 },
+			{ "id": "anchor_close", "start": 0.9, "end": 0.98 }
+		]
+	},
+
+	"stages_by_speed": {
+		"0.10x": [
+			{
+				"id": "stage_0_intro",
+				"name": "Opening Frame",
+				"short_name": "Intro",
+				"start_time": 0,
+				"end_time": 4,
+				"color": "#f4b942",
+				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder slow intro narration." }
+			},
+			{
+				"id": "stage_1_context",
+				"name": "Context Setup",
+				"short_name": "Context",
+				"start_time": 4,
+				"end_time": 12,
+				"color": "#8fc8ff",
+				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder context narration for the 0.10x profile." }
+			},
+			{
+				"id": "stage_2_von_neumann",
+				"name": "Sequential Bottleneck",
+				"short_name": "Legacy",
+				"start_time": 12,
+				"end_time": 20,
+				"color": "#d17e7e",
+				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder explanation of sequential architectures." }
+			},
+			{
+				"id": "stage_3_dataflow",
+				"name": "Dataflow Transition",
+				"short_name": "Dataflow",
+				"start_time": 20,
+				"end_time": 30,
+				"color": "#44bfbf",
+				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder transition from sequential to dataflow execution." }
+			},
+			{
+				"id": "stage_4_process_calculus",
+				"name": "Pi and Rho Calculus",
+				"short_name": "Pi-Rho",
+				"start_time": 30,
+				"end_time": 40,
+				"color": "#ad8fff",
+				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder narrative for process calculus and typed messaging." }
+			},
+			{
+				"id": "stage_5_correctness",
+				"name": "Correctness Layer",
+				"short_name": "Verify",
+				"start_time": 40,
+				"end_time": 51,
+				"color": "#84d08d",
+				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder narrative for behavioral typing and verification." }
+			},
+			{
+				"id": "stage_6_close",
+				"name": "Closing",
+				"short_name": "Close",
+				"start_time": 51,
+				"end_time": 60,
+				"color": "#f4b942",
+				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder slow-speed closing narrative." }
+			}
+		],
+		"0.25x": [
+			{
+				"id": "stage_0_intro",
+				"name": "Opening Frame",
+				"short_name": "Intro",
+				"start_time": 0,
+				"end_time": 5,
+				"color": "#f4b942",
+				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x opening narration." }
+			},
+			{
+				"id": "stage_1_legacy",
+				"name": "Legacy Constraints",
+				"short_name": "Legacy",
+				"start_time": 5,
+				"end_time": 15,
+				"color": "#d17e7e",
+				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x legacy-computing narration." }
+			},
+			{
+				"id": "stage_2_dataflow",
+				"name": "Dataflow Architecture",
+				"short_name": "Dataflow",
+				"start_time": 15,
+				"end_time": 27,
+				"color": "#44bfbf",
+				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x dataflow architecture narration." }
+			},
+			{
+				"id": "stage_3_messaging",
+				"name": "Typed Messaging",
+				"short_name": "Messaging",
+				"start_time": 27,
+				"end_time": 39,
+				"color": "#ad8fff",
+				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x typed messaging narration." }
+			},
+			{
+				"id": "stage_4_outcomes",
+				"name": "BFT and AI Outcomes",
+				"short_name": "Outcomes",
+				"start_time": 39,
+				"end_time": 51,
+				"color": "#84d08d",
+				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x outcome narration." }
+			},
+			{
+				"id": "stage_5_close",
+				"name": "Closing",
+				"short_name": "Close",
+				"start_time": 51,
+				"end_time": 60,
+				"color": "#f4b942",
+				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x closing narration." }
+			}
+		],
+		"1x": [
+			{
+				"id": "stage_0_intro",
+				"name": "Intro",
+				"short_name": "Intro",
+				"start_time": 0,
+				"end_time": 6,
+				"color": "#f4b942",
+				"narration": { "tone": "placeholder", "pause_ms": 140, "text": "Placeholder 1x intro narration." }
+			},
+			{
+				"id": "stage_1_contrast",
+				"name": "Sequential vs Dataflow",
+				"short_name": "Contrast",
+				"start_time": 6,
+				"end_time": 20,
+				"color": "#8fc8ff",
+				"narration": { "tone": "placeholder", "pause_ms": 140, "text": "Placeholder 1x contrast narration." }
+			},
+			{
+				"id": "stage_2_pi_rho",
+				"name": "Pi and Rho Calculus",
+				"short_name": "Pi-Rho",
+				"start_time": 20,
+				"end_time": 34,
+				"color": "#ad8fff",
+				"narration": { "tone": "placeholder", "pause_ms": 140, "text": "Placeholder 1x messaging and type-system narration." }
+			},
+			{
+				"id": "stage_3_correctness",
+				"name": "Correctness by Construction",
+				"short_name": "Verify",
+				"start_time": 34,
+				"end_time": 48,
+				"color": "#84d08d",
+				"narration": { "tone": "placeholder", "pause_ms": 140, "text": "Placeholder 1x correctness and verification narration." }
+			},
+			{
+				"id": "stage_4_close",
+				"name": "F1R3FLY Outcome",
+				"short_name": "Close",
+				"start_time": 48,
+				"end_time": 60,
+				"color": "#f4b942",
+				"narration": { "tone": "placeholder", "pause_ms": 140, "text": "Placeholder 1x closing narration." }
+			}
+		],
+		"1.5x": [
+			{
+				"id": "stage_0_intro",
+				"name": "Intro",
+				"short_name": "Intro",
+				"start_time": 0,
+				"end_time": 10,
+				"color": "#f4b942",
+				"narration": { "tone": "placeholder", "pause_ms": 120, "text": "Placeholder 1.5x intro narration." }
+			},
+			{
+				"id": "stage_1_shift",
+				"name": "Architecture Shift",
+				"short_name": "Shift",
+				"start_time": 10,
+				"end_time": 25,
+				"color": "#44bfbf",
+				"narration": { "tone": "placeholder", "pause_ms": 120, "text": "Placeholder 1.5x architecture shift narration." }
+			},
+			{
+				"id": "stage_2_messaging",
+				"name": "Typed Messaging",
+				"short_name": "Typing",
+				"start_time": 25,
+				"end_time": 42,
+				"color": "#ad8fff",
+				"narration": { "tone": "placeholder", "pause_ms": 120, "text": "Placeholder 1.5x typed messaging narration." }
+			},
+			{
+				"id": "stage_3_close",
+				"name": "Outcomes",
+				"short_name": "Close",
+				"start_time": 42,
+				"end_time": 60,
+				"color": "#f4b942",
+				"narration": { "tone": "placeholder", "pause_ms": 120, "text": "Placeholder 1.5x closing narration." }
+			}
+		],
+		"2x": [
+			{
+				"id": "stage_0_intro",
+				"name": "Legacy to Dataflow",
+				"short_name": "Shift",
+				"start_time": 0,
+				"end_time": 20,
+				"color": "#44bfbf",
+				"narration": { "tone": "placeholder", "pause_ms": 100, "text": "Placeholder 2x architecture shift narration." }
+			},
+			{
+				"id": "stage_1_messaging",
+				"name": "Typed Messaging",
+				"short_name": "Messaging",
+				"start_time": 20,
+				"end_time": 42,
+				"color": "#ad8fff",
+				"narration": { "tone": "placeholder", "pause_ms": 100, "text": "Placeholder 2x typed messaging narration." }
+			},
+			{
+				"id": "stage_2_close",
+				"name": "Outcome",
+				"short_name": "Close",
+				"start_time": 42,
+				"end_time": 60,
+				"color": "#f4b942",
+				"narration": { "tone": "placeholder", "pause_ms": 100, "text": "Placeholder 2x closing narration." }
+			}
+		]
+	}
+}

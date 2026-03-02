@@ -3,3 +3,5 @@
 docs/videos/
 node_modules
 .tmp/
+.env
+dist

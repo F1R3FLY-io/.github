@@ -46,6 +46,44 @@ Reports are saved to `docs/reports/` with metrics, PR lists, milestones, and con
 
 **Sample report:** [2026-01 MTD Sample Report](docs/reports/2026-01-mtd-sample-report.md)
 
+## Explainer Viewer Scaffold
+
+This repository now includes a Vite + TypeScript scaffold for a SMIL/SVG explainer viewer with:
+
+- SVG playback controls (play/pause, seek, keyboard transport)
+- speed profiles (`0.10x`, `0.25x`, `1x`, `1.5x`, `2x`)
+- stage-by-speed narration model (different stage counts per speed)
+- optional ElevenLabs narration hooks via environment variables
+- GitHub Pages deployment workflow
+
+### Local run
+
+```bash
+pnpm install
+pnpm run dev
+```
+
+### Build
+
+```bash
+pnpm run build
+```
+
+### Files to edit in follow-up steps
+
+- `docs/images/F1r3fly_explainer.svg` (SMIL animation asset, not yet created)
+- `docs/images/F1r3fly_explainer.jsonc` (runtime stage and narration data)
+- `docs/images/F1r3fly_explainer.md` (editable narrative draft source)
+
+### Optional TTS setup
+
+Set these in `.env`:
+
+```bash
+VITE_EL_TTS=your_elevenlabs_api_key
+VITE_EL_VOICE=your_elevenlabs_voice_id
+```
+
 ## 📚 Documentation Hub
 
 ### Core Documentation Resources
