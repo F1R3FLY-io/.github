@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
   <title id="title">F1R3FLY Explainer - 1x Whiteboard Animation</title>
-  <desc id="desc">A 60 second marker-board SMIL animation showing the shift from sequential systems to message-first, type-checked concurrency.</desc>
+  <desc id="desc">A 60 second marker-board SMIL animation tracing the arc from lambda calculus to provable concurrent systems.</desc>
 
   <defs>
     <linearGradient id="board_bg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -65,15 +65,15 @@
     F1R3FLY Whiteboard Story
   </text>
   <text x="600" y="74" text-anchor="middle" class="mono" font-size="13" fill="#8fb6de">
-    1x baseline (60s) - sequential bottlenecks to message-first correctness
+    1x baseline (60s) - from lambda-calculus to provable concurrent systems
   </text>
 
   <rect x="38" y="110" width="350" height="468" rx="10" class="panel"/>
   <rect x="424" y="110" width="350" height="468" rx="10" class="panel"/>
   <rect x="810" y="110" width="350" height="468" rx="10" class="panel"/>
 
-  <text x="213" y="136" text-anchor="middle" class="marker" font-size="18" fill="#9fc3ee">Sequential Legacy</text>
-  <text x="599" y="136" text-anchor="middle" class="marker" font-size="18" fill="#9fc3ee">Pi/Rho Message Core</text>
+  <text x="213" y="136" text-anchor="middle" class="marker" font-size="18" fill="#9fc3ee">Lambda-Calculus</text>
+  <text x="599" y="136" text-anchor="middle" class="marker" font-size="18" fill="#9fc3ee">Pi/Rho-Calculus</text>
   <text x="985" y="136" text-anchor="middle" class="marker" font-size="18" fill="#9fc3ee">Correctness + BFT</text>
 
   <path d="M124 334 C330 248 458 262 636 182" class="scribble" stroke="#d66fa0" stroke-width="2" opacity="0.9"/>
@@ -115,122 +115,184 @@
     Stage windows: 0-8s, 8-20s, 20-34s, 34-50s, 50-60s
   </text>
 
-  <g id="stage_1_problem" opacity="1">
+  <!-- ===== STAGE 1: Lambda Calculus Foundations (0-8s) ===== -->
+  <g id="stage_1_lambda" opacity="1">
     <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.133;0.15;1" dur="60s" repeatCount="indefinite"/>
 
-    <text x="78" y="175" class="marker" font-size="16" fill="#f2c6cf">single instruction pointer</text>
-    <path d="M74 204 H328" class="scribble" stroke="#ef8c99" stroke-width="5"/>
-    <rect x="72" y="230" width="260" height="74" rx="8" fill="#22131f" stroke="#d16c7c" stroke-width="1.8"/>
-    <text x="202" y="258" text-anchor="middle" class="marker" font-size="14" fill="#f5bac2">assembly-line scaling</text>
-    <text x="202" y="280" text-anchor="middle" class="marker" font-size="13" fill="#f5bac2">more cores, same bottleneck</text>
+    <!-- Large gold lambda symbol with chalk glow -->
+    <text x="110" y="290" class="marker" font-size="110" fill="#f3b14a" filter="url(#chalk_glow)">&#955;</text>
 
-    <rect x="82" y="330" width="248" height="152" rx="8" fill="#161f2d" stroke="#5f79a9" stroke-width="1.5"/>
-    <text x="96" y="356" class="marker" font-size="14" fill="#cddff8">x lock contention</text>
-    <text x="96" y="382" class="marker" font-size="14" fill="#cddff8">x race-condition surface</text>
-    <text x="96" y="408" class="marker" font-size="14" fill="#cddff8">x deadlock recovery cost</text>
-    <text x="96" y="434" class="marker" font-size="14" fill="#cddff8">x operational overhead</text>
+    <!-- Church / Turing labels -->
+    <text x="230" y="210" class="marker" font-size="16" fill="#ffdba0">Church (1936)</text>
+    <text x="230" y="236" class="marker" font-size="16" fill="#ffdba0">Turing</text>
 
-    <circle cx="98" cy="204" r="9" fill="#ffce82" stroke="#f3b14a" stroke-width="1.8" filter="url(#chalk_glow)">
-      <animate attributeName="cx" values="98;322" dur="3.3s" repeatCount="indefinite"/>
+    <!-- Properties list -->
+    <text x="230" y="268" class="marker" font-size="13" fill="#cddff8">Pure functions</text>
+    <text x="230" y="290" class="marker" font-size="13" fill="#cddff8">Referential transparency</text>
+    <text x="230" y="312" class="marker" font-size="13" fill="#cddff8">Sequential evaluation</text>
+
+    <!-- Conveyor line with bouncing token (single instruction pointer) -->
+    <path d="M74 370 H340" class="scribble" stroke="#9cc3f4" stroke-width="4"/>
+    <text x="78" y="360" class="mono" font-size="11" fill="#8fb6de">instruction pointer</text>
+    <circle cx="74" cy="370" r="9" fill="#ffce82" stroke="#f3b14a" stroke-width="1.8" filter="url(#chalk_glow)">
+      <animate attributeName="cx" values="74;340" dur="3.3s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0.8;1;0.8" dur="1.6s" repeatCount="indefinite"/>
     </circle>
+
+    <!-- Red limitation box -->
+    <rect x="68" y="400" width="290" height="120" rx="8" fill="#22131f" stroke="#d16c7c" stroke-width="1.5"/>
+    <text x="82" y="426" class="marker" font-size="14" fill="#f5bac2">x No concurrency model</text>
+    <text x="82" y="452" class="marker" font-size="14" fill="#f5bac2">x No distribution</text>
+    <text x="82" y="478" class="marker" font-size="14" fill="#f5bac2">x No channel primitives</text>
   </g>
 
-  <g id="stage_2_shift" opacity="0">
+  <!-- ===== STAGE 2: Von Neumann Bottleneck (8-20s) ===== -->
+  <g id="stage_2_von_neumann" opacity="0">
     <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.13;0.133;0.333;0.35;1" dur="60s" repeatCount="indefinite"/>
 
-    <path d="M336 246 C390 246 414 216 470 206" class="scribble" stroke="#77ddd1" stroke-width="3.4" stroke-dasharray="8 8" marker-end="url(#marker_arrow)">
+    <!-- Von Neumann Architectures title -->
+    <text x="78" y="175" class="marker" font-size="16" fill="#f2c6cf">Von Neumann Architectures</text>
+
+    <!-- Assembly-line boxes on a conveyor -->
+    <path d="M74 210 H340" class="scribble" stroke="#ef8c99" stroke-width="4"/>
+    <g fill="#22131f" stroke="#d16c7c" stroke-width="1.4">
+      <rect x="82" y="196" width="44" height="28" rx="4"/>
+      <rect x="140" y="196" width="44" height="28" rx="4"/>
+      <rect x="198" y="196" width="44" height="28" rx="4"/>
+      <rect x="256" y="196" width="44" height="28" rx="4"/>
+    </g>
+
+    <!-- Transition arrows: conveyor becomes networked -->
+    <path d="M340 204 C390 196 420 192 470 186" class="scribble" stroke="#77ddd1" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#marker_arrow)">
       <animate attributeName="stroke-dashoffset" values="16;0" dur="1.5s" repeatCount="indefinite"/>
     </path>
-    <path d="M336 276 C402 302 430 332 482 360" class="scribble" stroke="#77ddd1" stroke-width="3.4" stroke-dasharray="8 8" marker-end="url(#marker_arrow)">
+    <path d="M340 220 C400 240 430 270 480 300" class="scribble" stroke="#77ddd1" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#marker_arrow)">
       <animate attributeName="stroke-dashoffset" values="16;0" dur="1.7s" repeatCount="indefinite"/>
     </path>
 
-    <text x="512" y="187" class="marker" font-size="16" fill="#baf3ec">data arrives -> work starts</text>
-
-    <rect x="474" y="206" width="250" height="190" rx="10" fill="#132637" stroke="#4cd5c7" stroke-width="1.8"/>
+    <!-- Data Flow Architectures label and workstation grid -->
+    <text x="480" y="170" class="marker" font-size="15" fill="#baf3ec">Data Flow Architectures</text>
+    <rect x="470" y="182" width="260" height="150" rx="10" fill="#132637" stroke="#4cd5c7" stroke-width="1.8"/>
     <g stroke="#7fdff6" stroke-width="1.6" fill="#1a3046">
-      <rect x="500" y="236" width="56" height="36" rx="6"/>
-      <rect x="576" y="236" width="56" height="36" rx="6"/>
-      <rect x="652" y="236" width="56" height="36" rx="6"/>
-      <rect x="538" y="296" width="56" height="36" rx="6"/>
-      <rect x="614" y="296" width="56" height="36" rx="6"/>
+      <rect x="494" y="200" width="50" height="32" rx="6"/>
+      <rect x="562" y="200" width="50" height="32" rx="6"/>
+      <rect x="646" y="200" width="50" height="32" rx="6"/>
+      <rect x="528" y="260" width="50" height="32" rx="6"/>
+      <rect x="612" y="260" width="50" height="32" rx="6"/>
     </g>
-
-    <circle cx="528" cy="254" r="5" fill="#ffd58d">
-      <animate attributeName="cx" values="528;604;680;642;566;528" dur="3.6s" repeatCount="indefinite"/>
-      <animate attributeName="cy" values="254;254;254;314;314;254" dur="3.6s" repeatCount="indefinite"/>
+    <circle cx="519" cy="216" r="5" fill="#ffd58d">
+      <animate attributeName="cx" values="519;587;671;637;553;519" dur="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="216;216;216;276;276;216" dur="3.6s" repeatCount="indefinite"/>
     </circle>
+
+    <!-- SISD -> MIMD Flynn reference -->
+    <text x="500" y="356" class="mono" font-size="13" fill="#8fb6de">SISD -> MIMD (Flynn)</text>
+
+    <!-- Challenge list from whiteboard -->
+    <rect x="78" y="264" width="252" height="130" rx="8" fill="#161f2d" stroke="#5f79a9" stroke-width="1.5"/>
+    <text x="92" y="292" class="marker" font-size="14" fill="#cddff8">x Race Conditions</text>
+    <text x="92" y="318" class="marker" font-size="14" fill="#cddff8">x Deadlock</text>
+    <text x="92" y="344" class="marker" font-size="14" fill="#cddff8">x Composition</text>
   </g>
 
-  <g id="stage_3_message_first" opacity="0">
+  <!-- ===== STAGE 3: Pi/Rho Calculus - Messages in the Type System (20-34s) ===== -->
+  <g id="stage_3_pi_rho" opacity="0">
     <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.33;0.333;0.567;0.59;1" dur="60s" repeatCount="indefinite"/>
 
+    <!-- Milner label -->
+    <text x="600" y="168" text-anchor="middle" class="marker" font-size="14" fill="#baf3ec">Milner (1989)</text>
+
+    <!-- Network graph: 5 nodes with typed channel edges -->
     <g stroke="#9cc5f4" stroke-width="2" fill="none" opacity="0.9">
-      <line x1="504" y1="236" x2="600" y2="192"/>
-      <line x1="600" y1="192" x2="696" y2="236"/>
-      <line x1="504" y1="236" x2="560" y2="304"/>
-      <line x1="696" y1="236" x2="640" y2="304"/>
-      <line x1="560" y1="304" x2="640" y2="304"/>
+      <line x1="504" y1="246" x2="600" y2="198"/>
+      <line x1="600" y1="198" x2="696" y2="246"/>
+      <line x1="504" y1="246" x2="556" y2="316"/>
+      <line x1="696" y1="246" x2="644" y2="316"/>
+      <line x1="556" y1="316" x2="644" y2="316"/>
     </g>
+    <circle cx="504" cy="246" r="23" class="node"/>
+    <circle cx="600" cy="198" r="23" class="node"/>
+    <circle cx="696" cy="246" r="23" class="node"/>
+    <circle cx="556" cy="316" r="23" class="node"/>
+    <circle cx="644" cy="316" r="23" class="node"/>
 
-    <circle cx="504" cy="236" r="23" class="node"/>
-    <circle cx="600" cy="192" r="23" class="node"/>
-    <circle cx="696" cy="236" r="23" class="node"/>
-    <circle cx="560" cy="304" r="23" class="node"/>
-    <circle cx="640" cy="304" r="23" class="node"/>
-
-    <circle cx="504" cy="236" r="5" fill="#f3b14a">
+    <!-- Pulsing node indicators -->
+    <circle cx="504" cy="246" r="5" fill="#f3b14a">
       <animate attributeName="r" values="5;8;5" dur="1.8s" repeatCount="indefinite"/>
       <animate attributeName="fill" values="#f3b14a;#68dbc7;#f3b14a" dur="1.8s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="600" cy="192" r="5" fill="#f3b14a">
+    <circle cx="600" cy="198" r="5" fill="#f3b14a">
       <animate attributeName="r" values="5;8;5" dur="1.8s" begin="0.3s" repeatCount="indefinite"/>
       <animate attributeName="fill" values="#f3b14a;#68dbc7;#f3b14a" dur="1.8s" begin="0.3s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="696" cy="236" r="5" fill="#f3b14a">
+    <circle cx="696" cy="246" r="5" fill="#f3b14a">
       <animate attributeName="r" values="5;8;5" dur="1.8s" begin="0.6s" repeatCount="indefinite"/>
       <animate attributeName="fill" values="#f3b14a;#68dbc7;#f3b14a" dur="1.8s" begin="0.6s" repeatCount="indefinite"/>
     </circle>
 
-    <rect x="500" y="348" width="200" height="56" rx="10" fill="#281f38" stroke="#b38fff" stroke-width="2"/>
-    <text x="600" y="372" text-anchor="middle" class="marker" font-size="14" fill="#f1e2ff">TYPE-CHECKED</text>
-    <text x="600" y="392" text-anchor="middle" class="marker" font-size="14" fill="#f1e2ff">CHANNEL PROTOCOLS</text>
+    <!-- Split comparison: External Queue vs First-Class Channel -->
+    <rect x="450" y="352" width="128" height="52" rx="6" fill="#2a1520" stroke="#d16c7c" stroke-width="1.4"/>
+    <text x="514" y="374" text-anchor="middle" class="marker" font-size="12" fill="#f5bac2">External Queue</text>
+    <text x="514" y="392" text-anchor="middle" class="mono" font-size="10" fill="#d16c7c">outside types</text>
+
+    <text x="600" y="382" text-anchor="middle" class="marker" font-size="14" fill="#8fb6de">vs</text>
+
+    <rect x="622" y="352" width="136" height="52" rx="6" fill="#1a2540" stroke="#68dbc7" stroke-width="1.4"/>
+    <text x="690" y="374" text-anchor="middle" class="marker" font-size="12" fill="#baf3ec">First-Class Channel</text>
+    <text x="690" y="392" text-anchor="middle" class="mono" font-size="10" fill="#68dbc7">inside types</text>
+
+    <!-- Large rho symbol (purple) with chalk glow -->
+    <text x="460" y="490" class="marker" font-size="80" fill="#b38fff" filter="url(#chalk_glow)">&#961;</text>
+    <text x="540" y="460" class="marker" font-size="16" fill="#d6c0ff">pi/rho-calculus</text>
+
+    <!-- TYPE-CHECKED CHANNEL PROTOCOLS badge -->
+    <rect x="500" y="504" width="200" height="56" rx="10" fill="#281f38" stroke="#b38fff" stroke-width="2"/>
+    <text x="600" y="528" text-anchor="middle" class="marker" font-size="14" fill="#f1e2ff">TYPE-CHECKED</text>
+    <text x="600" y="548" text-anchor="middle" class="marker" font-size="14" fill="#f1e2ff">CHANNEL PROTOCOLS</text>
     <animate attributeName="opacity" values="0.85;1;0.85" dur="1.4s" repeatCount="indefinite"/>
   </g>
 
-  <g id="stage_4_correctness_performance" opacity="0">
+  <!-- ===== STAGE 4: Correctness by Construction + BFT (34-50s) ===== -->
+  <g id="stage_4_correctness_bft" opacity="0">
     <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.56;0.567;0.833;0.85;1" dur="60s" repeatCount="indefinite"/>
 
-    <rect x="840" y="190" width="300" height="172" rx="10" fill="#14263a" stroke="#6fc98c" stroke-width="1.8"/>
-    <text x="992" y="216" text-anchor="middle" class="marker" font-size="15" fill="#c6f0d0">correctness by construction</text>
-    <text x="858" y="246" class="marker" font-size="13" fill="#c6f0d0">[x] protocol order</text>
-    <text x="858" y="270" class="marker" font-size="13" fill="#c6f0d0">[x] deadlock checks</text>
-    <text x="858" y="294" class="marker" font-size="13" fill="#c6f0d0">[x] linear resources</text>
-    <text x="858" y="318" class="marker" font-size="13" fill="#c6f0d0">[x] safer concurrency</text>
+    <!-- Correctness checklist -->
+    <rect x="840" y="160" width="300" height="196" rx="10" fill="#14263a" stroke="#6fc98c" stroke-width="1.8"/>
+    <text x="990" y="188" text-anchor="middle" class="marker" font-size="15" fill="#c6f0d0">correctness by construction</text>
+    <text x="858" y="218" class="marker" font-size="13" fill="#c6f0d0">[x] deadlock freedom</text>
+    <text x="858" y="244" class="marker" font-size="13" fill="#c6f0d0">[x] race freedom</text>
+    <text x="858" y="270" class="marker" font-size="13" fill="#c6f0d0">[x] protocol adherence</text>
+    <text x="858" y="296" class="marker" font-size="13" fill="#c6f0d0">[x] linear resources</text>
 
-    <g transform="translate(915 430)">
-      <circle cx="0" cy="0" r="62" fill="#0f1f31" stroke="#6bc0e1" stroke-width="2"/>
-      <path d="M-42 0 A42 42 0 1 1 42 0" fill="none" stroke="#395a7b" stroke-width="10" stroke-linecap="round"/>
-      <path d="M-42 0 A42 42 0 0 1 42 0" fill="none" stroke="#5ad6c2" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
-      <line x1="0" y1="0" x2="30" y2="-24" stroke="#f3b14a" stroke-width="4" stroke-linecap="round">
-        <animateTransform attributeName="transform" type="rotate" values="-50 0 0;62 0 0;-38 0 0" dur="5.4s" repeatCount="indefinite"/>
-      </line>
-      <circle cx="0" cy="0" r="6" fill="#f3b14a"/>
-      <text x="0" y="86" text-anchor="middle" class="marker" font-size="13" fill="#c8eaf6">throughput trajectory</text>
-    </g>
+    <!-- Spatial Behavioral Typing label -->
+    <text x="990" y="380" text-anchor="middle" class="marker" font-size="14" fill="#84d08d">Spatial Behavioral Typing</text>
 
-    <g transform="translate(1030 430)">
+    <!-- Bridge truss wireframe with Euler and Navier labels -->
+    <g transform="translate(1030 440)">
       <line x1="0" y1="-36" x2="34" y2="-14" stroke="#7fa8d5" stroke-width="2"/>
       <line x1="0" y1="-36" x2="-34" y2="-14" stroke="#7fa8d5" stroke-width="2"/>
       <line x1="-34" y1="-14" x2="0" y2="8" stroke="#7fa8d5" stroke-width="2"/>
       <line x1="34" y1="-14" x2="0" y2="8" stroke="#7fa8d5" stroke-width="2"/>
       <line x1="-17" y1="-25" x2="17" y2="-25" stroke="#7fa8d5" stroke-width="2"/>
       <line x1="-17" y1="-3" x2="17" y2="-3" stroke="#7fa8d5" stroke-width="2"/>
-      <text x="0" y="26" text-anchor="middle" class="marker" font-size="12" fill="#bdd8f6">Euler/Navier analogy</text>
+      <text x="-26" y="26" class="marker" font-size="11" fill="#bdd8f6">Euler</text>
+      <text x="10" y="26" class="marker" font-size="11" fill="#bdd8f6">Navier</text>
     </g>
 
-    <g transform="translate(1000 268)">
+    <!-- Throughput gauge -->
+    <g transform="translate(905 440)">
+      <circle cx="0" cy="0" r="58" fill="#0f1f31" stroke="#6bc0e1" stroke-width="2"/>
+      <path d="M-40 0 A40 40 0 1 1 40 0" fill="none" stroke="#395a7b" stroke-width="9" stroke-linecap="round"/>
+      <path d="M-40 0 A40 40 0 0 1 40 0" fill="none" stroke="#5ad6c2" stroke-width="9" stroke-linecap="round" opacity="0.8"/>
+      <line x1="0" y1="0" x2="28" y2="-22" stroke="#f3b14a" stroke-width="4" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate" values="-50 0 0;62 0 0;-38 0 0" dur="5.4s" repeatCount="indefinite"/>
+      </line>
+      <circle cx="0" cy="0" r="6" fill="#f3b14a"/>
+      <text x="0" y="80" text-anchor="middle" class="marker" font-size="13" fill="#c8eaf6">throughput trajectory</text>
+    </g>
+
+    <!-- BFT network: 4 nodes, 1 flashing faulty -->
+    <g transform="translate(990 310)">
       <circle cx="-42" cy="0" r="8" fill="#91b8e9"/>
       <circle cx="0" cy="-24" r="8" fill="#91b8e9"/>
       <circle cx="40" cy="0" r="8" fill="#91b8e9"/>
@@ -249,42 +311,53 @@
     </g>
   </g>
 
-  <g id="stage_5_outcome" opacity="0">
+  <!-- ===== STAGE 5: Tools, Systems, Services (50-60s) ===== -->
+  <g id="stage_5_tools" opacity="0">
     <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.83;0.833;1" dur="60s" repeatCount="indefinite"/>
 
+    <!-- Full-width "Design. Verify. Deploy." banner -->
     <rect x="108" y="506" width="984" height="96" rx="14" fill="#1f3048" stroke="#f3b14a" stroke-width="2.2"/>
     <text x="600" y="542" text-anchor="middle" class="marker" font-size="29" fill="#ffdba0" filter="url(#chalk_glow)">
       Design. Verify. Deploy.
     </text>
     <text x="600" y="572" text-anchor="middle" class="marker" font-size="15" fill="#d5e5fa">
-      Move from ad-hoc concurrency to provable message-first infrastructure.
+      Move from ad-hoc concurrency to provable concurrent systems.
     </text>
 
-    <g transform="translate(600 430)">
-      <ellipse cx="-24" cy="-3" rx="30" ry="16" fill="#59d8cb" opacity="0.86"/>
-      <ellipse cx="24" cy="-3" rx="30" ry="16" fill="#7ee89f" opacity="0.86"/>
-      <ellipse cx="-19" cy="16" rx="19" ry="10" fill="#59d8cb" opacity="0.72"/>
-      <ellipse cx="19" cy="16" rx="19" ry="10" fill="#7ee89f" opacity="0.72"/>
-      <rect x="-4" y="-18" width="8" height="42" rx="4" fill="#f3b14a"/>
-      <line x1="-2" y1="-18" x2="-12" y2="-30" stroke="#f3b14a" stroke-width="2"/>
-      <line x1="2" y1="-18" x2="12" y2="-30" stroke="#f3b14a" stroke-width="2"/>
-      <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="2.6s" repeatCount="indefinite"/>
+    <!-- Firefly butterfly motif (pulsing) -->
+    <g transform="translate(600 420)">
+      <g>
+        <ellipse cx="-24" cy="-3" rx="30" ry="16" fill="#59d8cb" opacity="0.86"/>
+        <ellipse cx="24" cy="-3" rx="30" ry="16" fill="#7ee89f" opacity="0.86"/>
+        <ellipse cx="-19" cy="16" rx="19" ry="10" fill="#59d8cb" opacity="0.72"/>
+        <ellipse cx="19" cy="16" rx="19" ry="10" fill="#7ee89f" opacity="0.72"/>
+        <rect x="-4" y="-18" width="8" height="42" rx="4" fill="#f3b14a"/>
+        <line x1="-2" y1="-18" x2="-12" y2="-30" stroke="#f3b14a" stroke-width="2"/>
+        <line x1="2" y1="-18" x2="12" y2="-30" stroke="#f3b14a" stroke-width="2"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="2.6s" repeatCount="indefinite"/>
+      </g>
     </g>
 
-    <g transform="translate(446 430)">
+    <!-- Four tool icons from whiteboard -->
+    <g transform="translate(260 460)">
       <circle cx="0" cy="0" r="22" fill="#13293c" stroke="#67d9c8" stroke-width="1.8"/>
-      <text x="0" y="5" text-anchor="middle" class="mono" font-size="12" fill="#c6f4ef">D</text>
-      <text x="0" y="38" text-anchor="middle" class="marker" font-size="12" fill="#9ee8de">Design</text>
+      <text x="0" y="5" text-anchor="middle" class="mono" font-size="11" fill="#c6f4ef">Vis</text>
+      <text x="0" y="38" text-anchor="middle" class="marker" font-size="11" fill="#9ee8de">Visually</text>
     </g>
-    <g transform="translate(600 430)">
+    <g transform="translate(440 460)">
+      <circle cx="0" cy="0" r="22" fill="#13293c" stroke="#cf7a56" stroke-width="1.8"/>
+      <text x="0" y="5" text-anchor="middle" class="mono" font-size="11" fill="#f5c4a6">Dbg</text>
+      <text x="0" y="38" text-anchor="middle" class="marker" font-size="11" fill="#e8a080">Debug</text>
+    </g>
+    <g transform="translate(760 460)">
       <circle cx="0" cy="0" r="22" fill="#13293c" stroke="#8dc0ff" stroke-width="1.8"/>
-      <text x="0" y="5" text-anchor="middle" class="mono" font-size="12" fill="#d8e9ff">V</text>
-      <text x="0" y="38" text-anchor="middle" class="marker" font-size="12" fill="#b7d7ff">Verify</text>
+      <text x="0" y="5" text-anchor="middle" class="mono" font-size="11" fill="#d8e9ff">Des</text>
+      <text x="0" y="38" text-anchor="middle" class="marker" font-size="11" fill="#b7d7ff">Design</text>
     </g>
-    <g transform="translate(754 430)">
+    <g transform="translate(940 460)">
       <circle cx="0" cy="0" r="22" fill="#13293c" stroke="#f3b14a" stroke-width="1.8"/>
-      <text x="0" y="5" text-anchor="middle" class="mono" font-size="12" fill="#ffe4bc">P</text>
-      <text x="0" y="38" text-anchor="middle" class="marker" font-size="12" fill="#ffd391">Deploy</text>
+      <text x="0" y="5" text-anchor="middle" class="mono" font-size="11" fill="#ffe4bc">Dev</text>
+      <text x="0" y="38" text-anchor="middle" class="marker" font-size="11" fill="#ffd391">Develop</text>
     </g>
   </g>
 </svg>
