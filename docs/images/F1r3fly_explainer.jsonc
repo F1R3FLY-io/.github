@@ -4,7 +4,7 @@
 	"meta": {
 		"id": "f1r3fly_explainer_speed_based",
 		"title": "F1R3FLY Explainer",
-		"version": "0.2.0",
+		"version": "0.3.0",
 		"total_duration_seconds": 60
 	},
 
@@ -51,123 +51,175 @@
 	"stages_by_speed": {
 		"0.10x": [
 			{
-				"id": "stage_0_intro",
+				"id": "stage_1_opening",
 				"name": "Opening Frame",
 				"short_name": "Intro",
 				"start_time": 0,
 				"end_time": 4,
 				"color": "#f4b942",
-				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder slow intro narration." }
+				"narration": {
+					"tone": "product explainer, deliberate opening",
+					"pause_ms": 220,
+					"text": "Firefly rethinks high-throughput systems from first principles. This explainer shows why sequential assumptions break down and what replaces them."
+				}
 			},
 			{
-				"id": "stage_1_context",
-				"name": "Context Setup",
+				"id": "stage_2_context",
+				"name": "Context and Stakes",
 				"short_name": "Context",
 				"start_time": 4,
 				"end_time": 12,
 				"color": "#8fc8ff",
-				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder context narration for the 0.10x profile." }
+				"narration": {
+					"tone": "product explainer, informative",
+					"pause_ms": 220,
+					"text": "Classical software design was optimized for a single instruction stream on a single machine. Modern systems are distributed, concurrent, heterogeneous, and latency-sensitive. That mismatch creates reliability and scaling risks at the architecture level."
+				}
 			},
 			{
-				"id": "stage_2_von_neumann",
+				"id": "stage_3_legacy_bottleneck",
 				"name": "Sequential Bottleneck",
 				"short_name": "Legacy",
 				"start_time": 12,
 				"end_time": 20,
 				"color": "#d17e7e",
-				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder explanation of sequential architectures." }
+				"narration": {
+					"tone": "product explainer, technical",
+					"pause_ms": 220,
+					"text": "Traditional scaling copies the same line: more cores, more servers, more shared-state coordination. Teams then manage race conditions, lock contention, and complex failure modes with growing operational overhead."
+				}
 			},
 			{
-				"id": "stage_3_dataflow",
+				"id": "stage_4_dataflow_transition",
 				"name": "Dataflow Transition",
 				"short_name": "Dataflow",
 				"start_time": 20,
 				"end_time": 30,
 				"color": "#44bfbf",
-				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder transition from sequential to dataflow execution." }
+				"narration": {
+					"tone": "product explainer, technical",
+					"pause_ms": 220,
+					"text": "Dataflow changes control logic. Work is triggered by data availability rather than a rigid instruction pointer. Execution routes through adaptive compute graphs that match modern silicon and distributed runtime behavior."
+				}
 			},
 			{
-				"id": "stage_4_process_calculus",
-				"name": "Pi and Rho Calculus",
-				"short_name": "Pi-Rho",
+				"id": "stage_5_message_first",
+				"name": "Message-First Model",
+				"short_name": "Messaging",
 				"start_time": 30,
 				"end_time": 40,
 				"color": "#ad8fff",
-				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder narrative for process calculus and typed messaging." }
+				"narration": {
+					"tone": "product explainer, technical depth",
+					"pause_ms": 240,
+					"text": "Most platforms bolt messaging on with external queues, so protocol behavior sits outside the type system. Pi and rho calculus make communication first-class. Channels and processes become type-visible, enabling explicit protocol modeling and stronger compile-time guarantees."
+				}
 			},
 			{
-				"id": "stage_5_correctness",
-				"name": "Correctness Layer",
-				"short_name": "Verify",
+				"id": "stage_6_correctness_performance",
+				"name": "Correctness and Performance",
+				"short_name": "Verify+Perf",
 				"start_time": 40,
 				"end_time": 51,
 				"color": "#84d08d",
-				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder narrative for behavioral typing and verification." }
+				"narration": {
+					"tone": "product explainer, deep technical",
+					"pause_ms": 240,
+					"text": "Behavioral typing supports design-time checks for deadlock risk, protocol ordering, and constrained resource usage. Combined with dataflow execution, this improves both correctness and throughput, with a path toward Byzantine fault tolerance at crash-fault-like efficiency."
+				}
 			},
 			{
-				"id": "stage_6_close",
-				"name": "Closing",
+				"id": "stage_7_outcome",
+				"name": "Outcome and Deployment",
 				"short_name": "Close",
 				"start_time": 51,
 				"end_time": 60,
 				"color": "#f4b942",
-				"narration": { "tone": "placeholder", "pause_ms": 220, "text": "Placeholder slow-speed closing narrative." }
+				"narration": {
+					"tone": "product explainer, deliberate close",
+					"pause_ms": 220,
+					"text": "Firefly delivers this through tools, systems, and services for design, verification, and deployment. The result is a practical move from ad-hoc concurrency to provable concurrent infrastructure for blockchains, AI pipelines, and distributed backends."
+				}
 			}
 		],
 		"0.25x": [
 			{
-				"id": "stage_0_intro",
-				"name": "Opening Frame",
-				"short_name": "Intro",
+				"id": "stage_1_problem",
+				"name": "Problem Framing",
+				"short_name": "Problem",
 				"start_time": 0,
 				"end_time": 5,
-				"color": "#f4b942",
-				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x opening narration." }
+				"color": "#d17e7e",
+				"narration": {
+					"tone": "product explainer, detailed opening",
+					"pause_ms": 180,
+					"text": "Firefly rethinks high-throughput systems. Single-machine, single-instruction assumptions do not match distributed, concurrent, always-on workloads."
+				}
 			},
 			{
-				"id": "stage_1_legacy",
-				"name": "Legacy Constraints",
-				"short_name": "Legacy",
+				"id": "stage_2_shift",
+				"name": "Architecture Shift",
+				"short_name": "Shift",
 				"start_time": 5,
 				"end_time": 15,
-				"color": "#d17e7e",
-				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x legacy-computing narration." }
+				"color": "#44bfbf",
+				"narration": {
+					"tone": "product explainer, detailed",
+					"pause_ms": 180,
+					"text": "Traditional scaling replicates the same line: more cores, more servers, more coordination complexity. Dataflow reverses that pattern. Work activates when data is ready and routes through flexible compute paths."
+				}
 			},
 			{
-				"id": "stage_2_dataflow",
-				"name": "Dataflow Architecture",
-				"short_name": "Dataflow",
+				"id": "stage_3_message_first",
+				"name": "Message-First Model",
+				"short_name": "Messaging",
 				"start_time": 15,
 				"end_time": 27,
-				"color": "#44bfbf",
-				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x dataflow architecture narration." }
+				"color": "#ad8fff",
+				"narration": {
+					"tone": "product explainer, detailed technical",
+					"pause_ms": 180,
+					"text": "Many stacks treat messaging as infrastructure outside the language model. Pi and rho calculus make communication first-class and type-visible, so protocols can be reasoned about and checked before production deployment."
+				}
 			},
 			{
-				"id": "stage_3_messaging",
-				"name": "Typed Messaging",
-				"short_name": "Messaging",
+				"id": "stage_4_correctness",
+				"name": "Correctness by Construction",
+				"short_name": "Verify",
 				"start_time": 27,
 				"end_time": 39,
-				"color": "#ad8fff",
-				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x typed messaging narration." }
+				"color": "#84d08d",
+				"narration": {
+					"tone": "product explainer, detailed technical",
+					"pause_ms": 180,
+					"text": "Behavioral typing helps verify deadlock risk, protocol order, and constrained resource behavior at design time. This shifts concurrency engineering from reactive debugging toward proactive correctness."
+				}
 			},
 			{
-				"id": "stage_4_outcomes",
-				"name": "BFT and AI Outcomes",
-				"short_name": "Outcomes",
+				"id": "stage_5_performance",
+				"name": "Performance and BFT Efficiency",
+				"short_name": "Perf+BFT",
 				"start_time": 39,
 				"end_time": 51,
-				"color": "#84d08d",
-				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x outcome narration." }
+				"color": "#6ccf8a",
+				"narration": {
+					"tone": "product explainer, detailed outcomes",
+					"pause_ms": 180,
+					"text": "Dataflow execution aligns with modern parallel silicon and helps sustain throughput under distributed coordination. The target is Byzantine fault tolerance with operational efficiency closer to crash-fault systems."
+				}
 			},
 			{
-				"id": "stage_5_close",
-				"name": "Closing",
+				"id": "stage_6_outcome",
+				"name": "Outcome and Call to Action",
 				"short_name": "Close",
 				"start_time": 51,
 				"end_time": 60,
 				"color": "#f4b942",
-				"narration": { "tone": "placeholder", "pause_ms": 180, "text": "Placeholder 0.25x closing narration." }
+				"narration": {
+					"tone": "product explainer, detailed close",
+					"pause_ms": 180,
+					"text": "Firefly provides tools, systems, and services to design, verify, and deploy message-first software. Move from ad-hoc concurrency to provable distributed infrastructure."
+				}
 			}
 		],
 		"1x": [
