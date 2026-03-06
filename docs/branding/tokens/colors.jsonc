@@ -1,0 +1,79 @@
+// F1R3FLY canonical color tokens.
+// Primary source: F1r3fly_Brand_Book-03.01.2026.pdf (pages 12-13).
+// Schema reference: https://design-tokens.github.io/community-group/format/
+{
+	"brand": {
+		"black": {
+			"$value": "#000000",
+			"$type": "color",
+			"$description": "Foundation brand surface; primary context for logo usage."
+		},
+		"yellow": {
+			"$value": "#F3D630",
+			"$type": "color",
+			"$description": "Brand Yellow."
+		},
+		"sage": {
+			"$value": "#8BB999",
+			"$type": "color",
+			"$description": "Brand Sage."
+		},
+		"sky": {
+			"$value": "#3FA9F5",
+			"$type": "color",
+			"$description": "Brand Sky."
+		}
+	},
+
+	// Gradient stop colors extracted from the published brand-book palette bars.
+	"gradients": {
+		"primary": {
+			"start": { "$value": "#F3D630", "$type": "color" },
+			"middle": { "$value": "#8BB999", "$type": "color" },
+			"end": { "$value": "#3FA9F5", "$type": "color" }
+		},
+		"neutral": {
+			"start": { "$value": "#282B2E", "$type": "color" },
+			"middle": { "$value": "#171E30", "$type": "color" },
+			"end": { "$value": "#061132", "$type": "color" }
+		},
+		"client": {
+			"start": { "$value": "#5D0266", "$type": "color" },
+			"middle": { "$value": "#6C0349", "$type": "color" },
+			"end": { "$value": "#7A042C", "$type": "color" }
+		},
+		"developer": {
+			"start": { "$value": "#007CC2", "$type": "color" },
+			"middle": { "$value": "#0086A6", "$type": "color" },
+			"end": { "$value": "#00908A", "$type": "color" }
+		},
+		"partner": {
+			"start": { "$value": "#108F22", "$type": "color" },
+			"middle": { "$value": "#439518", "$type": "color" },
+			"end": { "$value": "#759C0F", "$type": "color" }
+		}
+	},
+
+	// Semantic UI colors for implementation.
+	// Dark values align with brand-book primary context (dark surfaces).
+	"semantic": {
+		"dark": {
+			"bg": { "$value": "#000000", "$type": "color" },
+			"surface": { "$value": "#0F1831", "$type": "color" },
+			"surfaceHover": { "$value": "#171E30", "$type": "color" },
+			"border": { "$value": "#282B2E", "$type": "color" },
+			"text": { "$value": "#FCFCFC", "$type": "color" },
+			"textMuted": { "$value": "#A3A3A3", "$type": "color" },
+			"textDim": { "$value": "#5E5E5E", "$type": "color" }
+		},
+		"light": {
+			"bg": { "$value": "#FFFFFF", "$type": "color" },
+			"surface": { "$value": "#F5F5F5", "$type": "color" },
+			"surfaceHover": { "$value": "#E5E7EB", "$type": "color" },
+			"border": { "$value": "#D1D5DB", "$type": "color" },
+			"text": { "$value": "#000000", "$type": "color" },
+			"textMuted": { "$value": "#5E5E5E", "$type": "color" },
+			"textDim": { "$value": "#737373", "$type": "color" }
+		}
+	}
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="986" height="75" viewBox="0 0 986 75" role="img" aria-label="F1R3FLY developer gradient">
+  <defs>
+    <linearGradient id="developerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#007CC2" />
+      <stop offset="50%" stop-color="#0086A6" />
+      <stop offset="100%" stop-color="#00908A" />
+    </linearGradient>
+  </defs>
+  <rect width="986" height="75" rx="37.5" fill="url(#developerGradient)" />
+</svg>
