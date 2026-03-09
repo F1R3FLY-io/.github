@@ -137,7 +137,7 @@ validate() {
 
     # Check if narratives are filled
     local unfilled
-    unfilled=$(grep -c "_Add.*here_\|_Add.*summary_\|_Add.*:_\|_Add.*guidance_\|_Add.*preview_\|_Add.*notes_" "$report_file" || echo "0")
+    unfilled=$(grep -cE "_Add.*here_|_Add.*summary_|_Add.*:_|_Add.*guidance_|_Add.*preview_|_Add.*notes_" "$report_file" || echo "0")
 
     if [[ "$unfilled" -gt 0 ]]; then
         check_warn "$unfilled unfilled narrative placeholder(s) found"
