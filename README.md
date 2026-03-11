@@ -101,11 +101,11 @@ This repository follows F1R3FLY.io's documentation-first methodology, serving as
 - **[MeTTa](https://github.com/F1R3FLY-io/MeTTa)** - MeTTa 2.0 language (Scala)
 - **[F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)** - Visualization tool for Infrastructure as Code
 
-**[Complete Repository Guide](https://github.com/F1R3FLY-io/.github/blob/main/docs/Organization_of_Repositories.md)** - View all projects with detailed descriptions
+**[Complete Repository Guide](https://github.com/F1R3FLY-io/.github/blob/master/docs/Organization_of_Repositories.md)** - View all projects with detailed descriptions
 
 ## Quick Links
 
-- **[Project Template](https://github.com/F1R3FLY-io/.github/blob/main/docs/Project_Template.md)** - Standard template for F1R3FLY.io repositories
+- **[Project Template](https://github.com/F1R3FLY-io/.github/blob/master/docs/Project_Template.md)** - Standard template for F1R3FLY.io repositories
 - **[LLM Context](CLAUDE.md)** - AI assistant instructions for this project
 - **[GitHub Organization](https://github.com/F1R3FLY-io)** - View all repositories
 
@@ -266,11 +266,11 @@ public_portal:
   description: "Public documentation portal"
 
 organization_guide:
-  url: "https://github.com/F1R3FLY-io/.github/blob/main/docs/Organization_of_Repositories.md"
+  url: "https://github.com/F1R3FLY-io/.github/blob/master/docs/Organization_of_Repositories.md"
   description: "Complete project overview"
 
 project_template:
-  url: "https://github.com/F1R3FLY-io/.github/blob/main/docs/Project_Template.md"
+  url: "https://github.com/F1R3FLY-io/.github/blob/master/docs/Project_Template.md"
   description: "Standard repository template"
 ```
 
@@ -334,7 +334,7 @@ principles:
 ```yaml
 organization_website: "https://f1r3fly.io"
 documentation_portal: "https://github.com/F1R3FLY-io/.github"
-repository_guide: "https://github.com/F1R3FLY-io/.github/blob/main/docs/Organization_of_Repositories.md"
+repository_guide: "https://github.com/F1R3FLY-io/.github/blob/master/docs/Organization_of_Repositories.md"
 improvement_proposals: "https://github.com/F1R3FLY-io/fflip"
 contact: "f1r3fly.ceo@gmail.com"
 ```
