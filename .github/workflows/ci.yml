@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  link-check:
+    name: Broken Link Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Check repo and org landing page links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --root-dir "${{ github.workspace }}"
+            --verbose
+            --no-progress
+            README.md
+            profile/README.md
+          fail: true
+          jobSummary: true
+          token: ${{ secrets.GITHUB_TOKEN }}
