@@ -1,0 +1,537 @@
+BRAND BOOK
+1                                        V 1.0 | MARCH 2, 2026
+             © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+TABLE OF CONTENTS
+
+
+ABOUT THIS GUIDE             3
+
+OVERVIEW OF BRAND            4
+
+LOGO: VERTICAL LOCKUP        5
+
+LOGO: HORIZONTAL LOCKUP      7
+
+LOGOMARK AND ICON            9
+
+LOGO FOR LIGHT BACKGROUND   10
+
+LOGO RULES                  11
+
+COLOR PALETTE               12
+
+SECONDARY COLOR PALETTE     13
+
+TYPOGRAPHY                  14
+
+OUR VOICE                   16
+
+CONSISTENT BRAND LAYOUTS    17
+
+BRAND ARCHITECTURE          18
+
+ACCESSIBILITY               19
+
+TEMPLATES AND ASSETS        20
+
+SEND FEEDBACK               21
+ABOUT THIS GUIDE
+
+
+THIS GUIDE IS THE SINGLE REFERENCE FOR HOW F1R3FLY
+SHOWS UP VISUALLY—ACROSS PRODUCTS, PLATFORMS,
+AND TEAMS.
+
+
+Use it when creating anything that carries the F1R3FLY name:
+presentations, documents, web pages, social posts, partner
+materials. If it's not covered here, ask before improvising.
+Areas still in development are marked.
+
+This is a living document.
+Check back for updates as the system evolves.
+
+
+
+
+3                                                              © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+OVERVIEW OF BRAND
+
+
+THE CORE ELEMENTS
+THAT HOLD THE
+BRAND TOGETHER.
+
+
+Four things should stay consistent
+across every F1R3FLY property:
+the logo, the color system, the
+typography, and the structure.              Logo                          Colors
+
+Consistency builds recognition,
+and recognition builds trust.
+
+Every time the brand shows
+up looking different, it costs us
+credibility especially with enterprise
+and institutional audiences who
+read inconsistency as instability.
+This book exists to prevent that.        Typography                        Layout
+
+
+
+4                                                     © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+LOGO: VERTICAL LOCKUP
+
+
+THE VERTICAL LOCKUP IS THE PRIMARY
+                                                               20%                 60%                                    20%
+LOGO CONFIGURATION — LOGOMARK
+STACKED ABOVE THE WORDMARK.
+
+
+The spacing between the logomark and wordmark is fixed at
+60% of the wordmark height. The logomark occupies the center
+60% of the total width, with 20% clear space on each side.
+
+
+These proportions don't change at any size.
+
+                                                                     This gap is 60% of Wordmark height
+
+
+
+
+5                                                                                     © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+LOGO: VERTICAL LOCKUP
+
+
+CLEAR SPACE PROTECTS
+THE LOGO FROM COMPETING
+VISUAL ELEMENTS. THE
+BOUNDARY SHOWN HERE
+IS THE MINIMUM—MORE
+SPACE IS ALWAYS BETTER.
+
+
+The same margins, clear space,
+and minimum size rules apply
+to every version of the F1R3FLY
+logo: vertical lockup, horizontal
+lockup, logomark alone, and icon.
+
+
+
+
+6                                   © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+LOGO: HORIZONTAL LOCKUP
+
+
+THE HORIZONTAL LOCKUP
+PLACES THE LOGOMARK              Gap is 20% of logomark
+
+TO THE LEFT OF THE
+WORDMARK.
+
+
+Use it where vertical space
+is limited — headers, footers,
+navigation bars, partner
+logo rows.
+
+The wordmark sits within
+the center 60% of the lockup
+height, with 20% padding above
+and below. The gap between
+logomark and wordmark is 20%
+of the logomark width.
+
+
+
+
+7                                                         © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+LOGO: HORIZONTAL LOCKUP
+
+
+CONSISTENT RULES
+
+
+Same clear space rules
+as the vertical lockup.
+
+
+The boundary around
+the horizontal configuration
+is the minimum keep-out zone.
+
+
+
+
+8                               © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+LOGOMARK AND ICON
+
+
+LOGOMARK AND ICON USE
+
+
+The logomark can be used
+independently when the F1R3FLY
+name is already established in
+context—app icons, favicons,
+                                      Maximum width as stand alone is 80 px   Maximum width as stand alone is 60 px
+social avatars, watermarks.
+
+The icon (the single firefly)
+is reserved for the smallest
+applications: browser tabs,
+notification badges, and anywhere
+the full logomark loses legibility.
+
+The same clear space and minimum
+size rules apply to both. When in
+                                              Minimum width 40 px                       As small as a is flavicon
+doubt, use the full lockup.
+
+
+
+
+9                                                                                © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+LOGO FOR LIGHT BACKGROUND
+
+
+THESE ARE THE DARK-
+ON-LIGHT VERSIONS FOR
+USE ON WHITE OR LIGHT
+BACKGROUNDS.
+
+
+The full-color logomark and the
+single-color black versions are
+both approved.
+
+Use full-color when the context
+supports it. Use single-color black
+when printing limitations or visual
+simplicity require it. The dark
+circular badge versions (bottom
+row) are for social profiles and app
+icons on light backgrounds.
+
+
+
+
+10                                     © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+LOGO RULES
+
+
+DARK BACKGROUNDS ARE
+                                        NO   NO
+THE PRIMARY CONTEXT FOR
+THE F1R3FLY LOGO. LIGHT
+BACKGROUND USAGE IS
+APPROVED
+BUT SECONDARY.
+
+
+Don't recolor the logo, distort the
+proportions, add effects, place
+                                        NO   DEFINITELY NO
+it on busy backgrounds without
+sufficient contrast, or separate the
+logomark from the wordmark in
+the lockup configurations.
+
+Logo files are available in SVG, PNG,
+and PDF formats. Always use the
+provided files—don't recreate or
+approximate the logo.
+
+
+11                                                   © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+COLOR PALETTE
+
+
+THE F1R3FLY PALETTE IS BUILT
+TO BE THE LIGHT IN DARK
+ENVIRONMENTS.
+
+
+Black is the foundation—not a
+background color, the actual brand
+surface. Everything else exists in
+relationship to it—to emphasize
+light as a metaphor
+for bright ideas.
+
+This is the primary F1R3FLY
+                                      Brand Yellow        Brand Sage                                            Brand Sky
+identifier—the gradient that ties
+                                        F3D630              8BB999                                                 3FA9F5
+cyan, sage green, and warm
+yellow together. Use it for section
+labels, navigation highlights, and
+brand accents. Don't use it as a
+                                                     Primary brand gradient
+background fill.
+
+
+12                                                                            © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+SECONDARY COLOR PALETTE
+
+
+EACH AUDIENCE
+SEGMENT HAS ITS OWN
+GRADIENT IDENTITY.
+                                   Neutral gradient: Made for universal use with the primary brand gradient
+
+
+These appear on both websites,
+social media visuals, and also
+for print.
+                                     Client Gradient: Use as the primary gradient for client-facing elements
+On our website, these are
+applied to buttons, section
+backgrounds, and CTAs to
+signal who the content is for.
+                                 Developer Gradient: Use as the primary gradient for developer-facing elements
+
+
+
+
+                                   Partner Gradient: Use as the primary gradient for partner-facing elements
+
+
+
+
+13                                                                                        © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+TYPOGRAPHY
+
+
+BRANDON GROTESQUE IS THE ONLY HEADING TYPEFACE.
+SOURCE SANS PRO IS THE ONLY BODY TYPEFACE.
+
+
+PLEASE AVOID SUBSTITUTE, APPROXIMATE, OR ADD TO THIS SYSTEM.
+
+
+Weight hierarchy:
+
+
+
+Brandon Grotesque Bold                                 Brandon Grotesque Regular
+Page titles, primary section headers                   Eyebrow labels, secondary UI text
+
+
+
+Brandon Grotesque Medium                               Brandon Grotesque Light
+Subheaders, card titles, navigation                    Large display text, hero headlines
+
+
+
+
+14                                                                                      © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+TYPOGRAPHY
+
+
+SIZING
+
+
+The headline is set in Brandon Grotesque
+Bold for both print and digital. All caps
+with 25 tracking and 90% leading.
+
+The subhead is set in Brandon Grotesque
+Medium. All caps with 25 tracking. Start
+at 1/3 headline size and scale up to a
+maximum of 2/3 as desired or necessary
+to fit the layout. With a lengthier headline,
+start at 2/3 headline size and scale down
+to a minimum of 1/3 as necessary.
+
+The body copy is set in Source Sans
+Pro Light (weight 300) for both print and
+digital. 16px base with 0.04em tracking.
+
+
+
+
+15                                              © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+TYPOGRAPHY
+
+
+ALL HEADINGS ARE UPPERCASE                                             PAIRING RULES
+WITH WIDE LETTER-SPACING
+
+                                                                       Brandon Grotesque handles anything structural—headers, labels,
+Secondary: Source Sans Pro                                             buttons, navigation. Source Sans Pro handles anything the reader
+                                                                       needs to actually read—paragraphs, descriptions, FAQ answers, form
+Adobe Typekit (same kit)
+                                                                       fields. Don't reverse these roles.
+Weight 300 (Light) is the default body text weight. Set at 16px with
+0.04em letter-spacing for comfortable reading on dark backgrounds.
+
+Size Scale (from website CSS)
+
+Hero / display: clamp(2rem, 4vw, 3.5rem)
+
+Section headings: 2.75rem, weight 100
+
+Subheadings: 1.25rem–1.5rem, weight 500
+
+Body: 1rem (16px), weight 300
+
+Eyebrow labels: 0.85rem, uppercase, wide tracking
+
+Nav links: 18px, weight 330, uppercase
+
+16                                                                                                          © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+OUR VOICE
+
+
+HOW F1R3FLY SHOULD SOUND:
+
+
+•    Clear, technically accurate, no hype
+
+•    Business-friendly, not academic
+
+•    Confident and grounded—not "to-the-moon" Web3 marketing
+
+•    Visionary, but anchored in real use cases
+
+
+
+Approved tagline: "Concurrency for the people."
+
+Preferred terms: verifiable infrastructure, audit-ready data, provable
+systems, evidence-first
+
+Avoid: investment language, unverified green claims, crypto hype,
+aggressive competitor language, deep jargon on public-facing pages
+
+
+
+
+17                                                                       © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+CONSISTENT BRAND LAYOUTS
+
+
+STANDARD LAYOUT
+CONFIGURATIONS
+FOR F1R3FLY MATERIALS.
+
+
+These patterns apply
+across presentations,
+web pages, social cards,
+and print—anywhere the
+logo, text, and imagery
+need to coexist.
+Use these as starting points,
+not constraints. The goal is
+recognizable structure, not
+rigid templates.
+
+
+
+
+18                              © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+BRAND ARCHITECTURE
+
+
+F1R3FLY USES AN ENDORSED BRAND MODEL. THE MASTER BRAND LEADS EVERY SUB-BRAND — THEY CARRY THE F1R3FLY
+NAME, THE FIREFLY MARK, AND THE CORE VISUAL SYSTEM. EACH SUB-BRAND CAN DEVELOP ITS OWN ACCENT COLOR AND
+SECTOR-SPECIFIC IMAGERY, BUT THE FOUNDATION DOESN'T CHANGE.
+
+
+Consistent across all sub-brands:                      F1R3FLY Sports
+
+F1R3FLY name and firefly mark                          F1R3FLY Arts & Entertainment
+
+Black foundation / dark aesthetic                      F1R3FLY Limited
+
+Brandon Grotesque typography
+
+Core tone and language
+
+Products:
+
+F1R3SKY, F1R3Drive, Embers, F1R3FLY Core, F1R3FLY AI
+
+Sub-brands:
+
+F1R3FLY.IO (developer platform)
+
+F1R3FLY Medical
+
+19                                                                                    © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+ACCESSIBILITY
+
+
+ACCESSIBILITY IS BASELINE PROFESSIONALISM.
+
+
+We design to WCAG AA standards as a minimum: sufficient contrast ratios,
+proper heading structure, labeled form elements, readable type sizes.
+Tools like Pa11y, axe-core, and Lighthouse keep us honest.
+
+
+
+Add links for checking contrast etc
+
+Chicago manual of formatting
+
+
+
+
+20                                                                         © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+TEMPLATES AND ASSETS
+
+
+THIS PAGE WILL LINK TO DOWNLOADABLE TEMPLATES AND
+THE BRAND ASSET LIBRARY AS THEY BECOME AVAILABLE.
+FOR NOW, TREAT IT AS A DIRECTORY.
+
+
+Presentation template (PowerPoint)—in development
+
+Email signature template—in development
+
+Social media templates—in development
+
+Brand asset download—in development
+
+All templates and assets will eventually live in a shared portal.
+Until then, contact Hannah Adams for current files.
+
+
+
+
+21                                                                  © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+SEND FEEDBACK
+FEEL FREE TO USE THE DROPBOX COMMENTS SECTION TO
+ADD FEEDBACK DIRECTLY, WHICH I WILL SEE. OR, SEND VIA
+EMAIL.
+
+
+
+
+HANNAH ADAMS
+
+hannah.adams.design@gmail.com
+
+360 - 622 - 9780
+
+
+
+GREG MEREDITH
+
+lgreg.meredith@gmail.com
+
+206 - 650 - 3740
+
+
+
+
+22                                                      © F1R3FLY.IO, 2026. All Rights Reserved. | F1R3FLY Brand Book | March 2, 2026
+

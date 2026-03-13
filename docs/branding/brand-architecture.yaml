@@ -1,0 +1,24 @@
+brand_architecture:
+  model: endorsed
+  master_brand: F1R3FLY
+  principles:
+    - Keep the F1R3FLY name and firefly mark across sub-brands.
+    - Keep dark visual foundation and shared typography system.
+    - Allow sub-brands to vary accent colors and sector imagery.
+  shared_foundation:
+    - name_and_mark
+    - dark_foundation
+    - brandon_grotesque_typography
+    - consistent_voice_and_language
+  products:
+    - F1R3SKY
+    - F1R3Drive
+    - Embers
+    - F1R3FLY Core
+    - F1R3FLY AI
+  sub_brands:
+    - F1R3FLY.IO
+    - F1R3FLY Medical
+    - F1R3FLY Sports
+    - F1R3FLY Arts & Entertainment
+    - F1R3FLY Limited

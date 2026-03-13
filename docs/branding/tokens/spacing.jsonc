@@ -1,0 +1,24 @@
+// F1R3FLY spacing tokens.
+// Based on a 4px base unit for implementation consistency.
+{
+	"spacing": {
+		"0": { "$value": "0px", "$type": "dimension" },
+		"1": { "$value": "0.25rem", "$type": "dimension" }, // 4px
+		"2": { "$value": "0.5rem", "$type": "dimension" }, // 8px
+		"3": { "$value": "0.75rem", "$type": "dimension" }, // 12px
+		"4": { "$value": "1rem", "$type": "dimension" }, // 16px
+		"5": { "$value": "1.25rem", "$type": "dimension" }, // 20px
+		"6": { "$value": "1.5rem", "$type": "dimension" }, // 24px
+		"8": { "$value": "2rem", "$type": "dimension" }, // 32px
+		"10": { "$value": "2.5rem", "$type": "dimension" }, // 40px
+		"12": { "$value": "3rem", "$type": "dimension" }, // 48px
+		"16": { "$value": "4rem", "$type": "dimension" }, // 64px
+		"20": { "$value": "5rem", "$type": "dimension" }, // 80px
+		"24": { "$value": "6rem", "$type": "dimension" } // 96px
+	},
+
+	"container": {
+		"maxWidth": { "$value": "80rem", "$type": "dimension" }, // 1280px
+		"padding": { "$value": "1rem", "$type": "dimension" } // 16px
+	}
+}

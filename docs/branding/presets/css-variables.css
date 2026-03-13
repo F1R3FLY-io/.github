@@ -1,0 +1,48 @@
+/*
+ * F1R3FLY CSS custom properties.
+ *
+ * Canonical source: docs/branding/tokens/colors.jsonc
+ * Typography source: docs/branding/tokens/typography.jsonc
+ */
+
+:root {
+	/* Core brand colors */
+	--f1-black: #000000;
+	--f1-yellow: #f3d630;
+	--f1-sage: #8bb999;
+	--f1-sky: #3fa9f5;
+
+	/* Primary gradient */
+	--f1-gradient-primary: linear-gradient(90deg, #f3d630 0%, #8bb999 50%, #3fa9f5 100%);
+
+	/* Audience gradients */
+	--f1-gradient-neutral: linear-gradient(90deg, #282b2e 0%, #171e30 50%, #061132 100%);
+	--f1-gradient-client: linear-gradient(90deg, #5d0266 0%, #6c0349 50%, #7a042c 100%);
+	--f1-gradient-developer: linear-gradient(90deg, #007cc2 0%, #0086a6 50%, #00908a 100%);
+	--f1-gradient-partner: linear-gradient(90deg, #108f22 0%, #439518 50%, #759c0f 100%);
+
+	/* Dark theme semantic defaults */
+	--f1-bg: #000000;
+	--f1-surface: #0f1831;
+	--f1-surface-hover: #171e30;
+	--f1-border: #282b2e;
+	--f1-text: #fcfcfc;
+	--f1-text-muted: #a3a3a3;
+	--f1-text-dim: #5e5e5e;
+
+	/* Typography */
+	--f1-font-heading: "Brandon Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+	--f1-font-body: "Source Sans Pro", "Segoe UI", Helvetica, sans-serif;
+	--f1-letter-spacing-wide: 0.04em;
+}
+
+:root.light {
+	/* Light theme semantic colors */
+	--f1-bg: #ffffff;
+	--f1-surface: #f5f5f5;
+	--f1-surface-hover: #e5e7eb;
+	--f1-border: #d1d5db;
+	--f1-text: #000000;
+	--f1-text-muted: #5e5e5e;
+	--f1-text-dim: #737373;
+}

@@ -1,0 +1,21 @@
+// F1R3FLY elevation tokens.
+{
+	"shadow": {
+		"sm": {
+			"$value": "0 1px 2px 0 rgb(0 0 0 / 0.25)",
+			"$type": "shadow"
+		},
+		"md": {
+			"$value": "0 8px 16px -4px rgb(0 0 0 / 0.35)",
+			"$type": "shadow"
+		},
+		"lg": {
+			"$value": "0 12px 24px -6px rgb(0 0 0 / 0.4)",
+			"$type": "shadow"
+		},
+		"xl": {
+			"$value": "0 20px 32px -8px rgb(0 0 0 / 0.5)",
+			"$type": "shadow"
+		}
+	}
+}

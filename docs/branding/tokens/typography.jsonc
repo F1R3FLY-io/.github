@@ -1,0 +1,46 @@
+// F1R3FLY typography tokens.
+// Source: F1r3fly_Brand_Book-03.01.2026.pdf (pages 14-16).
+{
+	"fontFamily": {
+		"heading": {
+			"$value": ["Brandon Grotesque", "Avenir Next", "Segoe UI", "sans-serif"],
+			"$type": "fontFamily"
+		},
+		"body": {
+			"$value": ["Source Sans Pro", "Segoe UI", "Helvetica", "sans-serif"],
+			"$type": "fontFamily"
+		}
+	},
+
+	"fontWeight": {
+		"light": { "$value": 300, "$type": "fontWeight" },
+		"regular": { "$value": 400, "$type": "fontWeight" },
+		"medium": { "$value": 500, "$type": "fontWeight" },
+		"bold": { "$value": 700, "$type": "fontWeight" }
+	},
+
+	"fontSize": {
+		"heroMin": { "$value": "2rem", "$type": "dimension" },
+		"heroMax": { "$value": "3.5rem", "$type": "dimension" },
+		"sectionHeading": { "$value": "2.75rem", "$type": "dimension" },
+		"subheadingMin": { "$value": "1.25rem", "$type": "dimension" },
+		"subheadingMax": { "$value": "1.5rem", "$type": "dimension" },
+		"body": { "$value": "1rem", "$type": "dimension" }, // 16px
+		"nav": { "$value": "1.125rem", "$type": "dimension" }, // 18px
+		"eyebrow": { "$value": "0.85rem", "$type": "dimension" }
+	},
+
+	"lineHeight": {
+		"headline": { "$value": 0.9, "$type": "number" },
+		"normal": { "$value": 1.5, "$type": "number" }
+	},
+
+	"letterSpacing": {
+		"capsWide": { "$value": "0.04em", "$type": "dimension" },
+		"body": { "$value": "0.04em", "$type": "dimension" }
+	},
+
+	"textTransform": {
+		"headings": { "$value": "uppercase", "$type": "string" }
+	}
+}
