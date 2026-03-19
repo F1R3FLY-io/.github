@@ -39,21 +39,29 @@ This repository follows F1R3FLY.io's documentation-first methodology, serving as
 ### Key Repositories
 
 #### Core Platform
-- **[f1r3fly](https://github.com/F1R3FLY-io/f1r3fly)** - Main transaction server (Scala/Rust)
+- **[f1r3node](https://github.com/F1R3FLY-io/f1r3node)** - Core transaction node repository
+- **[f1r3node-rust](https://github.com/F1R3FLY-io/f1r3node-rust)** - Standalone Rust workspace and Docker/shard setup for the pure-Rust node
+- **[rust-client](https://github.com/F1R3FLY-io/rust-client)** - Rust client SDK for deploys, status, and network interaction
 
 #### Language & Tools
 - **[rholang-rs](https://github.com/F1R3FLY-io/rholang-rs)** - Rholang interpreter (Rust)
 - **[rholang-language-server](https://github.com/F1R3FLY-io/rholang-language-server)** - LSP-based Language Server for Rholang (Rust)
-- **[graph-to-rholang-parser](https://github.com/F1R3FLY-io/graph-to-rholang-parser)** - Graph to RhoLang parser (Rust)
+- **[graphl-parser](https://github.com/F1R3FLY-io/graphl-parser)** - Graph to Rholang parser
+- **[MeTTaIL](https://github.com/F1R3FLY-io/MeTTaIL)** - MeTTa intermediate language
 
-#### Applications
+#### Applications & Use Cases
 - **[embers](https://github.com/F1R3FLY-io/embers)** - F1R3Sky wallets and agents (Rust)
 - **[embers-frontend](https://github.com/F1R3FLY-io/embers-frontend)** - Web interface (TypeScript)
 - **[f1r3sky](https://github.com/F1R3FLY-io/f1r3sky)** - F1R3FLY BlueSky fork (TypeScript)
+- **[f1r3drive](https://github.com/F1R3FLY-io/f1r3drive)** - Canonical file system project using a FUSE-based interface on top of F1R3FLY shards
+- **[F1R3Games](https://github.com/F1R3FLY-io/F1R3Games)** - Collective-intelligence games portfolio
+- **[CatchingF1R3](https://github.com/F1R3FLY-io/CatchingF1R3)** - Decentralized voting application
+- **[F1R3Fi](https://github.com/F1R3FLY-io/F1R3Fi)** - DeFi and financial engineering exploration
 - **[lightning-bug](https://github.com/F1R3FLY-io/lightning-bug)** - Modern, extensible, browser-based code editor (Clojure)
 
-#### Research & Tools
-- **[MeTTa](https://github.com/F1R3FLY-io/MeTTa)** - MeTTa 2.0 language (Scala)
+#### Research & Publications
+- **[rhoHDC](https://github.com/F1R3FLY-io/rhoHDC)** - rho-calculus and hyper-dimensional computing research
+- **[publications](https://github.com/F1R3FLY-io/publications)** - Books, papers, and publication assets
 - **[F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)** - Visualization tool for Infrastructure as Code
 
 **[Complete Repository Guide](https://github.com/F1R3FLY-io/.github/blob/master/docs/Organization_of_Repositories.md)** - View all projects with detailed descriptions
@@ -182,9 +190,12 @@ documentation: "Markdown with GitHub integration"
 
 ```yaml
 core_platform:
-  f1r3fly:
-    url: "https://github.com/F1R3FLY-io/f1r3fly"
-    description: "Main transaction server"
+  f1r3node:
+    url: "https://github.com/F1R3FLY-io/f1r3node"
+    description: "Core transaction node repository"
+  f1r3node_rust:
+    url: "https://github.com/F1R3FLY-io/f1r3node-rust"
+    description: "Standalone Rust workspace and Docker/shard setup for the node"
   rholang_rs:
     url: "https://github.com/F1R3FLY-io/rholang-rs"
     description: "Rust Rholang implementation"
@@ -196,22 +207,34 @@ user_applications:
   f1r3sky:
     url: "https://github.com/F1R3FLY-io/f1r3sky"
     description: "Decentralized social platform"
+  f1r3drive:
+    url: "https://github.com/F1R3FLY-io/f1r3drive"
+    description: "FUSE-based file system use case on top of F1R3FLY shards"
+  F1R3Games:
+    url: "https://github.com/F1R3FLY-io/F1R3Games"
+    description: "Collective-intelligence games portfolio"
 
 developer_tools:
   rholang_language_server:
     url: "https://github.com/F1R3FLY-io/rholang-language-server"
     description: "LSP for Rholang"
+  graphl_parser:
+    url: "https://github.com/F1R3FLY-io/graphl-parser"
+    description: "Graph to Rholang parser"
   F1r3bu1ld3r:
     url: "https://github.com/F1R3FLY-io/F1r3bu1ld3r"
     description: "Infrastructure visualization"
 
 research_innovation:
-  MeTTa:
-    url: "https://github.com/F1R3FLY-io/MeTTa"
-    description: "Meta-Type Talk language"
-  F1R3FLYFS:
-    url: "https://github.com/F1R3FLY-io/F1R3FLYFS"
-    description: "Distributed file system"
+  MeTTaIL:
+    url: "https://github.com/F1R3FLY-io/MeTTaIL"
+    description: "MeTTa intermediate language"
+  rhoHDC:
+    url: "https://github.com/F1R3FLY-io/rhoHDC"
+    description: "rho-calculus and hyper-dimensional computing"
+  publications:
+    url: "https://github.com/F1R3FLY-io/publications"
+    description: "Books, papers, and publication assets"
 ```
 
 ## Documentation Resources

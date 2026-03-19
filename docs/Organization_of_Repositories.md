@@ -5,7 +5,7 @@
 This document is the canonical repository map for the `F1R3FLY-io` organization.
 It is intended for engineering, partner enablement, and documentation alignment.
 
-Repository inventory was reconciled against live org metadata on `2026-02-13` via `gh api`.
+Repository inventory was reconciled against live org metadata on `2026-03-19` via `gh api`.
 
 ## Canonical Naming Conventions
 
@@ -25,16 +25,16 @@ Repository inventory was reconciled against live org metadata on `2026-02-13` vi
 
 ## Portfolio Summary
 
-- Total repositories: `59`
-- Public repositories: `49`
+- Total repositories: `63`
+- Public repositories: `53`
 - Private repositories: `10`
 
 ## Public Repositories by Domain
 
 ### Core Platform and Protocol
 
-- [`f1r3node`](https://github.com/F1R3FLY-io/f1r3node): core transaction server and node implementation.
-- [`f1r3node-rust`](https://github.com/F1R3FLY-io/f1r3node-rust): shard/docker monorepo for node deployment.
+- [`f1r3node`](https://github.com/F1R3FLY-io/f1r3node): core transaction server and upstream node implementation.
+- [`f1r3node-rust`](https://github.com/F1R3FLY-io/f1r3node-rust): standalone Rust workspace for the pure-Rust node, including local and Docker shard workflows.
 - [`pyf1r3fly`](https://github.com/F1R3FLY-io/pyf1r3fly): Python interface for node integration.
 - [`rust-client`](https://github.com/F1R3FLY-io/rust-client): Rust client SDK.
 - [`f1r3fly-rgb-lightning-node`](https://github.com/F1R3FLY-io/f1r3fly-rgb-lightning-node): RGB/lightning integration node work.
@@ -71,6 +71,9 @@ Repository inventory was reconciled against live org metadata on `2026-02-13` vi
 - [`f1r3sky-client`](https://github.com/F1R3FLY-io/f1r3sky-client): client app for web/mobile.
 - [`f1r3sky-demo-scripts`](https://github.com/F1R3FLY-io/f1r3sky-demo-scripts): demo/testing scripts.
 - [`demo-f1r3sky-game`](https://github.com/F1R3FLY-io/demo-f1r3sky-game): demo game integration.
+- [`F1R3Games`](https://github.com/F1R3FLY-io/F1R3Games): collective-intelligence games portfolio.
+- [`CatchingF1R3`](https://github.com/F1R3FLY-io/CatchingF1R3): decentralized voting application.
+- [`F1R3Fi`](https://github.com/F1R3FLY-io/F1R3Fi): DeFi and financial engineering exploration.
 - [`f1r3wallet`](https://github.com/F1R3FLY-io/f1r3wallet): basic wallet app.
 - [`f1r3bot`](https://github.com/F1R3FLY-io/f1r3bot): Discord integration bot.
 - [`lightning-bug`](https://github.com/F1R3FLY-io/lightning-bug): browser-based code editor.
@@ -82,7 +85,7 @@ Repository inventory was reconciled against live org metadata on `2026-02-13` vi
 - [`F1r3bu1ld3r`](https://github.com/F1R3FLY-io/F1r3bu1ld3r): visualization-assisted infrastructure tooling.
 - [`system-integration`](https://github.com/F1R3FLY-io/system-integration): cross-project integration code.
 - [`Sankey_block_explorer`](https://github.com/F1R3FLY-io/Sankey_block_explorer): block explorer and visualization.
-- [`f1r3drive`](https://github.com/F1R3FLY-io/f1r3drive): drive/storage integration work.
+- [`f1r3drive`](https://github.com/F1R3FLY-io/f1r3drive): FUSE-based file system and storage integration on top of F1R3FLY nodes.
 - [`f1r3drive-extension`](https://github.com/F1R3FLY-io/f1r3drive-extension): extension integration for `f1r3drive`.
 
 ### Governance, Documentation, and Process
@@ -94,6 +97,13 @@ Repository inventory was reconciled against live org metadata on `2026-02-13` vi
 - [`FIPS`](https://github.com/F1R3FLY-io/FIPS): improvement process submissions.
 - [`devin-onboarding-task-tracker`](https://github.com/F1R3FLY-io/devin-onboarding-task-tracker): onboarding/task-tracker sample project.
 - [`MacroLoop`](https://github.com/F1R3FLY-io/MacroLoop): macroloop fork repo.
+- [`publications`](https://github.com/F1R3FLY-io/publications): books, papers, and publication assets.
+
+## File System and Storage Use Case
+
+- `f1r3node-rust` is the current standalone Rust workspace and the clearest local or Docker shard setup path for the node runtime.
+- `f1r3drive` is the canonical file system project: a FUSE-based file system layer that connects to a local or remote F1R3FLY shard.
+- `f1r3drive-extension` extends the same storage path with client and extension-side integration.
 
 ## Private Repositories (No URL References)
 
@@ -112,9 +122,9 @@ Repository inventory was reconciled against live org metadata on `2026-02-13` vi
 
 ### System Integrators and Partners
 
-1. Start with `f1r3node`, `rholang-rs`, and `OSLF` to understand platform and correctness model.
+1. Start with `f1r3node`, `f1r3node-rust`, and `rholang-rs` to understand the node runtime, Rust workspace, and language/runtime layers.
 2. Review `F1r3bu1ld3r`, `IaC`, and `system-integration` for deployment and integration pathways.
-3. Explore `embers`, `f1r3sky`, and `f1r3drive` as application and service exemplars.
+3. Explore `f1r3drive` as the file system/storage use case, then `embers` and `f1r3sky` as application and service exemplars.
 
 ### Language/Tooling Engineers
 

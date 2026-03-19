@@ -40,6 +40,12 @@ It is intended for system integrators (SIs) comparing:
 3. Assume integration layering: public portfolio for implementation path, private portfolio for strategic or governed extensions.
 4. Evaluate where CFT assumptions are sufficient versus where BFT assumptions are required by threat model, trust boundary, or cross-organization coordination.
 
+## Concrete File System Path
+
+1. Use `f1r3node-rust` as the current standalone Rust node workspace and local or Docker shard setup path.
+2. Layer `f1r3drive` on that shard when the target use case is a file system or storage interface.
+3. Add `f1r3drive-extension` when browser or extension-side integration is required.
+
 ## Guardrails
 
 - Do not represent these mappings as drop-in replacements.
@@ -48,4 +54,4 @@ It is intended for system integrators (SIs) comparing:
 
 ---
 
-Last updated: 2026-02-13
+Last updated: 2026-03-19

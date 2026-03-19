@@ -8,16 +8,19 @@ This document tracks high-level dependencies across key F1R3FLY.io repositories 
 - release coordination,
 - documentation-first planning.
 
-Repository names in this document follow canonical org naming reconciled on `2026-02-13`.
+Repository names in this document follow canonical org naming reconciled on `2026-03-19`.
 
 ## Dependency Map
 
 ```mermaid
 graph TD
     f1r3node[f1r3node<br/>Transaction Node] --> rholang_rs[rholang-rs<br/>Rholang Runtime]
+    f1r3node_rust[f1r3node-rust<br/>Rust Workspace + Docker/Shard Flows] --> f1r3node
 
     pyf1r3fly[pyf1r3fly<br/>Python Client] --> f1r3node
     rust_client[rust-client<br/>Rust Client] --> f1r3node
+    f1r3drive[f1r3drive<br/>FUSE File System] --> f1r3node
+    f1r3drive_extension[f1r3drive-extension<br/>Drive Extension] --> f1r3drive
 
     embers[embers<br/>Wallets and Agents Backend] --> f1r3node
     embers_frontend[embers-frontend<br/>Web UI] --> embers
@@ -43,12 +46,15 @@ graph TD
 - The map is intentionally portfolio-level and should be treated as coordination guidance, not build-graph truth.
 - Validate dependency details in each repository before implementation planning or release sign-off.
 - Some relationships are integration-level (service-to-service), not direct package dependencies.
+- For file system workflows, `f1r3node-rust` is the clearest standalone local or Docker shard path to pair with `f1r3drive`.
 
 ## Canonical Projects in Scope
 
 | Project | Primary Role | Depends On (High Level) | Dependents (High Level) | Status |
 |---|---|---|---|---|
-| `f1r3node` | Core transaction node | `rholang-rs` | `pyf1r3fly`, `rust-client`, `embers` | Active |
+| `f1r3node` | Core transaction node | `rholang-rs` | `pyf1r3fly`, `rust-client`, `embers`, `f1r3drive` | Active |
+| `f1r3node-rust` | Standalone Cargo workspace and Docker/shard workflow for the Rust node | `f1r3node` (upstream alignment) | local/dev/test workflows, `f1r3drive` operator path | Active |
+| `f1r3drive` | File system and storage layer | `f1r3node`, `f1r3node-rust` (deployment path) | `f1r3drive-extension` | Active |
 | `rholang-rs` | Runtime/language execution | - | `f1r3node`, `rholang-language-server` | Active |
 | `embers` | Wallets/agents backend | `f1r3node` | `embers-frontend`, `f1r3sky-backend` | Active |
 | `embers-frontend` | Web frontend | `embers` | - | Active |
@@ -81,8 +87,8 @@ graph TD
 ## Release Coordination Order
 
 1. Language/runtime core (`rholang-rs`, `OSLF`, `MeTTaIL`, `MeTTa-Compiler`).
-2. Core node/services (`f1r3node`, `embers`).
-3. App backends and clients (`f1r3sky-backend`, `f1r3sky`, `f1r3sky-client`, `embers-frontend`).
+2. Core node/services (`f1r3node`, `f1r3node-rust`, `embers`).
+3. App backends, storage use cases, and clients (`f1r3drive`, `f1r3drive-extension`, `f1r3sky-backend`, `f1r3sky`, `f1r3sky-client`, `embers-frontend`).
 4. Tooling and integrations (`rholang-language-server` clients, `F1r3bu1ld3r`, `system-integration`).
 
 ## Documentation Requirements per Repository

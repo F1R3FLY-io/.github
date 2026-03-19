@@ -155,6 +155,7 @@ This index provides a comprehensive guide to all F1R3FLY.io documentation standa
 
 #### Blockchain/Distributed Systems
 - Core Platform: [f1r3node](https://github.com/F1R3FLY-io/f1r3node)
+- Rust Runtime and Shard Setup: [f1r3node-rust](https://github.com/F1R3FLY-io/f1r3node-rust)
 - Language Tools: [rholang-rs](https://github.com/F1R3FLY-io/rholang-rs)
 - Development Tools: [rholang-language-server](https://github.com/F1R3FLY-io/rholang-language-server)
 
@@ -162,11 +163,13 @@ This index provides a comprehensive guide to all F1R3FLY.io documentation standa
 - Backend API: [embers](https://github.com/F1R3FLY-io/embers)
 - Frontend: [embers-frontend](https://github.com/F1R3FLY-io/embers-frontend)
 - Social Platform: [f1r3sky](https://github.com/F1R3FLY-io/f1r3sky)
+- File System Use Case: [f1r3drive](https://github.com/F1R3FLY-io/f1r3drive)
 - Code Editor: [lightning-bug](https://github.com/F1R3FLY-io/lightning-bug)
 
 #### Research & Innovation
 - Language Research: [MeTTaIL](https://github.com/F1R3FLY-io/MeTTaIL)
 - Compiler Toolchain: [mettail-rust](https://github.com/F1R3FLY-io/mettail-rust)
+- Publications: [publications](https://github.com/F1R3FLY-io/publications)
 - Infrastructure Tools: [F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)
 
 ### Documentation by Audience
@@ -200,4 +203,4 @@ This index provides a comprehensive guide to all F1R3FLY.io documentation standa
 
 ---
 
-*This index is maintained by the F1R3FLY.io platform team. Last updated: 2026-02-13*
+*This index is maintained by the F1R3FLY.io platform team. Last updated: 2026-03-19*
