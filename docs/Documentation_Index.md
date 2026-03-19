@@ -183,6 +183,7 @@ This index provides a comprehensive guide to all F1R3FLY.io documentation standa
 - [Deployment Standards](./deployment/Deployment_Standards.md) - Deployment requirements
 - [Security Standards](./specifications/security/Security_Standards.md) - Security implementation
 - [Cross-Project Dependencies](./Cross_Project_Dependencies.md) - System integration
+- Integration orchestration: [system-integration](https://github.com/F1R3FLY-io/system-integration) and the `shardctl` CLI
 
 #### For Product/Project Managers
 - [Cross-Project Dependencies](./Cross_Project_Dependencies.md) - Project relationships

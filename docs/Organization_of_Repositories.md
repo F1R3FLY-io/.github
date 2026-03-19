@@ -83,7 +83,7 @@ Repository inventory was reconciled against live org metadata on `2026-03-19` vi
 
 - [`IaC`](https://github.com/F1R3FLY-io/IaC): infrastructure automation (Python).
 - [`F1r3bu1ld3r`](https://github.com/F1R3FLY-io/F1r3bu1ld3r): visualization-assisted infrastructure tooling.
-- [`system-integration`](https://github.com/F1R3FLY-io/system-integration): cross-project integration code.
+- [`system-integration`](https://github.com/F1R3FLY-io/system-integration): cross-project integration repo with compose orchestration, integration tests, and the `shardctl` CLI.
 - [`Sankey_block_explorer`](https://github.com/F1R3FLY-io/Sankey_block_explorer): block explorer and visualization.
 - [`f1r3drive`](https://github.com/F1R3FLY-io/f1r3drive): FUSE-based file system and storage integration on top of F1R3FLY nodes.
 - [`f1r3drive-extension`](https://github.com/F1R3FLY-io/f1r3drive-extension): extension integration for `f1r3drive`.
@@ -123,7 +123,7 @@ Repository inventory was reconciled against live org metadata on `2026-03-19` vi
 ### System Integrators and Partners
 
 1. Start with `f1r3node`, `f1r3node-rust`, and `rholang-rs` to understand the node runtime, Rust workspace, and language/runtime layers.
-2. Review `F1r3bu1ld3r`, `IaC`, and `system-integration` for deployment and integration pathways.
+2. Review `F1r3bu1ld3r`, `IaC`, and `system-integration` for deployment and integration pathways; `system-integration` is the home of the `shardctl` operator CLI.
 3. Explore `f1r3drive` as the file system/storage use case, then `embers` and `f1r3sky` as application and service exemplars.
 
 ### Language/Tooling Engineers
