@@ -148,6 +148,7 @@ For each narrative section:
 |---------|-------|
 | `executive_overview` | Key accomplishments, business impact, notable decisions |
 | `milestone_commentary` | Milestone progress, delays, adjustments |
+| `milestone_analysis` | Completion trends, delivery reliability, tracking coverage recommendations |
 | `delivery_commentary` | What shipped, key features, customer-facing impact |
 | `risk_commentary` | Current risks, mitigations, items requiring escalation |
 | `resource_commentary` | Team capacity, hiring needs, resource allocation |
@@ -161,7 +162,10 @@ For each narrative section:
 - Recommend actions - provide clear options for decision items
 - Keep it concise - board members need scannable summaries
 
-**Good narrative:**
+**Good narrative (milestone_analysis):**
+> One milestone completed this period: embers/choreographer delivered on-time. Delivery reliability is 100% (1/1 with due dates). However, only 1 of 25 repositories has milestones defined, creating a strategic visibility gap. Recommend formalizing milestones for f1r3fly (production readiness) and rholang-rs (Rust interpreter) to track progress against Q2 objectives. Three repos use labeled issues as alternative tracking, but 21 have no tracking mechanism.
+
+**Good narrative (general):**
 > Core Platform delivered 28 merged PRs addressing consensus stability and whitelabel rebranding. The v2.0 milestone advanced to 75% completion, on track for Q1 delivery. One risk identified: CI migration to self-hosted runners requires 48-hour monitoring window.
 
 **Poor narrative:**

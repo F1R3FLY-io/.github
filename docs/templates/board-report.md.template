@@ -63,6 +63,41 @@ _Add commentary on milestone progress, delays, and adjustments._
 
 ---
 
+## Milestone Analysis
+
+### Completed This Period
+
+| Project | Milestone | Completed | Due Date | Delivery |
+|---------|-----------|-----------|----------|----------|
+| example | v1.0 | 2026-02-28 | 2026-03-01 | On-time |
+
+### Open & Upcoming
+
+| Project | Milestone | Progress | Due Date | Open Issues |
+|---------|-----------|----------|----------|-------------|
+| example | v2.0 | 25% (5/20) | 2026-06-01 | 15 |
+
+### Delivery Reliability
+
+| Metric | Value |
+|--------|-------|
+| Milestones completed | 0 |
+| On-time delivery | 0 |
+| Late delivery | 0 |
+| No due date set | 0 |
+
+### Tracking Coverage
+
+**Milestone coverage:** 0 of 0 repositories have milestones defined
+
+### Milestone Analysis Commentary
+
+<!-- AI_NARRATIVE_START: milestone_analysis -->
+_Add analysis of milestone completion trends, delivery reliability patterns, and recommendations for improving strategic tracking coverage across the organization._
+<!-- AI_NARRATIVE_END -->
+
+---
+
 ## Product Delivery
 
 ### Deliverables This Period

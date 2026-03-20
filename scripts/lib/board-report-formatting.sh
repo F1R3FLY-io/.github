@@ -80,6 +80,272 @@ format_board_milestones() {
 }
 
 #
+# Format milestones completed within the reporting period
+#
+format_completed_milestones() {
+    local all_data="$1"
+    local start_date="$2"
+    local end_date="$3"
+
+    local completed
+    completed=$(echo "$all_data" | jq --arg start "${start_date}" --arg end "${end_date}T23:59:59Z" '[
+        .[].repos[] |
+        .repo as $repo |
+        (.milestones // [])[] |
+        select(.state == "closed" and .closed_at != null and .closed_at >= $start and .closed_at <= $end) |
+        {repo: $repo, title, closed_at, due_on, progress, open_issues, closed_issues, url}
+    ] | sort_by(.closed_at)')
+
+    if [[ "$completed" == "[]" ]] || [[ -z "$completed" ]]; then
+        echo "_No milestones completed this period_"
+        return
+    fi
+
+    echo "| Project | Milestone | Completed | Due Date | Delivery |"
+    echo "|---------|-----------|-----------|----------|----------|"
+    echo "$completed" | jq -r '.[] |
+        (.closed_at[:10]) as $closed_date |
+        (if .due_on then .due_on[:10] else "TBD" end) as $due |
+        (if .due_on == null then "No due date"
+         elif $closed_date <= (.due_on[:10]) then "On-time"
+         else "Late" end) as $delivery |
+        "| \(.repo) | \(.title) | \($closed_date) | \($due) | \($delivery) |"
+    '
+}
+
+#
+# Format open and upcoming milestones (with and without due dates)
+#
+format_future_milestones() {
+    local all_data="$1"
+
+    local future
+    future=$(echo "$all_data" | jq '[
+        .[].repos[] |
+        .repo as $repo |
+        (.milestones // [])[] |
+        select(.state == "open") |
+        {repo: $repo, title, due_on, progress, open_issues, closed_issues, url}
+    ] | sort_by(.due_on // "9999-12-31")')
+
+    if [[ "$future" == "[]" ]] || [[ -z "$future" ]]; then
+        echo "_No open milestones found_"
+        return
+    fi
+
+    echo "| Project | Milestone | Progress | Due Date | Open Issues |"
+    echo "|---------|-----------|----------|----------|-------------|"
+    echo "$future" | jq -r '.[] |
+        (if .due_on then .due_on[:10] else "**Not set**" end) as $due |
+        "| \(.repo) | \(.title) | \(.progress)% (\(.closed_issues)/\(.open_issues + .closed_issues)) | \($due) | \(.open_issues) |"
+    '
+
+    # Flag milestones without due dates
+    local no_date_count
+    no_date_count=$(echo "$future" | jq '[.[] | select(.due_on == null)] | length')
+    if [[ "$no_date_count" -gt 0 ]]; then
+        echo ""
+        echo "> **Planning gap:** ${no_date_count} open milestone(s) have no due date set."
+    fi
+}
+
+#
+# Format delivery reliability metrics for completed milestones
+#
+format_delivery_reliability() {
+    local all_data="$1"
+    local start_date="$2"
+    local end_date="$3"
+
+    local completed
+    completed=$(echo "$all_data" | jq --arg start "${start_date}" --arg end "${end_date}T23:59:59Z" '[
+        .[].repos[] |
+        .repo as $repo |
+        (.milestones // [])[] |
+        select(.state == "closed" and .closed_at != null and .closed_at >= $start and .closed_at <= $end) |
+        {repo: $repo, title, closed_at, due_on}
+    ]')
+
+    local total
+    total=$(echo "$completed" | jq 'length')
+
+    if [[ "$total" -eq 0 ]]; then
+        echo "_No completed milestones to assess delivery reliability_"
+        return
+    fi
+
+    local on_time late no_due_date
+    on_time=$(echo "$completed" | jq '[.[] | select(.due_on != null and (.closed_at[:10]) <= (.due_on[:10]))] | length')
+    late=$(echo "$completed" | jq '[.[] | select(.due_on != null and (.closed_at[:10]) > (.due_on[:10]))] | length')
+    no_due_date=$(echo "$completed" | jq '[.[] | select(.due_on == null)] | length')
+
+    echo "| Metric | Value |"
+    echo "|--------|-------|"
+    echo "| Milestones completed | ${total} |"
+    echo "| On-time delivery | ${on_time} |"
+    echo "| Late delivery | ${late} |"
+    echo "| No due date set | ${no_due_date} |"
+
+    local with_dates=$((on_time + late))
+    if [[ "$with_dates" -gt 0 ]]; then
+        local pct=$((on_time * 100 / with_dates))
+        echo "| **Reliability rate** | **${pct}%** |"
+    fi
+}
+
+#
+# Format milestone coverage and tracking signal analysis
+#
+format_milestone_coverage() {
+    local all_data="$1"
+
+    local total_repos with_count without_count
+    total_repos=$(echo "$all_data" | jq '[.[].repos[] | select(.exists == true)] | length')
+    with_count=$(echo "$all_data" | jq '[.[].repos[] | select(.exists == true and ((.milestones // []) | length) > 0)] | length')
+    without_count=$((total_repos - with_count))
+
+    echo "**Milestone coverage:** ${with_count} of ${total_repos} repositories have milestones defined"
+    echo ""
+
+    if [[ "$without_count" -eq 0 ]]; then
+        return
+    fi
+
+    # Check for alternative tracking signals in repos without milestones
+    local with_alt no_tracking
+    with_alt=$(echo "$all_data" | jq '[
+        .[].repos[] |
+        select(.exists == true and ((.milestones // []) | length) == 0) |
+        select((.tracking_signals.labeled_tracking_issues // 0) > 0 or (.tracking_signals.project_boards // 0) > 0) |
+        {
+            repo,
+            labeled_issues: (.tracking_signals.labeled_tracking_issues // 0),
+            projects: (.tracking_signals.project_boards // 0)
+        }
+    ]')
+
+    no_tracking=$(echo "$all_data" | jq '[
+        .[].repos[] |
+        select(.exists == true and ((.milestones // []) | length) == 0) |
+        select((.tracking_signals.labeled_tracking_issues // 0) == 0 and (.tracking_signals.project_boards // 0) == 0) |
+        .repo
+    ]')
+
+    local alt_count no_count
+    alt_count=$(echo "$with_alt" | jq 'length')
+    no_count=$(echo "$no_tracking" | jq 'length')
+
+    if [[ "$alt_count" -gt 0 ]]; then
+        echo "#### Alternative Tracking Signals"
+        echo ""
+        echo "| Repository | Labeled Issues | Project Boards |"
+        echo "|------------|---------------|----------------|"
+        echo "$with_alt" | jq -r '.[] | "| \(.repo) | \(.labeled_issues) | \(.projects) |"'
+        echo ""
+    fi
+
+    if [[ "$no_count" -gt 0 ]]; then
+        echo "#### No Tracking Defined"
+        echo ""
+        echo "> **Recommendation:** ${no_count} repositories have no milestones, labeled tracking issues, or project boards. Consider adding milestones for strategic visibility."
+        echo ""
+        echo "$no_tracking" | jq -r '.[] | "- \(.)"'
+        echo ""
+    fi
+}
+
+#
+# Format milestone continuity across previous board reports
+#
+format_milestone_history() {
+    local all_data="$1"
+    local current_period="$2"
+    local repo_root="${REPO_ROOT:-$(pwd)}"
+
+    local reports_dir="${repo_root}/docs/reports"
+
+    # Find previous board reports (exclude current period)
+    local prev_reports
+    prev_reports=$(ls "${reports_dir}"/*board-report.md 2>/dev/null | grep -v "${current_period}" | sort)
+
+    if [[ -z "$prev_reports" ]]; then
+        return
+    fi
+
+    # Get all current milestone names
+    local milestone_entries
+    milestone_entries=$(echo "$all_data" | jq -r '[
+        .[].repos[] |
+        (.milestones // [])[] |
+        "\(.repo)\t\(.title)"
+    ] | unique | .[]')
+
+    if [[ -z "$milestone_entries" ]]; then
+        return
+    fi
+
+    local has_history=false
+    local history_output=""
+
+    while IFS=$'\t' read -r repo title; do
+        [[ -z "$title" ]] && continue
+        while IFS= read -r report; do
+            if grep -qF "$title" "$report" 2>/dev/null; then
+                local report_period
+                report_period=$(basename "$report" .md | sed 's/-board-report//' | sed 's/-biweekly//')
+                if [[ "$has_history" == false ]]; then
+                    has_history=true
+                fi
+                history_output="${history_output}| ${repo} | ${title} | ${report_period} |
+"
+            fi
+        done <<< "$prev_reports"
+    done <<< "$milestone_entries"
+
+    if [[ "$has_history" == true ]]; then
+        echo "#### Milestone Continuity"
+        echo ""
+        echo "Milestones tracked in previous board reports:"
+        echo ""
+        echo "| Project | Milestone | Previous Report |"
+        echo "|---------|-----------|-----------------|"
+        echo -n "$history_output"
+    fi
+}
+
+#
+# Generate complete Milestone Analysis section
+#
+format_milestone_analysis() {
+    local all_data="$1"
+    local start_date="$2"
+    local end_date="$3"
+    local period="$4"
+
+    echo "### Completed This Period"
+    echo ""
+    format_completed_milestones "$all_data" "$start_date" "$end_date"
+    echo ""
+
+    format_milestone_history "$all_data" "$period"
+    echo ""
+
+    echo "### Open & Upcoming"
+    echo ""
+    format_future_milestones "$all_data"
+    echo ""
+
+    echo "### Delivery Reliability"
+    echo ""
+    format_delivery_reliability "$all_data" "$start_date" "$end_date"
+    echo ""
+
+    echo "### Tracking Coverage"
+    echo ""
+    format_milestone_coverage "$all_data"
+}
+
+#
 # Format product delivery summary (repos with activity, condensed)
 #
 format_board_delivery_summary() {
@@ -228,6 +494,8 @@ generate_board_report() {
     local period="$3"
     local generated_at="$4"
     local cadence="${5:-monthly}"
+    local start_date="${6:-}"
+    local end_date="${7:-}"
 
     local doc_type="${cadence}-board-report"
 
@@ -277,6 +545,18 @@ $(format_board_milestones "$all_data")
 
 <!-- AI_NARRATIVE_START: milestone_commentary -->
 _Add commentary on milestone progress, delays, and adjustments._
+<!-- AI_NARRATIVE_END -->
+
+---
+
+## Milestone Analysis
+
+$(format_milestone_analysis "$all_data" "$start_date" "$end_date" "$period")
+
+### Milestone Analysis Commentary
+
+<!-- AI_NARRATIVE_START: milestone_analysis -->
+_Add analysis of milestone completion trends, delivery reliability patterns, and recommendations for improving strategic tracking coverage across the organization._
 <!-- AI_NARRATIVE_END -->
 
 ---
@@ -359,6 +639,9 @@ validate_board_report() {
         fi
         if ! grep -q "^## Strategic Milestones" "$report_file"; then
             errors+=("Missing Strategic Milestones section")
+        fi
+        if ! grep -q "^## Milestone Analysis" "$report_file"; then
+            errors+=("Missing Milestone Analysis section")
         fi
         if ! grep -q "^## Risk Register" "$report_file"; then
             errors+=("Missing Risk Register section")

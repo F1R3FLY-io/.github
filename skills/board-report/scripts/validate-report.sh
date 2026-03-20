@@ -109,6 +109,7 @@ validate() {
         "Executive Overview"
         "Category Health"
         "Strategic Milestones"
+        "Milestone Analysis"
         "Product Delivery"
         "Risk Register"
         "Team & Resources"

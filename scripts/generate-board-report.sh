@@ -354,7 +354,7 @@ main() {
     generated_at=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
 
     local report
-    report=$(generate_board_report "$all_data" "$PERIOD_NAME" "$TARGET_PERIOD" "$generated_at" "$CADENCE")
+    report=$(generate_board_report "$all_data" "$PERIOD_NAME" "$TARGET_PERIOD" "$generated_at" "$CADENCE" "$START_DATE" "$END_DATE")
 
     if [[ "$DRY_RUN" == true ]]; then
         echo ""

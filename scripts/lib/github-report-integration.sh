@@ -289,12 +289,46 @@ fetch_repo_milestones() {
             open_issues,
             closed_issues,
             due_on,
+            closed_at,
+            created_at,
             description: (.description // "" | if length > 100 then .[:100] + "..." else . end),
             progress: (if (.open_issues + .closed_issues) > 0
                 then ((.closed_issues / (.open_issues + .closed_issues)) * 100 | floor)
                 else 0 end),
             url: .html_url
         }]' 2>/dev/null || echo '[]'
+}
+
+#
+# Fetch tracking signals for repos without milestones
+# Checks labeled issues (epic, milestone, roadmap, planned, release)
+# and classic GitHub project boards
+#
+fetch_repo_tracking_signals() {
+    local repo="$1"
+
+    # Check for labeled issues that serve as tracking proxies
+    local tracking_labels="epic,milestone,roadmap,planned,release"
+    local labeled_count
+    labeled_count=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/issues?state=open&labels=${tracking_labels}&per_page=1" \
+        --jq 'length' 2>/dev/null || echo "0")
+
+    # Check for classic GitHub project boards (v2 requires GraphQL)
+    local project_count
+    project_count=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/projects" \
+        --jq 'length' 2>/dev/null || echo "0")
+
+    # Apply defaults for empty values
+    [[ -z "$labeled_count" ]] && labeled_count="0"
+    [[ -z "$project_count" ]] && project_count="0"
+
+    jq -n \
+        --argjson labeled "$labeled_count" \
+        --argjson projects "$project_count" \
+        '{
+            labeled_tracking_issues: $labeled,
+            project_boards: $projects
+        }'
 }
 
 #
@@ -338,7 +372,7 @@ fetch_repo_data() {
     local start_date="$2"
     local end_date="$3"
 
-    local info issues prs commits milestones
+    local info issues prs commits milestones tracking_signals
 
     echo "  Fetching data for ${repo}..." >&2
 
@@ -358,6 +392,7 @@ fetch_repo_data() {
     prs=$(fetch_repo_prs "$repo" "$start_date" "$end_date")
     commits=$(fetch_repo_commits "$repo" "$start_date" "$end_date")
     milestones=$(fetch_repo_milestones "$repo")
+    tracking_signals=$(fetch_repo_tracking_signals "$repo")
 
     # Apply defaults for empty values
     [[ -z "$info" ]] && info='{}'
@@ -365,6 +400,7 @@ fetch_repo_data() {
     [[ -z "$prs" ]] && prs='{"merged_count":0,"open_count":0,"merged_prs":[]}'
     [[ -z "$commits" ]] && commits='{"count":0,"contributors":[],"recent":[]}'
     [[ -z "$milestones" ]] && milestones='[]'
+    [[ -z "$tracking_signals" ]] && tracking_signals='{"labeled_tracking_issues":0,"project_boards":0}'
 
     jq -n \
         --arg repo "$repo" \
@@ -373,6 +409,7 @@ fetch_repo_data() {
         --argjson prs "$prs" \
         --argjson commits "$commits" \
         --argjson milestones "$milestones" \
+        --argjson tracking "$tracking_signals" \
         '{
             repo: $repo,
             exists: true,
@@ -380,7 +417,8 @@ fetch_repo_data() {
             issues: $issues,
             prs: $prs,
             commits: $commits,
-            milestones: $milestones
+            milestones: $milestones,
+            tracking_signals: $tracking
         }'
 }
 
