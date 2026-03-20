@@ -127,8 +127,8 @@ validate() {
 
     # Check narrative placeholders
     local start_count end_count
-    start_count=$(grep -c "AI_NARRATIVE_START" "$report_file" || echo "0")
-    end_count=$(grep -c "AI_NARRATIVE_END" "$report_file" || echo "0")
+    start_count=$(grep -c "AI_NARRATIVE_START" "$report_file") || start_count="0"
+    end_count=$(grep -c "AI_NARRATIVE_END" "$report_file") || end_count="0"
 
     if [[ "$start_count" -eq "$end_count" ]]; then
         check_pass "Narrative markers balanced ($start_count pairs)"
@@ -138,7 +138,7 @@ validate() {
 
     # Check if narratives are filled
     local unfilled
-    unfilled=$(grep -cE "_Add.*here_|_Add.*summary_|_Add.*:_|_List.*_|_Add.*notes_" "$report_file" || echo "0")
+    unfilled=$(grep -cE "_Add.*here_|_Add.*summary_|_Add.*:_|_List.*_|_Add.*notes_" "$report_file") || unfilled="0"
 
     if [[ "$unfilled" -gt 0 ]]; then
         check_warn "$unfilled unfilled narrative placeholder(s) found"

@@ -651,8 +651,8 @@ validate_board_report() {
         fi
 
         local start_count end_count
-        start_count=$(grep -c "AI_NARRATIVE_START" "$report_file" || echo "0")
-        end_count=$(grep -c "AI_NARRATIVE_END" "$report_file" || echo "0")
+        start_count=$(grep -c "AI_NARRATIVE_START" "$report_file") || start_count="0"
+        end_count=$(grep -c "AI_NARRATIVE_END" "$report_file") || end_count="0"
         if [[ "$start_count" != "$end_count" ]]; then
             errors+=("Mismatched narrative markers")
         fi

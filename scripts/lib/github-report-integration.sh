@@ -311,16 +311,17 @@ fetch_repo_tracking_signals() {
     local tracking_labels="epic,milestone,roadmap,planned,release"
     local labeled_count
     labeled_count=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/issues?state=open&labels=${tracking_labels}&per_page=1" \
-        --jq 'length' 2>/dev/null || echo "0")
+        --jq 'length' 2>/dev/null) || labeled_count="0"
 
     # Check for classic GitHub project boards (v2 requires GraphQL)
+    # The /projects endpoint may return 410 Gone if classic projects are disabled
     local project_count
     project_count=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/projects" \
-        --jq 'length' 2>/dev/null || echo "0")
+        --jq 'length' 2>/dev/null) || project_count="0"
 
-    # Apply defaults for empty values
-    [[ -z "$labeled_count" ]] && labeled_count="0"
-    [[ -z "$project_count" ]] && project_count="0"
+    # Ensure values are numeric (API may return error text on success with unexpected body)
+    [[ -z "$labeled_count" || ! "$labeled_count" =~ ^[0-9]+$ ]] && labeled_count="0"
+    [[ -z "$project_count" || ! "$project_count" =~ ^[0-9]+$ ]] && project_count="0"
 
     jq -n \
         --argjson labeled "$labeled_count" \
