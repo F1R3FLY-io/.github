@@ -46,6 +46,33 @@ Reports are saved to `docs/reports/` with metrics, PR lists, milestones, and con
 
 **Sample report:** [2026-01 MTD Sample Report](docs/reports/2026-01-mtd-sample-report.md)
 
+## Repository Harmonization
+
+F1R3FLY.io repositories are kept consistent through the `/harmonize` slash command, which propagates shared policies, templates, and conventions from a single set of workspace-level sources. Every F1R3FLY.io repository that opts in picks up the same CLAUDE.md policy sections, task-file templates (ToDos, Backlog, CompletedTasks, UserStories), and per-repo `docs/roadmap.md` file from the same source of truth.
+
+**Source of truth (dual-hosted, kept in sync):**
+
+- GitLab: [smart-assets.io/gitlab-profile](https://gitlab.com/smart-assets.io/gitlab-profile/) — scripts, templates, and convention standards under `AItools/scripts/` and `docs/`
+- GitHub: [SmartAssets-io/skills](https://github.com/SmartAssets-io/skills) — the Claude Code skill definition that exposes the `/harmonize` slash command
+
+**What `/harmonize` does:**
+
+- Creates `docs/roadmap.md` from the workspace template, governed by the [Roadmap, Release Date, and Version Normalization Standard](https://gitlab.com/smart-assets.io/gitlab-profile/-/blob/master/docs/common/roadmap-release-normalization-standard.md)
+- Merges standard policy sections into existing `CLAUDE.md` files without overwriting project-specific content
+- Bootstraps the three-file task pattern (`docs/ToDos.md`, `docs/Backlog.md`, `docs/CompletedTasks.md`)
+- Installs pre-push race-guard snippets where applicable
+
+**Usage:**
+
+From any F1R3FLY.io repo, inside Claude Code:
+
+```claude
+) /harmonize --dry-run    # preview changes first
+) /harmonize              # apply harmonization to the current repo
+```
+
+The generated `docs/roadmap.md` feeds the board and community status reports: gaps in release dates, missing milestones, and stale roadmap entries are surfaced automatically in `/generate-board-report` and `/generate-community-report` outputs.
+
 ## 📚 Documentation Hub
 
 ### Core Documentation Resources
