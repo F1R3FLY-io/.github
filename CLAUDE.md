@@ -1,5 +1,3 @@
-# F1R3FLY.io GitHub Documentation Repository
-
 ## Project Context
 - This is the **F1R3FLY.io GitHub organization documentation repository** serving as a central hub for organizational knowledge
 - F1R3FLY.io specializes in **high throughput transaction servers** with a focus on distributed systems and blockchain technologies
@@ -7,6 +5,25 @@
 - Follow F1R3FLY.io's **documentation-first development methodology** for all content and features
 - If the user does not provide enough information with their prompts, ask the user to clarify before executing the task
 - DO NOT user emoticons in documentation or synthesized code. Keep it to text, tables, and hierachical structures. Prefer use of `.yaml` to document hierarchies
+
+### Best Practices
+- Never commit API keys, secrets, or credentials
+- Review all content for sensitive information before committing
+- Use environment variables for sensitive configuration
+- Keep documentation access controls appropriate
+- Review third-party links and resources regularly
+
+## Security Considerations
+
+## Common Tasks
+
+## Development Environment
+
+## Troubleshooting
+
+### Common Issues
+
+# F1R3FLY.io GitHub Documentation Repository
 
 ## Repository Architecture
 
@@ -76,8 +93,6 @@ docs/
 - **Architecture**: `ADR-*` (Architecture Decision Records), `ORG-*` (Organizational)
 - **Governance**: `POL-*` (Policies), `PROC-*` (Procedures)
 - **Templates**: `TMPL-*` (Templates), `GUIDE-*` (Guidelines)
-
-## Development Environment
 
 ### Local Documentation Setup
 ```bash
@@ -165,8 +180,6 @@ docs/architecture/
 - **Reviews**: Require pull request reviews for documentation changes
 - **History**: Maintain clear documentation evolution history
 
-## Common Tasks
-
 ### Creating New Documentation
 1. Follow documentation-first methodology
 2. Use appropriate template from `docs/templates/`
@@ -230,24 +243,11 @@ docs/architecture/
 - **DO** use .gitignore for temporary and local files
 - **DO** optimize images and documents before committing
 
-## Security Considerations
-
-### Best Practices
-- Never commit API keys, secrets, or credentials
-- Review all content for sensitive information before committing
-- Use environment variables for sensitive configuration
-- Keep documentation access controls appropriate
-- Review third-party links and resources regularly
-
 ### Information Security
 - Classify documentation by sensitivity level
 - Protect internal process documentation appropriately
 - Ensure public documentation doesn't reveal security vulnerabilities
 - Regular security review of published content
-
-## Troubleshooting
-
-### Common Issues
 
 #### Git Repository Issues
 ```bash
@@ -322,3 +322,153 @@ git diff
 - NEVER proactively create documentation files unless requested
 - Follow F1R3FLY.io's documentation-first methodology
 - Ask for clarification when requirements are unclear
+
+### Key Principles
+
+1. **Stigmergic Collaboration**: Coordinate with other agents through shared `.md` files
+2. **Document-First**: Create design docs and specifications BEFORE implementation
+3. **Signal vs. Slop**: Maximize code that solves problems; avoid over-engineering
+4. **Acceptance Criteria**: Define measurable success criteria in task definitions
+
+### Standard Document Structure
+
+| Document | Purpose | Location |
+|----------|---------|----------|
+| User Stories | Business needs and acceptance criteria | `docs/UserStories.md` |
+| Tasks/Epochs | Implementation tracking | `docs/ToDos.md` |
+| Completed Work | Historical reference | `docs/CompletedTasks.md` |
+| Backlog | Deferred items | `docs/Backlog.md` |
+| Work Logs | Session progress | `docs/work-logs/*.md` |
+| Discoveries | Shared findings | `docs/discoveries/*.md` |
+
+### Before Starting Work
+
+1. **Read `docs/ToDos.md`** to check task status and claims
+2. **Check `docs/work-logs/`** for existing progress on related tasks
+3. **Review `docs/discoveries/`** for relevant context from other agents
+
+### When Claiming a Task
+
+Update the task in `docs/ToDos.md`:
+
+```yaml
+---
+id: TASK-001
+status: in_progress          # Changed from 'pending'
+claimed_by: claude-session-a1b2c3  # See Implementer Identification format
+claimed_at: 2025-01-15T10:00:00Z
+# Other valid claimed_by formats:
+#   human-jeff@example.com        # Human (git config --get user.email)
+#   design-sprint/researcher      # Agent team member ({team}/{name})
+---
+```
+
+### During Work
+
+1. **Create work log** at `docs/work-logs/task-{id}-{timestamp}.md`
+2. **Document discoveries** in `docs/discoveries/` for other agents
+3. **Update blockers** if you encounter dependencies
+
+### Before Pausing/Completing
+
+Update your work log with handoff notes:
+
+```yaml
+---
+handoff_status: ready | paused | blocked
+next_steps:
+  - What remains to be done
+---
+```
+
+### Configuration File Conventions
+
+When creating or modifying configuration files, follow these conventions to respect existing project preferences:
+
+**JSON Format Preference Order:**
+
+1. **Check for existing files first**: Before creating any `.json` file, check if `.jsonc` or `.json5` variants exist
+2. **Prefer existing format**: If `config.jsonc` or `config.json5` exists, use that format instead of creating `config.json`
+3. **Default to JSONC**: When creating new config files, prefer `.jsonc` (JSON with Comments) for better maintainability
+
+**Why This Matters:**
+- Projects may have established preferences for comment-supporting JSON formats
+- Creating duplicate configs (e.g., both `biome.json` and `biome.jsonc`) causes confusion
+- JSONC allows inline documentation which improves maintainability
+
+**Examples:**
+
+| If exists... | Don't create... | Instead... |
+|--------------|-----------------|------------|
+| `biome.jsonc` | `biome.json` | Edit the existing `biome.jsonc` |
+| `tsconfig.json5` | `tsconfig.json` | Edit the existing `tsconfig.json5` |
+| `eslint.config.jsonc` | `eslint.config.json` | Edit the existing file |
+| Nothing | - | Create new file as `.jsonc` when comments are useful |
+
+**File Discovery Pattern:**
+
+Before creating any config file, check for variants:
+```bash
+# Check for config variants (example for biome)
+ls biome.json biome.jsonc biome.json5 2>/dev/null
+```
+
+This applies to all slash commands and scripts that create configuration files.
+
+#### Git Operations
+- `/quick-commit` - Stage and commit changes (required in safe mode)
+- `/recursive-push` - Push across repositories
+
+#### Task Management
+- `/nextTask` - Find and select next task to work on
+- `/implement` - Begin implementation of a task
+- `/epoch-review` - Preview and summarize epochs
+- `/epoch-hygiene` - Archive completed epochs
+
+#### Workspace Sync
+- `/harmonize` - Sync workspace policies into this repo
+- `/multi-repo-sync` - Workspace-wide sync orchestration
+
+[OPTIONAL_COMMANDS]
+
+### PII Guidelines for Contributors
+
+**CRITICAL - Before submitting any contribution:**
+
+Contributors MUST ensure their code, commits, and documentation do NOT contain PII:
+
+**Check before committing:**
+- [ ] No absolute file paths with usernames in code or documentation
+- [ ] No personal email addresses in code (use generic examples like `user@example.com`)
+- [ ] No real user data in tests or examples (use synthetic/fake data only)
+- [ ] No PII in log statements (sanitize or use user IDs instead)
+- [ ] No PII in error messages or stack traces
+- [ ] No PII in code comments or documentation
+- [ ] No credentials, tokens, or secrets in code (use environment variables)
+- [ ] No IP addresses, MAC addresses, or device identifiers in examples
+
+**If you accidentally committed PII:**
+1. **DO NOT** push to remote repository
+2. Use `git reset` to remove the commit
+3. If already pushed, contact maintainers immediately
+4. Repository history may need to be rewritten to remove PII
+
+**Use these instead:**
+- File paths: Use relative paths or generic placeholders (`[WORKSPACE_ROOT]/project/`)
+- Email addresses: Use `user@example.com`, `admin@example.com`
+- Names: Use `John Doe`, `Jane Smith`, `User123`
+- Phone numbers: Use `+1-555-0100` (officially reserved for examples)
+- IP addresses: Use reserved ranges (`192.0.2.1`, `198.51.100.1`, `203.0.113.1`)
+- Dates: Use recent but generic dates, not specific personal dates
+
+**For test data:**
+- Use test data generators that create realistic but fake data
+- Use well-known test fixtures (e.g., `test@example.com`)
+- Never use production or real user data in development/testing
+
+# important-instruction-reminders
+Do what has been asked; nothing more, nothing less.
+NEVER create files unless they're absolutely necessary for achieving your goal.
+ALWAYS prefer editing an existing file to creating a new one.
+NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
+Before making any code changes, first state: (1) which files you plan to modify, (2) what approach you'll take, (3) any assumptions you're making. Wait for my confirmation before proceeding. For simple single-file edits, a one-line summary is sufficient.

@@ -1,9 +1,3 @@
----
-doc_type: backlog
-version: "1.0"
-last_updated: 2026-01-14
----
-
 # Backlog
 
 This document captures deferred work, future ideas, and low-priority items that aren't ready for active development.
@@ -31,17 +25,9 @@ Items that improve code quality, performance, or maintainability but aren't bloc
 
 ---
 
-<!-- Add technical debt items here following the template below -->
-
----
-
 ### Feature Ideas
 
 Future features that have been identified but aren't yet prioritized.
-
----
-
-<!-- Add feature ideas here following the template below -->
 
 ---
 
@@ -51,17 +37,9 @@ Items that need investigation before they can become actionable tasks.
 
 ---
 
-<!-- Add research items here following the template below -->
-
----
-
 ### Dependencies & Blockers
 
 Items waiting on external factors (upstream releases, third-party APIs, etc.)
-
----
-
-<!-- Add blocked items here following the template below -->
 
 ---
 

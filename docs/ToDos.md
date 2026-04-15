@@ -1,12 +1,3 @@
----
-doc_type: todos
-version: "1.0"
-last_updated: 2026-01-14
-mr_status:
-  ready: false
-  target_branch: main
----
-
 # Tasks and Epochs
 
 This document tracks implementation work through **epochs** (logical groupings of related tasks).
@@ -48,10 +39,6 @@ mr_status:
 
 ---
 
-<!-- Add epochs following the template below -->
-
----
-
 ## Epoch Template
 
 Use this template when adding new epochs:
@@ -65,7 +52,7 @@ priority: p2
 user_story: US-XXX
 blocked_by: []
 created_at: YYYY-MM-DD
-claimed_by: null
+claimed_by: null         # Implementer ID: human-{email}, {tool}-session[-{id}], or {team}/{role}
 claimed_at: null
 tasks:
   - id: TASK-XXX-1
@@ -93,7 +80,7 @@ tasks:
 ## Workflow
 
 1. **Find next task**: Use `/nextTask` to identify the highest priority unclaimed task
-2. **Claim task**: Update `claimed_by` and `status: in_progress`
+2. **Claim task**: Set `claimed_by` using [Implementer Identification](../common/stigmergic-collaboration.md#implementer-identification) format and `status: in_progress`
 3. **Implement**: Use `/implement` to execute with full context
 4. **Complete**: Mark `status: complete` when acceptance criteria met
 5. **Move epoch**: When all tasks complete, move epoch to `docs/CompletedTasks.md`

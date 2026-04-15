@@ -1,9 +1,3 @@
----
-doc_type: completed_tasks
-version: "1.0"
-last_updated: 2026-01-14
----
-
 # Completed Tasks
 
 This document archives completed epochs and tasks for historical reference and progress tracking.
@@ -22,10 +16,6 @@ This document archives completed epochs and tasks for historical reference and p
 ## Completed Epochs
 
 <!-- Epochs are listed in reverse chronological order (newest first) -->
-
----
-
-<!-- Add completed epochs here following the template below -->
 
 ---
 
