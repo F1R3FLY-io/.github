@@ -44,7 +44,8 @@ It is intended for system integrators (SIs) comparing:
 
 1. Use `f1r3node-rust` as the current standalone Rust node workspace and local or Docker shard setup path.
 2. Layer `f1r3drive` on that shard when the target use case is a file system or storage interface.
-3. Add `f1r3drive-extension` when browser or extension-side integration is required.
+3. Use `system-integration` and its `shardctl` CLI when the workflow expands from a single shard into a multi-service integration environment.
+4. Add `f1r3drive-extension` when browser or extension-side integration is required.
 
 ## Guardrails
 

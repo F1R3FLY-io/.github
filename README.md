@@ -46,6 +46,33 @@ Reports are saved to `docs/reports/` with metrics, PR lists, milestones, and con
 
 **Sample report:** [2026-01 MTD Sample Report](docs/reports/2026-01-mtd-sample-report.md)
 
+## Repository Harmonization
+
+F1R3FLY.io repositories are kept consistent through the `/harmonize` slash command, which propagates shared policies, templates, and conventions from a single set of workspace-level sources. Every F1R3FLY.io repository that opts in picks up the same CLAUDE.md policy sections, task-file templates (ToDos, Backlog, CompletedTasks, UserStories), and per-repo `docs/roadmap.md` file from the same source of truth.
+
+**Source of truth (dual-hosted, kept in sync):**
+
+- GitLab: [smart-assets.io/gitlab-profile](https://gitlab.com/smart-assets.io/gitlab-profile/) — scripts, templates, and convention standards under `AItools/scripts/` and `docs/`
+- GitHub: [SmartAssets-io/skills](https://github.com/SmartAssets-io/skills) — the Claude Code skill definition that exposes the `/harmonize` slash command
+
+**What `/harmonize` does:**
+
+- Creates `docs/roadmap.md` from the workspace template, governed by the [Roadmap, Release Date, and Version Normalization Standard](https://gitlab.com/smart-assets.io/gitlab-profile/-/blob/master/docs/common/roadmap-release-normalization-standard.md)
+- Merges standard policy sections into existing `CLAUDE.md` files without overwriting project-specific content
+- Bootstraps the three-file task pattern (`docs/ToDos.md`, `docs/Backlog.md`, `docs/CompletedTasks.md`)
+- Installs pre-push race-guard snippets where applicable
+
+**Usage:**
+
+From any F1R3FLY.io repo, inside Claude Code:
+
+```claude
+) /harmonize --dry-run    # preview changes first
+) /harmonize              # apply harmonization to the current repo
+```
+
+The generated `docs/roadmap.md` feeds the board and community status reports: gaps in release dates, missing milestones, and stale roadmap entries are surfaced automatically in `/generate-board-report` and `/generate-community-report` outputs.
+
 ## Explainer Viewer Scaffold
 
 This repository now includes a Vite + TypeScript scaffold for a SMIL/SVG explainer viewer with:
@@ -166,10 +193,14 @@ This repository follows F1R3FLY.io's documentation-first methodology, serving as
 - **[F1R3Fi](https://github.com/F1R3FLY-io/F1R3Fi)** - DeFi and financial engineering exploration
 - **[lightning-bug](https://github.com/F1R3FLY-io/lightning-bug)** - Modern, extensible, browser-based code editor (Clojure)
 
+#### Integration & Operations
+- **[system-integration](https://github.com/F1R3FLY-io/system-integration)** - Multi-service integration repo with compose orchestration, integration tests, and the `shardctl` CLI
+- **[IaC](https://github.com/F1R3FLY-io/IaC)** - Infrastructure automation for deployment environments
+- **[F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)** - Visualization tool for Infrastructure as Code
+
 #### Research & Publications
 - **[rhoHDC](https://github.com/F1R3FLY-io/rhoHDC)** - rho-calculus and hyper-dimensional computing research
 - **[publications](https://github.com/F1R3FLY-io/publications)** - Books, papers, and publication assets
-- **[F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)** - Visualization tool for Infrastructure as Code
 
 **[Complete Repository Guide](https://github.com/F1R3FLY-io/.github/blob/master/docs/Organization_of_Repositories.md)** - View all projects with detailed descriptions
 
@@ -325,6 +356,9 @@ developer_tools:
   graphl_parser:
     url: "https://github.com/F1R3FLY-io/graphl-parser"
     description: "Graph to Rholang parser"
+  system_integration:
+    url: "https://github.com/F1R3FLY-io/system-integration"
+    description: "Compose orchestration, integration tests, and the shardctl CLI"
   F1r3bu1ld3r:
     url: "https://github.com/F1R3FLY-io/F1r3bu1ld3r"
     description: "Infrastructure visualization"

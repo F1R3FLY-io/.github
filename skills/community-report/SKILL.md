@@ -158,8 +158,17 @@ The generated report includes:
 | Merged PRs | All merged PRs grouped by repository |
 | Contributor Recognition | Leaderboard, new contributors, spotlight narrative |
 | Get Involved | Open issues by repo, contribution guidance |
-| Coming Soon | Upcoming milestones, roadmap preview |
+| Coming Soon | Upcoming milestones (with **Target Release** column), **Recent Releases** published this period, roadmap preview |
 | Community | Events, discussions, resources |
+
+### Release Visibility
+
+The Coming Soon section is driven by the workspace [Roadmap, Release Date, and Version Normalization Standard](https://gitlab.com/smart-assets.io/gitlab-profile/-/blob/master/docs/common/roadmap-release-normalization-standard.md):
+
+- **Target Release** column in the Upcoming Milestones table is derived from the SemVer prefix in the milestone title (milestones should be titled `vX.Y.Z — <theme>`)
+- **Recent Releases** lists published (non-draft) GitHub Releases whose `published_at` falls within the reporting period, sorted newest-first; pre-releases are tagged, empty-body releases link to the tag instead of release notes
+
+This section intentionally omits the internal-risk signals (cadence stalls, missing roadmap files) that the board report surfaces. Gaps are framed as "subject to change" in forward-looking narrative, not as risk callouts.
 
 ## Narrative Writing Guidelines
 

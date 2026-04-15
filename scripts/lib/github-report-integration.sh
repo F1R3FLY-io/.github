@@ -289,12 +289,151 @@ fetch_repo_milestones() {
             open_issues,
             closed_issues,
             due_on,
+            closed_at,
+            created_at,
             description: (.description // "" | if length > 100 then .[:100] + "..." else . end),
             progress: (if (.open_issues + .closed_issues) > 0
                 then ((.closed_issues / (.open_issues + .closed_issues)) * 100 | floor)
                 else 0 end),
             url: .html_url
         }]' 2>/dev/null || echo '[]'
+}
+
+#
+# Fetch GitHub Releases for a repository
+#
+# Returns shape:
+#   {
+#     total_count: N,
+#     latest_published_at: "YYYY-MM-DDTHH:MM:SSZ" | null,
+#     latest_tag: "vX.Y.Z" | null,
+#     recent: [ { tag_name, name, published_at, draft, prerelease, body_empty, semver_ok } ]
+#   }
+#
+# SemVer validation: strict vMAJOR.MINOR.PATCH[-pre-release][+build]
+# per docs/common/roadmap-release-normalization-standard.md section 2.1.
+#
+fetch_repo_releases() {
+    local repo="$1"
+
+    rate_limited_api "repos/${GITHUB_ORG}/${repo}/releases?per_page=30" \
+        --jq '{
+            total_count: length,
+            latest_published_at: ([.[] | select(.draft == false) | .published_at] | sort | reverse | .[0] // null),
+            latest_tag: ([.[] | select(.draft == false) | .tag_name] | .[0] // null),
+            recent: [.[:10] | .[] | {
+                tag_name,
+                name,
+                published_at,
+                draft,
+                prerelease,
+                body_empty: ((.body // "") | length == 0),
+                semver_ok: (.tag_name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+(-[0-9A-Za-z.-]+)?(\\+[0-9A-Za-z.-]+)?$")),
+                url: .html_url
+            }]
+        }' 2>/dev/null || echo '{"total_count":0,"latest_published_at":null,"latest_tag":null,"recent":[]}'
+}
+
+#
+# Fetch docs/roadmap.md frontmatter for a repository
+#
+# Governed by docs/common/roadmap-release-normalization-standard.md.
+# Checks docs/roadmap.md first, then falls back to ROADMAP.md at root.
+# Extracts minimal v1 fields: presence and `updated:` date. Richer
+# parsing (releases[] list) is a future extension.
+#
+# Returns shape:
+#   {
+#     present: true|false,
+#     path: "docs/roadmap.md" | "ROADMAP.md" | null,
+#     updated: "YYYY-MM-DD" | null,
+#     parse_error: null | "error message"
+#   }
+#
+fetch_repo_roadmap_file() {
+    local repo="$1"
+    local content path=""
+
+    # Try docs/roadmap.md first
+    content=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/contents/docs/roadmap.md" \
+        --jq 'select(.content != null) | .content' 2>/dev/null) || content=""
+
+    if [[ -n "$content" ]]; then
+        path="docs/roadmap.md"
+    else
+        # Fallback to ROADMAP.md at repo root
+        content=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/contents/ROADMAP.md" \
+            --jq 'select(.content != null) | .content' 2>/dev/null) || content=""
+        [[ -n "$content" ]] && path="ROADMAP.md"
+    fi
+
+    if [[ -z "$content" ]]; then
+        echo '{"present":false,"path":null,"updated":null,"parse_error":null}'
+        return
+    fi
+
+    # Decode base64 and extract `updated:` from frontmatter (first --- block)
+    local decoded updated
+    decoded=$(echo "$content" | base64 -d 2>/dev/null) || decoded=""
+
+    if [[ -z "$decoded" ]]; then
+        jq -n --arg path "$path" '{present:true,path:$path,updated:null,parse_error:"base64 decode failed"}'
+        return
+    fi
+
+    # Extract updated: YYYY-MM-DD from the first frontmatter block only
+    updated=$(echo "$decoded" | awk '
+        /^---[[:space:]]*$/ { if (fm==0) { fm=1; next } else { exit } }
+        fm==1 && /^updated:/ {
+            sub(/^updated:[[:space:]]*/, "")
+            sub(/[[:space:]]*$/, "")
+            print
+            exit
+        }
+    ' | head -1)
+
+    jq -n \
+        --arg path "$path" \
+        --arg updated "$updated" \
+        '{
+            present: true,
+            path: $path,
+            updated: (if $updated == "" then null else $updated end),
+            parse_error: null
+        }'
+}
+
+#
+# Fetch tracking signals for repos without milestones
+# Checks labeled issues (epic, milestone, roadmap, planned, release)
+# and classic GitHub project boards
+#
+fetch_repo_tracking_signals() {
+    local repo="$1"
+
+    # Check for labeled issues that serve as tracking proxies
+    local tracking_labels="epic,milestone,roadmap,planned,release"
+    local labeled_count
+    labeled_count=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/issues?state=open&labels=${tracking_labels}&per_page=1" \
+        --jq 'length' 2>/dev/null) || labeled_count="0"
+
+    # Check for classic GitHub project boards (v2 requires GraphQL)
+    # The /projects endpoint may return 410 Gone if classic projects are disabled
+    local project_count
+    project_count=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/projects" \
+        --jq 'length' 2>/dev/null) || project_count="0"
+
+    # Ensure values are numeric (API may return error text on success with unexpected body)
+    [[ -z "$labeled_count" || ! "$labeled_count" =~ ^[0-9]+$ ]] && labeled_count="0"
+    [[ -z "$project_count" || ! "$project_count" =~ ^[0-9]+$ ]] && project_count="0"
+
+    jq -n \
+        --argjson labeled "$labeled_count" \
+        --argjson projects "$project_count" \
+        '{
+            labeled_tracking_issues: $labeled,
+            project_boards: $projects
+        }'
 }
 
 #
@@ -338,7 +477,7 @@ fetch_repo_data() {
     local start_date="$2"
     local end_date="$3"
 
-    local info issues prs commits milestones
+    local info issues prs commits milestones tracking_signals releases roadmap
 
     echo "  Fetching data for ${repo}..." >&2
 
@@ -358,6 +497,9 @@ fetch_repo_data() {
     prs=$(fetch_repo_prs "$repo" "$start_date" "$end_date")
     commits=$(fetch_repo_commits "$repo" "$start_date" "$end_date")
     milestones=$(fetch_repo_milestones "$repo")
+    tracking_signals=$(fetch_repo_tracking_signals "$repo")
+    releases=$(fetch_repo_releases "$repo")
+    roadmap=$(fetch_repo_roadmap_file "$repo")
 
     # Apply defaults for empty values
     [[ -z "$info" ]] && info='{}'
@@ -365,6 +507,9 @@ fetch_repo_data() {
     [[ -z "$prs" ]] && prs='{"merged_count":0,"open_count":0,"merged_prs":[]}'
     [[ -z "$commits" ]] && commits='{"count":0,"contributors":[],"recent":[]}'
     [[ -z "$milestones" ]] && milestones='[]'
+    [[ -z "$tracking_signals" ]] && tracking_signals='{"labeled_tracking_issues":0,"project_boards":0}'
+    [[ -z "$releases" ]] && releases='{"total_count":0,"latest_published_at":null,"latest_tag":null,"recent":[]}'
+    [[ -z "$roadmap" ]] && roadmap='{"present":false,"path":null,"updated":null,"parse_error":null}'
 
     jq -n \
         --arg repo "$repo" \
@@ -373,6 +518,9 @@ fetch_repo_data() {
         --argjson prs "$prs" \
         --argjson commits "$commits" \
         --argjson milestones "$milestones" \
+        --argjson tracking "$tracking_signals" \
+        --argjson releases "$releases" \
+        --argjson roadmap "$roadmap" \
         '{
             repo: $repo,
             exists: true,
@@ -380,7 +528,10 @@ fetch_repo_data() {
             issues: $issues,
             prs: $prs,
             commits: $commits,
-            milestones: $milestones
+            milestones: $milestones,
+            tracking_signals: $tracking,
+            releases: $releases,
+            roadmap: $roadmap
         }'
 }
 

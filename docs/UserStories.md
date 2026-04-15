@@ -1,10 +1,16 @@
----
-doc_type: user_stories
-version: "1.0"
-last_updated: 2026-01-14
----
-
 # User Stories
+
+<!--
+TEMPLATE USAGE INSTRUCTIONS:
+0. Update frontmatter: set last_updated to current date, increment version for structural changes
+1. Add completed stories under "Completed Stories" section
+2. Add planned stories under "Planned Stories" section
+3. Move completed stories from "Planned" to "Completed" sections
+4. Update epoch links when implementation begins
+5. Check acceptance criteria as features are verified
+6. (Optional) Update reference URLs if using a fork with modified standards
+7. Remove these usage instruction comments before committing
+-->
 
 This document captures user stories that drive feature development. User stories are reverse-engineered from completed epochs and updated as new features are planned.
 
@@ -16,8 +22,8 @@ This document captures user stories that drive feature development. User stories
 **Format:** Each story follows the standard template:
 > As a [persona], I want [capability] so that [benefit].
 
-**For reference (GitHub):**
-[User Stories Standard](https://gitlab.com/smart-assets.io/gitlab-profile/-/blob/master/docs/common/user-stories-standard.md)
+**User Stories Standard Reference** (canonical):
+[user-stories-standard.md](https://gitlab.com/smart-assets.io/gitlab-profile/-/blob/master/docs/common/user-stories-standard.md)
 
 ---
 
@@ -81,3 +87,4 @@ User stories capture the **why** (user need and benefit). Epochs capture the **w
 
 - **Task Tracking:** `docs/ToDos.md`
 - **Completed Work:** `docs/CompletedTasks.md`
+- **User Stories Standard** (canonical): [user-stories-standard.md](https://gitlab.com/smart-assets.io/gitlab-profile/-/blob/master/docs/common/user-stories-standard.md)

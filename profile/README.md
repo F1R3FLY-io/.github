@@ -59,10 +59,14 @@ This repository follows F1R3FLY.io's documentation-first methodology, serving as
 - **[F1R3Fi](https://github.com/F1R3FLY-io/F1R3Fi)** - DeFi and financial engineering exploration
 - **[lightning-bug](https://github.com/F1R3FLY-io/lightning-bug)** - Modern, extensible, browser-based code editor (Clojure)
 
+#### Integration & Operations
+- **[system-integration](https://github.com/F1R3FLY-io/system-integration)** - Multi-service integration repo with compose orchestration, integration tests, and the `shardctl` CLI
+- **[IaC](https://github.com/F1R3FLY-io/IaC)** - Infrastructure automation for deployment environments
+- **[F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)** - Visualization tool for Infrastructure as Code
+
 #### Research & Publications
 - **[rhoHDC](https://github.com/F1R3FLY-io/rhoHDC)** - rho-calculus and hyper-dimensional computing research
 - **[publications](https://github.com/F1R3FLY-io/publications)** - Books, papers, and publication assets
-- **[F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)** - Visualization tool for Infrastructure as Code
 
 **[Complete Repository Guide](https://github.com/F1R3FLY-io/.github/blob/master/docs/Organization_of_Repositories.md)** - View all projects with detailed descriptions
 
@@ -221,6 +225,9 @@ developer_tools:
   graphl_parser:
     url: "https://github.com/F1R3FLY-io/graphl-parser"
     description: "Graph to Rholang parser"
+  system_integration:
+    url: "https://github.com/F1R3FLY-io/system-integration"
+    description: "Compose orchestration, integration tests, and the shardctl CLI"
   F1r3bu1ld3r:
     url: "https://github.com/F1R3FLY-io/F1r3bu1ld3r"
     description: "Infrastructure visualization"

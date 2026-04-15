@@ -65,7 +65,7 @@ graph TD
 | `MeTTaIL` | Intermediate language | `OSLF` (semantic tooling alignment) | `mettail-rust`, `MeTTa-Compiler` | Active |
 | `OSLF` | Formal tooling/generators | - | `MeTTaIL`, `OSLF-editor` | Active |
 | `F1r3bu1ld3r` | Infra visualization tooling | `IaC`/integration context | deployment workflows | Active |
-| `system-integration` | Cross-project integration code | multiple project APIs | integration workflows | Active |
+| `system-integration` | Cross-project integration orchestration and the `shardctl` CLI | multiple project APIs | integration and operator workflows | Active |
 
 ## Breaking Change Process
 

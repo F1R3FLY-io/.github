@@ -206,7 +206,12 @@ format_community_open_issues() {
 }
 
 #
-# Format upcoming milestones for community visibility
+# Format upcoming milestones for community visibility.
+#
+# Includes a Target Release column derived from the milestone title
+# (SemVer prefix per roadmap-release-normalization-standard Section 1.1:
+# milestones are titled "vX.Y.Z — <theme>"). When the SemVer prefix is
+# absent, the column shows "—".
 #
 format_community_upcoming() {
     local all_data="$1"
@@ -225,10 +230,53 @@ format_community_upcoming() {
         return
     fi
 
-    echo "| Project | Milestone | Progress | Due |"
-    echo "|---------|-----------|----------|-----|"
+    echo "| Project | Milestone | Target Release | Progress | Due |"
+    echo "|---------|-----------|----------------|----------|-----|"
     echo "$milestones" | jq -r '.[] |
-        "| \(.repo) | \(.title) | \(.progress)% (\(.closed_issues)/\(.open_issues + .closed_issues)) | \(.due_on // "TBD") |"
+        ((.title | capture("^(?<ver>v[0-9]+\\.[0-9]+\\.[0-9]+(-[0-9A-Za-z.-]+)?)")) // null) as $m |
+        (if $m then $m.ver else "—" end) as $release |
+        "| \(.repo) | \(.title) | \($release) | \(.progress)% (\(.closed_issues)/\(.open_issues + .closed_issues)) | \(.due_on // "TBD") |"
+    '
+}
+
+#
+# Format Recent Releases for community transparency.
+#
+# Lists published (non-draft) releases within the reporting period.
+# Thresholds and tag validation per roadmap-release-normalization-standard
+# Section 2.
+#
+format_community_recent_releases() {
+    local all_data="$1"
+    local start_date="$2"
+    local end_date="$3"
+
+    local releases
+    releases=$(echo "$all_data" | jq \
+        --arg start "${start_date}T00:00:00Z" \
+        --arg end "${end_date}T23:59:59Z" '[
+        .[].repos[] |
+        .repo as $repo |
+        (.releases.recent // [])[] |
+        select(.draft == false and .published_at != null
+               and .published_at >= $start and .published_at <= $end) |
+        {repo: $repo, tag: .tag_name, name, published_at, prerelease, semver_ok, url, body_empty}
+    ] | sort_by(.published_at) | reverse')
+
+    local release_count
+    release_count=$(echo "$releases" | jq 'length')
+
+    if [[ "$release_count" -eq 0 ]]; then
+        echo "_No releases published this period._"
+        return
+    fi
+
+    echo "| Project | Version | Published | Notes |"
+    echo "|---------|---------|-----------|-------|"
+    echo "$releases" | jq -r '.[] |
+        (if .prerelease then " (pre-release)" else "" end) as $pre |
+        (if .body_empty then "[tag](\(.url))" else "[notes](\(.url))" end) as $link |
+        "| \(.repo) | \(.tag)\($pre) | \(.published_at[:10]) | \($link) |"
     '
 }
 
@@ -241,6 +289,8 @@ generate_community_report() {
     local period="$3"
     local generated_at="$4"
     local cadence="${5:-monthly}"
+    local start_date="${6:-}"
+    local end_date="${7:-}"
 
     local doc_type="${cadence}-community-report"
 
@@ -333,6 +383,10 @@ _Add guidance on how to contribute: good first issues, areas seeking help, mento
 ### Upcoming Milestones
 
 $(format_community_upcoming "$all_data")
+
+### Recent Releases
+
+$(format_community_recent_releases "$all_data" "$start_date" "$end_date")
 
 ### Roadmap Preview
 
