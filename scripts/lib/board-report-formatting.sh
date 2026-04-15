@@ -314,6 +314,235 @@ format_milestone_history() {
 }
 
 #
+# Format Date Gaps: milestones approaching their due date with low progress,
+# plus a summary of milestones that have no due_on at all.
+#
+# Governed by docs/common/roadmap-release-normalization-standard.md Section 1.3.
+# Threshold: 30 days + <50% progress (Medium severity in the standard).
+#
+format_date_gaps() {
+    local all_data="$1"
+
+    local today horizon
+    today=$(date -u +%Y-%m-%d)
+    horizon=$(date -u -v+30d +%Y-%m-%d 2>/dev/null || date -u -d '+30 days' +%Y-%m-%d)
+
+    # Milestones within 30 days AND <50% progress
+    local at_risk
+    at_risk=$(echo "$all_data" | jq --arg today "$today" --arg horizon "$horizon" '[
+        .[].repos[] |
+        .repo as $repo |
+        (.milestones // [])[] |
+        select(.state == "open" and .due_on != null
+               and (.due_on[:10]) >= $today
+               and (.due_on[:10]) <= $horizon
+               and (.progress // 0) < 50) |
+        {repo: $repo, title, due_on: .due_on[:10], progress}
+    ] | sort_by(.due_on)')
+
+    local at_risk_count
+    at_risk_count=$(echo "$at_risk" | jq 'length')
+
+    if [[ "$at_risk_count" -gt 0 ]]; then
+        echo "**At-risk milestones (due within 30 days, under 50% progress):**"
+        echo ""
+        echo "| Project | Milestone | Due | Progress |"
+        echo "|---------|-----------|-----|----------|"
+        echo "$at_risk" | jq -r '.[] | "| \(.repo) | \(.title) | \(.due_on) | \(.progress)% |"'
+        echo ""
+    fi
+
+    # Count open milestones missing due_on (already listed by future_milestones
+    # but re-surface as an explicit gap count here).
+    local no_due
+    no_due=$(echo "$all_data" | jq '[
+        .[].repos[] |
+        (.milestones // [])[] |
+        select(.state == "open" and .due_on == null)
+    ] | length')
+
+    if [[ "${no_due:-0}" -gt 0 ]]; then
+        echo "**${no_due} open milestone(s) still have no due date** — see the Open & Upcoming table above."
+        echo ""
+    fi
+
+    if [[ "$at_risk_count" -eq 0 ]] && [[ "${no_due:-0}" -eq 0 ]]; then
+        echo "_No milestone date gaps detected this period._"
+        echo ""
+    fi
+}
+
+#
+# Format Release Cadence Risks for the Risk Register.
+#
+# Governed by docs/common/roadmap-release-normalization-standard.md Section 2.3.
+# Thresholds:
+#   - Active repo (commits in window) + no published release >90 days (Medium)
+#   - Draft release >14 days old (Low)
+#   - Tag does not match SemVer pattern (Medium)
+#
+format_release_cadence_risks() {
+    local all_data="$1"
+
+    local today_epoch cutoff_90d cutoff_14d
+    today_epoch=$(date -u +%s)
+    cutoff_90d=$((today_epoch - 90*86400))
+    cutoff_14d=$((today_epoch - 14*86400))
+
+    # Repos with activity in the window but no release in the last 90 days
+    local stale_releases
+    stale_releases=$(echo "$all_data" | jq --arg cutoff "$cutoff_90d" '[
+        .[].repos[] |
+        select(.exists == true and (.commits.count // 0) > 0) |
+        . as $r |
+        (.releases.latest_published_at // null) as $latest |
+        select(
+            $latest == null
+            or (($latest | fromdateiso8601? // 0) < ($cutoff | tonumber))
+        ) |
+        {
+            repo: .repo,
+            latest_published_at: $latest,
+            latest_tag: (.releases.latest_tag // null),
+            total_releases: (.releases.total_count // 0),
+            commits: (.commits.count // 0)
+        }
+    ] | sort_by(.latest_published_at // "0")')
+
+    local stale_count
+    stale_count=$(echo "$stale_releases" | jq 'length')
+
+    if [[ "$stale_count" -gt 0 ]]; then
+        echo "#### Release Cadence Risks"
+        echo ""
+        echo "Active repositories without a published release in the last 90 days:"
+        echo ""
+        echo "| Repository | Commits (period) | Latest Release | Published |"
+        echo "|------------|------------------|----------------|-----------|"
+        echo "$stale_releases" | jq -r '.[] |
+            "| \(.repo) | \(.commits) | \(.latest_tag // "_none_") | \(.latest_published_at // "_never_") |"'
+        echo ""
+    fi
+
+    # Non-SemVer tags on published releases
+    local semver_violations
+    semver_violations=$(echo "$all_data" | jq '[
+        .[].repos[] |
+        .repo as $repo |
+        (.releases.recent // [])[] |
+        select(.draft == false and .semver_ok == false) |
+        {repo: $repo, tag: .tag_name, published_at}
+    ]')
+
+    if [[ "$semver_violations" != "[]" ]] && [[ -n "$semver_violations" ]]; then
+        echo "#### Non-SemVer Release Tags"
+        echo ""
+        echo "| Repository | Tag | Published |"
+        echo "|------------|-----|-----------|"
+        echo "$semver_violations" | jq -r '.[] | "| \(.repo) | \(.tag) | \(.published_at // "_draft_") |"'
+        echo ""
+    fi
+
+    # Drafts older than 14 days
+    local stale_drafts
+    stale_drafts=$(echo "$all_data" | jq --arg cutoff "$cutoff_14d" '[
+        .[].repos[] |
+        .repo as $repo |
+        (.releases.recent // [])[] |
+        select(.draft == true and .published_at != null
+               and ((.published_at | fromdateiso8601? // 0) < ($cutoff | tonumber))) |
+        {repo: $repo, tag: .tag_name, published_at}
+    ]')
+
+    if [[ "$stale_drafts" != "[]" ]] && [[ -n "$stale_drafts" ]]; then
+        echo "#### Stale Draft Releases (>14 days)"
+        echo ""
+        echo "| Repository | Tag | Draft Since |"
+        echo "|------------|-----|-------------|"
+        echo "$stale_drafts" | jq -r '.[] | "| \(.repo) | \(.tag) | \(.published_at) |"'
+        echo ""
+    fi
+}
+
+#
+# Format Roadmap Staleness for the Risk Register.
+#
+# Governed by docs/common/roadmap-release-normalization-standard.md Section 3.3.
+# Surfaces:
+#   - Missing roadmap.md (High severity)
+#   - Roadmap updated >60 days ago (Medium severity)
+#
+format_roadmap_gaps() {
+    local all_data="$1"
+
+    local today_epoch cutoff_60d
+    today_epoch=$(date -u +%s)
+    cutoff_60d=$((today_epoch - 60*86400))
+
+    local missing
+    missing=$(echo "$all_data" | jq '[
+        .[].repos[] |
+        select(.exists == true and ((.roadmap.present // false) == false)) |
+        .repo
+    ]')
+    local missing_count
+    missing_count=$(echo "$missing" | jq 'length')
+
+    local stale
+    stale=$(echo "$all_data" | jq --arg cutoff "$cutoff_60d" '[
+        .[].repos[] |
+        select(.exists == true and ((.roadmap.present // false) == true)
+               and (.roadmap.updated != null)
+               and (((.roadmap.updated + "T00:00:00Z") | fromdateiso8601? // 0) < ($cutoff | tonumber))) |
+        {repo, updated: .roadmap.updated, path: .roadmap.path}
+    ] | sort_by(.updated)')
+    local stale_count
+    stale_count=$(echo "$stale" | jq 'length')
+
+    local unparseable
+    unparseable=$(echo "$all_data" | jq '[
+        .[].repos[] |
+        select(.exists == true and ((.roadmap.present // false) == true)
+               and (.roadmap.updated == null)) |
+        {repo, path: .roadmap.path, parse_error: .roadmap.parse_error}
+    ]')
+    local unparseable_count
+    unparseable_count=$(echo "$unparseable" | jq 'length')
+
+    if [[ "$missing_count" -eq 0 ]] && [[ "$stale_count" -eq 0 ]] && [[ "$unparseable_count" -eq 0 ]]; then
+        return
+    fi
+
+    echo "#### Roadmap Staleness"
+    echo ""
+    echo "_Per [roadmap-release-normalization-standard](https://gitlab.com/smart-assets.io/gitlab-profile/-/blob/master/docs/common/roadmap-release-normalization-standard.md)._"
+    echo ""
+
+    if [[ "$missing_count" -gt 0 ]]; then
+        echo "**Missing roadmap.md (${missing_count} repos):** run \`/harmonize\` to bootstrap from the workspace template."
+        echo ""
+        echo "$missing" | jq -r '.[] | "- \(.)"'
+        echo ""
+    fi
+
+    if [[ "$stale_count" -gt 0 ]]; then
+        echo "**Roadmap updated >60 days ago (${stale_count} repos):**"
+        echo ""
+        echo "| Repository | Path | Updated |"
+        echo "|------------|------|---------|"
+        echo "$stale" | jq -r '.[] | "| \(.repo) | \(.path) | \(.updated) |"'
+        echo ""
+    fi
+
+    if [[ "$unparseable_count" -gt 0 ]]; then
+        echo "**Roadmap present but \`updated:\` field missing or unparseable (${unparseable_count} repos):**"
+        echo ""
+        echo "$unparseable" | jq -r '.[] | "- \(.repo) (\(.path))"'
+        echo ""
+    fi
+}
+
+#
 # Generate complete Milestone Analysis section
 #
 format_milestone_analysis() {
@@ -333,6 +562,11 @@ format_milestone_analysis() {
     echo "### Open & Upcoming"
     echo ""
     format_future_milestones "$all_data"
+    echo ""
+
+    echo "### Date Gaps"
+    echo ""
+    format_date_gaps "$all_data"
     echo ""
 
     echo "### Delivery Reliability"
@@ -425,6 +659,10 @@ format_board_risk_register() {
         echo "$dormant" | jq -r '.[] | "- \(.)"'
         echo ""
     fi
+
+    # Release cadence and roadmap risks (per roadmap-release-normalization-standard)
+    format_release_cadence_risks "$all_data"
+    format_roadmap_gaps "$all_data"
 }
 
 #

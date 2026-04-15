@@ -147,11 +147,29 @@ The generated report includes:
 | Executive Overview | Organization health dashboard, key metrics, highlights |
 | Category Health | Per-category summary table (repos active, commits, PRs, issues) |
 | Strategic Milestones | Open milestones with progress and due dates |
+| Milestone Analysis | Completed this period, open & upcoming, **date gaps** (30-day horizon + no due dates), delivery reliability, tracking coverage |
 | Product Delivery | Active repos with commit/PR/issue counts |
-| Risk Register | Overdue milestones, elevated backlogs, dormant repos |
+| Risk Register | Overdue milestones, elevated backlogs, dormant repos, **release cadence risks** (no release >90 days on active repos, non-SemVer tags, stale drafts), **roadmap staleness** (missing `docs/roadmap.md`, `updated:` >60 days old) |
 | Team & Resources | Active contributors with commit share |
 | Decisions Required | Items needing board attention (narrative) |
 | Next Period Outlook | Forward-looking summary (narrative) |
+
+### Release Date Gap Analysis
+
+The Milestone Analysis and Risk Register sections consume GitHub Releases and `docs/roadmap.md` frontmatter per the workspace [Roadmap, Release Date, and Version Normalization Standard](https://gitlab.com/smart-assets.io/gitlab-profile/-/blob/master/docs/common/roadmap-release-normalization-standard.md). Thresholds:
+
+| Signal | Threshold | Surface |
+|--------|-----------|---------|
+| Open milestone with no `due_on` | any | Milestone Analysis > Open & Upcoming (planning gap callout) + Date Gaps count |
+| Open milestone due within 30 days, <50% progress | 30 days | Milestone Analysis > Date Gaps |
+| Open milestone overdue | any | Risk Register > Overdue Milestones |
+| No published release on active repo | 90 days | Risk Register > Release Cadence Risks |
+| Non-SemVer release tag | any | Risk Register > Non-SemVer Release Tags |
+| Draft release older than 14 days | 14 days | Risk Register > Stale Draft Releases |
+| Missing `docs/roadmap.md` | any | Risk Register > Roadmap Staleness |
+| `roadmap.md` `updated:` >60 days old | 60 days | Risk Register > Roadmap Staleness |
+
+Repositories that lack `docs/roadmap.md` can be bootstrapped by running `/harmonize` in the target repo.
 
 ## Narrative Writing Guidelines
 
