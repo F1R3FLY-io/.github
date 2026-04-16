@@ -125,7 +125,7 @@ This repository follows F1R3FLY.io's documentation-first methodology, serving as
 - **[graphl-parser](https://github.com/F1R3FLY-io/graphl-parser)** - Graph to Rholang parser
 - **[MeTTaIL](https://github.com/F1R3FLY-io/MeTTaIL)** - MeTTa intermediate language (Rust)
 - **[MeTTa-Compiler](https://github.com/F1R3FLY-io/MeTTa-Compiler)** - Compiler from MeTTa to MeTTaIL (Rust)
-- **[mettail-rust](https://github.com/F1R3FLY-io/mettail-rust)** - Rust workspace for the MeTTaIL toolchain
+- **[mettail-rust](https://github.com/F1R3FLY-io/mettail-rust)** - MeTTaIL language framework in Rust: macro-driven specification of formal languages (parsing, terms, evaluation)
 
 #### Applications & Use Cases
 - **[embers](https://github.com/F1R3FLY-io/embers)** - F1R3Sky wallets and agents (Rust)
@@ -148,7 +148,7 @@ This repository follows F1R3FLY.io's documentation-first methodology, serving as
 - **[F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)** - Visualization tool for Infrastructure as Code
 
 #### Research & Publications
-- **[MeTTaIL](https://github.com/F1R3FLY-io/MeTTaIL)** / **[MeTTa-Compiler](https://github.com/F1R3FLY-io/MeTTa-Compiler)** - Active research track for MeTTa tooling and compilation
+- **[MeTTaIL](https://github.com/F1R3FLY-io/MeTTaIL)** / **[MeTTa-Compiler](https://github.com/F1R3FLY-io/MeTTa-Compiler)** / **[mettail-rust](https://github.com/F1R3FLY-io/mettail-rust)** - Active research track for MeTTa tooling, compilation, and macro-driven language frameworks
 - **[rhoHDC](https://github.com/F1R3FLY-io/rhoHDC)** - rho-calculus and hyper-dimensional computing research (archival; superseded by the MeTTaIL line)
 - **[publications](https://github.com/F1R3FLY-io/publications)** - Books, papers, and publication assets
 
@@ -372,7 +372,7 @@ research_innovation:
     description: "Compiler from MeTTa to MeTTaIL"
   mettail_rust:
     url: "https://github.com/F1R3FLY-io/mettail-rust"
-    description: "Rust workspace for the MeTTaIL toolchain"
+    description: "MeTTaIL language framework in Rust: macro-driven specification of formal languages"
   rhoHDC:
     url: "https://github.com/F1R3FLY-io/rhoHDC"
     description: "rho-calculus and hyper-dimensional computing (archival; superseded by MeTTaIL line)"
