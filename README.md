@@ -125,7 +125,7 @@ This repository follows F1R3FLY.io's documentation-first methodology, serving as
 - **[graphl-parser](https://github.com/F1R3FLY-io/graphl-parser)** - Graph to Rholang parser
 - **[MeTTaIL](https://github.com/F1R3FLY-io/MeTTaIL)** - MeTTa intermediate language (Rust)
 - **[MeTTa-Compiler](https://github.com/F1R3FLY-io/MeTTa-Compiler)** - Compiler from MeTTa to MeTTaIL (Rust)
-- **[mettail-rust](https://github.com/F1R3FLY-io/mettail-rust)** - MeTTaIL language framework in Rust: macro-driven specification of formal languages (parsing, terms, evaluation)
+- **[MeTTaiL-rust](https://github.com/F1R3FLY-io/mettail-rust)** - MeTTaIL language framework in Rust: macro-driven specification of formal languages (parsing, terms, evaluation)
 
 #### Applications & Use Cases
 - **[embers](https://github.com/F1R3FLY-io/embers)** - F1R3Sky wallets and agents (Rust)
