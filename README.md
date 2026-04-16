@@ -2,7 +2,7 @@
 
 Central hub for F1R3FLY.io's organizational documentation, templates, and governance. This repository serves as the single source of truth for organization-wide knowledge management and project standards.
 
-**Quick Navigation**: [Documentation Index](docs/Documentation_Index.md) | [Repository Guide](docs/Organization_of_Repositories.md) | [FIPs](https://github.com/F1R3FLY-io/fflip) | [Project Template](docs/Project_Template.md)
+**Quick Navigation**: [Documentation Index](docs/Documentation_Index.md) | [Repository Guide](docs/Organization_of_Repositories.md) | [FIPs](https://github.com/F1R3FLY-io/FIPS) | [Project Template](docs/Project_Template.md)
 
 ## Quick Start
 
@@ -142,7 +142,7 @@ VITE_EL_VOICE=your_elevenlabs_voice_id
 - **[📖 Documentation Index](./docs/Documentation_Index.md)** - Complete guide to all documentation, organized by role and category
 - **[📂 Repository Guide](./docs/Organization_of_Repositories.md)** - Navigate all F1R3FLY.io projects by category
 - **[📋 Project Template](./docs/Project_Template.md)** - Standard template for new repositories
-- **[🔧 FIP Process](https://github.com/F1R3FLY-io/fflip)** - F1R3FLY.io Improvement Proposals
+- **[🔧 FIP Process](https://github.com/F1R3FLY-io/FIPS)** - F1R3FLY.io Improvement Proposals
 
 ### Standards & Specifications
 
@@ -173,24 +173,35 @@ This repository follows F1R3FLY.io's documentation-first methodology, serving as
 ### Key Repositories
 
 #### Core Platform
-- **[f1r3node](https://github.com/F1R3FLY-io/f1r3node)** - Core transaction node repository
+- **[f1r3node](https://github.com/F1R3FLY-io/f1r3node)** - Core transaction node repository (Rust)
 - **[f1r3node-rust](https://github.com/F1R3FLY-io/f1r3node-rust)** - Standalone Rust workspace and Docker/shard setup for the pure-Rust node
 - **[rust-client](https://github.com/F1R3FLY-io/rust-client)** - Rust client SDK for deploys, status, and network interaction
+- **[pyf1r3fly](https://github.com/F1R3FLY-io/pyf1r3fly)** - Python 3 interface to F1r3node
 
 #### Language & Tools
 - **[rholang-rs](https://github.com/F1R3FLY-io/rholang-rs)** - Rholang interpreter (Rust)
 - **[rholang-language-server](https://github.com/F1R3FLY-io/rholang-language-server)** - LSP-based Language Server for Rholang (Rust)
+- **[rholang-vscode-client](https://github.com/F1R3FLY-io/rholang-vscode-client)** - Rholang support for VSCode (TypeScript)
+- **[rholang-emacs-client](https://github.com/F1R3FLY-io/rholang-emacs-client)** - Rholang support for Emacs (Emacs Lisp)
+- **[rholang-nvim](https://github.com/F1R3FLY-io/rholang-nvim)** - Rholang LSP client for Neovim (Lua)
 - **[graphl-parser](https://github.com/F1R3FLY-io/graphl-parser)** - Graph to Rholang parser
-- **[MeTTaIL](https://github.com/F1R3FLY-io/MeTTaIL)** - MeTTa intermediate language
+- **[MeTTaIL](https://github.com/F1R3FLY-io/MeTTaIL)** - MeTTa intermediate language (Rust)
+- **[MeTTa-Compiler](https://github.com/F1R3FLY-io/MeTTa-Compiler)** - Compiler from MeTTa to MeTTaIL (Rust)
+- **[mettail-rust](https://github.com/F1R3FLY-io/mettail-rust)** - Rust workspace for the MeTTaIL toolchain
 
 #### Applications & Use Cases
 - **[embers](https://github.com/F1R3FLY-io/embers)** - F1R3Sky wallets and agents (Rust)
 - **[embers-frontend](https://github.com/F1R3FLY-io/embers-frontend)** - Web interface (TypeScript)
 - **[f1r3sky](https://github.com/F1R3FLY-io/f1r3sky)** - F1R3FLY BlueSky fork (TypeScript)
+- **[f1r3sky-backend](https://github.com/F1R3FLY-io/f1r3sky-backend)** - F1R3Sky backend services (TypeScript)
+- **[f1r3sky-client](https://github.com/F1R3FLY-io/f1r3sky-client)** - F1R3Sky web, iOS, and Android client (TypeScript)
 - **[f1r3drive](https://github.com/F1R3FLY-io/f1r3drive)** - Canonical file system project using a FUSE-based interface on top of F1R3FLY shards
+- **[f1r3drive-extension](https://github.com/F1R3FLY-io/f1r3drive-extension)** - Native macOS extension for f1r3drive (Swift)
+- **[F1R3Docs](https://github.com/F1R3FLY-io/F1R3Docs)** - Google Docs / MS Office-style collaboration on a F1R3Node shard
 - **[F1R3Games](https://github.com/F1R3FLY-io/F1R3Games)** - Collective-intelligence games portfolio
 - **[CatchingF1R3](https://github.com/F1R3FLY-io/CatchingF1R3)** - Decentralized voting application
 - **[F1R3Fi](https://github.com/F1R3FLY-io/F1R3Fi)** - DeFi and financial engineering exploration
+- **[Sankey_block_explorer](https://github.com/F1R3FLY-io/Sankey_block_explorer)** - Sankey-style block explorer (TypeScript)
 - **[lightning-bug](https://github.com/F1R3FLY-io/lightning-bug)** - Modern, extensible, browser-based code editor (Clojure)
 
 #### Integration & Operations
@@ -199,7 +210,8 @@ This repository follows F1R3FLY.io's documentation-first methodology, serving as
 - **[F1r3bu1ld3r](https://github.com/F1R3FLY-io/F1r3bu1ld3r)** - Visualization tool for Infrastructure as Code
 
 #### Research & Publications
-- **[rhoHDC](https://github.com/F1R3FLY-io/rhoHDC)** - rho-calculus and hyper-dimensional computing research
+- **[MeTTaIL](https://github.com/F1R3FLY-io/MeTTaIL)** / **[MeTTa-Compiler](https://github.com/F1R3FLY-io/MeTTa-Compiler)** - Active research track for MeTTa tooling and compilation
+- **[rhoHDC](https://github.com/F1R3FLY-io/rhoHDC)** - rho-calculus and hyper-dimensional computing research (archival; superseded by the MeTTaIL line)
 - **[publications](https://github.com/F1R3FLY-io/publications)** - Books, papers, and publication assets
 
 **[Complete Repository Guide](https://github.com/F1R3FLY-io/.github/blob/master/docs/Organization_of_Repositories.md)** - View all projects with detailed descriptions
@@ -331,45 +343,101 @@ core_platform:
   f1r3node_rust:
     url: "https://github.com/F1R3FLY-io/f1r3node-rust"
     description: "Standalone Rust workspace and Docker/shard setup for the node"
-  rholang_rs:
-    url: "https://github.com/F1R3FLY-io/rholang-rs"
-    description: "Rust Rholang implementation"
+  rust_client:
+    url: "https://github.com/F1R3FLY-io/rust-client"
+    description: "Rust client SDK for deploys, status, and network interaction"
+  pyf1r3fly:
+    url: "https://github.com/F1R3FLY-io/pyf1r3fly"
+    description: "Python 3 interface to F1r3node"
 
 user_applications:
   embers:
     url: "https://github.com/F1R3FLY-io/embers"
     description: "F1R3Sky wallets and agents"
+  embers_frontend:
+    url: "https://github.com/F1R3FLY-io/embers-frontend"
+    description: "Embers web interface"
   f1r3sky:
     url: "https://github.com/F1R3FLY-io/f1r3sky"
-    description: "Decentralized social platform"
+    description: "F1R3FLY BlueSky fork"
+  f1r3sky_backend:
+    url: "https://github.com/F1R3FLY-io/f1r3sky-backend"
+    description: "F1R3Sky backend services"
+  f1r3sky_client:
+    url: "https://github.com/F1R3FLY-io/f1r3sky-client"
+    description: "F1R3Sky web, iOS, and Android client"
   f1r3drive:
     url: "https://github.com/F1R3FLY-io/f1r3drive"
     description: "FUSE-based file system use case on top of F1R3FLY shards"
+  f1r3drive_extension:
+    url: "https://github.com/F1R3FLY-io/f1r3drive-extension"
+    description: "Native macOS extension for f1r3drive"
+  F1R3Docs:
+    url: "https://github.com/F1R3FLY-io/F1R3Docs"
+    description: "Google Docs / MS Office-style collaboration on a F1R3Node shard"
   F1R3Games:
     url: "https://github.com/F1R3FLY-io/F1R3Games"
     description: "Collective-intelligence games portfolio"
+  CatchingF1R3:
+    url: "https://github.com/F1R3FLY-io/CatchingF1R3"
+    description: "Decentralized voting application"
+  F1R3Fi:
+    url: "https://github.com/F1R3FLY-io/F1R3Fi"
+    description: "DeFi and financial engineering exploration"
+  Sankey_block_explorer:
+    url: "https://github.com/F1R3FLY-io/Sankey_block_explorer"
+    description: "Sankey-style block explorer"
 
 developer_tools:
+  rholang_rs:
+    url: "https://github.com/F1R3FLY-io/rholang-rs"
+    description: "Rust Rholang interpreter"
   rholang_language_server:
     url: "https://github.com/F1R3FLY-io/rholang-language-server"
     description: "LSP for Rholang"
+  rholang_vscode_client:
+    url: "https://github.com/F1R3FLY-io/rholang-vscode-client"
+    description: "Rholang support for VSCode"
+  rholang_emacs_client:
+    url: "https://github.com/F1R3FLY-io/rholang-emacs-client"
+    description: "Rholang support for Emacs"
+  rholang_nvim:
+    url: "https://github.com/F1R3FLY-io/rholang-nvim"
+    description: "Rholang LSP client for Neovim"
   graphl_parser:
     url: "https://github.com/F1R3FLY-io/graphl-parser"
     description: "Graph to Rholang parser"
+  lightning_bug:
+    url: "https://github.com/F1R3FLY-io/lightning-bug"
+    description: "Modern, extensible, browser-based code editor"
   system_integration:
     url: "https://github.com/F1R3FLY-io/system-integration"
     description: "Compose orchestration, integration tests, and the shardctl CLI"
+  IaC:
+    url: "https://github.com/F1R3FLY-io/IaC"
+    description: "Infrastructure automation for deployment environments"
   F1r3bu1ld3r:
     url: "https://github.com/F1R3FLY-io/F1r3bu1ld3r"
     description: "Infrastructure visualization"
+
+governance:
+  FIPS:
+    url: "https://github.com/F1R3FLY-io/FIPS"
+    description: "F1R3FLY Improvement Proposals and submissions"
 
 research_innovation:
   MeTTaIL:
     url: "https://github.com/F1R3FLY-io/MeTTaIL"
     description: "MeTTa intermediate language"
+  MeTTa_Compiler:
+    url: "https://github.com/F1R3FLY-io/MeTTa-Compiler"
+    description: "Compiler from MeTTa to MeTTaIL"
+  mettail_rust:
+    url: "https://github.com/F1R3FLY-io/mettail-rust"
+    description: "Rust workspace for the MeTTaIL toolchain"
   rhoHDC:
     url: "https://github.com/F1R3FLY-io/rhoHDC"
-    description: "rho-calculus and hyper-dimensional computing"
+    description: "rho-calculus and hyper-dimensional computing (archival; superseded by MeTTaIL line)"
   publications:
     url: "https://github.com/F1R3FLY-io/publications"
     description: "Books, papers, and publication assets"
@@ -397,7 +465,7 @@ project_template:
 
 ```yaml
 improvement_proposals:
-  url: "https://github.com/F1R3FLY-io/fflip"
+  url: "https://github.com/F1R3FLY-io/FIPS"
   description: "F1R3FLY improvement proposals"
 
 security: "Organization-wide security policies and procedures"
@@ -454,7 +522,7 @@ principles:
 organization_website: "https://f1r3fly.io"
 documentation_portal: "https://github.com/F1R3FLY-io/.github"
 repository_guide: "https://github.com/F1R3FLY-io/.github/blob/master/docs/Organization_of_Repositories.md"
-improvement_proposals: "https://github.com/F1R3FLY-io/fflip"
+improvement_proposals: "https://github.com/F1R3FLY-io/FIPS"
 contact: "f1r3fly.ceo@gmail.com"
 ```
 
