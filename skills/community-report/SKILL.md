@@ -155,7 +155,7 @@ The generated report includes:
 | What's New | Activity overview metrics, product updates narrative |
 | Technical Highlights | Notable technical changes narrative |
 | Repository Spotlights | Active repos with metrics and descriptions |
-| Merged PRs | All merged PRs grouped by repository |
+| Merged PRs | Per-repo table of merged PRs (up to 40 per repo) with cycle time (`created_at` → `merged_at`), LOC delta (`+additions / -deletions`), issue comments, inline review comments, and submitted-review counts |
 | Contributor Recognition | Leaderboard, new contributors, spotlight narrative |
 | Get Involved | Open issues by repo, contribution guidance |
 | Coming Soon | Upcoming milestones (with **Target Release** column), **Recent Releases** published this period, roadmap preview |

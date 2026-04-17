@@ -216,30 +216,68 @@ fetch_repo_prs() {
     local start_date="$2"
     local end_date="$3"
 
-    # Get merged PRs in period
-    local merged_data
-    merged_data=$(paginated_api "repos/${GITHUB_ORG}/${repo}/pulls?state=closed" | \
+    # Get merged PRs in period (basic fields only — list endpoint doesn't
+    # return additions/deletions/comments/review_comments; those come from
+    # the per-PR detail endpoint below). Capped at 40 per repo.
+    local merged_basic
+    merged_basic=$(paginated_api "repos/${GITHUB_ORG}/${repo}/pulls?state=closed" | \
         jq "flatten | [.[] | select(.merged_at != null and .merged_at >= \"${start_date}\" and .merged_at <= \"${end_date}T23:59:59Z\")] | {
             count: length,
-            prs: [.[:15] | .[] | {
+            prs: [.[:40] | .[] | {
                 number,
                 title,
+                created_at,
                 merged_at,
                 user: .user.login,
-                url: .html_url,
-                additions: .additions,
-                deletions: .deletions,
-                comments: .comments
+                url: .html_url
             }]
         }" 2>/dev/null || echo '{"count": 0, "prs": []}')
+
+    [[ -z "$merged_basic" ]] && merged_basic='{"count":0,"prs":[]}'
+
+    # Enrich each PR with detail fields (additions/deletions/comments/
+    # review_comments) and submitted-review count. One detail call and one
+    # reviews call per merged PR.
+    local pr_numbers
+    pr_numbers=$(echo "$merged_basic" | jq -r '.prs[].number')
+
+    local enriched='[]'
+    if [[ -n "$pr_numbers" ]]; then
+        local pr_number detail reviews_count
+        while IFS= read -r pr_number; do
+            [[ -z "$pr_number" ]] && continue
+
+            detail=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/pulls/${pr_number}" \
+                --jq '{additions, deletions, comments, review_comments}' 2>/dev/null || echo '{}')
+            [[ -z "$detail" ]] && detail='{}'
+
+            reviews_count=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/pulls/${pr_number}/reviews" \
+                --jq 'length' 2>/dev/null || echo "0")
+            [[ -z "$reviews_count" ]] && reviews_count="0"
+
+            enriched=$(jq -n \
+                --argjson list "$enriched" \
+                --argjson num "$pr_number" \
+                --argjson detail "$detail" \
+                --argjson rev "$reviews_count" \
+                '$list + [{number: $num, detail: $detail, reviews_count: $rev}]')
+        done <<< "$pr_numbers"
+    fi
+
+    local merged_data
+    merged_data=$(echo "$merged_basic" | jq --argjson enriched "$enriched" '
+        ($enriched | map({key: (.number | tostring), value: .}) | from_entries) as $idx |
+        .prs |= map(
+            . as $base |
+            ($idx[($base.number | tostring)] // {detail: {}, reviews_count: 0}) as $e |
+            $base + $e.detail + {reviews_count: $e.reviews_count}
+        )
+    ')
 
     # Get open PRs count
     local open_prs
     open_prs=$(rate_limited_api "repos/${GITHUB_ORG}/${repo}/pulls?state=open" \
         --jq 'length' 2>/dev/null || echo "0")
-
-    # Apply defaults for empty values
-    [[ -z "$merged_data" ]] && merged_data='{"count":0,"prs":[]}'
     [[ -z "$open_prs" ]] && open_prs="0"
 
     jq -n \

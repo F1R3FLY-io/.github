@@ -23,23 +23,8 @@ fi
 COMMUNITY_REPORT_FORMATTING_LOADED=1
 
 #
-# Format product updates summary (what shipped)
-#
-format_community_product_updates() {
-    local all_data="$1"
-
-    # Show repos with merged PRs, grouped by category
-    echo "$all_data" | jq -r '
-        .[] |
-        .category as $cat |
-        .repos[] |
-        select((.prs.merged_count // 0) > 0) |
-        "### \(.repo)\n\n\(.prs.merged_count) PRs merged, \(.commits.count // 0) commits\n"
-    '
-}
-
-#
-# Format notable PRs across all repos
+# Format notable PRs across all repos, one table per repo with cycle time,
+# LOC delta, and comment/review counts.
 #
 format_community_notable_prs() {
     local all_data="$1"
@@ -49,7 +34,12 @@ format_community_notable_prs() {
         .[].repos[] |
         .repo as $repo |
         (.prs.merged_prs // [])[] |
-        {repo: $repo, number, title, user, merged_at, url}
+        {repo: $repo, number, title, user, created_at, merged_at, url,
+         additions: (.additions // 0),
+         deletions: (.deletions // 0),
+         comments: (.comments // 0),
+         review_comments: (.review_comments // 0),
+         reviews_count: (.reviews_count // 0)}
     ] | sort_by(.merged_at) | reverse')
 
     local pr_count
@@ -60,11 +50,30 @@ format_community_notable_prs() {
         return
     fi
 
-    # Group by repo for readability
+    # One table per repo, rows ordered newest-merged first.
+    # Title pipes are escaped so they don't break the markdown table.
     echo "$prs" | jq -r '
+        def cycle(c; m):
+          if c == null or m == null then "—"
+          else
+            (((m | fromdateiso8601) - (c | fromdateiso8601)) / 3600) as $h |
+            if $h >= 24 then (((($h / 24) * 10) | floor) / 10 | tostring) + "d"
+            elif $h >= 1 then ($h | floor | tostring) + "h"
+            else (($h * 60) | floor | tostring) + "m"
+            end
+          end;
+        def trunc(s; n):
+          if (s | length) > n then (s[0:n-1] + "…") else s end;
+
         group_by(.repo)[] |
         "**\(.[0].repo)**",
-        (.[] | "- [#\(.number)](\(.url)) - \(.title) (@\(.user))"),
+        "",
+        "| # | Title | Author | Cycle | LOC | Comments | Review Comments | Reviews |",
+        "|---|-------|--------|-------|-----|----------|-----------------|---------|",
+        (.[] |
+          (.title | gsub("\\|"; "\\|")) as $t |
+          "| [#\(.number)](\(.url)) | \(trunc($t; 60)) | @\(.user) | \(cycle(.created_at; .merged_at)) | +\(.additions) / -\(.deletions) | \(.comments) | \(.review_comments) | \(.reviews_count) |"
+        ),
         ""
     '
 }
