@@ -73,6 +73,68 @@ From any F1R3FLY.io repo, inside Claude Code:
 
 The generated `docs/roadmap.md` feeds the board and community status reports: gaps in release dates, missing milestones, and stale roadmap entries are surfaced automatically in `/generate-board-report` and `/generate-community-report` outputs.
 
+## Explainer Viewer Scaffold
+
+This repository now includes a Vite + TypeScript scaffold for a SMIL/SVG explainer viewer with:
+
+- SVG playback controls (play/pause, seek, keyboard transport)
+- speed profiles (`0.10x`, `0.25x`, `1x`, `1.5x`, `2x`)
+- stage-by-speed narration model (different stage counts per speed)
+- optional ElevenLabs narration hooks via environment variables
+- GitHub Pages deployment workflow
+
+### Local run
+
+```bash
+pnpm install
+pnpm run dev
+```
+
+### Build
+
+```bash
+pnpm run build
+```
+
+### Unit tests
+
+```bash
+pnpm run test
+```
+
+### Pre-push hook setup
+
+```bash
+./scripts/setup-hooks.sh
+```
+
+Optional copy mode:
+
+```bash
+./scripts/setup-hooks.sh --copy
+```
+
+The hook runs:
+
+- `pnpm run typecheck`
+- `pnpm run test`
+- `pnpm run build` (skipped with `QUICK=1`)
+
+### Files to edit in follow-up steps
+
+- `docs/images/F1r3fly_explainer.svg` (SMIL animation asset, not yet created)
+- `docs/images/F1r3fly_explainer.jsonc` (runtime stage and narration data)
+- `docs/images/F1r3fly_explainer.md` (editable narrative draft source)
+
+### Optional TTS setup
+
+Set these in `.env`:
+
+```bash
+VITE_EL_TTS=your_elevenlabs_api_key
+VITE_EL_VOICE=your_elevenlabs_voice_id
+```
+
 ## 📚 Documentation Hub
 
 ### Core Documentation Resources

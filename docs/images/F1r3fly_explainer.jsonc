@@ -1,0 +1,388 @@
+{
+	// Source of truth for runtime playback scaffolding.
+	// Lambda-calculus origin arc: Church/Turing -> Von Neumann -> pi/rho-calculus -> correctness -> tools.
+	"meta": {
+		"id": "f1r3fly_explainer_speed_based",
+		"title": "F1R3FLY Explainer",
+		"version": "0.4.0",
+		"total_duration_seconds": 60
+	},
+
+	"playback_profiles": {
+		"0.10x": {
+			"speed_factor": 0.1,
+			"loop_seconds": 600,
+			"detail_level": "slowest"
+		},
+		"0.25x": {
+			"speed_factor": 0.25,
+			"loop_seconds": 240,
+			"detail_level": "slow"
+		},
+		"1x": {
+			"speed_factor": 1.0,
+			"loop_seconds": 60,
+			"detail_level": "baseline"
+		},
+		"1.5x": {
+			"speed_factor": 1.5,
+			"loop_seconds": 40,
+			"detail_level": "fast"
+		},
+		"2x": {
+			"speed_factor": 2.0,
+			"loop_seconds": 30,
+			"detail_level": "fastest"
+		}
+	},
+
+	"tempo_map": {
+		"anchor_speed": 1.0,
+		"strength": 0.5,
+		"regions": [
+			{ "id": "anchor_stage_1", "start": 0.0, "end": 0.133 },
+			{ "id": "anchor_stage_2", "start": 0.133, "end": 0.333 },
+			{ "id": "anchor_stage_3", "start": 0.333, "end": 0.567 },
+			{ "id": "anchor_stage_4", "start": 0.567, "end": 0.833 },
+			{ "id": "anchor_stage_5", "start": 0.833, "end": 0.98 }
+		]
+	},
+
+	"stages_by_speed": {
+		"0.10x": [
+			{
+				"id": "stage_1_opening",
+				"name": "Opening Frame",
+				"short_name": "Intro",
+				"start_time": 0,
+				"end_time": 4,
+				"color": "#f4b942",
+				"narration": {
+					"tone": "product explainer, deliberate opening",
+					"pause_ms": 220,
+					"text": "Firefly rethinks high-throughput systems by tracing the intellectual lineage from lambda calculus to provable concurrent infrastructure. This explainer follows that arc."
+				}
+			},
+			{
+				"id": "stage_2_lambda",
+				"name": "Lambda Calculus Foundations",
+				"short_name": "Lambda",
+				"start_time": 4,
+				"end_time": 12,
+				"color": "#f4b942",
+				"narration": {
+					"tone": "product explainer, informative",
+					"pause_ms": 220,
+					"text": "Church and Turing formalized computation as sequential pure functions. Lambda calculus defines what is computable but assumes a single thread of control. It offers no model for concurrency, no distribution primitives, and no channel abstractions. This limitation shaped every architecture that followed."
+				}
+			},
+			{
+				"id": "stage_3_von_neumann",
+				"name": "Von Neumann Bottleneck",
+				"short_name": "Von Neumann",
+				"start_time": 12,
+				"end_time": 20,
+				"color": "#d17e7e",
+				"narration": {
+					"tone": "product explainer, technical",
+					"pause_ms": 220,
+					"text": "Von Neumann architectures hardwired sequential execution into silicon. Traditional scaling replicates the same line: more cores, more servers, more shared-state coordination. The SISD to MIMD transition created race conditions, deadlock, and composition problems that operational tooling cannot fully resolve."
+				}
+			},
+			{
+				"id": "stage_4_dataflow",
+				"name": "Dataflow Transition",
+				"short_name": "Dataflow",
+				"start_time": 20,
+				"end_time": 30,
+				"color": "#44bfbf",
+				"narration": {
+					"tone": "product explainer, technical",
+					"pause_ms": 220,
+					"text": "Dataflow architectures change control logic. Work is triggered by data availability rather than a rigid instruction pointer. Execution routes through adaptive compute graphs that match modern silicon and distributed runtime behavior."
+				}
+			},
+			{
+				"id": "stage_5_pi_rho",
+				"name": "Pi/Rho Calculus: Messages in the Type System",
+				"short_name": "Pi/Rho",
+				"start_time": 30,
+				"end_time": 40,
+				"color": "#ad8fff",
+				"narration": {
+					"tone": "product explainer, technical depth",
+					"pause_ms": 240,
+					"text": "Milner's pi-calculus replaced shared state with message passing as the fundamental primitive. Rho-calculus takes this further: channels become first-class values inside the type system. Protocol behavior becomes type-visible, enabling explicit protocol modeling and stronger compile-time guarantees -- not external queues bolted on after the fact."
+				}
+			},
+			{
+				"id": "stage_6_correctness_bft",
+				"name": "Correctness by Construction + BFT",
+				"short_name": "Verify+BFT",
+				"start_time": 40,
+				"end_time": 51,
+				"color": "#84d08d",
+				"narration": {
+					"tone": "product explainer, deep technical",
+					"pause_ms": 240,
+					"text": "Spatial behavioral typing supports compile-time checks for deadlock freedom, race freedom, protocol adherence, and linear resource constraints. Combined with Byzantine fault tolerant consensus and dataflow execution, this improves both correctness and throughput while sustaining performance under adversarial conditions."
+				}
+			},
+			{
+				"id": "stage_7_tools",
+				"name": "Tools, Systems, Services",
+				"short_name": "Close",
+				"start_time": 51,
+				"end_time": 60,
+				"color": "#f4b942",
+				"narration": {
+					"tone": "product explainer, deliberate close",
+					"pause_ms": 220,
+					"text": "Firefly delivers this through tools, systems, and services for visual modeling, debugging, design, and deployment. The result is a practical move from ad-hoc concurrency to provable concurrent infrastructure for blockchains, AI pipelines, and distributed backends."
+				}
+			}
+		],
+		"0.25x": [
+			{
+				"id": "stage_1_lambda",
+				"name": "Lambda Calculus Foundations",
+				"short_name": "Lambda",
+				"start_time": 0,
+				"end_time": 5,
+				"color": "#f4b942",
+				"narration": {
+					"tone": "product explainer, detailed opening",
+					"pause_ms": 180,
+					"text": "Lambda calculus established the theoretical foundations of computation. Church and Turing formalized computation as pure sequential functions operating on a single thread of control, with no model for concurrency or communication."
+				}
+			},
+			{
+				"id": "stage_2_von_neumann",
+				"name": "Von Neumann Bottleneck",
+				"short_name": "Von Neumann",
+				"start_time": 5,
+				"end_time": 15,
+				"color": "#d17e7e",
+				"narration": {
+					"tone": "product explainer, detailed",
+					"pause_ms": 180,
+					"text": "Von Neumann architectures implemented this sequential model in hardware. Scaling meant replicating the same line: more cores, more servers, more shared-state coordination. The SISD to MIMD transition introduced race conditions, deadlock, and fragile composition as fundamental engineering challenges."
+				}
+			},
+			{
+				"id": "stage_3_pi_rho",
+				"name": "Pi/Rho Calculus: Messages in the Type System",
+				"short_name": "Pi/Rho",
+				"start_time": 15,
+				"end_time": 27,
+				"color": "#ad8fff",
+				"narration": {
+					"tone": "product explainer, detailed technical",
+					"pause_ms": 180,
+					"text": "Milner's pi-calculus replaced shared state with message passing as the computational primitive. Rho-calculus embeds channels as first-class type-system values rather than external infrastructure. Protocols become visible and checkable at design time instead of runtime."
+				}
+			},
+			{
+				"id": "stage_4_correctness",
+				"name": "Correctness by Construction",
+				"short_name": "Verify",
+				"start_time": 27,
+				"end_time": 39,
+				"color": "#84d08d",
+				"narration": {
+					"tone": "product explainer, detailed technical",
+					"pause_ms": 180,
+					"text": "Spatial behavioral typing enables compile-time verification of deadlock freedom, race freedom, protocol adherence, and linear resource constraints. This shifts concurrency engineering from reactive debugging toward proactive correctness."
+				}
+			},
+			{
+				"id": "stage_5_performance_bft",
+				"name": "Performance + BFT",
+				"short_name": "Perf+BFT",
+				"start_time": 39,
+				"end_time": 51,
+				"color": "#6ccf8a",
+				"narration": {
+					"tone": "product explainer, detailed outcomes",
+					"pause_ms": 180,
+					"text": "Dataflow execution aligns with modern parallel silicon and sustains throughput under distributed coordination. Combined with Byzantine fault tolerance, the system maintains correctness even when nodes behave adversarially, approaching crash-fault-like efficiency."
+				}
+			},
+			{
+				"id": "stage_6_tools",
+				"name": "Outcome and Call to Action",
+				"short_name": "Close",
+				"start_time": 51,
+				"end_time": 60,
+				"color": "#f4b942",
+				"narration": {
+					"tone": "product explainer, detailed close",
+					"pause_ms": 180,
+					"text": "Firefly provides tools, systems, and services to visually model, debug, design, and deploy message-first software. Move from ad-hoc concurrency to provable concurrent infrastructure."
+				}
+			}
+		],
+		"1x": [
+			{
+				"id": "stage_1_lambda",
+				"name": "Lambda Calculus Foundations",
+				"short_name": "Lambda",
+				"start_time": 0,
+				"end_time": 8,
+				"color": "#f4b942",
+				"narration": {
+					"tone": "product explainer, opening",
+					"pause_ms": 140,
+					"text": "Lambda calculus gave computing its theoretical foundation. Church and Turing showed that pure functions and sequential evaluation define what is computable. But the model assumes a single thread of control with no primitives for concurrency, distribution, or communication channels."
+				}
+			},
+			{
+				"id": "stage_2_von_neumann",
+				"name": "Von Neumann Bottleneck",
+				"short_name": "Von Neumann",
+				"start_time": 8,
+				"end_time": 20,
+				"color": "#d17e7e",
+				"narration": {
+					"tone": "product explainer, clear",
+					"pause_ms": 140,
+					"text": "Von Neumann architectures hardwired this sequential model into silicon. Scaling meant more cores, more servers, more shared-state coordination: the SISD to MIMD transition. But composition remains the unsolved challenge -- race conditions, deadlock, and fragile concurrency emerge wherever parallel components share mutable state."
+				}
+			},
+			{
+				"id": "stage_3_pi_rho",
+				"name": "Pi/Rho Calculus: Messages in the Type System",
+				"short_name": "Pi/Rho",
+				"start_time": 20,
+				"end_time": 34,
+				"color": "#ad8fff",
+				"narration": {
+					"tone": "product explainer, technical",
+					"pause_ms": 160,
+					"text": "Milner's pi-calculus replaced shared state with message passing as the fundamental primitive. Rho-calculus goes further: channels become first-class values inside the type system rather than external infrastructure. This makes protocol behavior type-checkable at design time."
+				}
+			},
+			{
+				"id": "stage_4_correctness_bft",
+				"name": "Correctness by Construction + BFT",
+				"short_name": "Verify+BFT",
+				"start_time": 34,
+				"end_time": 50,
+				"color": "#84d08d",
+				"narration": {
+					"tone": "product explainer, assertive",
+					"pause_ms": 160,
+					"text": "Spatial behavioral typing checks deadlock freedom, race freedom, protocol adherence, and linear resource usage at compile time. Combined with Byzantine fault tolerant consensus, the system maintains correctness even when nodes fail or act maliciously."
+				}
+			},
+			{
+				"id": "stage_5_tools",
+				"name": "Tools, Systems, Services",
+				"short_name": "Close",
+				"start_time": 50,
+				"end_time": 60,
+				"color": "#f4b942",
+				"narration": {
+					"tone": "product explainer, closing",
+					"pause_ms": 140,
+					"text": "Firefly delivers this through four pillars: visually model, debug, design, and develop concurrent systems. Move from ad-hoc concurrency to provable concurrent systems."
+				}
+			}
+		],
+		"1.5x": [
+			{
+				"id": "stage_1_lambda_von_neumann",
+				"name": "Lambda Calculus to Von Neumann",
+				"short_name": "Lambda+VN",
+				"start_time": 0,
+				"end_time": 10,
+				"color": "#f4b942",
+				"narration": {
+					"tone": "product explainer, concise",
+					"pause_ms": 120,
+					"text": "Lambda calculus defined computation as sequential pure functions. Von Neumann architectures hardwired this into silicon. Scaling to multicore and distributed systems exposed fundamental limits: race conditions, deadlock, and brittle shared-state composition."
+				}
+			},
+			{
+				"id": "stage_2_pi_rho",
+				"name": "Pi/Rho Calculus + Type Channels",
+				"short_name": "Pi/Rho",
+				"start_time": 10,
+				"end_time": 25,
+				"color": "#ad8fff",
+				"narration": {
+					"tone": "product explainer, concise",
+					"pause_ms": 120,
+					"text": "Milner's pi-calculus replaced shared state with message passing. Rho-calculus embeds channels as first-class values inside the type system, making protocol behavior checkable at design time rather than bolted on via external queues."
+				}
+			},
+			{
+				"id": "stage_3_correctness_bft",
+				"name": "Correctness + BFT",
+				"short_name": "Verify+BFT",
+				"start_time": 25,
+				"end_time": 42,
+				"color": "#84d08d",
+				"narration": {
+					"tone": "product explainer, concise",
+					"pause_ms": 120,
+					"text": "Spatial behavioral typing verifies deadlock freedom, protocol adherence, and linear resource safety at compile time. Combined with BFT consensus, this yields correctness even under adversarial node failures."
+				}
+			},
+			{
+				"id": "stage_4_tools",
+				"name": "Outcome and Call to Action",
+				"short_name": "Close",
+				"start_time": 42,
+				"end_time": 60,
+				"color": "#f4b942",
+				"narration": {
+					"tone": "product explainer, concise close",
+					"pause_ms": 120,
+					"text": "Firefly delivers tools, systems, and services to visually model, debug, design, and deploy provable concurrent infrastructure. Move from ad-hoc concurrency to systems you can verify before they ship."
+				}
+			}
+		],
+		"2x": [
+			{
+				"id": "stage_1_lambda_to_pi_rho",
+				"name": "Lambda Calculus to Pi/Rho",
+				"short_name": "Lambda->Rho",
+				"start_time": 0,
+				"end_time": 20,
+				"color": "#ad8fff",
+				"narration": {
+					"tone": "product explainer, rapid",
+					"pause_ms": 100,
+					"text": "Lambda calculus and Von Neumann architectures assumed sequential execution. Milner's pi-calculus and rho-calculus replace shared state with first-class typed channels, making protocol behavior verifiable at design time."
+				}
+			},
+			{
+				"id": "stage_2_correctness_bft",
+				"name": "Correctness + BFT",
+				"short_name": "Verify+BFT",
+				"start_time": 20,
+				"end_time": 42,
+				"color": "#84d08d",
+				"narration": {
+					"tone": "product explainer, rapid",
+					"pause_ms": 100,
+					"text": "Spatial behavioral typing checks deadlock freedom, race freedom, and linear resources at compile time, while BFT consensus sustains correctness under adversarial conditions."
+				}
+			},
+			{
+				"id": "stage_3_tools",
+				"name": "Outcome and Call to Action",
+				"short_name": "Close",
+				"start_time": 42,
+				"end_time": 60,
+				"color": "#f4b942",
+				"narration": {
+					"tone": "product explainer, rapid close",
+					"pause_ms": 100,
+					"text": "Firefly delivers design, verification, and deployment tooling for provable concurrent systems. Move from ad-hoc concurrency to infrastructure you can trust."
+				}
+			}
+		]
+	}
+}

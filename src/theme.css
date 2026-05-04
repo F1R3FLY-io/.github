@@ -1,0 +1,32 @@
+:root {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	--bg: #07111d;
+	--surface: #0d1b2b;
+	--surface-hover: #17293d;
+	--border: #26445f;
+	--border-strong: #3b6285;
+	--text: #d4dfef;
+	--text-muted: #93abca;
+	--text-dim: #6785aa;
+	--accent: #f4b942;
+	--accent-2: #40c2c5;
+	--danger: #e07474;
+	--thumb-border: #0a1725;
+}
+
+:root.light {
+	--bg: #eef4fb;
+	--surface: #ffffff;
+	--surface-hover: #e7eef7;
+	--border: #c8d5e6;
+	--border-strong: #9db5ce;
+	--text: #1a2b3d;
+	--text-muted: #3c5877;
+	--text-dim: #718dab;
+	--accent: #af7a00;
+	--accent-2: #0a9aa5;
+	--danger: #ba5757;
+	--thumb-border: #dde7f3;
+}

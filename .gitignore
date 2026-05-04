@@ -3,4 +3,6 @@
 docs/videos/
 node_modules
 .tmp/
-dist/
+.env
+dist
+coverage
