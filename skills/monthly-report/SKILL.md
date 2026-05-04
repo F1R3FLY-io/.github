@@ -78,7 +78,7 @@ The script will:
 [HH:MM:SS] Report period: December 2024 (2024-12-01 to 2024-12-31)
 [HH:MM:SS] Fetching data from 22 repositories...
 [HH:MM:SS] Processing category: Core Platform
-  Fetching data for f1r3fly...
+  Fetching data for f1r3node...
 [HH:MM:SS] Processing category: Language & Compiler
   Fetching data for rholang-rs...
   ...
@@ -190,7 +190,7 @@ The generated report includes:
 | Section | Content |
 |---------|---------|
 | Executive Summary | Key metrics table, highlights narrative |
-| Core Platform | f1r3fly metrics and activity |
+| Core Platform | f1r3node, f1r3node-rust metrics and activity |
 | Language & Compiler | rholang-rs, language-server, etc. |
 | Frontend & Apps | embers, f1r3sky ecosystem |
 | Developer Tools | F1r3bu1ld3r, IaC, etc. |

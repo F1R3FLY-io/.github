@@ -31,7 +31,7 @@ RATE_LIMIT_WAIT=60
 # Repository categories (from Organization_of_Repositories.md)
 declare -A REPO_CATEGORIES
 REPO_CATEGORIES=(
-    ["Core Platform"]="f1r3fly"
+    ["Core Platform"]="f1r3node f1r3node-rust"
     ["Language & Compiler"]="rholang-rs rholang-language-server rholang graph-to-rholang-parser rholang-nvim rholang-vscode-client"
     ["Frontend & Applications"]="embers embers-frontend f1r3sky f1r3sky-client f1r3sky-backend-rs f1r3sky-backend-ts lightning-bug"
     ["Developer Tools"]="F1r3bu1ld3r rust-client IaC f1r3drive-extension Sankey_block_explorer"

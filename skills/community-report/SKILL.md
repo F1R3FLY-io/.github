@@ -77,7 +77,7 @@ For each `<!-- AI_NARRATIVE_START: section_name -->` marker, write a community-f
 This period brought several improvements to the F1R3FLY ecosystem:
 
 - **Embers Frontend**: The OSLF editor gained sidebar navigation (#178, #189) and typesafe i18n support (#191), making the development experience smoother for all users
-- **f1r3fly Core**: Consensus stability fixes landed, improving reliability for node operators
+- **f1r3node Core**: Consensus stability fixes landed, improving reliability for node operators
 - **Whitelabel Support**: Rebranding groundwork completed, enabling customization for partner deployments
 <!-- AI_NARRATIVE_END -->
 ```
