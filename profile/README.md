@@ -39,9 +39,9 @@ This repository follows F1R3FLY.io's documentation-first methodology, serving as
 ### Key Repositories
 
 #### Core Platform
-- **[f1r3node](https://github.com/F1R3FLY-io/f1r3node)** - Core transaction node repository
 - **[f1r3node-rust](https://github.com/F1R3FLY-io/f1r3node-rust)** - Standalone Rust workspace and Docker/shard setup for the pure-Rust node
 - **[rust-client](https://github.com/F1R3FLY-io/rust-client)** - Rust client SDK for deploys, status, and network interaction
+- **[f1r3node scala](https://github.com/F1R3FLY-io/f1r3node)** - Core transaction node repository (deprecated)
 
 #### Language & Tools
 - **[rholang-rs](https://github.com/F1R3FLY-io/rholang-rs)** - Rholang interpreter (Rust)
